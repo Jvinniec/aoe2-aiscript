@@ -7,14 +7,44 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.aiscript",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "[0-9]"
+				},
+				{
+					"name": "entity.name.function",
+					"match": "\\b(build|research|train)"
+				},
+				{
+					"name": "keyword.control.aiscript",
+					"match": "\\b(defconst|disable-self|end-if|not|or)\\b"
+				},
+				
+				{
+					"name": "storage.type",
+					"match": "\\b(defrule)\\b"
+				},
+				{
+					"name": "constant.language",
+					"match": "\\b(true|false)\\b"
+				},
+				{
+					"name": "support.type",
+					"match": "=>"
+				},
+				{
+					"name": "variable.other",
+					"match": "set-strategic-number"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.aiscript",
@@ -23,6 +53,17 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape.aiscript",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.semicolon",
+			"begin": ";",
+			"end": "$",
+			"patterns": [
+				{
+					"name": "comment.line.double-slash",
 					"match": "\\\\."
 				}
 			]
