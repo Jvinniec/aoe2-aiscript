@@ -1,7 +1,23 @@
-// This is a comment
+; this is a comment
 (defrule                            ; This is the start of a new rule
     (true)                          ; This will guarantee the rule runs
     =>
-    (chat-to-all "It's alive!!!")
+    (chat-to-all "I'm alive!!!")
     (disable-self)                  ; Stop the rule from constantly running
+)
+
+; defrule is not highlighted when placed in a comment
+
+(defrule
+    (true)
+    =>
+    (chat-to-all "... okay, maybe I'm just an AI :(")
+    (disable-self)
+)
+
+; train villagers
+(defrule
+    (unit-type-count-total villager < 10)
+    =>
+    (train villager)
 )
