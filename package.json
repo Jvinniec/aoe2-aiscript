@@ -1,0 +1,25 @@
+{
+    "name": "aoe2-aiscript",
+    "displayName": "Aoe2 AiScript",
+    "description": "Syntax highlighting for Age of Empires 2 AI scripts",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "aiscript",
+            "aliases": ["AiScript", "aiscript"],
+            "extensions": [".per"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "aiscript",
+            "scopeName": "source.per",
+            "path": "./syntaxes/aiscript.tmLanguage.json"
+        }]
+    }
+}

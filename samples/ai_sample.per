@@ -1,0 +1,7 @@
+// This is a comment
+(defrule                            ; This is the start of a new rule
+    (true)                          ; This will guarantee the rule runs
+    =>
+    (chat-to-all "It's alive!!!")
+    (disable-self)                  ; Stop the rule from constantly running
+)
