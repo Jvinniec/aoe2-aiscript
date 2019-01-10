@@ -16,11 +16,11 @@
 		"keywords": {
 			"patterns": [
 				{
-					"name": "constant.numeric",
+					"name": "constant.numeric.aiscript",
 					"match": "(?<!\\w)-?\\d+(?!-)"
 				},
 				{
-					"name": "entity.name.function",
+					"name": "entity.name.function.aiscript",
 					"match": "(?<!-)\\b(build|research|train)\\b(?!-)"
 				},
 				{
@@ -33,22 +33,22 @@
 				},
 				{
 					"name": "keyword.control.aiscript",
-					"match": "(?<!-)\\b(not|or)\\b(?!-)"
+					"match": "(?<!-)\\b(nor|not|or)\\b(?!-)"
 				},
 				{
 					"name": "storage.type.aiscript",
 					"match": "\\b(defrule)\\b"
 				},
 				{
-					"name": "constant.language",
+					"name": "constant.language.aiscript",
 					"match": "\\b(true|false)\\b"
 				},
 				{
-					"name": "support.type",
+					"name": "support.type.aiscript",
 					"match": "=>"
 				},
 				{
-					"name": "variable.other",
+					"name": "variable.other.aiscript",
 					"match": "(?<!-)\\b(food|wood|gold|stone)\\b(?!-)"
 				}
 			]
