@@ -3,7 +3,7 @@
 [![Version-GH](https://badge.fury.io/gh/jvinniec%2Faoe2-aiscript.svg)](https://github.com/Jvinniec/aoe2-aiscript.git)
 [![Version](http://vsmarketplacebadge.apphb.com/version-short/jvinniec.aoe2-aiscript.svg)](https://marketplace.visualstudio.com/items?itemName=jvinniec.aoe2-aiscript)
 [![Installs](http://vsmarketplacebadge.apphb.com/installs/jvinniec.aoe2-aiscript.svg)](https://marketplace.visualstudio.com/items?itemName=jvinniec.aoe2-aiscript)
-[![Rating](http://vsmarketplacebadge.apphb.com/installs/jvinniec.aoe2-aiscript.svg)](https://marketplace.visualstudio.com/items?itemName=jvinniec.aoe2-aiscript)
+[![Rating](http://vsmarketplacebadge.apphb.com/rating-short/jvinniec.aoe2-aiscript.svg)](https://marketplace.visualstudio.com/items?itemName=jvinniec.aoe2-aiscript)
 
 This extension serves as a syntax highlighting tool for writing ai scripts in AoE2. It will apply this highlighting to any `.per` files that are loaded in vscode.
 
