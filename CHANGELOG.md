@@ -7,7 +7,8 @@ Only the most recent patch for a given release is shown.
 ## [Unreleased]
 - Nothing here yet
 
-## 0.1.1
+## v0.1.2
+- Add icon for the extension
 - Fix image size in README.md
 - Initial alpha release of the extension.
 - Very basic syntax highlighting capabilities are enabled
