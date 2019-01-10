@@ -27,5 +27,12 @@
             "scopeName": "source.per",
             "path": "./syntaxes/aiscript.tmLanguage.json"
         }]
-    }
+    },
+    "badges": [
+        {
+            "description": "GitHub release version",
+            "href": "https://github.com/Jvinniec/aoe2-aiscript.git",
+            "url": "https://badge.fury.io/gh/jvinniec%2Faoe2-aiscript.svg"
+        }
+    ]
 }
