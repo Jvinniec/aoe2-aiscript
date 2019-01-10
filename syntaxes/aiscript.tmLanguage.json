@@ -17,19 +17,26 @@
 			"patterns": [
 				{
 					"name": "constant.numeric",
-					"match": "[0-9]"
+					"match": "(?<!\\w)-?\\d+(?!-)"
 				},
 				{
 					"name": "entity.name.function",
-					"match": "\\b(build|research|train)"
+					"match": "(?<!-)\\b(build|research|train)\\b(?!-)"
 				},
 				{
 					"name": "keyword.control.aiscript",
-					"match": "\\b(defconst|disable-self|end-if|not|or)\\b"
+					"match": "\\b(defconst|disable-self|#end-if)\\b"
 				},
-				
 				{
-					"name": "storage.type",
+					"name": "keyword.control.aiscript",
+					"match": "(#end-if|#load-if-defined|#load-if-not-defined)"
+				},
+				{
+					"name": "keyword.control.aiscript",
+					"match": "(?<!-)\\b(not|or)\\b(?!-)"
+				},
+				{
+					"name": "storage.type.aiscript",
 					"match": "\\b(defrule)\\b"
 				},
 				{
@@ -42,7 +49,7 @@
 				},
 				{
 					"name": "variable.other",
-					"match": "set-strategic-number"
+					"match": "(?<!-)\\b(food|wood|gold|stone)\\b(?!-)"
 				}
 			]
 		},
