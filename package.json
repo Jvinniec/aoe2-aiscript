@@ -3,6 +3,11 @@
     "displayName": "Aoe2 AiScript",
     "description": "Syntax highlighting for Age of Empires 2 AI scripts",
     "version": "0.1.0",
+    "publisher": "jvinniec",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Jvinniec/aoe2-aiscript.git"
+    },
     "engines": {
         "vscode": "^1.30.0"
     },
