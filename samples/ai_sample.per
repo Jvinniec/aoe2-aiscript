@@ -1,3 +1,16 @@
+;---------------------------------------------------------------------;
+; Filename: ai_sample.per
+; Author: J.V. Cardenzana
+;---------------------------------------------------------------------;
+; Discription:
+;       This file provides a sample of a few rules that demonstrate
+;       how the syntax hylighting is suppose to behave. It allows for
+;       testing the different syntax highlighting regular expressions
+;       to ensure that everything works correctly.
+;---------------------------------------------------------------------;
+
+(defconst max-dark-villagers 20)
+
 ; this is a comment
 (defrule                            ; This is the start of a new rule
     (true)                          ; This will guarantee the rule runs
@@ -8,16 +21,20 @@
 
 ; defrule is not highlighted when placed in a comment
 
+; train villagers in the dark age
 (defrule
-    (true)
+    (current-age == dark-age)
+    (unit-type-count-total villager < max-dark-villagers)
+    (can-train villager)            ; 'train' is NOT highlighted
     =>
-    (chat-to-all "... okay, maybe I'm just an AI :(")
-    (disable-self)
+    (train villager)                ; 'train' IS highlighted
 )
 
-; train villagers
+; Build a house
+#load-if-not-defined HUN-CIV
 (defrule
-    (unit-type-count-total villager < 10)
-    =>
-    (train villager)
+   (can-build house)                ; 'build' is NOT highlighted
+   =>
+   (build house)                    ; 'build' IS highlighted
 )
+#end-if
