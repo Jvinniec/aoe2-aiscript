@@ -7,7 +7,7 @@ This extension serves as a syntax highlighting tool for writing ai scripts in Ao
 
 This extension currently provides very rudimentary syntax highlighting as demonstrated below (image uses the `Dark+` color theme):
 
-<img src="./images/syntax_highlighting.png" width="500px" alt="syntax highlighting example"/>
+![image](images/syntax_highlighting.png "syntax highlighting")
 
 ## Known Issues
 
