@@ -7,11 +7,11 @@ This extension serves as a syntax highlighting tool for writing ai scripts in Ao
 
 This extension currently provides very rudimentary syntax highlighting as demonstrated below (image uses the `Dark+` color theme):
 
-![Syntax Highlighting](images/syntax_highlighting.png)
+<img src="./images/syntax_highlighting.png" width="500px" alt="syntax highlighting example"/>
 
 ## Known Issues
 
-This is an alpha version afterall, so there are going to be issues
+This is an alpha version afterall, so there are going to be issues:
 
 - [ ] Numbers are still highlighted even if they appear at the end of a variable, but only if also proceded by a dash.
 
