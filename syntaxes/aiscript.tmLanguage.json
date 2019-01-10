@@ -29,7 +29,7 @@
 				},
 				{
 					"name": "keyword.control.aiscript",
-					"match": "(#end-if|#load-if-defined|#load-if-not-defined)"
+					"match": "(#else|#end-if|#load-if-defined|#load-if-not-defined)"
 				},
 				{
 					"name": "keyword.control.aiscript",
