@@ -1,23 +1,23 @@
 {
+	"Add rule": {
+		"prefix": "addrule",
+		"body": [
+			"(defrule\n\t(${1:fact})\n\t=>\n\t(${2:action})\n)"
+		],
+		"description": "Boilerplate for a new rule"
+	},
 	"Build rule": {
 		"prefix": "buildrule",
 		"body": [
-			"(defrule\n\t(can-build $1)\n\t=>\n\t(build $1)\n)"
+			"(defrule\n\t(can-build ${1:building})\n\t=>\n\t(build ${1:building})\n)"
 		],
-		"description": "Construct a generic build rule"
-	},
-	"New rule": {
-		"prefix": "(defrule",
-		"body": [
-			"(defrule\n\t; facts\n\t=>\n\t; actions\n"
-		],
-		"description": "Create the boilerplate for a new rule"
+		"description": "Generic build rule"
 	},
 	"Train rule": {
 		"prefix": "trainrule",
 		"body": [
-			"(defrule\n\t(can-train $1)\n\t=>\n\t(train $1)\n)"
+			"(defrule\n\t(can-train ${1:unit})\n\t=>\n\t(train ${1:unit})\n)"
 		],
-		"description": "Construct a generic train rule"
+		"description": "Generic train rule"
 	}
 }
