@@ -13,7 +13,7 @@
         "vscode": "^1.30.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages", "Snippets"
     ],
     "contributes": {
         "languages": [{
@@ -26,6 +26,10 @@
             "language": "aiscript",
             "scopeName": "source.per",
             "path": "./syntaxes/aiscript.tmLanguage.json"
+        }],
+        "snippets": [{
+                "language": "aiscript",
+                "path": "./snippets/aiscript.tmSnippets.json"
         }]
     },
     "badges": [

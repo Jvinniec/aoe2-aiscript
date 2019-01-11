@@ -1,0 +1,16 @@
+{
+	"Build rule": {
+		"prefix": "buildrule",
+		"body": [
+			"(defrule\n\t(can-build $1)\n\t=>\n\t(build $1)\n)"
+		],
+		"description": "Construct a generic build rule"
+	},
+	"Train rule": {
+		"prefix": "trainrule",
+		"body": [
+			"(defrule\n\t(can-train $1)\n\t=>\n\t(train $1)\n)"
+		],
+		"description": "Construct a generic train rule"
+	}
+}
