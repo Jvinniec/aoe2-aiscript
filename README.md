@@ -14,6 +14,12 @@ This extension currently provides very rudimentary syntax highlighting as demons
 
 ![image](images/syntax_highlighting.png "syntax highlighting")
 
+### Snippets
+
+Snippets are also provided to quickly create new rules.
+
+![image](images/snippets_example.gif "snippets")
+
 ## Known Issues
 
 This is an alpha version afterall, so there are going to be issues:

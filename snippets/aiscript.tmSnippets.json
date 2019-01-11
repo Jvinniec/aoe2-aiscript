@@ -6,6 +6,13 @@
 		],
 		"description": "Construct a generic build rule"
 	},
+	"New rule": {
+		"prefix": "(defrule",
+		"body": [
+			"(defrule\n\t; facts\n\t=>\n\t; actions\n"
+		],
+		"description": "Create the boilerplate for a new rule"
+	},
 	"Train rule": {
 		"prefix": "trainrule",
 		"body": [
