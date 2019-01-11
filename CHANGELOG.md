@@ -3,8 +3,7 @@ All notable changes to the "aoe2-aiscript" extension will be documented in this 
 
     <major>.<minor>.<patch>
 
-Only the most recent patch for a given release is shown.
-## v0.1.2 [Unreleased]
+## v0.1.2
 - Add snippets capability ("(defrule", "buildrule", "trainrule")
 - Add icon for the extension
 
