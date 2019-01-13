@@ -24,7 +24,7 @@ Snippets are also provided to quickly create new rules.
 
 This is an alpha version afterall, so there are going to be issues:
 
-- [ ] Numbers are still highlighted even if they appear at the end of a variable, but only if also proceded by a dash.
+- Numbers are still highlighted even if they appear at the end of a variable, but only if also proceded by a dash.
 
 ## Contributing
 Feel free to submit issues to the github repository, and I will try to look into them when I have time.
