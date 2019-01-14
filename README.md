@@ -20,9 +20,24 @@ Snippets are also provided to quickly create new rules.
 
 ![image](images/snippets_example.gif "snippets")
 
+## Why ANOTHER code editor?
+
+Building the editing features on top of Visual Studio Code offers several benefits:
+
+- VSCode is already used by a large community of developers, meaning that it wont go away any time soon and many existing programmers should already be familiar with it.
+- VSCode is cross-platform (it works on Windows, Mac and Linux)
+- VSCode has many additional features which don't have to be entirely implemented from scratch, such as:
+  - [code snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
+  - [basic file editing features](https://code.visualstudio.com/docs/editor/codebasics), such as searching across all files, find-and-replace, multi-line selection and much more.
+  - [syntax highlighting](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide) and user-defined [color themes](https://code.visualstudio.com/api/extension-guides/color-theme)
+  - [intellisense](https://code.visualstudio.com/docs/editor/intellisense), which is a way to provide code-completion and error-checking 
+- Developers of the extension can focus on the particulars of the AoE2 AI scripting language and don't have to be concerned with developing the interface.
+
+To be clear, the original author of this code has never used or attempted to use any existing AI script editor, so this is in no way a critique of those editors.
+
 ## Known Issues
 
-This is an alpha version afterall, so there are going to be issues:
+This is an alpha version after all, so there are going to be issues:
 
 - Numbers are still highlighted even if they appear at the end of a variable, but only if also proceded by a dash.
 
