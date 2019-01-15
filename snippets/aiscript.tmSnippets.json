@@ -3,9 +3,9 @@
 		"prefix": "addrule",
 		"body": [
 			"(defrule",
-			"\t(${fact})",
+			"\t(${1:fact})",
 			"\t=>",
-			"\t(${action})",
+			"\t(${2:action})",
 			")"
 		],
 		"description": "Boilerplate for a new rule"
@@ -14,9 +14,9 @@
 		"prefix": "actrule",
 		"body": [
 			"(defrule",
-			"\t(can-${1|build,research,train|} ${object})",
+			"\t(can-${1|build,research,train|} ${2:object})",
 			"\t=>",
-			"\t(${1} ${object})",
+			"\t(${1} ${2:object})",
 			")"
 		],
 		"description": "Rule to take an action (choose action)"
@@ -25,9 +25,9 @@
 		"prefix": "buildrule",
 		"body": [
 			"(defrule",
-			"\t(can-build ${building})",
+			"\t(can-build ${1:building})",
 			"\t=>",
-			"\t(build ${building})",
+			"\t(build ${1:building})",
 			")"
 		],
 		"description": "Generic train rule"
@@ -36,9 +36,9 @@
 		"prefix": "researchrule",
 		"body": [
 			"(defrule",
-			"\t(can-research ${tech})",
+			"\t(can-research ${1:tech})",
 			"\t=>",
-			"\t(research ${tech})",
+			"\t(research ${1:tech})",
 			")"
 		],
 		"description": "Generic research rule"
@@ -47,9 +47,9 @@
 		"prefix": "trainrule",
 		"body": [
 			"(defrule",
-			"\t(can-train ${unit})",
+			"\t(can-train ${1:unit})",
 			"\t=>",
-			"\t(train ${unit})",
+			"\t(train ${1:unit})",
 			")"
 		],
 		"description": "Generic train rule"
