@@ -164,7 +164,7 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 					value: `${test_str}\n${com_match}`
 				}
 			}
-
+			
 		}
 		// ... otherwise if no command is found, produce an error
 		else {
