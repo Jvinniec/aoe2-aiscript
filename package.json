@@ -2,41 +2,104 @@
     "name": "aoe2-aiscript",
     "displayName": "Aoe2 AiScript",
     "description": "Syntax highlighting for Age of Empires 2 AI scripts",
-    "version": "0.1.2",
+    "version": "0.1.3-master",
+    "license": "GPL-3.0-or-later",
+    "author": "jvinniec",
     "publisher": "jvinniec",
     "icon": "images/icon.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/Jvinniec/aoe2-aiscript.git"
     },
-    "engines": {
-        "vscode": "^1.30.0"
-    },
-    "categories": [
-        "Programming Languages", "Snippets"
+    "activationEvents": [
+        "onLanguage:aiscript"
     ],
-    "contributes": {
-        "languages": [{
-            "id": "aiscript",
-            "aliases": ["AiScript", "aiscript"],
-            "extensions": [".per"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "aiscript",
-            "scopeName": "source.per",
-            "path": "./syntaxes/aiscript.tmLanguage.json"
-        }],
-        "snippets": [{
-                "language": "aiscript",
-                "path": "./snippets/aiscript.tmSnippets.json"
-        }]
-    },
+    "main": "./client/out/extension",
     "badges": [
         {
             "description": "GitHub release version",
             "href": "https://github.com/Jvinniec/aoe2-aiscript.git",
             "url": "https://badge.fury.io/gh/jvinniec%2Faoe2-aiscript.svg"
         }
-    ]
+    ],
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "aiscript",
+                "aliases": [
+                    "AiScript",
+                    "aiscript"
+                ],
+                "extensions": [
+                    ".per"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "AoE2 AiScript",
+            "properties": {
+                "aoe2_AiScript.maxNumberOfProblems": {
+                    "scope": "resource",
+                    "type": "number",
+                    "default": 100,
+                    "description": "Controls the maximum number of problems produced by the server."
+                },
+                "aoe2_AiScript.showExampleCode": {
+                    "scope": "resource",
+                    "type": "boolean",
+                    "enum": [
+                        true,
+                        false
+                    ],
+                    "default": true,
+                    "description": "Controls whether or not to show sample code when hovering"
+                },
+                "aoe2_AiScript.targetVersion": {
+                    "scope": "resource",
+                    "type": "string",
+                    "enum": [
+                        "hd",
+                        "1.5"
+                    ],
+                    "default": "1.5",
+                    "description": "Controls the AoE2 version for checking script compatibility"
+                }
+            }
+        },
+        "grammars": [
+            {
+                "language": "aiscript",
+                "scopeName": "source.per",
+                "path": "./syntaxes/aiscript.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "aiscript",
+                "path": "./snippets/aiscript.tmSnippets.json"
+            }
+        ]
+    },
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "scripts": {
+        "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
+        "compile": "tsc -b",
+        "watch": "tsc -b -w",
+        "postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
+        "test": "sh ./scripts/e2e.sh"
+    },
+    "devDependencies": {
+        "@types/mocha": "^5.2.0",
+        "@types/node": "^8.0.0",
+        "tslint": "^5.11.0",
+        "typescript": "^3.1.3"
+    }
 }
