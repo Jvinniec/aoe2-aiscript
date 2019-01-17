@@ -270,9 +270,9 @@ function getRequiresFormattedList(reqList: Array<string>) {
 			text += ", ";
 		}
 
-		// Requirement is 'none'
-		if (req === "none") {
-			text += "*none*";
+		// Requirement is 'none' or 'all'
+		if ((req === "none") || (req === "all")) {
+			text += "*" + req + "*";
 		} 
 		// A '!' signifies the requirement is to NOT have this item
 		else if (req[0] === "!") {
