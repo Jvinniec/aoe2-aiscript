@@ -6,5 +6,4 @@
 # Server ignores
 out
 node_modules
-client/server
 .vscode-test

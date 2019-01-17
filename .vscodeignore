@@ -1,5 +1,4 @@
 .vscode/**
 .vscode-test/**
 .gitignore
-client/node_modules/**
-server/node_modules/**
+languageExtension/node_modules/**
