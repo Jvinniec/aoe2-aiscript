@@ -33,10 +33,8 @@
 ; Build a house
 #load-if-not-defined HUN-CIV
 (defrule
-   (up-can-build house)                ; 'build' is NOT highlighted
+   (can-build house)                ; 'build' is NOT highlighted
    =>
    (build house)                    ; 'build' IS highlighted
 )
 #end-if
-
-(up-compare-sn
