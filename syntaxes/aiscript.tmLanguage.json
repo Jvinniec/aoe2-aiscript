@@ -18,36 +18,28 @@
 				{
 					"name": "constant.numeric.aiscript",
 					"match": "(?<!\\w)-?\\d+(?!-)"
-				},
-				{
-					"name": "entity.name.function.aiscript",
-					"match": "(?<!-)\\b(up-)?(can-)?(build|research|train)\\b(?!-)"
-				},
-				{
+				},{
 					"name": "keyword.control.aiscript",
 					"match": "\\b(defconst|disable-self|do-nothing|#end-if)\\b"
-				},
-				{
+				},{
 					"name": "keyword.control.aiscript",
 					"match": "(#else|#end-if|#load-if-defined|#load-if-not-defined)"
-				},
-				{
+				},{
 					"name": "keyword.control.aiscript",
 					"match": "(?<!-)\\b(nor|not|or)\\b(?!-)"
-				},
-				{
+				},{
 					"name": "storage.type.aiscript",
 					"match": "\\b(defrule)\\b"
-				},
-				{
+				},{
 					"name": "constant.language.aiscript",
 					"match": "\\b(true|false)\\b"
-				},
-				{
+				},{
 					"name": "support.type.aiscript",
 					"match": "=>"
-				},
-				{
+				},{
+					"name": "entity.name.function.aiscript",
+					"match": "(?<!-)\\b(up-)?(can-)?(build|research|train)\\b(?!-)"
+				},{
 					"name": "variable.other.aiscript",
 					"match": "(?<!-)\\b(food|wood|gold|stone)\\b(?!-)"
 				}
