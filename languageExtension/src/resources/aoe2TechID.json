@@ -1,0 +1,62 @@
+{ "tech": [
+    {
+        "name": "ri-arbalest",
+        "description": "",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "location": "archery-range",
+        "section": "TechID",
+        "example": [ ],
+        "related": [ ]
+    },
+    {
+        "name": "ri-crossbow",
+        "description": "",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "location": "archery-range",
+        "section": "TechID",
+        "example": [ ],
+        "related": [ ]
+    },
+    {
+        "name": "ri-elite-skirmisher",
+        "description": "",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "location": "archery-range",
+        "section": "TechID",
+        "example": [ ],
+        "related": [ ]
+    },
+    {
+        "name": "ri-hand-cannon",
+        "description": "",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "location": "archery-range",
+        "section": "TechID",
+        "example": [ ],
+        "related": [ ]
+    },
+    {
+        "name": "ri-heavy-cavalry-archer",
+        "description": "",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "location": "archery-range",
+        "section": "TechID",
+        "example": [ ],
+        "related": [ ]
+    },
+    {
+        "name": "ri-champion",
+        "description": "",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "location": "barracks",
+        "section": "TechID",
+        "example": [ ],
+        "related": [ ]
+    }
+]}

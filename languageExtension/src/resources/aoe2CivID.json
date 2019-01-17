@@ -1,0 +1,220 @@
+{ "civ": [
+    {
+        "name": "aztec",
+        "unique": {
+            "unit": ["jaguar-warrior"],
+            "building": ["none"],
+            "tech": ["ri-atlatl", "ri-garland-wars"]
+        }
+    },{
+        "name": "berber",
+        "unique": {
+            "unit": ["camel-archer"],
+            "building": ["none"],
+            "tech": ["ri-kasbah", "ri-maghrabi-camels"]
+        }
+    },{
+        "name": "britons",
+        "unique": {
+            "unit": ["longbowman"],
+            "building": ["none"],
+            "tech": ["ri-yeomen", "ri-warwolf"]
+        }
+    },{
+        "name": "burmese",
+        "unique": {
+            "unit": ["arambai"],
+            "building": ["none"],
+            "tech": ["ri-howdah", "ri-manipur-cavalry"]
+        }
+    },{
+        "name": "byzantine",
+        "unique": {
+            "unit": ["cataphract"],
+            "building": ["none"],
+            "tech": ["ri-greek-fire", "ri-logistica"]
+        }
+    },{
+        "name": "celt",
+        "unique": {
+            "unit": ["woad-raider"],
+            "building": ["none"],
+            "tech": ["ri-stronghold", "ri-furor-celtica"]
+        }
+    },{
+        "name": "chinese",
+        "unique": {
+            "unit": ["chu-ko-nu"],
+            "building": ["none"],
+            "tech": ["ri-great-wall", "ri-rocketry"]
+        }
+    },{
+        "name": "ethiopian",
+        "unique": {
+            "unit": ["shotel-warrior"],
+            "building": ["none"],
+            "tech": ["ri-royal-heirs", "ri-torsion-engines"]
+        }
+    },{
+        "name": "frank",
+        "unique": {
+            "unit": ["throwing-axeman"],
+            "building": ["none"],
+            "tech": ["ri-chivalry", "ri-bearded-axe"]
+        }
+    },{
+        "name": "goth",
+        "unique": {
+            "unit": ["huskarl"],
+            "building": ["none"],
+            "tech": ["ri-anarchy", "ri-perfusion"]
+        }
+    },{
+        "name": "hun",
+        "unique": {
+            "unit": ["tarkan"],
+            "building": ["none"],
+            "tech": ["ri-marauders", "ri-atheism"]
+        }
+    },{
+        "name": "inca",
+        "unique": {
+            "unit": ["kamayuk", "slinger"],
+            "building": ["none"],
+            "tech": ["ri-andean-sling", "ri-couriers"]
+        }
+    },{
+        "name": "indian",
+        "unique": {
+            "unit": ["elephant-archer", "imperial-camel"],
+            "building": ["none"],
+            "tech": ["ri-sultans", "ri-shatagni"]
+        }
+    },{
+        "name": "italian",
+        "unique": {
+            "unit": ["genoese-crossbowman"],
+            "building": ["none"],
+            "tech": ["ri-pavise", "ri-silk-road"]
+        }
+    },{
+        "name": "japanese",
+        "unique": {
+            "unit": ["samurai"],
+            "building": ["none"],
+            "tech": ["ri-yasama", "ri-kataparuto"]
+        }
+    },{
+        "name": "khmer",
+        "unique": {
+            "unit": ["ballista-elephant"],
+            "building": ["none"],
+            "tech": ["ri-tusk-swords", "ri-double-crossbow"]
+        }
+    },{
+        "name": "korean",
+        "unique": {
+            "unit": ["war-wagon", "turtle-ship"],
+            "building": ["none"],
+            "tech": ["ri-panokseon", "ri-shinkichon"]
+        }
+    },{
+        "name": "magyar",
+        "unique": {
+            "unit": ["magyar-huszar"],
+            "building": ["none"],
+            "tech": ["ri-mercenaries", "ri-recurve-bow"]
+        }
+    },{
+        "name": "malay",
+        "unique": {
+            "unit": ["karambit-warrior"],
+            "building": ["none"],
+            "tech": ["ri-thalassocracy", "ri-forced-levy"]
+        }
+    },{
+        "name": "malian",
+        "unique": {
+            "unit": ["gbeto"],
+            "building": ["none"],
+            "tech": ["ri-tigui", "ri-farimba"]
+        }
+    },{
+        "name": "mayan",
+        "unique": {
+            "unit": ["plumed-archer"],
+            "building": ["none"],
+            "tech": ["ri-obsidian-arrows", "ri-el-dorado"]
+        }
+    },{
+        "name": "mongol",
+        "unique": {
+            "unit": ["mangudai"],
+            "building": ["none"],
+            "tech": ["ri-nomads", "ri-drill"]
+        }
+    },{
+        "name": "persian",
+        "unique": {
+            "unit": ["war-elephant"],
+            "building": ["none"],
+            "tech": ["ri-boiling-oil", "ri-mahouts"]
+        }
+    },{
+        "name": "portuguese",
+        "unique": {
+            "unit": ["organ-gun", "caravel"],
+            "building": ["feitoria"],
+            "tech": ["ri-carrack", "ri-arquebus"]
+        }
+    },{
+        "name": "saracen",
+        "unique": {
+            "unit": ["mameluke"],
+            "building": ["none"],
+            "tech": ["ri-madrasah", "ri-zealotry"]
+        }
+    },{
+        "name": "slav",
+        "unique": {
+            "unit": ["boyar"],
+            "building": ["none"],
+            "tech": ["ri-orthodoxy", "ri-druzhina"]
+        }
+    },{
+        "name": "spanish",
+        "unique": {
+            "unit": ["conquistador", "missionary"],
+            "building": ["none"],
+            "tech": ["ri-inquisition", "ri-supremacy"]
+        }
+    },{
+        "name": "teuton",
+        "unique": {
+            "unit": ["teutonic-knight"],
+            "building": ["none"],
+            "tech": ["ri-ironclad", "ri-crenellations"]
+        }
+    },{
+        "name": "turk",
+        "unique": {
+            "unit": ["janissary"],
+            "building": ["none"],
+            "tech": ["ri-sipahi", "ri-artillery"]
+        }
+    },{
+        "name": "vietnamese",
+        "unique": {
+            "unit": ["rattan-archer"],
+            "building": ["none"],
+            "tech": ["ri-chatras", "ri-paper-money"]
+        }
+    },{
+        "name": "viking",
+        "unique": {
+            "unit": ["berserk", "longboat"],
+            "building": ["none"],
+            "tech": ["ri-chieftains", "ri-berserkergang"]
+        }
+    }
+]}

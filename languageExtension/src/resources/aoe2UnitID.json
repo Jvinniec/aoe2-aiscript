@@ -1,0 +1,19 @@
+{ "unit": [
+    {
+        "name": "",
+        "description": "",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "",
+        "example": [],
+        "related": [],
+        "requires": {
+            "age": "castle-age",
+            "building": [],
+            "civ": ["!goth", "!hun"],
+            "tech": ["ri-guard-tower"],
+            "unit": []
+        }
+    }
+]}

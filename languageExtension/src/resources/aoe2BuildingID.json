@@ -1,0 +1,453 @@
+{ "building": [
+    {
+        "name": "archery-range",
+        "description": "Used to create and improve archers.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["barracks"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "barracks",
+        "description": "Used to create and improve infantry. Required for Archery Range, Stable.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "dark-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "blacksmith",
+        "description": "Used to improve infantry, archers, cavalry, towers, Town Centers, Castles, and Viking Longboats.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "bombard-tower",
+        "description": "Powerful attack with extensive line of sight. Attack bonus vs. ships",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["none"],
+            "civ": ["byzantine", "chinese", "italian", "korean", "malay", "portuguese", "spanish", "teutons", "turk", "vietnamese"],
+            "tech": ["ri-bombard-tower"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "castle",
+        "description": "Used to create your unique unit, build Trebuchets, and improve villagers and buildings",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "dock",
+        "description": "Used to build and improve ships, deposit food from Fishing Ships, and trade with other players by sea.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "dark-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "farm",
+        "description": "A renewable source of food. Provides a limited amount of food before it goes fallow and must be rebuilt.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "dark-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "feitoria",
+        "description": "Economic building. Generates resources without the need of villagers. Requires 20 population.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["none"],
+            "civ": ["portuguese"],
+            "tech": ["imperial-age"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "fish-trap",
+        "description": "A renewable source of food. Similar to a Farm, but in water.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["dock"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["fishing-ship"]
+        }
+    },{
+        "name": "fortified-wall",
+        "description": "Stronger than Stone Wall. Difficult to breach without siege weapons.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["none"],
+            "civ": ["!goth", "!hun", "!agyar", "!malay", "!persian"],
+            "tech": ["ri-fortified-wall"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "gate",
+        "description": "Can be built into existing walls. You or your allies can manually open and close this Gate.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["dock"],
+            "civ": ["!goth"],
+            "tech": ["none"],
+            "unit": ["fishing-ship"]
+        } 
+    },{
+        "name": "guard-tower",
+        "description": "Stronger than Watch Tower, with greater fighting ability.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["none"],
+            "civ": ["!goth", "!hun"],
+            "tech": ["ri-guard-tower"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "harbor",
+        "description": "Used to build and improve ships, deposit food from Fishing Ships, and trade with other players by sea.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["none"],
+            "civ": ["malay"],
+            "tech": ["ri-thalassocracy"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "house",
+        "description": "Each House supports 5 units (villagers, military units, ships, Trade Carts).",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "dark-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "keep",
+        "description": "Stronger than Watch Tower, with greater fighting ability.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["none"],
+            "civ": ["!aztec", "!berber", "!franc", "!goth", "!hun", "!indian", "!magyar", "!mongol", "!persian","!slav","!viking"],
+            "tech": ["ri-keep"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "lumber-camp",
+        "description": "Used to deposit wood and research wood-gathering improvements.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "dark-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "market",
+        "description": "Used to buy and sell resources, trade with other players by land, and research trade improvements.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["mill"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "mill",
+        "description": "Used to deposit food and research farming improvements.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "dark-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "mining-camp",
+        "description": "Used to deposit stone and gold and research stone-gathering and gold-gathering improvements.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "dark-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "monastery",
+        "description": "Used to create and improve Monks. Garrisoned relics generate gold.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "outpost",
+        "description": "A stationary watch point that provides advanced warning of nearby enemy activity.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "dark-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "palisade-gate",
+        "description": "Can be built into existing Walls. You and your allies can manually open and close this Gate.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "dark-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "palisade-wall",
+        "description": "Wooden Wall that is cheap and easy to build. Slows down your enemies and warns you of their approach.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "dark-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "siege-workshop",
+        "description": "Used to build siege weapons.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["blacksmith"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "stable",
+        "description": "Used to create and improve cavalry.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["barracks"],
+            "civ": ["!aztec", "!inca", "!mayan"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "stone-wall",
+        "description": "Stronger than Palisade Wall but more expensive. Slows down your enemies so you have a chance to fend them off.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["none"],
+            "civ": ["!goth"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "town-center",
+        "description": "Used to create villagers, deposit resources (food, wood, stone, gold), advance to next age, and improve buildings, villagers. Units can garrison inside for protection.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "university",
+        "description": "Used to improve buildings and missile units.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "watch-tower",
+        "description": "Basic stone tower. Automatically attacks enemy units and buildings within range.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "wonder",
+        "description": "Building a Wonder of the World demonstrates the superiority of your civilization. Constructing a Wonder that stands for a certain period of time is one way to win the game.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "BuildingID",
+        "example": ["none"],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["none"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    }
+]}
