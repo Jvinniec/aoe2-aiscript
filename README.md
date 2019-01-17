@@ -20,6 +20,17 @@ Snippets are also provided to quickly create new rules.
 
 ![image](images/snippets_example.gif "snippets")
 
+### Experimental Features
+
+These are features that are considered good enough to be tested by people, but may still need some tweaking. 
+
+Current experimental features:
+- Auto completion suggestions (so far only user patch commands, building names and civilizations)
+- Green warning squiggles for unknown *actions* or *facts* (still very wonky)
+
+By default these features are turned off to ensure the average person has a stable experience with the extension.
+To turn them on, go the settings (`Code`->`Preferences`->`Settings`), search for *'aoe2 enable experimental'* and set it to `true`.
+
 ## Why ANOTHER code editor?
 
 Building the editing features on top of Visual Studio Code offers several benefits:
