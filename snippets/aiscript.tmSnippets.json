@@ -3,9 +3,9 @@
 		"prefix": "addrule",
 		"body": [
 			"(defrule",
-			"\t(${1:fact})",
+			"\t($0)",
 			"\t=>",
-			"\t(${2:action})",
+			"\t(disable-self)",
 			")"
 		],
 		"description": "Boilerplate for a new rule"
