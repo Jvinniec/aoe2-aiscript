@@ -21,7 +21,7 @@
 				},
 				{
 					"name": "entity.name.function.aiscript",
-					"match": "(?<!-)\\b(build|research|train)\\b(?!-)"
+					"match": "(?<!-)\\b(up-)?(can-)?(build|research|train)\\b(?!-)"
 				},
 				{
 					"name": "keyword.control.aiscript",
