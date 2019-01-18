@@ -1,5 +1,277 @@
 { "unit": [
     {
+        "name": "arbalest",
+        "description": "Stronger than Crosbowman. Quick and light.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "archer-line",
+        "example": [],
+        "related": ["archer", "crossbowman"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["archery-range"],
+            "civ": ["!berber", "!burmese", "!celt", "!frank", "!goth", "!hun", "!indian", "!persian", "!slav", "!spanish", "!teuton", "!turk"],
+            "tech": ["ri-arbalest"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "archer",
+        "description": "Quick and light. Weak at close range; excels at battle from distance.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "archer-line",
+        "example": [],
+        "related": ["crossbowman", "arbalest"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["archery-range"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "champion",
+        "description": "Stronger than Two-Handed Swordsman. Cheap and quick to create.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "militiaman-line",
+        "example": [],
+        "related": ["militia", "man-at-arms", "long-swordsman", "long-swordsman"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["barracks"],
+            "civ": ["!ethiopian", "!huns", "!khmer", "!malay", "!mayans", "!persians"],
+            "tech": ["ri-champion"],
+            "unit": []
+        }
+    },{
+        "name": "Condottiero",
+        "description": "Italian mercenary unit. Quick infantry.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "none",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["barracks"],
+            "civ": ["italian"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "crossbowman",
+        "description": "Stronger than Archer. Quick and light.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "archer-line",
+        "example": [],
+        "related": ["archer", "arbalest"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["archery-range"],
+            "civ": ["!spanish"],
+            "tech": ["ri-crossbowman"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "eagle-scout",
+        "description": "Fast infantry with extensive sight.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "eagle-warrior-line",
+        "example": [],
+        "related": ["eagle-warrior", "elite-eagle-warrior"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["barracks"],
+            "civ": ["aztec", "inca", "mayan"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "eagle-warrior",
+        "description": "Stronger than Eagle Scout. Fast infantry with extensive sight.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "eagle-warrior-line",
+        "example": [],
+        "related": ["eagle-scout", "elite-eagle-warrior"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["barracks"],
+            "civ": ["aztec", "inca", "mayan"],
+            "tech": ["ri-eagle-warrior"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "elite-eagle-warrior",
+        "description": "Stronger than Eagle Warrior. Fast infantry with extensive sight.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "eagle-warrior-line",
+        "example": [],
+        "related": ["eagle-scout", "eagle-warrior"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["barracks"],
+            "civ": ["aztec", "inca", "mayan"],
+            "tech": ["ri-elite-eagle-warrior"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "elite-huskarl",
+        "description": "Gothic unique unit. Infantry with substantial pierce armor, virtually immune to archer fire.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "none",
+        "example": [],
+        "related": ["huskarl"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["goth"],
+            "tech": ["ri-elite-huskarl"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "halberdier",
+        "description": "Stronger than Spearman. Medium infantry.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "spearman-line",
+        "example": [],
+        "related": ["spearman", "pikeman"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["barracks"],
+            "civ": ["!aztec", "!berber", "!italian", "!malian", "!mongol", "!saracen", "!turk", "!viking"],
+            "tech": ["ri-halberdier"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "huskarl",
+        "description": "Gothic unique unit. Infantry with substantial pierce armor, virtually immune to archer fire.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "none",
+        "example": [],
+        "related": ["elite-huskarl"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["goth"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "long-swordsman",
+        "description": "Stronger than Man-at-Arms. Cheap and quick to create.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "militiaman-line",
+        "example": [],
+        "related": ["militia", "man-at-arms", "two-handed-swordsman", "champion"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["barracks"],
+            "civ": ["all"],
+            "tech": ["ri-long-swordsman"],
+            "unit": []
+        }
+    },{
+        "name": "man-at-arms",
+        "description": "Stronger than Militia. Cheap and quick to create.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "militiaman-line",
+        "example": [],
+        "related": ["militia", "long-swordsman", "two-handed-swordsman", "champion"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["barracks"],
+            "civ": ["all"],
+            "tech": ["ri-man-at-arms"],
+            "unit": []
+        }
+    },{
+        "name": "militia",
+        "description": "Basic infantry swordsman. Cheap and quick to create.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "militiaman-line",
+        "example": [],
+        "related": ["man-at-arms", "long-swordsman", "two-handed-swordsman", "champion"],
+        "requires": {
+            "age": "dark-age",
+            "building": ["barracks"],
+            "civ": ["all"],
+            "tech": [""],
+            "unit": ["none"]
+        }
+    },{
+        "name": "pikeman",
+        "description": "Stronger than Spearman. Medium infantry.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "spearman-line",
+        "example": [],
+        "related": ["spearman", "halberdier"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["barracks"],
+            "civ": ["!turk"],
+            "tech": ["ri-pikeman"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "spearman",
+        "description": "Stronger than Long Swordsman. Cheap and quick to create.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "spearman-line",
+        "example": [],
+        "related": ["pikeman", "halberdier"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["barracks"],
+            "civ": ["all"],
+            "tech": ["none"],
+            "unit": ["none"]
+        }
+    },{
+        "name": "two-handed-swordsman",
+        "description": "Stronger than Long Swordsman. Cheap and quick to create.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "militiaman-line",
+        "example": [],
+        "related": ["militia", "man-at-arms", "long-swordsman", "champion"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["barracks"],
+            "civ": ["!persian"],
+            "tech": ["ri-two-handed-swordsman"],
+            "unit": ["none"]
+        }
+    },{
         "name": "",
         "description": "",
         "version": {"min": "1.0c", "max": ""},
@@ -9,11 +281,11 @@
         "example": [],
         "related": [],
         "requires": {
-            "age": "castle-age",
+            "age": "",
             "building": [],
-            "civ": ["!goth", "!hun"],
-            "tech": ["ri-guard-tower"],
-            "unit": []
+            "civ": ["all"],
+            "tech": [""],
+            "unit": ["none"]
         }
     }
 ]}
