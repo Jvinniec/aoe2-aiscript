@@ -642,7 +642,7 @@
             "age": "imperial-age",
             "building": ["siege-workshop"],
             "civ": ["!berber", "!briton", "!burmese", "!frank", "!goth", "!indian", "!italian", "!japanese", "!korean", "!magyar", "!malay", "!malian", "!portuguese", "!teuton", "!vietnamese"],
-            "tech": ["ri-seige-ram"]
+            "tech": ["ri-siege-ram"]
         }
     },{
         "name": "siege-tower",
