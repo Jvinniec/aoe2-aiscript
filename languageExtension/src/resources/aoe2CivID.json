@@ -205,7 +205,7 @@
     },{
         "name": "vietnamese",
         "unique": {
-            "unit": ["rattan-archer"],
+            "unit": ["rattan-archer", "imperial-skirmisher"],
             "building": ["none"],
             "tech": ["ri-chatras", "ri-paper-money"]
         }
