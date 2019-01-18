@@ -60,6 +60,21 @@
             "tech": ["none"]
         }
     },{
+        "name": "bombard-canon",
+        "description": "Powerful mobile anti-building siege weapon.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "none",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["siege-workshop"],
+            "civ": ["!aztec", "!briton", "!celt", "!chinese", "!hun", "!inca", "!indian", "!magyar", "!mayan", "!mongol", "!slav", "!viking"],
+            "tech": ["ri-chemistry"]
+        }
+    },{
         "name": "camel",
         "description": "Excels at killing other mounted units.",
         "version": {"min": "1.0c", "max": ""},
@@ -360,6 +375,21 @@
             "tech": ["ri-heavy-cavalry-archer"]
         }
     },{
+        "name": "heavy-scorpion",
+        "description": "Stronger than Scorpion. Light artillery that fires large arrowlike bolts.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "scorpion-line",
+        "example": [],
+        "related": ["scorpion"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["siege-workshop"],
+            "civ": ["!aztec", "!byzantine", "!hun", "!indian", "!italian", "!korean", "!malian", "!portuguese", "!saracen", "!spanish", "!vietnamese"],
+            "tech": ["ri-heavy-scorpion"]
+        }
+    },{
         "name": "huskarl",
         "description": "Gothic unique unit. Infantry with substantial pierce armor, virtually immune to archer fire.",
         "version": {"min": "1.0c", "max": ""},
@@ -480,6 +510,21 @@
             "tech": ["ri-man-at-arms"]
         }
     },{
+        "name": "mangonel",
+        "description": "Wheeled siege weapon used to attack a small mass of units.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "mangonel-line",
+        "example": [],
+        "related": ["onager", "siege-onager"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["siege-workshop"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
         "name": "militia",
         "description": "Basic infantry swordsman. Cheap and quick to create.",
         "version": {"min": "1.0c", "max": ""},
@@ -493,6 +538,21 @@
             "building": ["barracks"],
             "civ": ["all"],
             "tech": ["none"]
+        }
+    },{
+        "name": "onager",
+        "description": "Stronger than Mangonel. Wheeled siege weapon used to attack a small mass of units.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "mangonel-line",
+        "example": [],
+        "related": ["mangonel", "siege-onager"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["siege-workshop"],
+            "civ": ["!hun", "!turk"],
+            "tech": ["ri-onager"]
         }
     },{
         "name": "paladin",
@@ -525,6 +585,21 @@
             "tech": ["ri-pikeman"]
         }
     },{
+        "name": "scorpion",
+        "description": "Light artillery that fires large arrowlike bolts.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "scorpion-line",
+        "example": [],
+        "related": ["heavy-scorpion"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["siege-workshop"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
         "name": "scout-cavalry",
         "description": "Fast with extensive line of sight.",
         "version": {"min": "1.0c", "max": ""},
@@ -540,7 +615,22 @@
             "tech": ["none"]
         }
     },{
-        "name": "seige-ram",
+        "name": "siege-onager",
+        "description": "Stronger than Onager. Wheeled siege weapon used to attack a small mass of units.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "mangonel-line",
+        "example": [],
+        "related": ["mangonel", "onager"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["siege-workshop"],
+            "civ": ["aztec", "celt", "ethiopian", "korean", "malian", "mongol", "saracen", "slav", "teuton"],
+            "tech": ["ri-siege-onager"]
+        }
+    },{
+        "name": "siege-ram",
         "description": "Stronger than Capped Ram. Slow, lumbering siege weapon used to reduce enemy towns to ruins.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -553,6 +643,21 @@
             "building": ["siege-workshop"],
             "civ": ["!berber", "!briton", "!burmese", "!frank", "!goth", "!indian", "!italian", "!japanese", "!korean", "!magyar", "!malay", "!malian", "!portuguese", "!teuton", "!vietnamese"],
             "tech": ["ri-seige-ram"]
+        }
+    },{
+        "name": "siege-tower",
+        "description": "Siege weapon used to scale enemy walls; resistant to archer attack.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "none",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["siege-workshop"],
+            "civ": ["all"],
+            "tech": ["none"]
         }
     },{
         "name": "skirmisher",
