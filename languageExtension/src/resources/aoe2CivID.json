@@ -9,7 +9,7 @@
     },{
         "name": "berber",
         "unique": {
-            "unit": ["camel-archer"],
+            "unit": ["camel-archer", "genitour"],
             "building": ["none"],
             "tech": ["ri-kasbah", "ri-maghrabi-camels"]
         }
