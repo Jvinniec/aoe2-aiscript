@@ -12,8 +12,7 @@
             "age": "imperial-age",
             "building": ["archery-range"],
             "civ": ["!berber", "!burmese", "!celt", "!frank", "!goth", "!hun", "!indian", "!persian", "!slav", "!spanish", "!teuton", "!turk"],
-            "tech": ["ri-arbalest"],
-            "unit": ["none"]
+            "tech": ["ri-arbalest"]
         }
     },{
         "name": "archer",
@@ -28,8 +27,97 @@
             "age": "feudal-age",
             "building": ["archery-range"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
+        }
+    },{
+        "name": "battering-ram",
+        "description": "Slow, lumbering siege weapon used to reduce enemy towns to ruins.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "battering-ram-line",
+        "example": [],
+        "related": ["capped-ram", "siege-ram"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["siege-workshop"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "battle-elephant",
+        "description": "Slow and heavy cavalry.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "none",
+        "example": [],
+        "related": ["elite-battle-elephant"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["stable"],
+            "civ": ["burmese", "khmer", "malay", "vietnamese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "camel",
+        "description": "Excels at killing other mounted units.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "camel-line",
+        "example": [],
+        "related": ["heavy-camel", "imperial-camel"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["stable"],
+            "civ": ["berber", "byzantine", "chinese", "ethiopian", "indian", "malian", "mongol", "persian", "saracen", "turk"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "capped-ram",
+        "description": "Stronger than Battering Ram. Slow, lumbering siege weapon used to reduce enemy towns to ruins.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "battering-ram-line",
+        "example": [],
+        "related": ["battering-ram", "siege-ram"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["siege-workshop"],
+            "civ": ["all"],
+            "tech": ["ri-capped-ram"]
+        }
+    },{
+        "name": "cavalier",
+        "description": "Stronger than Knight. Fast and heavy cavalry.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "knight-line",
+        "example": [],
+        "related": ["knight", "paladin"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["stable"],
+            "civ": ["!aztec", "!inca", "!indian", "!mayan", "!saracen"],
+            "tech": ["ri-cavalier"]
+        }
+    },{
+        "name": "cavalry-archer",
+        "description": "Fast, with ranged attack. Ideal for hit-and-run attacks.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "cavalry-archer-line",
+        "example": [],
+        "related": ["heavy-cavalry-archer"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["archery-range"],
+            "civ": ["!aztec", "!inca", "!mayan"],
+            "tech": ["none"]
         }
     },{
         "name": "champion",
@@ -44,8 +132,7 @@
             "age": "imperial-age",
             "building": ["barracks"],
             "civ": ["!ethiopian", "!huns", "!khmer", "!malay", "!mayans", "!persians"],
-            "tech": ["ri-champion"],
-            "unit": []
+            "tech": ["ri-champion"]
         }
     },{
         "name": "Condottiero",
@@ -60,8 +147,7 @@
             "age": "imperial-age",
             "building": ["barracks"],
             "civ": ["italian"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "crossbowman",
@@ -76,8 +162,7 @@
             "age": "castle-age",
             "building": ["archery-range"],
             "civ": ["!spanish"],
-            "tech": ["ri-crossbowman"],
-            "unit": ["none"]
+            "tech": ["ri-crossbowman"]
         }
     },{
         "name": "eagle-scout",
@@ -92,8 +177,7 @@
             "age": "feudal-age",
             "building": ["barracks"],
             "civ": ["aztec", "inca", "mayan"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "eagle-warrior",
@@ -108,8 +192,22 @@
             "age": "castle-age",
             "building": ["barracks"],
             "civ": ["aztec", "inca", "mayan"],
-            "tech": ["ri-eagle-warrior"],
-            "unit": ["none"]
+            "tech": ["ri-eagle-warrior"]
+        }
+    },{
+        "name": "elite-battle-elephant",
+        "description": "Stronger than Battle Elephant. Slow and heavy cavalry.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "none",
+        "example": [],
+        "related": ["battle-elephant"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["stable"],
+            "civ": ["burmese", "khmer", "malay", "vietnamese"],
+            "tech": ["ri-elite-battle-elephant"]
         }
     },{
         "name": "elite-eagle-warrior",
@@ -124,8 +222,22 @@
             "age": "imperial-age",
             "building": ["barracks"],
             "civ": ["aztec", "inca", "mayan"],
-            "tech": ["ri-elite-eagle-warrior"],
-            "unit": ["none"]
+            "tech": ["ri-elite-eagle-warrior"]
+        }
+    },{
+        "name": "elite-genitour",
+        "description": "Berber unique unit. Mounted Skirmisher.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "none",
+        "example": [],
+        "related": ["genitour"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["archery-range"],
+            "civ": ["berber"],
+            "tech": ["ri-elite-genitour"]
         }
     },{
         "name": "elite-huskarl",
@@ -140,8 +252,52 @@
             "age": "castle-age",
             "building": ["castle"],
             "civ": ["goth"],
-            "tech": ["ri-elite-huskarl"],
-            "unit": ["none"]
+            "tech": ["ri-elite-huskarl"]
+        }
+    },{
+        "name": "elite-skirmisher",
+        "description": "Stronger than Skirmisher. Ranged unit equipped with armor vs. archer attacks.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "skirmisher-line",
+        "example": [],
+        "related": ["skirmisher", "imperial-skirmisher"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["archery-range"],
+            "civ": ["!turk"],
+            "tech": ["ri-elite-skirmisher"]
+        }
+    },{
+        "name": "elite-tarkan",
+        "description": "Hun unique unit. Cavalry with attack bonus vs. buildings.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "none",
+        "example": [],
+        "related": ["tarkan"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["hun"],
+            "tech": ["ri-elite-tarkan"]
+        }
+    },{
+        "name": "genitour",
+        "description": "Berber unique unit. Mounted Skirmisher.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "none",
+        "example": [],
+        "related": ["elite-genitour"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["archery-range"],
+            "civ": ["berber"],
+            "tech": ["none"]
         }
     },{
         "name": "halberdier",
@@ -156,8 +312,52 @@
             "age": "imperial-age",
             "building": ["barracks"],
             "civ": ["!aztec", "!berber", "!italian", "!malian", "!mongol", "!saracen", "!turk", "!viking"],
-            "tech": ["ri-halberdier"],
-            "unit": ["none"]
+            "tech": ["ri-halberdier"]
+        }
+    },{
+        "name": "hand-cannoneer",
+        "description": "Powerful close attack; inaccurate at range.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "none",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["archery-range"],
+            "civ": ["!aztec", "!briton", "!burmese", "!celt", "!chinese", "!ethiopian", "!hun", "!inca", "!magyar", "!malay", "!mayan", "!mongol", "!slav", "!vietnamese", "!viking"],
+            "tech": ["ri-chemistry"]
+        }
+    },{
+        "name": "heavy-camel",
+        "description": "Stronger than Camel. Excels at killing other mounted units.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "camel-line",
+        "example": [],
+        "related": ["camel", "imperial-camel"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["stable"],
+            "civ": ["berber", "byzantine", "chinese", "ethiopian", "indian", "malian", "mongol", "persian", "saracen", "turk"],
+            "tech": ["ri-heavy-camel"]
+        }
+    },{
+        "name": "heavy-cavalry-archer",
+        "description": "Stronger than Cavalry Archer. Fast, with ranged attack.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "cavalry-archer-line",
+        "example": [],
+        "related": ["cavalry-archer"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["archery-range"],
+            "civ": ["!aztec", "!inca", "!italian", "!malay", "!mayan", "!portuguese", "!teuton", "!viking"],
+            "tech": ["ri-heavy-cavalry-archer"]
         }
     },{
         "name": "huskarl",
@@ -172,8 +372,82 @@
             "age": "castle-age",
             "building": ["castle"],
             "civ": ["goth"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
+        }
+    },{
+        "name": "hussar",
+        "description": "Stronger than Light Cavalry. Fast with extensive line of sight.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "scout-cavalry-line",
+        "example": [],
+        "related": ["scout-cavalry", "light-cavalry"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["stable"],
+            "civ": ["!aztec", "!briton", "!chinese", "!frank", "!inca", "!japanese", "!khmer", "!malay", "!malian", "!mayan", "!portuguese", "!teuton", "!viking", "!vietnamese"],
+            "tech": ["ri-hussar"]
+        }
+    },{
+        "name": "imperial-camel",
+        "description": "Stronger than Heavy Camel. Excels at killing other mounted units.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "camel-line",
+        "example": [],
+        "related": ["camel", "heavy-camel"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["stable"],
+            "civ": ["indian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "imperial-skirmisher",
+        "description": "Stronger than Skirmisher. Ranged unit equipped with armor vs. archer attacks.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "skirmisher-line",
+        "example": [],
+        "related": ["skirmisher", "elite-skirmisher"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["archery-range"],
+            "civ": ["vietnamese"],
+            "tech": ["ri-imperial-skirmisher"]
+        }
+    },{
+        "name": "knight",
+        "description": "Fast and heavy cavalry.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "knight-line",
+        "example": [],
+        "related": ["cavalier", "paladin"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["stable"],
+            "civ": ["!aztec", "!inca", "!indian", "!mayan"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "light-cavalry",
+        "description": "Stronger than Scout Cavalry. Fast with extensive line of sight.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "scout-cavalry-line",
+        "example": [],
+        "related": ["scout-cavalry", "hussar"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["stable"],
+            "civ": ["!aztec", "!inca", "!mayan", "!teuton"],
+            "tech": ["none"]
         }
     },{
         "name": "long-swordsman",
@@ -188,8 +462,7 @@
             "age": "castle-age",
             "building": ["barracks"],
             "civ": ["all"],
-            "tech": ["ri-long-swordsman"],
-            "unit": []
+            "tech": ["ri-long-swordsman"]
         }
     },{
         "name": "man-at-arms",
@@ -204,8 +477,7 @@
             "age": "feudal-age",
             "building": ["barracks"],
             "civ": ["all"],
-            "tech": ["ri-man-at-arms"],
-            "unit": []
+            "tech": ["ri-man-at-arms"]
         }
     },{
         "name": "militia",
@@ -220,8 +492,22 @@
             "age": "dark-age",
             "building": ["barracks"],
             "civ": ["all"],
-            "tech": [""],
-            "unit": ["none"]
+            "tech": ["none"]
+        }
+    },{
+        "name": "paladin",
+        "description": "Stronger than Cavalier. Fast and heavy cavalry.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "knight-line",
+        "example": [],
+        "related": ["knight", "cavalier"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["stable"],
+            "civ": ["byzantine", "celt", "frank", "hun", "magyar", "persian", "spanish", "teuton"],
+            "tech": ["ri-paladin"]
         }
     },{
         "name": "pikeman",
@@ -236,8 +522,67 @@
             "age": "castle-age",
             "building": ["barracks"],
             "civ": ["!turk"],
-            "tech": ["ri-pikeman"],
-            "unit": ["none"]
+            "tech": ["ri-pikeman"]
+        }
+    },{
+        "name": "scout-cavalry",
+        "description": "Fast with extensive line of sight.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "scout-cavalry-line",
+        "example": [],
+        "related": ["light-cavalry", "hussar"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["stable"],
+            "civ": ["!aztec", "!inca", "!mayan"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "seige-ram",
+        "description": "Stronger than Capped Ram. Slow, lumbering siege weapon used to reduce enemy towns to ruins.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "battering-ram-line",
+        "example": [],
+        "related": ["battering-ram", "capped-ram"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["siege-workshop"],
+            "civ": ["!berber", "!briton", "!burmese", "!frank", "!goth", "!indian", "!italian", "!japanese", "!korean", "!magyar", "!malay", "!malian", "!portuguese", "!teuton", "!vietnamese"],
+            "tech": ["ri-seige-ram"]
+        }
+    },{
+        "name": "skirmisher",
+        "description": "Ranged unit equipped with armor vs. archer attacks.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "skirmisher-line",
+        "example": [],
+        "related": ["elite-skirmisher", "imperial-skirmisher"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["archery-range"],
+            "civ": ["any"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "slinger",
+        "description": "Inca unique unit. Ranged unit with attack bonus vs. infantry.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "none",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["archery-range"],
+            "civ": ["inca"],
+            "tech": ["none"]
         }
     },{
         "name": "spearman",
@@ -252,8 +597,22 @@
             "age": "feudal-age",
             "building": ["barracks"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
+        }
+    },{
+        "name": "tarkan",
+        "description": "Hun unique unit. Cavalry with attack bonus vs. buildings.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "line:": "none",
+        "example": [],
+        "related": ["elite-tarkan"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["hun"],
+            "tech": ["none"]
         }
     },{
         "name": "two-handed-swordsman",
@@ -268,8 +627,22 @@
             "age": "imperial-age",
             "building": ["barracks"],
             "civ": ["!persian"],
-            "tech": ["ri-two-handed-swordsman"],
-            "unit": ["none"]
+            "tech": ["ri-two-handed-swordsman"]
+        }
+    },{
+        "name": "villager",
+        "description": "Gathers wood, food, stone, gold. Builds and repairs buildings. Also repairs ships, siege weapons.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "UnitID",
+        "wildcard_line:": "none",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "dark-age",
+            "building": ["town-center"],
+            "civ": ["all"],
+            "tech": ["none"]
         }
     },{
         "name": "",
@@ -283,9 +656,8 @@
         "requires": {
             "age": "",
             "building": [],
-            "civ": ["all"],
-            "tech": [""],
-            "unit": ["none"]
+            "civ": [],
+            "tech": []
         }
     }
 ]}
