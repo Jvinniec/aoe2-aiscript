@@ -185,32 +185,10 @@ function getCompletionsForCivs() {
 				let text = element.name.toUpperCase() + " civilization.";
 				
 				// Add unique unit & tech information
-				text += "\n\n### Unique:\n";
-				text += "- Unit(s): ";
-				element.unique.unit.forEach(unit => {
-					if (unit != element.unique.unit[0]) {
-						text += ", ";
-					}
-					text += unit;
-				});
-				text += "\n- Techs  : ";
-				element.unique.tech.forEach(tech => {
-					if (tech != element.unique.tech[0]) {
-						text += ", ";
-					}
-					text += tech;
-				});
-				text += "\n- Buildings: ";
-				element.unique.building.forEach(building => {
-					if (building != element.unique.building[0]) {
-						text += ", ";
-					}
-					if (building === "none") {
-						text += "*none*";
-					} else {
-						text += building;
-					}
-				});
+				text += "\n\n### Unique:";
+				text += "\n- **Unit(s):** " + getRequiresFormattedList(element.unique.unit);
+				text += "\n- **Techs:** "   + getRequiresFormattedList(element.unique.tech);
+				text += "\n- **Buildings:** " + getRequiresFormattedList(element.unique.building);
 				commandCompletion1.documentation = new MarkdownString(text);
 
 				const commandCompletion2 = new CompletionItem(element.name.toUpperCase()+"-CIV");
