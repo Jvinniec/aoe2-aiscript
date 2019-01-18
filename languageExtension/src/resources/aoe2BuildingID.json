@@ -11,8 +11,7 @@
             "age": "feudal-age",
             "building": ["barracks"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "barracks",
@@ -26,8 +25,7 @@
             "age": "dark-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "blacksmith",
@@ -41,8 +39,7 @@
             "age": "feudal-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "bombard-tower",
@@ -56,8 +53,7 @@
             "age": "imperial-age",
             "building": ["none"],
             "civ": ["byzantine", "chinese", "italian", "korean", "malay", "portuguese", "spanish", "teutons", "turk", "vietnamese"],
-            "tech": ["ri-bombard-tower"],
-            "unit": ["none"]
+            "tech": ["ri-bombard-tower"]
         }
     },{
         "name": "castle",
@@ -71,8 +67,7 @@
             "age": "castle-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "dock",
@@ -86,8 +81,7 @@
             "age": "dark-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "farm",
@@ -101,8 +95,7 @@
             "age": "dark-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "feitoria",
@@ -116,8 +109,7 @@
             "age": "imperial-age",
             "building": ["none"],
             "civ": ["portuguese"],
-            "tech": ["imperial-age"],
-            "unit": ["none"]
+            "tech": ["imperial-age"]
         }
     },{
         "name": "fish-trap",
@@ -131,8 +123,7 @@
             "age": "feudal-age",
             "building": ["dock"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["fishing-ship"]
+            "tech": ["none"]
         }
     },{
         "name": "fortified-wall",
@@ -146,8 +137,7 @@
             "age": "castle-age",
             "building": ["none"],
             "civ": ["!goth", "!hun", "!agyar", "!malay", "!persian"],
-            "tech": ["ri-fortified-wall"],
-            "unit": ["none"]
+            "tech": ["ri-fortified-wall"]
         }
     },{
         "name": "gate",
@@ -159,10 +149,9 @@
         "related": ["none"],
         "requires": {
             "age": "feudal-age",
-            "building": ["dock"],
+            "building": ["none"],
             "civ": ["!goth"],
-            "tech": ["none"],
-            "unit": ["fishing-ship"]
+            "tech": ["none"]
         } 
     },{
         "name": "guard-tower",
@@ -176,8 +165,7 @@
             "age": "castle-age",
             "building": ["none"],
             "civ": ["!goth", "!hun"],
-            "tech": ["ri-guard-tower"],
-            "unit": ["none"]
+            "tech": ["ri-guard-tower"]
         }
     },{
         "name": "harbor",
@@ -191,8 +179,7 @@
             "age": "castle-age",
             "building": ["none"],
             "civ": ["malay"],
-            "tech": ["ri-thalassocracy"],
-            "unit": ["none"]
+            "tech": ["ri-thalassocracy"]
         }
     },{
         "name": "house",
@@ -206,8 +193,7 @@
             "age": "dark-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "keep",
@@ -221,8 +207,7 @@
             "age": "imperial-age",
             "building": ["none"],
             "civ": ["!aztec", "!berber", "!franc", "!goth", "!hun", "!indian", "!magyar", "!mongol", "!persian","!slav","!viking"],
-            "tech": ["ri-keep"],
-            "unit": ["none"]
+            "tech": ["ri-keep"]
         }
     },{
         "name": "lumber-camp",
@@ -236,8 +221,7 @@
             "age": "dark-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "market",
@@ -251,8 +235,7 @@
             "age": "feudal-age",
             "building": ["mill"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "mill",
@@ -266,8 +249,7 @@
             "age": "dark-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "mining-camp",
@@ -281,8 +263,7 @@
             "age": "dark-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "monastery",
@@ -296,8 +277,7 @@
             "age": "castle-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "outpost",
@@ -311,8 +291,7 @@
             "age": "dark-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "palisade-gate",
@@ -326,8 +305,7 @@
             "age": "dark-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "palisade-wall",
@@ -341,8 +319,7 @@
             "age": "dark-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "siege-workshop",
@@ -356,8 +333,7 @@
             "age": "castle-age",
             "building": ["blacksmith"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "stable",
@@ -371,8 +347,7 @@
             "age": "feudal-age",
             "building": ["barracks"],
             "civ": ["!aztec", "!inca", "!mayan"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "stone-wall",
@@ -386,8 +361,7 @@
             "age": "feudal-age",
             "building": ["none"],
             "civ": ["!goth"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "town-center",
@@ -401,8 +375,7 @@
             "age": "castle-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "university",
@@ -416,8 +389,7 @@
             "age": "castle-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "watch-tower",
@@ -431,8 +403,7 @@
             "age": "feudal-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     },{
         "name": "wonder",
@@ -446,8 +417,7 @@
             "age": "imperial-age",
             "building": ["none"],
             "civ": ["all"],
-            "tech": ["none"],
-            "unit": ["none"]
+            "tech": ["none"]
         }
     }
 ]}

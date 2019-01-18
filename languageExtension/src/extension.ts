@@ -225,7 +225,6 @@ interface AiScriptRequires {
 	building: Array<string>;
 	civ: Array<string>;
 	tech: Array<string>;
-	unit: Array<string>;
 }
 
 function getRequiresText(requires: AiScriptRequires) {
@@ -235,7 +234,6 @@ function getRequiresText(requires: AiScriptRequires) {
 	reqText += "\n- **Building:** " + getRequiresFormattedList(requires.building);
 	reqText += "\n- **Techs:** " + getRequiresFormattedList(requires.tech);
 	reqText += "\n- **Civ:** " + getRequiresFormattedList(requires.civ);
-	reqText += "\n- **Units:** " + getRequiresFormattedList(requires.unit);
 
 	return reqText;
 }
