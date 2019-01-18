@@ -29,6 +29,7 @@ import {
 import * as aoe2commands  from './resources/aoe2AiCommands.json';
 import * as aoe2buildings from './resources/aoe2BuildingID.json';
 import * as aoe2civs      from './resources/aoe2CivID.json';
+import * as aoe2units     from './resources/aoe2UnitID.json';
 
 let client: LanguageClient;
 
@@ -83,13 +84,14 @@ export function activate(context: ExtensionContext) {
 		let provider1 = getCompletionsForCommands();
 		let provider2 = getCompletionsForBuilding();
 		let provider3 = getCompletionsForCivs();
+		let provider4 = getCompletionsForUnits();
 
 		/* Additional completions still to be implemented
 		let provider3 = getCompletionsForUnit();
 		let provider4 = getCompletionsForTech();
 		let provider5 = getCompletionsForStrategicNumbers();
 		*/
-		context.subscriptions.push(provider1, provider2);
+		context.subscriptions.push(provider1, provider2, provider3, provider4);
 	}	
 }
 
@@ -205,6 +207,34 @@ function getCompletionsForCivs() {
 	
 	return provider;
 }
+
+
+// Defines completion items for buildings
+function getCompletionsForUnits() {
+
+	let provider = languages.registerCompletionItemProvider('aiscript', {
+        provideCompletionItems(document: TextDocument, position: Position, token: CancellationToken, context: CompletionContext) {
+			let items = [];
+			aoe2units.unit.forEach(element => {
+				const commandCompletion = new CompletionItem(element.name);
+				commandCompletion.kind = CompletionItemKind.Unit;
+				commandCompletion.insertText = element.name;
+				
+				// Construct the unique text of the civilization
+				let text = element.description;
+				text    += getRequiresText(element.requires);
+				commandCompletion.documentation = new MarkdownString(text);
+
+				items.push(commandCompletion);
+			});
+
+            return items;
+        }
+	});
+	
+	return provider;
+}
+
 
 function getExampleText(example: Array<{title: string, data: string}>) {
 	let exText = "";
