@@ -17,7 +17,10 @@ import {
 	TextDocumentPositionParams,
 	Hover
 } from 'vscode-languageserver';
-//import {aoe2commands} from "./aoe2AiCommands";
+
+import {
+	MarkdownString 
+} from 'vscode';
 
 import * as aoe2commands from './resources/aoe2AiCommands.json';
 import * as aoe2buildings from './resources/aoe2BuildingID.json';
@@ -53,7 +56,9 @@ connection.onInitialize((params: InitializeParams) => {
 			// Tell the client that the server supports code completion
 			completionProvider: {
 				resolveProvider: false
-			}
+			},
+			// Tell the client we support hover text
+			hoverProvider: false
 		}
 	};
 
@@ -160,7 +165,7 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	let diagnostics: Diagnostic[] = [];
 
 	/* Skip if experimental features are not requested */
-	if (!settings.enableExperimental) {
+	if (true) {
 		connection.sendDiagnostics({ uri: textDocument.uri, diagnostics });
 		return;
 	}
@@ -275,6 +280,17 @@ connection.onCompletionResolve(
 				(item.documentation = 'JavaScript documentation');
 		}
 		return item;
+	}
+);
+
+connection.onHover(
+	(_textDocumentPosition: TextDocumentPositionParams): Hover => {
+		return {
+			contents: {
+				language: "aiscript",
+				value: "### HOVER!"
+			}
+		}
 	}
 );
 
