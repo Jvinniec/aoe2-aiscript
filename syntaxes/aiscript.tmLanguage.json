@@ -17,7 +17,7 @@
 			"patterns": [
 				{
 					"name": "constant.numeric.aiscript",
-					"match": "(?<!\\w)-?\\d+(?!-)"
+					"match": "\\s-?\\d+(?!-)"
 				},{
 					"name": "keyword.control.aiscript",
 					"match": "\\b(defconst|disable-self|do-nothing|#end-if)\\b"
