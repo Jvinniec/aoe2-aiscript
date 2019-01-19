@@ -25,11 +25,10 @@ Snippets are also provided to quickly create new rules.
 These are features that are considered good enough to be tested by people, but may still need some tweaking. 
 
 Current experimental features:
-- Auto completion suggestions (so far only user patch commands, building names and civilizations)
-- Green warning squiggles for unknown *actions* or *facts* (still very wonky)
+- Auto completion suggestions
 
-By default these features are turned off to ensure the average person has a stable experience with the extension.
-To turn them on, go the settings (`Code`->`Preferences`->`Settings`), search for *'aoe2 enable experimental'* and set it to `true`.
+By default experimental features are turned off to ensure the average person has a stable experience with the extension.
+To turn them on, go to settings (`Code`->`Preferences`->`Settings`), search for *'aoe2 enable experimental'* and set to `true`. You may need to reload your VSCode instance for some features to be enabled.
 
 ## Why ANOTHER code editor?
 
@@ -48,9 +47,7 @@ To be clear, the original author of this code has never used or attempted to use
 
 ## Known Issues
 
-This is an alpha version after all, so there are going to be issues:
-
-- Numbers are still highlighted even if they appear at the end of a variable, but only if also proceded by a dash.
+This is an alpha version after all, so there are going to be issues. If you come across a bug using the extension, please submit an issue to the github repository.
 
 ## Contributing
 Feel free to submit issues to the github repository, and I will try to look into them when I have time.
