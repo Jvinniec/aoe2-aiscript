@@ -15,12 +15,9 @@ import {
 	CompletionItem,
 	CompletionItemKind,
 	TextDocumentPositionParams,
-	Hover
+	Hover,
+	MarkupKind
 } from 'vscode-languageserver';
-
-import {
-	MarkdownString 
-} from 'vscode';
 
 import * as aoe2commands from './resources/aoe2AiCommands.json';
 import * as aoe2buildings from './resources/aoe2BuildingID.json';
@@ -61,7 +58,6 @@ connection.onInitialize((params: InitializeParams) => {
 			hoverProvider: false
 		}
 	};
-
 });
 
 connection.onInitialized(() => {
@@ -285,10 +281,20 @@ connection.onCompletionResolve(
 
 connection.onHover(
 	(_textDocumentPosition: TextDocumentPositionParams): Hover => {
+		// Need to get the word that we're hovering over
+		let hoverWord = "**Line:** " + _textDocumentPosition.position.line +"\n"
+						"**Char:** " + _textDocumentPosition.position.character;
+
+		// Get the line text
+
+		// Split line on known delimiters
+
+		// Find the "character" at this position
+
 		return {
 			contents: {
-				language: "aiscript",
-				value: "### HOVER!"
+				kind: MarkupKind.Markdown,
+				value: hoverWord
 			}
 		}
 	}
