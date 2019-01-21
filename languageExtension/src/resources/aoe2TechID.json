@@ -1,62 +1,2355 @@
-{ "tech": [
+{ "TechID": [
     {
+        "name": "ri-",
+        "description": "",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": [""],
+        "requires": {
+            "age": "",
+            "building": [""],
+            "civ": [""],
+            "tech": [""]
+        }
+    },{
+        "name": "ri-anarchy",
+        "description": "Huskarls can be trained at Barracks",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-perfusion"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["goth"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-andean-sling",
+        "description": "Skirmishers and Slingers minimum range removed",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-couriers"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["inca"],
+            "tech": ["none"]
+        }
+    },{
         "name": "ri-arbalest",
-        "description": "",
+        "description": "Upgrades Crossbowman to Arbalest",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "location": "archery-range",
         "section": "TechID",
-        "example": [ ],
-        "related": [ ]
-    },
-    {
-        "name": "ri-crossbow",
-        "description": "",
+        "example": [],
+        "related": ["ri-crossbowman"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["archery-range"],
+            "civ": ["!berber", "!burmese", "!celt", "!frank", "!goth", "!hun", "!indian", "!persian", "!slav", "!spanish", "!teuton", "!turk"],
+            "tech": ["ri-crossbowman"]
+        }
+    },{
+        "name": "ri-architecture",
+        "description": "Buildings +10% HP, +1 armor, +1 pierce armor, +3 building armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "location": "archery-range",
         "section": "TechID",
-        "example": [ ],
-        "related": [ ]
-    },
-    {
-        "name": "ri-elite-skirmisher",
-        "description": "",
+        "example": [],
+        "related": ["ri-masonry"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["university"],
+            "civ": ["!aztec", "!berbers", "!byzantine", "!celt", "!hun", "!inca", "!indian", "!japanese", "!magyar", "!malay", "!mongol", "!saracen", "!slav", "!teuton", "!vietnamese"],
+            "tech": ["ri-masonry"]
+        }
+    },{
+        "name": "ri-arquebus",
+        "description": "Gunpowder units fire more accurately at moving targets. Increases projectile speed of Bombard Cannons and Bombard Towers by +0.2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "location": "archery-range",
         "section": "TechID",
-        "example": [ ],
-        "related": [ ]
-    },
-    {
-        "name": "ri-hand-cannon",
-        "description": "",
+        "example": [],
+        "related": ["ri-carrack"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["portuguese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-arrowslits",
+        "description": "Watch Tower/Guard Tower/Keep +1/+2/+3 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "location": "archery-range",
         "section": "TechID",
-        "example": [ ],
-        "related": [ ]
-    },
-    {
-        "name": "ri-heavy-cavalry-archer",
-        "description": "",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["university"],
+            "civ": ["!burmese", "!ethiopian", "!goth", "!hun", "!indian", "!khmer", "!magyar", "!malay", "!malian", "!mayan", "!mongol", "!persian", "!portuguese", "!slav"],
+            "tech": [""]
+        }
+    },{
+        "name": "ri-arson",
+        "description": "Infantry +2 attack vs standard buildings",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "location": "archery-range",
         "section": "TechID",
-        "example": [ ],
-        "related": [ ]
-    },
-    {
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["barracks"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-artillery",
+        "description": "Bombard Tower, Bombard Cannon, and Cannon Galleon range +2",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-sipahi"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["turk"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-atheism",
+        "description": "Wonder and Relic victories take +100 years -50% Spies/Treason cost",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-marauders"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["hun"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-atlatl",
+        "description": "Skirmishers +1 attack and range",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-garland-wars"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["aztec"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-attonement",
+        "description": "Monks and Missionaries can convert enemy Monks and Missionaries",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-redemption"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["monastery"],
+            "civ": ["!briton", "!celt", "!frank", "!goth", "!inca", "!indian", "!khmer", "!korean", "!magyar", "!persian"],
+            "tech": [""]
+        }
+    },{
+        "name": "ri-ballistics",
+        "description": "Improves missile unit's accuracy at moving targets.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["university"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-banking",
+        "description": "Tributes are free",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-coinage"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["market"],
+            "civ": ["all"],
+            "tech": ["ri-coinage"]
+        }
+    },{
+        "name": "ri-bearded-axe",
+        "description": "Throwing Axeman range +1",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-chivalry"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["frank"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-berserkergang",
+        "description": "Berserks regenerate faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-chieftains"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["viking"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-blast-furnace",
+        "description": "Infantry and cavalry +2 attack",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-forging", "ri-iron-casting"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["blacksmith"],
+            "civ": ["!byzantine", "!korean", "!malian", "!vietnamese"],
+            "tech": ["ri-iron-casting"]
+        }
+    },{
+        "name": "ri-block-printing",
+        "description": "Monk and Missionary conversion range +3 and line of sight +3",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["monastery"],
+            "civ": ["!berber", "!celt", "!chinese", "!ethiopian", "!goth", "!hun", "!khmer", "!mongol", "!turk"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-bloodlines",
+        "description": "Mounted units +20 HP",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["stable"],
+            "civ": ["!aztec", "!briton", "!byzantine", "!celt", "!ethiopian", "!frank", "!inca", "!korean", "!malay", "!mayan", "!viking"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-bodkin-arrow",
+        "description": "Archers, Castles, Town Centers, Towers, Galleys, and Longboats +1 attack, +1 range",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-fletching", "ri-bracer"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["blacksmith"],
+            "civ": ["all"],
+            "tech": ["ri-fletching"]
+        }
+    },{
+        "name": "ri-boiling-oil",
+        "description": "Castles +9 bonus damage against rams",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-mahouts"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["persian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-bombard-tower",
+        "description": "Allows creation of Bombard Towers",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-chemistry"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["university"],
+            "civ": ["byzantine", "chinese", "italian", "korean", "malay", "portuguese", "spanish", "teuton", "turk", "vietnamese"],
+            "tech": ["ri-chemistry"]
+        }
+    },{
+        "name": "ri-bow-saw",
+        "description": "Villagers gather wood 20% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-double-bit-axe", "ri-two-man-saw"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["lumber-camp"],
+            "civ": ["all"],
+            "tech": ["ri-double-bit-axe"]
+        }
+    },{
+        "name": "ri-bracer",
+        "description": "Archers, Castles, Town Centers, Towers, Galleys, and Longboats +1 attack, +1 range",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-fletching", "ri-bodkin-arrow"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["blacksmith"],
+            "civ": ["!celt", "!frank", "!malian", "!persian", "!slav", "!teuton"],
+            "tech": ["ri-bodkin-arrow"]
+        }
+    },{
+        "name": "ri-hoardings",
+        "description": "Castles +21% HP",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["!aztec", "!burmese", "!chinese", "!ethiopian", "!goth", "!hun", "!japanese", "!korean", "!malay", "!portuguese"],
+            "tech": [""]
+        }
+    },{
+        "name": "ri-howdah",
+        "description": "Battle Elephants +1/+1 armor",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-manipur-cavalry"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["burmese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-cannon-galleon",
+        "description": "Allows creation of Cannon Galleons",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-elite-cannon-galleon"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["!aztec", "!hun", "!inca", "!mayan"],
+            "tech": ["ri-chemistry"]
+        }
+    },{
+        "name": "ri-caravan",
+        "description": "Trade Carts and Trade Cogs move 50% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-cartography"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["market"],
+            "civ": ["all"],
+            "tech": ["ri-cartography"]
+        }
+    },{
+        "name": "ri-careening",
+        "description": "Ship armor +1, Transport Ship capacity +5",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-dry-dock"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-carrack",
+        "description": "Ship armor +1/+1",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-arquebus"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["portuguese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-cartography",
+        "description": "See allies' Line of Sight",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-caravan"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["market"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-cavalier",
+        "description": "Upgrades Knight to Cavalier",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-paladin"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["stable"],
+            "civ": ["!aztec", "!inca", "!indian", "!mayan", "!saracen"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-chain-barding-armor",
+        "description": "Cavalry armor +1/+1",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-scale-barding-armor", "ri-plate-barding-armor"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["blacksmith"],
+            "civ": ["!aztec", "!inca", "!malay", "!mayan"],
+            "tech": ["ri-scale-barding-armor"]
+        }
+    },{
+        "name": "ri-chain-mail-armor",
+        "description": "Infantry armor +1/+1",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-scale-mail-armor", "ri-plate-mail-armor"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["blacksmith"],
+            "civ": ["all"],
+            "tech": ["ri-scale-mail-armor"]
+        }
+    },{
         "name": "ri-champion",
-        "description": "",
+        "description": "Upgrads Two Handed Swordsman to Champion",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "location": "barracks",
         "section": "TechID",
-        "example": [ ],
-        "related": [ ]
+        "example": [],
+        "related": ["ri-man-at-arms", "ri-long-swordsman", "ri-two-handed-swordsman"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["barracks"],
+            "civ": ["!ethiopian", "!hun", "!khmer", "!malay", "!mayan", "!persian"],
+            "tech": ["ri-two-handed-swordsman"]
+        }
+    },{
+        "name": "ri-chatras",
+        "description": "Battle Elephants +50 HP",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-paper-money"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["vietnamese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-chemistry",
+        "description": "Allows creation of gunpowder units; +1 attack for siege units, archers, and defensive structures",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-bombard-tower"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["university"],
+            "civ": ["!aztec", "!hun", "!inca", "!mayan"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-chieftains",
+        "description": "Infantry +5 attack vs cavalry, +4 vs camels",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-berserkergang"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["viking"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-chivalry",
+        "description": "Stables work 40% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-bearded-axe"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["frank"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-coinage",
+        "description": "Tribute fee reduced to 20%",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-banking"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["market"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-conscription",
+        "description": "Barracks, Archery Range, Stable, and Castle units train 33% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-couriers",
+        "description": "Kamayuks, Slingers, and Eagle Scouts +1/+2 armor",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-andean-sling"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["inca"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-crenellations",
+        "description": "Castle range +3, garrisoned infantry fires arrows",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-ironclad"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["teuton"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-crop-rotation",
+        "description": "Farms provide +175 food before they need to be reseeded",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-horse-collar", "ri-heavy-plow"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["mill"],
+            "civ": ["!briton", "!celt", "!chinese", "!ethiopian", "!hun", "!indian", "!japanese", "!korean", "!mongol", "!saracen", "!spanish", "!turk"],
+            "tech": ["ri-heavy-plow"]
+        }
+    },{
+        "name": "ri-crossbowman",
+        "description": "Upgrades Archer to Crossbowman",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-arbalest"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["archery-range"],
+            "civ": ["!spanish"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-demolition-ship",
+        "description": "Upgrades Demolition Raft to Demolition Ship",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-heavy-demolition-Ship"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["dock"],
+            "civ": ["!korean"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-double-bit-axe",
+        "description": "Villagers gather wood 20% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-bow-saw", "ri-two-man-saw"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["lumber-camp"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-double-crossbow",
+        "description": "Ballista Elephants and Scorpions fire two projectiles",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-tusk-swords"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["khmer"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-drill",
+        "description": "Siege Workshop units movement speed +50%",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-nomads"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["mongol"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-druzhina",
+        "description": "Infantry deals trample damage",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-orthodoxy"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["slav"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-dry-dock",
+        "description": "Ship speed +15%, Transport Ship capacity +10",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-careening"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["dock"],
+            "civ": ["!goth", "!mongol", "!teuton"],
+            "tech": ["ri-careening"]
+        }
+    },{
+        "name": "ri-eagle-warrior",
+        "description": "Upgrades Eagle Scout to Eagle Warrior",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-elite-eagle-warrior"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["barracks"],
+            "civ": ["aztec", "inca", "mayan"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-el-dorado",
+        "description": "Eagle Warrior HP +40",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-obsidian-arrows"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["mayan"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-battle-elephant",
+        "description": "Upgrades Battle Elephant to Elite Battle Elephant",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["stable"],
+            "civ": ["burmese", "khmer", "malay", "vietnamese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-cannon-galleon",
+        "description": "Upgrades Cannon Galleons to Elite Cannon Galleons",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-cannon-galleon"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["berber", "burmese", "byzantine", "indian", "italian", "japanese", "khmer", "malay", "persian", "portuguese", "saracen", "spanish", "turk", "vietnamese", "viking"],
+            "tech": ["ri-cannon-galleon"]
+        }
+    },{
+        "name": "ri-elite-caravel",
+        "description": "Upgrades Caravel to Elite Caravel",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["portuguese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-eagle-warrior",
+        "description": "Upgrades Eagle Warrior to Elite Eagle Warrior",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-eagle-warrior"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["barracks"],
+            "civ": ["aztec", "inca", "mayan"],
+            "tech": ["ri-eagle-warrior"]
+        }
+    },{
+        "name": "ri-elite-genitour",
+        "description": "Upgrades Genitour to Elite Genitour",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["archery-range"],
+            "civ": ["berber"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-longboat",
+        "description": "Upgrades Longboat to Elite Longboat",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["viking"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-skirmisher",
+        "description": "Upgrades Skirmisher to Elite Skirmisher",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-imperial-skirmisher"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["archery-range"],
+            "civ": ["!turk"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-turtleship",
+        "description": "Upgrades Turtleship to Elite Turtleship",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["korean"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-faith",
+        "description": "Increases conversion resistance",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-heresy"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["monastery"],
+            "civ": ["!khmer", "!magyar", "!slav"],
+            "tech": [""]
+        }
+    },{
+        "name": "ri-farimba",
+        "description": "Stable units +5 attack",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-tigui"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["malian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-fast-fire-ship",
+        "description": "Upgrades Fire Ship to Fast Fire Ship",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-war-galley"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["!burmese", "!celt", "!chinese", "!ethiopian", "!hun", "!indian", "!malian", "!portuguese", "!saracen", "!turk", "!vietnamese", "!viking"],
+            "tech": ["ri-war-galley"]
+        }
+    },{
+        "name": "ri-fervor",
+        "description": "Monk and Missionary speed +15%",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["monastery"],
+            "civ": ["!inca", "!malay", "!vietnamese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-fletching",
+        "description": "Archers, Castles, Town Centers, Towers, Galleys, and Longboats +1 attack and range",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-bodkin-arrow", "ri-bracer"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["blacksmith"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-forced-levy",
+        "description": "Militia line units cost no gold",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-thalassocracy"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["malay"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-forging",
+        "description": "Infantry and cavalry +1 attack",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-iron-casting", "ri-blast-furnace"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["blacksmith"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-fortified-wall",
+        "description": "Upgrades your Stone Walls to Fortified Walls. Also increases hit points of gates.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["university"],
+            "civ": ["!goth", "!hun", "!magyar", "!malay", "!persian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-furor-celtica",
+        "description": "Siege Workshop units +40% HP",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-stronghold"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["celt"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-galleon",
+        "description": "Upgrades War Galley to Galleon",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-war-galley"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["!aztec"],
+            "tech": ["ri-war-galley"]
+        }
+    },{
+        "name": "ri-garland-wars",
+        "description": "Infantry attack +4",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-atlatl"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["aztec"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-gillnets",
+        "description": "Fishing Ships work +25% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["dock"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-gold-mining",
+        "description": "Villagers gather gold 15% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-gold-shaft-mining"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["mining-camp"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-gold-shaft-mining",
+        "description": "Villagers gather gold 15% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-gold-mining"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["mining-camp"],
+            "civ": ["!goth", "!italian", "!mayan", "!portuguese", "!spanish", "!teuton", "!vietnamese"],
+            "tech": ["ri-gold-mining"]
+        }
+    },{
+        "name": "ri-great-wall",
+        "description": "Walls and towers +30% hit points",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-rocketry"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["chinese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-greek-fire",
+        "description": "Fire Ships +1 range",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-logistica"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["byzantine"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-guard-tower",
+        "description": "Upgrads Watch Towers to Guard Towers",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-keep", "ri-bombard-tower"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["university"],
+            "civ": ["!goth", "!hun"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-guilds",
+        "description": "Trading fee reduced to 15%",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["market"],
+            "civ": ["!aztec", "!chinese", "!frank", "!japanese", "!khmer", "!magyar", "!mongol", "!saracen", "!slav", "!viking"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-halberdier",
+        "description": "Upgrades Pikeman to Halberdier",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-pikeman"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["barracks"],
+            "civ": ["!aztec", "!berber", "!italian", "!malian", "!mongol", "!saracen", "!turk", "!viking"],
+            "tech": ["ri-pikeman"]
+        }
+    },{
+        "name": "ri-hand-cart",
+        "description": "Villagers carry 50% more and move 10% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-wheelbarrow"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["town-center"],
+            "civ": ["all"],
+            "tech": ["ri-wheelbarrow"]
+        }
+    },{
+        "name": "ri-heated-shot",
+        "description": "Towers +125%, Castles and Harbors +4 attack vs ships",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["university"],
+            "civ": ["!byzantine", "!frank", "!hun", "!japanese", "!mongol", "!saracen", "!slav", "!spanish"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-heavy-camel",
+        "description": "Upgrades Camel to Heavy Camel",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-imperial-camel"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["stable"],
+            "civ": ["berber", "byzantine", "chinese", "ethiopian", "indian", "malian", "mongol", "persian", "saracen", "turk"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-heavy-cavalry-archer",
+        "description": "Upgrades Cavalry Archer to Heavy Cavalry Archer",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["archery-range"],
+            "civ": ["!aztec", "!inca", "!italian", "!malay", "!mayan", "!portuguese", "!teuton", "!viking"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-heavy-demolition-ship",
+        "description": "Upgrades Demolition Raft to Demolition Ship",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-demolition-Ship"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["!aztec", "!burmese", "!ethiopian", "!inca", "!italian", "!japanese", "!khmer", "!korean", "!magyar", "!malay", "!slav"],
+            "tech": ["ri-demolition-ship"]
+        }
+    },{
+        "name": "ri-heavy-plow",
+        "description": "Farms provide +125 food, Villagers carry +1 food",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-horse-collar", "ri-crop-rotation"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["mill"],
+            "civ": ["all"],
+            "tech": ["ri-horse-collar"]
+        }
+    },{
+        "name": "ri-herbal-medicine",
+        "description": "Quadruples the healing rate of units garrisoned inside buildings",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["monastery"],
+            "civ": ["!byzantine", "!hun", "!teuton", "!turk", "!viking"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-heresy",
+        "description": "Converted units/buildings die/are destroyed instead of taking the enemy's color",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-faith"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["monastery"],
+            "civ": ["!briton", "!burmese", "!chinese", "!goth", "!indian", "!italian", "!japanese", "!khmer", "!korean", "!persian", "!slav", "!vietnamese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-horse-collar",
+        "description": "Farms provide +75 food before they need to be reseeded",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-heavy-plow", "ri-crop-rotation"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["mill"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-husbandry",
+        "description": "Cavalry speed +10%",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["stable"],
+            "civ": ["!aztec", "!inca", "!mayan", "!teuton", "!vietnamese", "!viking"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-hussar",
+        "description": "Upgrades light Cavalry to Hussar",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-light-cavalry"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["stable"],
+            "civ": ["!aztec", "!briton", "!chinese", "!frank", "!inca", "!japanese", "!khmer", "!malay", "!malian", "!mayan", "!portuguese", "!teuton", "!vietnamese", "!viking"],
+            "tech": ["ri-light-cavalry"]
+        }
+    },{
+        "name": "ri-illumination",
+        "description": "Monks and Missionaries regain their faith faster after a successful conversion",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["monastery"],
+            "civ": ["!celt", "!korean", "!malian", "!mayan", "!mongol", "!persian", "!portuguese", "!turk", "!viking"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-imperial-camel",
+        "description": "Upgrades Heavy Camel to Imperial Camel",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-heavy-camel"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["stable"],
+            "civ": ["indian"],
+            "tech": ["ri-heavy-camel"]
+        }
+    },{
+        "name": "ri-imperial-skirmisher",
+        "description": "Upgrades Elite Skirmisher to Imperial Skirmisher",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-elite-skirmisher"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["archery-range"],
+            "civ": ["vietnamese"],
+            "tech": ["ri-elite-skirmisher"]
+        }
+    },{
+        "name": "ri-inquisition",
+        "description": "Monks convert faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-supremacy"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["spanish"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-iron-casting",
+        "description": "Infantry and cavalry +1 attack",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-forging", "ri-blast-furnace"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["blacksmith"],
+            "civ": ["all"],
+            "tech": ["ri-forging"]
+        }
+    },{
+        "name": "ri-ironclad",
+        "description": "Siege weapon melee armor +4",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-crenellations"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["teuton"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-kasbah",
+        "description": "Team Castles work +25% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-maghrabi-camels"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["berber"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-kataparuto",
+        "description": "Trebuchets pack/unpack and fire faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-yasama"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["japanese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-keep",
+        "description": "Upgrads Guard Towers to Keeps",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-guard-tower", "ri-bombard-tower"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["university"],
+            "civ": ["!aztec", "!berber", "!frank", "!goth", "!hun", "!indian", "!magyar", "!mongol", "!persian","!slav","!viking"],
+            "tech": ["ri-guard-tower"]
+        }
+    },{
+        "name": "ri-leather-archer-armor",
+        "description": "Archer armor +1/+1",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-padded-archer-armor", "ri-ring-archer-armor"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["blacksmith"],
+            "civ": ["!burmese"],
+            "tech": ["ri-padded-archer-armor"]
+        }
+    },{
+        "name": "ri-light-cavalry",
+        "description": "Upgrades Scout Cavalry to Light Cavalry",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-hussar"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["stable"],
+            "civ": ["!aztec", "!inca", "!mayan", "!teuton"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-logistica",
+        "description": "Cataphracts cause trample damage, +6 attack vs infantry",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-greek-fire"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["byzantine"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-long-swordsman",
+        "description": "Upgrads Man-at-Arms to Long Swordsman",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-man-at-arms", "ri-two-handed-swordsman", "ri-champion"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["barracks"],
+            "civ": ["all"],
+            "tech": ["ri-man-at-arms"]
+        }
+    },{
+        "name": "ri-loom",
+        "description": "Villagers +15 HP, +1/+2 armor",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "dark-age",
+            "building": ["town-center"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-madrasah",
+        "description": "Monks return 33 gold when killed",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-zealotry"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["saracen"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-maghrabi-camels",
+        "description": "Camel troops regenerate",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-kasbah"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["berber"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-mahouts",
+        "description": "War Elephant speed +30%",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-boiling-oil"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["persian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-man-at-arms",
+        "description": "Upgrads Milita to Man-at-Arms",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-long-swordsman", "ri-two-handed-swordsman", "ri-champion"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["barracks"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-manipur-cavalry",
+        "description": "Cavalry and Arambai +3 attack vs buildings and standard buildings",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-howdah"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["burmese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-marauders",
+        "description": "Tarkans can be trained at the Stable",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-atheism"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["hun"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-masonry",
+        "description": "Buildings +10% HP, +1 armor, +1 pierce armor, +3 building armor",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-architecture"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["university"],
+            "civ": ["!aztec", "!byzantine", "!vietnamese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-mercenaries",
+        "description": "Magyar Huszars cost no gold",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-recurve-bow"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["magyar"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-murder-holes",
+        "description": "Removes towers and Castles minimum range",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["university"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-nomads",
+        "description": "Houses do not lose population when destroyed",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-drill"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["mongol"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-obsidian-arrows",
+        "description": "Archer line has +6 attack vs standard buildings and stone defense",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-el-dorado"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["mayan"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-orthodoxy",
+        "description": "Monks +3/+3 armor",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-druzhina"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["slav"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-padded-archer-armor",
+        "description": "Archer armor +1/+1",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-leather-archer-armor", "ri-ring-archer-armor"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["blacksmith"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-paladin",
+        "description": "Upgrades Cavalier to Paladin",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-cavalier"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["stable"],
+            "civ": ["!aztec", "!inca", "!indian", "!mayan", "!saracen"],
+            "tech": ["ri-cavalier"]
+        }
+    },{
+        "name": "ri-panokseon",
+        "description": "Turtle Ships move 15% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-shinkichon"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["korean"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-paper-money",
+        "description": "The player and all allies receive 500 gold",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-chatras"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["vietnamese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-parthian-tactics",
+        "description": "Mounted archer armor +1/+2, attack bonus of +2 or +4 against Pikemen",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["archery-range"],
+            "civ": ["burmese", "hun", "indian", "japanese", "khmer", "magyar", "mongol", "persian", "saracen", "turk"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-pavise",
+        "description": "Foot archers +1/+1 armor",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-silk-road"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["italian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-perfusion",
+        "description": "Barracks work 100% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-anarchy"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["goth"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-pikeman",
+        "description": "Upgrades Spearman to Pikeman",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-halberdier"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["barracks"],
+            "civ": ["!turk"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-plate-barding-armor",
+        "description": "Cavalry armor +1/+2",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-scale-barding-armor", "ri-chain-barding-armor"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["blacksmith"],
+            "civ": ["!aztec", "!celt", "!ethiopian", "!goth", "!inca", "!japanese", "!korean", "!malay", "!mayan", "!mongol", "!viking"],
+            "tech": ["ri-chain-barding-armor"]
+        }
+    },{
+        "name": "ri-plate-mail-armor",
+        "description": "Infantry armor +1/+2",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-scale-mail-armor", "ri-chain-mail-armor"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["blacksmith"],
+            "civ": ["!goth", "!hun", "!indian", "!khmer", "!magyar"],
+            "tech": ["ri-chain-mail-armor"]
+        }
+    },{
+        "name": "ri-recurve-bow",
+        "description": "Cavalry Archers +1 range and attack",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-mercenaries"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["magyar"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-redemption",
+        "description": "Monks can convert most buildings and siege units",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-attonement"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["monastery"],
+            "civ": ["!briton", "!celt", "!ethiopian", "!frank", "!goth", "!hun", "!korean", "!magyar", "!mayan", "!mongol", "!persian", "!vietnamese", "!viking"],
+            "tech": [""]
+        }
+    },{
+        "name": "ri-ring-archer-armor",
+        "description": "Archer armor +1/+2",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-padded-archer-armor", "ri-leather-archer-armor"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["blacksmith"],
+            "civ": ["!aztec", "!burmese", "!celt", "!frank", "!hun", "!mongol"],
+            "tech": ["ri-leather-archer-armor"]
+        }
+    },{
+        "name": "ri-rocketry",
+        "description": "Chu Ko Nu attack +2, Scorpion attack +4",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-great-wall"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["chinese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-royal-heirs",
+        "description": "Shotel Warriors are created nearly instantly",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-torsion-engines"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["ethiopian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-sanctity",
+        "description": "Monk and Missionary hit points +15",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["monastery"],
+            "civ": ["!berber", "!mongol", "!persian", "!viking"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-sappers",
+        "description": "Villagers +15 attack against buildings and stone defense. Villagers chop down trees with one strike",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["!berber", "!burmese", "!byzantine", "!frank", "!indian", "!italian", "!japanese", "!korean", "!saracen"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-scale-barding-armor",
+        "description": "Cavalry armor +1/+1",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-chain-barding-armor", "ri-plate-barding-armor"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["blacksmith"],
+            "civ": ["!aztec", "!inca", "!mayan"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-scale-mail-armor",
+        "description": "Infantry armor +1/+1",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-chain-mail-armor", "ri-plate-mail-armor"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["blacksmith"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-shatagni",
+        "description": "Hand Cannoneers +1 range",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-sultans"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["indian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-shinkichon",
+        "description": "Mangonels +1 range",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-panokseon"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["korean"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-shipwright",
+        "description": "Ships cost -20% wood and are built 54% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["!berber", "!burmese", "!frank", "!hun", "!indian", "!malian", "!persian", "!portuguese", "!saracen", "!slav", "!teuton", "!vietnamese", "!viking"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-siege-engineers",
+        "description": "Siege units +20% attack against buildings, +1 range (except Rams)",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["university"],
+            "civ": ["!byzantine", "!chinese", "!goth", "!hun", "!italian", "!malian", "!mayan", "!persian", "!spanish", "!turk"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-silk-road",
+        "description": "Trade units cost halved",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-pavise"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["italian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-sipahi",
+        "description": "Cavalry Archers +20 HP",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-artillery"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["turk"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-spies",
+        "description": "See enemy's Line of Sight",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Spies is replaced by Treason in Regicide maps"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-treason"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-squires",
+        "description": "Infantry move 10% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["barracks"],
+            "civ": ["!celt", "!khmer", "!magyar", "!portuguese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-stone-mining",
+        "description": "Villagers gather stone 15% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-stone-shaft-mining"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["mining-camp"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-stone-shaft-mining",
+        "description": "Villagers gather stone 15% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-stone-mining"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["mining-camp"],
+            "civ": ["!briton", "!burmese", "!frank", "!hun", "!japanese", "!magyar", "!saracen", "!slav", "!turk", "!viking"],
+            "tech": ["ri-stone-mining"]
+        }
+    },{
+        "name": "ri-stronghold",
+        "description": "Castles and Towers fire 25% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-furor-celtica"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["celt"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-sultans",
+        "description": "All gold gathering is 10% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-shatagni"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["indian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-supremacy",
+        "description": "Increases Villager combat skills",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-inquisition"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["spanish"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-thalassocracy",
+        "description": "Turns Docks into Harbors",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-forced-levy"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["malay"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-theocracy",
+        "description": "Only one Monk or Missionary must rest after a successful conversion",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["monastery"],
+            "civ": ["!celt", "!hun", "!malay", "!mongol", "!viking"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-thumb-ring",
+        "description": "Archers fire faster and with 100% accuracy",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["archery-range"],
+            "civ": ["!aztec", "!briton", "!burmese", "!celt", "!frank", "!goth", "!khmer", "!slav", "!teuton"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-tigui",
+        "description": "Town Centers fire arrows",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-farimba"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["malian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-torsion-engines",
+        "description": "Siege Workshop units blast radius increased",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-royal-heirs"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["ethiopian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-town-patrol",
+        "description": "Building line-of-sight +4.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-town-watch"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["town-center"],
+            "civ": ["all"],
+            "tech": ["ri-town-watch"]
+        }
+    },{
+        "name": "ri-town-watch",
+        "description": "Building line-of-sight +4.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-town-patrol"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["town-center"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-tracking",
+        "description": "Infantry +2 line-of-sight",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["barracks"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-treadmill-crane",
+        "description": "Villagers construct buildings 20% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["university"],
+            "civ": ["!briton", "!byzantine", "!chinese", "!ethiopian", "!goth", "!hun", "!indian", "!malay", "!mongol", "!persian", "!spanish"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-treason",
+        "description": "See enemy Kings for a short time",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Treason replaces Spies in Regicide maps"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-spies"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-tusk-swords",
+        "description": "Battle Elephants +3 attack",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-double-crossbow"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["khmer"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-two-handed-swordsman",
+        "description": "Upgrads Long Swordsman to Two Handed Swordsman",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-man-at-arms", "ri-long-swordsman", "ri-champion"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["barracks"],
+            "civ": ["!persian"],
+            "tech": ["ri-long-swordsman"]
+        }
+    },{
+        "name": "ri-two-man-saw",
+        "description": "Villagers gather wood 10% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-double-bit-axe", "ri-bow-saw"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["lumber-camp"],
+            "civ": ["!aztec", "!berber", "!celt", "!frank", "!inca", "!khmer", "!malay", "!malian", "!mongol"],
+            "tech": ["ri-bow-saw"]
+        }
+    },{
+        "name": "ri-war-galley",
+        "description": "Upgrades Galley to War Galley and Fire Galley to Fire Ship",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-galleon"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["dock"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-warwolf",
+        "description": "Trebuchets do blast damage, 100% accuracy against units",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-yeoman"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["briton"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-wheelbarrow",
+        "description": "Villagers carry 25% more and move 10% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-hand-cart"],
+        "requires": {
+            "age": "feudal-age",
+            "building": ["town-center"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-yasama",
+        "description": "Towers fire 2 extra arrows",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-kataparuto"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["japanese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-yeoman",
+        "description": "Foot archer range +1, Tower attack +2",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-warwolf"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["briton"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-zealotry",
+        "description": "Camel and Mameluke +30HP",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechID",
+        "example": [],
+        "related": ["ri-madrasah"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["saracen"],
+            "tech": ["none"]
+        }
     }
 ]}
