@@ -14,13 +14,18 @@ import {
 	DidChangeConfigurationNotification,
 	CompletionItem,
 	CompletionItemKind,
+	CompletionList,
 	TextDocumentPositionParams,
 	Hover,
-	MarkupKind
+	MarkupKind,
+	SignatureHelp
 } from 'vscode-languageserver';
 
-import * as aoe2commands from './resources/aoe2AiCommands.json';
-import * as aoe2buildings from './resources/aoe2BuildingID.json';
+// Import the needed methods and objects
+import {
+	AiScriptPar,
+	loadAoE2Parameters
+} from './aiScriptResources';
 
 // Create a connection for the server. The connection uses Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -34,8 +39,17 @@ let hasConfigurationCapability: boolean = false;
 let hasWorkspaceFolderCapability: boolean = false;
 let hasDiagnosticRelatedInformationCapability: boolean = false;
 
+// List of parameters
+let aiScriptPars: AiScriptPar[] = loadAoE2Parameters();
+let aiScriptCompletionList: CompletionList = {items: [], isIncomplete: false};
+
 connection.onInitialize((params: InitializeParams) => {
 	let capabilities = params.capabilities;
+
+	// Fill the list of completion items
+	fillCompletions();
+	connection.console.log("Num pars: " + aiScriptPars.length);
+	connection.console.log("Completios pars: " + aiScriptCompletionList.items.length);
 
 	// Does the client support the `workspace/configuration` request?
 	// If not, we will fall back using global settings
@@ -53,9 +67,14 @@ connection.onInitialize((params: InitializeParams) => {
 			// Tell the client that the server supports code completion
 			completionProvider: {
 				resolveProvider: false
-			},
+			}
+			/*
 			// Tell the client we support hover text
-			hoverProvider: false
+			hoverProvider: false,
+			signatureHelpProvider: {
+				triggerCharacters: [' ', ' ']
+			}
+			*/
 		}
 	};
 });
@@ -77,8 +96,8 @@ connection.onInitialized(() => {
 
 // The example settings
 interface AiScriptSettings {
-	maxNumberOfProblems: number;
-	showExampleCode: boolean;
+	//maxNumberOfProblems: number;
+	//showExampleCode: boolean;
 	updateErrorsWhen: string;
 	enableExperimental: boolean;
 }
@@ -87,8 +106,8 @@ interface AiScriptSettings {
 // Please note that this is not the case when using this server with the client provided in this example
 // but could happen with other clients.
 const defaultSettings: AiScriptSettings = { 
-	maxNumberOfProblems: 1000,
-	showExampleCode: true,
+	//maxNumberOfProblems: 1000,
+	//showExampleCode: true,
 	updateErrorsWhen: "onSave",
 	enableExperimental: false
 };
@@ -107,6 +126,8 @@ connection.onDidChangeConfiguration(change => {
 			(change.settings.aoe2_AiScript || defaultSettings)
 		);
 	}
+	// Re-generate the list of completions
+	fillCompletions();
 
 	// Revalidate all open text documents
 	documents.all().forEach(validateTextDocument);
@@ -172,25 +193,24 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	let m: RegExpExecArray | null;
 
 	let problems = 0;
-	while ((m = pattern.exec(text)) && problems < settings.maxNumberOfProblems) {
+	while ((m = pattern.exec(text)) && problems < 0/*settings.maxNumberOfProblems*/) {
 		problems++;
 
 		// Search for matching command
 		let test_str = m[0].slice(1,).replace(/\s*/g,'');
 		let offset = m[0].length - test_str.length;
 		let com_match = "";
-		aoe2commands.aic.forEach(el => {
+		/*
+		aiScriptPars.forEach(el => {
 			if (el.name === test_str) {
 				//connection.console.log(el.name);
 				com_match = el.description;
 				
-				if (settings.showExampleCode) {
-					com_match += "\nexample:\n```"+el.example[0].data+"```";
-				}
+				com_match += "\nexample:\n```"+el.example[0].data+"```";
 				return true;
 			}
 		});
-
+		*/
 		// Note the match
 		if (com_match.length > 0) {
 			let hover: Hover = {
@@ -245,22 +265,11 @@ connection.onDidChangeWatchedFiles(_change => {
 
 // This handler provides the initial list of the completion items.
 connection.onCompletion(
-	(_textDocumentPosition: TextDocumentPositionParams): CompletionItem[] => {
+	(_textDocumentPosition: TextDocumentPositionParams): CompletionList => {
 		// The pass parameter contains the position of the text document in
-		// which code complete got requested. For the example we ignore this
-		// info and always provide the same completion items.
-		return [
-			{
-				label: 'TypeScript',
-				kind: CompletionItemKind.Text,
-				data: 1
-			},
-			{
-				label: 'JavaScript',
-				kind: CompletionItemKind.Text,
-				data: 2
-			}
-		];
+		// which code complete got requested. We ignore this info and always
+		// provide the same list of completion items.
+		return aiScriptCompletionList;
 	}
 );
 
@@ -269,16 +278,17 @@ connection.onCompletion(
 connection.onCompletionResolve(
 	(item: CompletionItem): CompletionItem => {
 		if (item.data === 1) {
-			(item.detail = 'TypeScript details'),
-				(item.documentation = 'TypeScript documentation');
+			item.detail = 'TypeScript details';
+			item.documentation = 'TypeScript documentation';
 		} else if (item.data === 2) {
-			(item.detail = 'JavaScript details'),
-				(item.documentation = 'JavaScript documentation');
+			item.detail = 'JavaScript details';
+			item.documentation = 'JavaScript documentation';
 		}
 		return item;
 	}
 );
 
+/*
 connection.onHover(
 	(_textDocumentPosition: TextDocumentPositionParams): Hover => {
 		// Need to get the word that we're hovering over
@@ -289,7 +299,7 @@ connection.onHover(
 
 		// Split line on known delimiters
 
-		// Find the "character" at this position
+		// Find the "command" at this position
 
 		return {
 			contents: {
@@ -300,6 +310,31 @@ connection.onHover(
 	}
 );
 
+
+// The following provides parameter information when typing an action or fact
+connection.onSignatureHelp(
+	(textDocPos: TextDocumentPositionParams): SignatureHelp => {
+		// Description
+		let sigHelp = "**Line:** " + textDocPos.position.line +"\n"
+					  "**Char:** " + textDocPos.position.character;;
+
+		return {
+			signatures: [
+				{
+					label: "signature par1 par2 par3",
+					documentation: sigHelp,
+					parameters: [
+						{label: "par1",
+					     documentation: "Parameter 1"},
+						{label: "par2"}, 
+						{label: "par3"}]
+				}],
+			activeSignature: 0,
+			activeParameter: 0
+		}
+	}
+);
+*/
 /*
 connection.onDidOpenTextDocument((params) => {
 	// A text document got opened in VSCode.
@@ -326,3 +361,71 @@ documents.listen(connection);
 
 // Listen on the connection
 connection.listen();
+
+
+/*******************************************************************//**
+ * BELOW HERE ARE ALL OF THE NECESSARY AOE2 HELP TEXT RELATED COMMANDS
+ ***********************************************************************/
+
+
+/*******************************************************************//**
+ * Fill and register the completion objects
+ ***********************************************************************/
+function fillCompletions() {
+	// Delete any stored completions
+	while(aiScriptCompletionList.items.length > 0) {
+		aiScriptCompletionList.items.pop();
+	}
+	
+	// ... otherwise fill completion items
+	if ((globalSettings.enableExperimental === false) && (aiScriptCompletionList.items.length === 0)) {
+		connection.console.log("Updating completions");
+		aiScriptPars.forEach(par => {
+
+			let docText = par.description;
+
+			let item: CompletionItem = {
+				label: par.label,
+				documentation: {
+					value: docText,
+					kind: 'markdown'
+				}
+			}
+
+			// Define the parameter kind
+			switch (par.section) {
+				case "BuildingId":
+					item.kind = CompletionItemKind.Struct;
+					break;
+				case "UnitId":
+					item.kind = CompletionItemKind.Unit;
+					break;
+				case "ActionId":
+				case "FactActionId":
+					item.kind = CompletionItemKind.Method
+					break;
+				case "FactId":
+					item.kind = CompletionItemKind.Variable;
+					break;
+				case "TechId":
+					item.kind = CompletionItemKind.Class;
+					break;
+				default:
+					item.kind = CompletionItemKind.Operator;
+			}
+
+			// Append the new completion item
+			aiScriptCompletionList.items.push(item);
+
+			// Add an entry for alternative labels, i.e. for Civs
+			if (par.altLabel !== undefined) {
+				item.label = par.altLabel;
+				aiScriptCompletionList.items.push(item);
+			}
+		});
+	} // end-if
+	else {
+		connection.console.log("Failed");
+		connection.console.log("blah "+globalSettings.enableExperimental);
+	}
+}
