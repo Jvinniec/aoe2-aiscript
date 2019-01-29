@@ -1,0 +1,2453 @@
+{
+    "ActionID": [
+        {
+            "name": "actionid-attack",
+            "id": 600,
+            "description": "Attack action"
+        },{
+            "name": "actionid-defend",
+            "id": 601,
+            "description": "Defend action"
+        },{
+            "name": "actionid-build",
+            "id": 602,
+            "description": "Build action"
+        },{
+            "name": "actionid-heal",
+            "id": 603,
+            "description": "Heal action"
+        },{
+            "name": "actionid-convert",
+            "id": 604,
+            "description": "Convert action"
+        },{
+            "name": "actionid-explore",
+            "id": 605,
+            "description": "Explore action"
+        },{
+            "name": "actionid-stop",
+            "id": 606,
+            "description": "Stop action"
+        },{
+            "name": "actionid-runaway",
+            "id": 607,
+            "description": "Runaway action"
+        },{
+            "name": "actionid-retreat",
+            "id": 608,
+            "description": "Retreat action"
+        },{
+            "name": "actionid-gather",
+            "id": 609,
+            "description": "Gather action"
+        },{
+            "name": "actionid-move",
+            "id": 610,
+            "description": "Move action"
+        },{
+            "name": "actionid-patrol",
+            "id": 611,
+            "description": "Patrol action"
+        },{
+            "name": "actionid-follow",
+            "id": 612,
+            "description": "Follow action"
+        },{
+            "name": "actionid-hunt",
+            "id": 613,
+            "description": "Hunt action"
+        },{
+            "name": "actionid-transport",
+            "id": 614,
+            "description": "Transport action"
+        },{
+            "name": "actionid-trade",
+            "id": 615,
+            "description": "Trade action"
+        },{
+            "name": "actionid-evade",
+            "id": 616,
+            "description": "Evade action"
+        },{
+            "name": "actionid-enter",
+            "id": 617,
+            "description": "Enter action"
+        },{
+            "name": "actionid-repair",
+            "id": 618,
+            "description": "Repair action"
+        },{
+            "name": "actionid-train",
+            "id": 619,
+            "description": "Train action"
+        },{
+            "name": "actionid-research",
+            "id": 620,
+            "description": "Research action"
+        },{
+            "name": "actionid-unload",
+            "id": 621,
+            "description": "Unload action"
+        },{
+            "name": "actionid-relic",
+            "id": 631,
+            "description": "Relic action"
+        }],
+    "AgeID": [
+        {
+            "name": "dark-age",
+            "description": "Dark age"
+        },{
+            "name": "feudal-age",
+            "description": "Feudal age"
+        },{
+            "name": "castle-age",
+            "description": "Castle age"
+        },{
+            "name": "imperial-age",
+            "description": "Imperial age"
+        }],
+    "AttackStance": [
+        {
+            "name": "stance-aggressive",
+            "id": 0,
+            "description": "Agressive unit stance"
+        },{
+            "name": "stance-defensive",
+            "id": 1,
+            "description": "Defensive unit stance (unit chases a little, before returning to position)"
+        },{
+            "name": "stance-stand-ground",
+            "id": 2,
+            "description": "Units do not move from position"
+        },{
+            "name": "stance-no-attack",
+            "id": 3,
+            "description": "Units will not move"
+        }],
+    "CmdID": [
+        {
+            "name": "cmdid-flag",
+            "id": 0,
+            "description": "flag command"
+        },{
+            "name": "cmdid-livestock-gaia",
+            "id": 1,
+            "description": "livestock command"
+        },{
+            "name": "cmdid-civilian-building",
+            "id": 2,
+            "description": "Civilian buildings command"
+        },{
+            "name": "cmdid-villager",
+            "id": 3,
+            "description": "Villager command"
+        },{
+            "name": "cmdid-military",
+            "id": 4,
+            "description": "Military command"
+        },{
+            "name": "cmdid-trade",
+            "id": 5,
+            "description": "Trade command"
+        },{
+            "name": "cmdid-monk",
+            "id": 6,
+            "description": "Monk command"
+        },{
+            "name": "cmdid-transport",
+            "id": 7,
+            "description": "Transport command"
+        },{
+            "name": "cmdid-relic",
+            "id": 8,
+            "description": "Relic command, includes monk-with-relic"
+        },{
+            "name": "cmdid-fishing-ship",
+            "id": 9,
+            "description": "Fishing ship command"
+        },{
+            "name": "cmdid-military-building",
+            "id": 10,
+            "description": "Military building command"
+        }],
+    "Commodity": [
+        {
+            "name": "food",
+            "description": "Food commodity"
+        },{
+            "name": "stone",
+            "description": "Stone commodity"
+        },{
+            "name": "wood",
+            "description": "Wood commodity"
+        }],
+    "ClassID": [
+        {
+            "name": "archery-class",
+            "id": 900,
+            "description": "Archery class"
+        },{
+            "name": "building-class",
+            "id": 903,
+            "description": "Building class"
+        },{
+            "name": "villager-class",
+            "id": 904,
+            "description": "Villager class"
+        },{
+            "name": "ocean-fish-class",
+            "id": 905,
+            "description": "Ocean fish class"
+        },{
+            "name": "infantry-class",
+            "id": 906,
+            "description": "Infantry class"
+        },{
+            "name": "cavalry-class",
+            "id": 912,
+            "description": "Cavalry class"
+        },{
+            "name": "siege-weapon-class",
+            "id": 913,
+            "description": "Siege weapon class"
+        },{
+            "name": "tree-class",
+            "id": 915,
+            "description": "Tree class"
+        },{
+            "name": "monastery-class",
+            "id": 918,
+            "description": "Monastery class"
+        },{
+            "name": "warship-class",
+            "id": 922,
+            "description": "Warship class"
+        },{
+            "name": "cavalry-cannon-class",
+            "id": 923,
+            "description": "Cavalry cannon class"
+        },{
+            "name": "wall-class",
+            "id": 927,
+            "description": "Wall class"
+        },{
+            "name": "shore-fish-class",
+            "id": 933,
+            "description": "Shore fish class"
+        },{
+            "name": "petard-class",
+            "id": 935,
+            "description": "Petard class"
+        },{
+            "name": "cavalry-archer-class",
+            "id": 936,
+            "description": "Cavalry archer class"
+        },{
+            "name": "gate-class",
+            "id": 939,
+            "description": "Gate class"
+        },{
+            "name": "archery-cannon-class",
+            "id": 944,
+            "description": "Archery cannon class"
+        },{
+            "name": "farm-class",
+            "id": 949,
+            "description": "Farm class"
+        },{
+            "name": "packed-trebuchet-class",
+            "id": 951,
+            "description": "Infantry class"
+        },{
+            "name": "tower-class",
+            "id": 952,
+            "description": "Tower class"
+        },{
+            "name": "unpacked-trebuchet-class",
+            "id": 954,
+            "description": "Unpacked trebuchet class"
+        },{
+            "name": "scorpion-class",
+            "id": 955,
+            "description": "Scorpion class"
+        },{
+            "name": "livestock-class",
+            "id": 958,
+            "description": "Livestock class"
+        },{
+            "name": "king-class",
+            "id": 959,
+            "description": "Villager class"
+        }],
+    "CompareOp": [
+        {
+            "name": "less-than",
+            "description": "Less than operator"
+        },{
+            "name": "less-or-equal",
+            "description": "Less than or equal operator"
+        },{
+            "name": "greater-than",
+            "description": "Greater than operator"
+        },{
+            "name": "greater-or-equal",
+            "description": "Greater than or equal operator"
+        },{
+            "name": "equal",
+            "description": "Equality operator"
+        },{
+            "name": "not-equal",
+            "description": "Not-equal operator"
+        },{
+            "name": "<",
+            "description": "Less than operator"
+        },{
+            "name": "<=",
+            "description": "Less than or equal operator"
+        },{
+            "name": ">",
+            "description": "Greater than operator"
+        },{
+            "name": ">=",
+            "description": "Greater than or equal operator"
+        },{
+            "name": "==",
+            "description": "Equality operator"
+        },{
+            "name": "!=",
+            "description": "Not-equal operator"
+        }],
+    "Difficulty": [
+        {
+            "name": "easiest",
+            "description": "The lowest level of difficulty"
+        },{
+            "name": "easy",
+            "description": "Slightly more difficult that 'easiest'"
+        },{
+            "name": "moderate",
+            "description": "The difficulty of a novice player"
+        },{
+            "name": "hard",
+            "description": "The difficulty of an experienced player"
+        },{
+            "name": "hardest",
+            "description": "The hardest difficulty in the game. AI's might cheat"
+        }],
+    "DifficultyParam": [
+        {
+            "name": "ability-to-dodge-missiles",
+            "description": "Chance of a computer player's unit dodging a missile (range: 0-100, default: 100)"
+        },{
+            "name": "ability-to-maintain-distance",
+            "description": "Chance that a computer player's ranged unit will maintain the distance (range: 0-100, default:100)"
+        }],
+    "DiplomaticStance": [
+        {
+            "name": "any",
+            "description": "Players with any allegiance"
+        },{
+            "name": "ally",
+            "description": "Player(s) that are allied to computer player"
+        },{
+            "name": "enemy",
+            "description": "Player(s) that are enemied to computer player"
+        },{
+            "name": "neutral",
+            "description": "Player(s) that are neutral to coputer player"
+        }],
+    "EventType": [
+        {
+            "name": "trigger",
+            "description": "Triggered events"
+        }],
+    "ExploredState": [
+        {
+            "name": "explored-no",
+            "id": 0,
+            "description": "Not explored"
+        },{
+            "name": "explored-yes",
+            "id": 128,
+            "description": "Point explored, but not currently visible"
+        },{
+            "name": "explored-active",
+            "id": 15,
+            "description": "Point is currently visible"
+        }],
+    "FindPlayerMethod": [
+        {
+            "name": "find-attacker",
+            "description": "Find attacking player"
+        },{
+            "name": "find-closest", 
+            "description": "Find closest player"
+        },{
+            "name": "find-ordered",
+            "description": "(?) Find next player in a given category"
+        },{
+            "name": "find-random",
+            "description": "Find player at random"
+        }],
+    "Formation": [
+        {
+            "name": "formation-line",
+            "id": 2,
+            "description": "Line formation"
+        },{
+            "name": "formation-box",
+            "id": 4,
+            "description": "Box formation"
+        },{
+            "name": "formation-stagger",
+            "id": 7,
+            "description": "Stagger formation"
+        },{
+            "name": "formation-flank",
+            "id": 8,
+            "description": "Flank formation"
+        }],
+    "FoundationId": [
+        {
+            "name": "town-center-foundation",
+            "id": 621,
+            "description": "town-center-foundation"
+        },{
+            "name": "gate-ascending",
+            "id": 487,
+            "description": "gate-ascending"
+        },{
+            "name": "gate-ascending-closed",
+            "id": 64,
+            "description": "gate-ascending-closed"
+        },{
+            "name": "gate-ascending-open",
+            "id": 78,
+            "description": "gate-ascending-open"
+        },{
+            "name": "gate-descending",
+            "id": 490,
+            "description": "gate-descending"
+        },{
+            "name": "gate-descending-closed",
+            "id": 88,
+            "description": "gate-descending-closed"
+        },{
+            "name": "gate-descending-open",
+            "id": 99,
+            "description": "gate-descending-open"
+        },{
+            "name": "gate-horizontal",
+            "id": 665,
+            "description": "gate-horizontal"
+        },{
+            "name": "gate-horizontal-closed",
+            "id": 659,
+            "description": "gate-horizontal-closed"
+        },{
+            "name": "gate-horizontal-open",
+            "id": 661,
+            "description": "gate-horizontal-open"
+        },{
+            "name": "gate-vertical",
+            "id": 673,
+            "description": "gate-vertical"
+        },{
+            "name": "gate-vertical-closed",
+            "id": 667,
+            "description": "gate-vertical-closed"
+        },{
+            "name": "gate-vertical-open",
+            "id": 669,
+            "description": "gate-vertical-open"
+        }],
+    "GroupType": [
+        {
+            "name": "group-type-land-attack",
+            "description": "Land attack group"
+        },{
+            "name": "group-type-land-explore",
+            "description": "Land explorers group"
+        },{
+            "name": "group-type-land-trade",
+            "description": "Land traders group"
+        },{
+            "name": "group-type-water-attack",
+            "description": "Water attack group"
+        },{
+            "name": "group-type-water-explore",
+            "description": "Water explorers group"
+        },{
+            "name": "group-type-water-trade",
+            "description": "Water traders group"
+        },{
+            "name": "group-type-transport-ship",
+            "description": "Transport ship group"
+        },{
+            "name": "group-type-fishing-ship",
+            "description": "Fishing ship group"
+        },{
+            "name": "group-type-forward-builder",
+            "description": "Forward buidler group"
+        },{
+            "name": "group-type-monk",
+            "description": "Monk group"
+        }],
+    "GuardFlag": [
+        {
+            "name": "guard-flag-victory",
+            "id": 1,
+            "description": "Victory guard flag"
+        },{
+            "name": "guard-flag-resource",
+            "id": 2,
+            "description": "Resource guard flag"
+        },{
+            "name": "guard-flag-inverse",
+            "id": 4,
+            "description": "Inverse guard flag"
+        }],
+    "IdleType": [
+        {
+            "name": "idle-type-villager",
+            "description": "Idle villagers"
+        },{
+            "name": "idle-type-trade-cart",
+            "description": "Idle trade carts"
+        },{
+            "name": "idle-type-fishing-ship",
+            "description": "Idle fishing ships"
+        },{
+            "name": "idle-type-trade-cog",
+            "description": "Idle trade cogs"
+        }],
+    "MapSize": [
+        {
+            "name": "tiny",
+            "description": "Smallest map size"
+        },{
+            "name": "small",
+            "description": "A little larger than tiny"
+        },{
+            "name": "medium",
+            "description": "A little larger than small"
+        },{
+            "name": "normal",
+            "description": "A little larger than medium"
+        },{
+            "name": "large",
+            "description": "A little larger than normal"
+        },{
+            "name": "giant",
+            "description": "The largest map size"
+        }],
+    "MapType": [
+        {
+            "name": "arabia",
+            "description": "none"
+        },{
+            "name": "archipelago",
+            "description": "none"
+        },{
+            "name": "baltic",
+            "description": "none"
+        },{
+            "name": "black-forest",
+            "description": "none"
+        },{
+            "name": "coastal",
+            "description": "none"
+        },{
+            "name": "continental",
+            "description": "none"
+        },{
+            "name": "crater-lake",
+            "description": "none"
+        },{
+            "name": "fortress",
+            "description": "none"
+        },{
+            "name": "gold-rush",
+            "description": "none"
+        },{
+            "name": "highland",
+            "description": "none"
+        },{
+            "name": "islands",
+            "description": "none"
+        },{
+            "name": "mediterranean",
+            "description": "none"
+        },{
+            "name": "migration",
+            "description": "none"
+        },{
+            "name": "rivers",
+            "description": "none"
+        },{
+            "name": "team-islands",
+            "description": "none"
+        },{
+            "name": "scenario-map",
+            "description": "none"
+        }],
+    "ObjectData": [
+        {
+            "name": "object-data-index",
+            "id": -1,
+            "description": "Only use with up-remove-objects"
+        },{
+            "name": "object-data-id",
+            "id": 0,
+            "description": "Object ID"
+        },{
+            "name": "object-data-type",
+            "id": 1,
+            "description": "Object type"
+        },{
+            "name": "object-data-class",
+            "id": 2,
+            "description": "Object class"
+        },{
+            "name": "object-data-category",
+            "id": 3,
+            "description": "Object category"
+        },{
+            "name": "object-data-cmdid",
+            "id": 4,
+            "description": "Object command ID"
+        },{
+            "name": "object-data-action",
+            "id": 5,
+            "description": "Object action"
+        },{
+            "name": "object-data-order",
+            "id": 6,
+            "description": "Object order"
+        },{
+            "name": "object-data-target",
+            "id": 7,
+            "description": "Object target"
+        },{
+            "name": "object-data-point-x",
+            "id": 8,
+            "description": "Object x location"
+        },{
+            "name": "object-data-point-y",
+            "id": 9,
+            "description": "Object y location"
+        },{
+            "name": "object-data-hitpoints",
+            "id": 10,
+            "description": "Object current hitpoints"
+        },{
+            "name": "object-data-maxhp",
+            "id": 11,
+            "description": "Object maximum hitpoints"
+        },{
+            "name": "object-data-range",
+            "id": 12,
+            "description": "Object range"
+        },{
+            "name": "object-data-speed",
+            "id": 13,
+            "description": "Object speed"
+        },{
+            "name": "object-data-dropsite",
+            "id": 14,
+            "description": "Object drop site"
+        },{
+            "name": "object-data-resource",
+            "id": 15,
+            "description": "Object resource"
+        },{
+            "name": "object-data-carry",
+            "id": 16,
+            "description": "Object carry"
+        },{
+            "name": "object-data-garrisoned",
+            "id": 17,
+            "description": "Whehter the object is garrisoned"
+        },{
+            "name": "object-data-garrison-count",
+            "id": 18,
+            "description": "Number of objects garrisoned"
+        },{
+            "name": "object-data-status",
+            "id": 19,
+            "description": "Object status (0=incomplete, 2=active, 3=resource, >=4:inactive)"
+        },{
+            "name": "object-data-player",
+            "id": 20,
+            "description": "Object player ID"
+        },{
+            "name": "object-data-attack-stance",
+            "id": 21,
+            "description": "Object attack stance"
+        },{
+            "name": "object-data-action-time",
+            "id": 22,
+            "description": "Object action time"
+        },{
+            "name": "object-target-id",
+            "id": 23,
+            "description": "Object target ID"
+        },{
+            "name": "object-data-formation-id",
+            "id": 24,
+            "description": "Object formation ID"
+        },{
+            "name": "object-data-patrolling",
+            "id": 25,
+            "description": "Object patrolling status"
+        },{
+            "name": "object-data-strike-armor",
+            "id": 26,
+            "description": "Object strike armor"
+        },{
+            "name": "object-data-pierce-armor",
+            "id": 27,
+            "description": "Object pierce armor"
+        },{
+            "name": "object-data-base-attack",
+            "id": 28,
+            "description": "Object base attack"
+        },{
+            "name": "object-locked",
+            "id": 29,
+            "description": "Object locked status"
+        },{
+            "name": "object-data-garrison-id",
+            "id": 30,
+            "description": "Object garrison ID"
+        },{
+            "name": "object-data-train-count",
+            "id": 31,
+            "description": "Object training count"
+        },{
+            "name": "object-data-tasks-count",
+            "id": 32,
+            "description": "Object tasks count (increased for internal tasks performed on the object, i.e. may be more than 1 per event)"
+        },{
+            "name": "object-data-attacker-count",
+            "id": 33,
+            "description": "Object number of attackers (note increased for certain situations like hunting)"
+        },{
+            "name": "object-data-attacker-id",
+            "id": 34,
+            "description": "Object attacker ID (not set for situations like hunting)"
+        },{
+            "name": "object-data-under-attack",
+            "id": 35,
+            "description": "Object is under attack (not set for certian situations like hunting)"
+        },{
+            "name": "object-data-attack-timer",
+            "id": 36,
+            "description": "Object timer that resets to 60s for each attack (buildings only)"
+        },{
+            "name": "object-data-point-z",
+            "id": 37,
+            "description": "Object elevation"
+        },{
+            "name": "object-data-precise-x",
+            "id": 38,
+            "description": "Object x position x100"
+        },{
+            "name": "object-data-precise-y",
+            "id": 39,
+            "description": "Object y position x100"
+        },{
+            "name": "object-data-precise-z",
+            "id": 40,
+            "description": "Object elevation x100"
+        },{
+            "name": "object-data-researching",
+            "id": 41,
+            "description": "Object is researching"
+        },{
+            "name": "object-data-tile-position",
+            "id": 42,
+            "description": "Object tile position (match with sn-target-point-adjustment)"
+        },{
+            "name": "object-data-tile-inversion",
+            "id": 43,
+            "description": "Object tile inverse"
+        },{
+            "name": "object-data-distance",
+            "id": 44,
+            "description": "Object distance to target-point"
+        },{
+            "name": "object-data-precise-distance",
+            "id": 45,
+            "description": "Object distance to target-point x100"
+        },{
+            "name": "object-data-full-distance",
+            "id": 46,
+            "description": "Full distance to target-point"
+        },{
+            "name": "object-data-map-zone-id",
+            "id": 47,
+            "description": "Object map zone ID"
+        },{
+            "name": "object-data-on-mainland",
+            "id": 48,
+            "description": "Object is on the mainland (compares map-zone-id to home TC map-zone-id)"
+        },{
+            "name": "object-data-idling",
+            "id": 49,
+            "description": "Object is idle"
+        },{
+            "name": "object-data-move-x",
+            "id": 50,
+            "description": "Move object to x"
+        },{
+            "name": "object-data-move-y",
+            "id": 51,
+            "description": "Move object to y"
+        },{
+            "name": "object-data-precise-move-x",
+            "id": 52,
+            "description": "Move object to x (x100)"
+        },{
+            "name": "object-data-precise-move-y",
+            "id": 53,
+            "description": "Move object to y (x100)"
+        },{
+            "name": "object-data-reload-time",
+            "id": 54,
+            "description": "Time between attacks (in milliseconds)"
+        },{
+            "name": "object-data-next-attack",
+            "id": 55,
+            "description": "Time until object's next attack (in milliseconds)"
+        },{
+            "name": "object-data-train-site",
+            "id": 56,
+            "description": "Object train site"
+        },{
+            "name": "object-data-train-time",
+            "id": 57,
+            "description": "Object training time (in seconds)"
+        },{
+            "name": "object-data-blast-radius",
+            "id": 58,
+            "description": "Object attack blast radius (x100)"
+        },{
+            "name": "object-data-blast-level",
+            "id": 59,
+            "description": "Object blast level"
+        },{
+            "name": "object-data-progress-type",
+            "id": 60,
+            "description": "Object progress type"
+        },{
+            "name": "object-data-progress-type",
+            "id": 60,
+            "description": "Object progress type"
+        },{
+            "name": "object-data-progress-value",
+            "id": 61,
+            "description": "Object progress value"
+        },{
+            "name": "object-data-min-range",
+            "id": 62,
+            "description": "Object minimum distance to attack"
+        },{
+            "name": "object-data-target-time",
+            "id": 63,
+            "description": "Object target time (in milliseconds, not for villagers)"
+        },{
+            "name": "object-data-heresy",
+            "id": 64,
+            "description": "Checks amount-heresy"
+        },{
+            "name": "object-data-faith",
+            "id": 65,
+            "description": "Checks amount-convert-resistance"
+        },{
+            "name": "object-data-redemption",
+            "id": 66,
+            "description": "Checks amount-convert-resistance"
+        },{
+            "name": "object-data-atonement",
+            "id": 67,
+            "description": "Checks amount-convert-priest"
+        },{
+            "name": "object-data-theocracy",
+            "id": 68,
+            "description": "Checks amount-theocracy"
+        },{
+            "name": "object-spies",
+            "id": 69,
+            "description": "Checks amount-spies"
+        },{
+            "name": "object-data-ballistics",
+            "id": 70,
+            "description": "Object has ballistics"
+        },{
+            "name": "object-data-gather-type",
+            "id": 71,
+            "description": "food, wood, gold, stone or -1 for none"
+        },{
+            "name": "object-data-language-id",
+            "id": 72,
+            "description": "Can be used to check villager types"
+        },{
+            "name": "object-data-group-flag",
+            "id": 73,
+            "description": "Group ID from 0-9 or -2 for none"
+        },{
+            "name": "object-data-hero-flags",
+            "id": 74,
+            "description": "Combined hero status flags"
+        },{
+            "name": "object-data-hero",
+            "id": 75,
+            "description": "Object has actual hero flag set"
+        },{
+            "name": "object-data-auto-heal",
+            "id": 76,
+            "description": "Object will hero heal (non-berserk)"
+        },{
+            "name": "object-data-no-convert",
+            "id": 77,
+            "description": "Object cannot be converted"
+        },{
+            "name": "object-data-frame-delay",
+            "id": 78,
+            "description": "Number of frames for projectile delay"
+        },{
+            "name": "object-data-attack-count",
+            "id": 79,
+            "description": "Object consecutive attack count"
+        },{
+            "name": "object-data-to-precise",
+            "id": 80,
+            "description": "Precise distance to a precise target-point"
+        },{
+            "name": "object-data-base-type",
+            "id": 81,
+            "description": "Object base type ID"
+        },{
+            "name": "object-data-upgrade-type",
+            "id": 82,
+            "description": "Object upgrade type ID"
+        }],
+    "ObjectList": [
+        {
+            "name": "list-active",
+            "id": 0,
+            "description": "Active list"
+        },{
+            "name": "list-inactive",
+            "id": 1,
+            "description": "Inactive list"
+        }],
+    "ObjectStatus": [
+        {
+            "name": "status-pending",
+            "id": 0,
+            "description": "Object is pending"
+        },{
+            "name": "status-read",
+            "id": 2,
+            "description": "Object is ready"
+        },{
+            "name": "status-resource",
+            "id": 3,
+            "description": "Object is a resource (?)"
+        },{
+            "name": "status-down",
+            "id": 4,
+            "description": "Object is down (?)"
+        },{
+            "name": "status-gather",
+            "id": 5,
+            "description": "Object is gethering (?)"
+        }],
+    "OrderId": [
+        {
+            "name": "orderid-attack",
+            "id": 700,
+            "description": "Attack order"
+        },{
+            "name": "orderid-defend",
+            "id": 701,
+            "description": "Defend order"
+        },{
+            "name": "orderid-build",
+            "id": 702,
+            "description": "Build order"
+        },{
+            "name": "orderid-heal",
+            "id": 703,
+            "description": "Heal order"
+        },{
+            "name": "orderid-convert",
+            "id": 704,
+            "description": "Convert order"
+        },{
+            "name": "orderid-explore",
+            "id": 705,
+            "description": "Explore order"
+        },{
+            "name": "orderid-stop",
+            "id": 706,
+            "description": "Stop order"
+        },{
+            "name": "orderid-runaway",
+            "id": 707,
+            "description": "Runaway order"
+        },{
+            "name": "orderid-retreat",
+            "id": 708,
+            "description": "Retreat order"
+        },{
+            "name": "orderid-gather",
+            "id": 709,
+            "description": "Gather order"
+        },{
+            "name": "orderid-move",
+            "id": 710,
+            "description": "Move order"
+        },{
+            "name": "orderid-patrol",
+            "id": 711,
+            "description": "Patrol order"
+        },{
+            "name": "orderid-follow",
+            "id": 712,
+            "description": "Follow order"
+        },{
+            "name": "orderid-hunt",
+            "id": 713,
+            "description": "Hunt order"
+        },{
+            "name": "orderid-transport",
+            "id": 714,
+            "description": "Transport order"
+        },{
+            "name": "orderid-trade",
+            "id": 715,
+            "description": "Trade order"
+        },{
+            "name": "orderid-evade",
+            "id": 716,
+            "description": "Evade order"
+        },{
+            "name": "orderid-enter",
+            "id": 717,
+            "description": "Enter order"
+        },{
+            "name": "orderid-repair",
+            "id": 718,
+            "description": "Repair order"
+        },{
+            "name": "orderid-train",
+            "id": 719,
+            "description": "Train order"
+        },{
+            "name": "orderid-research",
+            "id": 720,
+            "description": "Research order"
+        },{
+            "name": "orderid-unload",
+            "id": 721,
+            "description": "Unload order"
+        },{
+            "name": "orderid-relic",
+            "id": 731,
+            "description": "Relic order"
+        }],
+    "PlacementType": [
+        {
+            "name": "place-normal",
+            "description": "Normal placement"
+        },{
+            "name": "place-forward",
+            "description": "Place buildling forward"
+        },{
+            "name": "place-control",
+            "description": "Control placement (?)"
+        },{
+            "name": "place-point",
+            "description": "Point placement (?)"
+        }],
+    "PlayerID": [
+        {
+            "name": "1",
+            "description": "Player 1"
+        },{
+            "name": "2",
+            "description": "Player 2"
+        },{
+            "name": "3",
+            "description": "Player 3"
+        },{
+            "name": "4",
+            "description": "Player 4"
+        },{
+            "name": "5",
+            "description": "Player 5"
+        },{
+            "name": "6",
+            "description": "Player 6"
+        },{
+            "name": "7",
+            "description": "Player 7"
+        },{
+            "name": "8",
+            "description": "Player 8"
+        },{
+            "name": "any-ally",
+            "description": "Random ally, computer or human"
+        },{
+            "name": "any-computer",
+            "description": "Random computer player (any diplomatic stance)"
+        },{
+            "name": "any-computer-ally",
+            "description": "Random ally computer player"
+        },{
+            "name": "any-computer-enemy",
+            "description": "Random enemied computer player"
+        },{
+            "name": "any-computer-neutral",
+            "description": "Random neutral stance computer player"
+        },{
+            "name": "any-enemy",
+            "description": "Random enemy, computer or human"
+        },{
+            "name": "any-human",
+            "description": "Random human player (any diplomatic stance)"
+        },{
+            "name": "any-human-ally",
+            "description": "Random ally human player"
+        },{
+            "name": "any-human-enemy",
+            "description": "Random enemied human player"
+        },{
+            "name": "any-human-neutral",
+            "description": "Random neutral stance human player"
+        },{
+            "name": "any-neutral",
+            "description": "Random neutral, computer or human"
+        },{
+            "name": "every-ally",
+            "description": "All allied players, computer and human"
+        },{
+            "name": "every-computer",
+            "description": "Every computer player (any diplomatic stance)"
+        },{
+            "name": "every-enemy",
+            "description": "Every enemy player, computer or human"
+        },{
+            "name": "every-human",
+            "description": "Every human player (any diplomatic stance)"
+        },{
+            "name": "every-neutral",
+            "description": "Every neutral stanced player, computer and human"
+        }],
+    "PositionType": [
+        {
+            "name": "position-center",
+            "description": "Center position"
+        },{
+            "name": "position-opposite",
+            "description": "Opposite position"
+        },{
+            "name": "position-corner",
+            "description": "Corner position"
+        },{
+            "name": "position-enemy",
+            "description": "Enemy position"
+        },{
+            "name": "position-border",
+            "description": "Border position"
+        },{
+            "name": "position-mirror",
+            "description": "Mirror position"
+        },{
+            "name": "position-flank",
+            "description": "Flank position"
+        },{
+            "name": "position-zero",
+            "description": "Zero position"
+        },{
+            "name": "position-map-size",
+            "description": "Map size position"
+        },{
+            "name": "position-self",
+            "description": "Self position"
+        },{
+            "name": "position-target",
+            "description": "Target position"
+        },{
+            "name": "position-focus",
+            "description": "Focus position"
+        },{
+            "name": "position-object",
+            "description": "Object position"
+        },{
+            "name": "position-point",
+            "description": "Point position"
+        }],
+    "PriorityType": [
+        {
+            "name": "priority-offense",
+            "description": "Offense prio"
+        },{
+            "name": "priority-defense",
+            "description": ""
+        }],
+    "ProjectileType": [
+        {
+            "name": "projectile-any",
+            "description": "Projectiles from any source"
+        },{
+            "name": "projectile-bombard-tower",
+            "description": "Bombard tower projectile"
+        },{
+            "name": "projectile-castle",
+            "description": "Castle projectile"
+        },{
+            "name": "projectile-fortification",
+            "description": "Fortification projectile"
+        },{
+            "name": "projectile-ship",
+            "description": "Ship projectile"
+        },{
+            "name": "projectile-siege",
+            "description": "Siege weapon projectile"
+        },{
+            "name": "projectile-town-center",
+            "description": "Town center projectile"
+        },{
+            "name": "projectile-watch-tower",
+            "description": "Watch tower projectile"
+        }],
+    "ResearchAmount": [
+        {
+            "name": "amount-food",
+            "id": 0,
+            "description": "amount-food"
+        },{
+            "name": "amount-wood",
+            "id": 1,
+            "description": "amount-wood"
+        },{
+            "name": "amount-stone",
+            "id": 2,
+            "description": "amount-stone"
+        },{
+            "name": "amount-gold",
+            "id": 3,
+            "description": "amount-gold"
+        },{
+            "name": "amount-population-cap",
+            "id": 4,
+            "description": "amount-population-cap"
+        },{
+            "name": "amount-religion",
+            "id": 5,
+            "description": "amount-religion"
+        },{
+            "name": "amount-current-age",
+            "id": 6,
+            "description": "amount-current-age"
+        },{
+            "name": "amount-relics",
+            "id": 7,
+            "description": "amount-relics"
+        },{
+            "name": "amount-trade-bonus",
+            "id": 8,
+            "description": "amount-trade-bonus"
+        },{
+            "name": "amount-trade-goods",
+            "id": 9,
+            "description": "amount-trade-goods"
+        },{
+            "name": "amount-trade-production",
+            "id": 10,
+            "description": "amount-trade-production"
+        },{
+            "name": "amount-population",
+            "id": 11,
+            "description": "amount-population"
+        },{
+            "name": "amount-decay",
+            "id": 12,
+            "description": "amount-decay"
+        },{
+            "name": "amount-discovery",
+            "id": 13,
+            "description": "amount-discovery"
+        },{
+            "name": "amount-ruins",
+            "id": 14,
+            "description": "amount-ruins"
+        },{
+            "name": "amount-meat",
+            "id": 15,
+            "description": "amount-meat"
+        },{
+            "name": "amount-berries",
+            "id": 16,
+            "description": "amount-berries"
+        },{
+            "name": "amount-fish",
+            "id": 17,
+            "description": "amount-fish"
+        },{
+            "name": "amount-kills",
+            "id": 20,
+            "description": "amount-kills"
+        },{
+            "name": "amount-research-count",
+            "id": 21,
+            "description": "amount-research-count"
+        },{
+            "name": "amount-exploration",
+            "id": 22,
+            "description": "amount-exploration"
+        },{
+            "name": "amount-convert-priest",
+            "id": 27,
+            "description": "amount-convert-priest"
+        },{
+            "name": "amount-convert-building",
+            "id": 28,
+            "description": "amount-convert-building"
+        },{
+            "name": "amount-building-limit",
+            "id": 30,
+            "description": "amount-building-limit"
+        },{
+            "name": "amount-food-limit",
+            "id": 31,
+            "description": "amount-food-limit"
+        },{
+            "name": "amount-unit-limit",
+            "id": 32,
+            "description": "amount-unit-limit"
+        },{
+            "name": "amount-maintenance",
+            "id": 33,
+            "description": "amount-maintenance"
+        },{
+            "name": "amount-faith",
+            "id": 34,
+            "description": "amount-faith"
+        },{
+            "name": "amount-faith-recharge-rate",
+            "id": 35,
+            "description": "amount-faith-recharge-rate"
+        },{
+            "name": "amount-farm-food",
+            "id": 36,
+            "description": "amount-farm-food"
+        },{
+            "name": "amount-civilian-population",
+            "id": 37,
+            "description": "amount-civilian-population"
+        },{
+            "name": "amount-all-techs-achieved",
+            "id": 39,
+            "description": "amount-all-techs-achieved"
+        },{
+            "name": "amount-military-population",
+            "id": 40,
+            "description": "amount-military-population"
+        },{
+            "name": "amount-conversions",
+            "id": 41,
+            "description": "amount-conversions"
+        },{
+            "name": "amount-wonder",
+            "id": 42,
+            "description": "amount-wonder"
+        },{
+            "name": "amount-razings",
+            "id": 43,
+            "description": "amount-razings"
+        },{
+            "name": "amount-kill-ratio",
+            "id": 44,
+            "description": "amount-kill-ratio"
+        },{
+            "name": "amount-player-killed",
+            "id": 45,
+            "description": "amount-player-killed"
+        },{
+            "name": "amount-tribute-inefficiency",
+            "id": 46,
+            "description": "amount-tribute-inefficiency"
+        },{
+            "name": "amount-gold-bonus",
+            "id": 47,
+            "description": "amount-gold-bonus"
+        },{
+            "name": "amount-town-center-unavailable",
+            "id": 48,
+            "description": "amount-town-center-unavailable"
+        },{
+            "name": "amount-gold-counter",
+            "id": 49,
+            "description": "amount-gold-counter"
+        },{
+            "name": "amount-writing",
+            "id": 50,
+            "description": "amount-writing"
+        },{
+            "name": "amount-monasteries",
+            "id": 52,
+            "description": "amount-monasteries"
+        },{
+            "name": "amount-tribute",
+            "id": 53,
+            "description": "amount-tribute"
+        },{
+            "name": "amount-hold-ruins",
+            "id": 54,
+            "description": "amount-hold-ruins"
+        },{
+            "name": "amount-hold-relics",
+            "id": 55,
+            "description": "amount-hold-relics"
+        },{
+            "name": "amount-ore",
+            "id": 56,
+            "description": "amount-ore"
+        },{
+            "name": "amount-captured-unit",
+            "id": 57,
+            "description": "amount-captured-unit"
+        },{
+            "name": "amount-trade-good-quality",
+            "id": 59,
+            "description": "amount-trade-good-quality"
+        },{
+            "name": "amount-trade-market-level",
+            "id": 60,
+            "description": "amount-trade-market-level"
+        },{
+            "name": "amount-formations",
+            "id": 61,
+            "description": "amount-formations"
+        },{
+            "name": "amount-building-housing-rate",
+            "id": 62,
+            "description": "amount-building-housing-rate"
+        },{
+            "name": "amount-gather-tax-rate",
+            "id": 63,
+            "description": "amount-gather-tax-rate"
+        },{
+            "name": "amount-gather-accumulator",
+            "id": 64,
+            "description": "amount-gather-accumulator"
+        },{
+            "name": "amount-salvage-decay-rate",
+            "id": 65,
+            "description": "amount-salvage-decay-rate"
+        },{
+            "name": "amount-allow-formations",
+            "id": 66,
+            "description": "amount-allow-formations"
+        },{
+            "name": "amount-can-convert",
+            "id": 67,
+            "description": "amount-can-convert"
+        },{
+            "name": "amount-player1-kills",
+            "id": 69,
+            "description": "amount-player1-kills"
+        },{
+            "name": "amount-player2-kills",
+            "id": 70,
+            "description": "amount-player2-kills"
+        },{
+            "name": "amount-player3-kills",
+            "id": 71,
+            "description": "amount-player3-kills"
+        },{
+            "name": "amount-player4-kills",
+            "id": 72,
+            "description": "amount-player4-kills"
+        },{
+            "name": "amount-player5-kills",
+            "id": 73,
+            "description": "amount-player5-kills"
+        },{
+            "name": "amount-player6-kills",
+            "id": 74,
+            "description": "amount-player6-kills"
+        },{
+            "name": "amount-player7-kills",
+            "id": 75,
+            "description": "amount-player7-kills"
+        },{
+            "name": "amount-player8-kills",
+            "id": 76,
+            "description": "amount-player8-kills"
+        },{
+            "name": "amount-convert-resistance",
+            "id": 77,
+            "description": "amount-convert-resistance"
+        },{
+            "name": "amount-trade-vig-rate",
+            "id": 78,
+            "description": "amount-trade-vig-rate"
+        },{
+            "name": "amount-stone-bonus",
+            "id": 79,
+            "description": "amount-stone-bonus"
+        },{
+            "name": "amount-queued-count",
+            "id": 80,
+            "description": "amount-queued-count"
+        },{
+            "name": "amount-training-count",
+            "id": 81,
+            "description": "amount-training-count"
+        },{
+            "name": "amount-raider",
+            "id": 82,
+            "description": "amount-raider"
+        },{
+            "name": "amount-boarding-recharge-rate",
+            "id": 83,
+            "description": "amount-boarding-recharge-rate"
+        },{
+            "name": "amount-starting-villagers",
+            "id": 84,
+            "description": "amount-starting-villagers"
+        },{
+            "name": "amount-research-cost-mod",
+            "id": 85,
+            "description": "amount-research-cost-mod"
+        },{
+            "name": "amount-research-time-mod",
+            "id": 86,
+            "description": "amount-research-time-mod"
+        },{
+            "name": "amount-convert-boats",
+            "id": 87,
+            "description": "amount-convert-boats"
+        },{
+            "name": "amount-fish-trap-food",
+            "id": 88,
+            "description": "amount-fish-trap-food"
+        },{
+            "name": "amount-heal-rate-modifier",
+            "id": 89,
+            "description": "amount-heal-rate-modifier"
+        },{
+            "name": "amount-heal-range",
+            "id": 90,
+            "description": "amount-heal-range"
+        },{
+            "name": "amount-starting-food",
+            "id": 91,
+            "description": "amount-starting-food"
+        },{
+            "name": "amount-starting-wood",
+            "id": 92,
+            "description": "amount-starting-wood"
+        },{
+            "name": "amount-starting-stone",
+            "id": 93,
+            "description": "amount-starting-stone"
+        },{
+            "name": "amount-starting-gold",
+            "id": 94,
+            "description": "amount-starting-gold"
+        },{
+            "name": "amount-raider-ability",
+            "id": 95,
+            "description": "amount-raider-ability"
+        },{
+            "name": "amount-berserker-heal-timer",
+            "id": 96,
+            "description": "amount-berserker-heal-timer"
+        },{
+            "name": "amount-dominant-sheep-control",
+            "id": 97,
+            "description": "amount-dominant-sheep-control"
+        },{
+            "name": "amount-object-cost-summation",
+            "id": 98,
+            "description": "amount-object-cost-summation"
+        },{
+            "name": "amount-research-cost-summation",
+            "id": 99,
+            "description": "amount-research-cost-summation"
+        },{
+            "name": "amount-relic-income-summation",
+            "id": 100,
+            "description": "amount-relic-income-summation"
+        },{
+            "name": "amount-trade-income-summation",
+            "id": 101,
+            "description": "amount-trade-income-summation"
+        },{
+            "name": "amount-player1-tribute",
+            "id": 102,
+            "description": "amount-player1-tribute"
+        },{
+            "name": "amount-player2-tribute",
+            "id": 103,
+            "description": "amount-player2-tribute"
+        },{
+            "name": "amount-player3-tribute",
+            "id": 104,
+            "description": "amount-player3-tribute"
+        },{
+            "name": "amount-player4-tribute",
+            "id": 105,
+            "description": "amount-player4-tribute"
+        },{
+            "name": "amount-player5-tribute",
+            "id": 106,
+            "description": "amount-player5-tribute"
+        },{
+            "name": "amount-player6-tribute",
+            "id": 107,
+            "description": "amount-player6-tribute"
+        },{
+            "name": "amount-player7-tribute",
+            "id": 108,
+            "description": "amount-player7-tribute"
+        },{
+            "name": "amount-player8-tribute",
+            "id": 109,
+            "description": "amount-player8-tribute"
+        },{
+            "name": "amount-player1-kill-value",
+            "id": 110,
+            "description": "amount-player1-kill-value"
+        },{
+            "name": "amount-player2-kill-value",
+            "id": 111,
+            "description": "amount-player2-kill-value"
+        },{
+            "name": "amount-player3-kill-value",
+            "id": 112,
+            "description": "amount-player3-kill-value"
+        },{
+            "name": "amount-player4-kill-value",
+            "id": 113,
+            "description": "amount-player4-kill-value"
+        },{
+            "name": "amount-player5-kill-value",
+            "id": 114,
+            "description": "amount-player5-kill-value"
+        },{
+            "name": "amount-player6-kill-value",
+            "id": 115,
+            "description": "amount-player6-kill-value"
+        },{
+            "name": "amount-player7-kill-value",
+            "id": 116,
+            "description": "amount-player7-kill-value"
+        },{
+            "name": "amount-player8-kill-value",
+            "id": 117,
+            "description": "amount-player8-kill-value"
+        },{
+            "name": "amount-player1-razings",
+            "id": 118,
+            "description": "amount-player1-razings"
+        },{
+            "name": "amount-player2-razings",
+            "id": 119,
+            "description": "amount-player2-razings"
+        },{
+            "name": "amount-player3-razings",
+            "id": 120,
+            "description": "amount-player3-razings"
+        },{
+            "name": "amount-player4-razings",
+            "id": 121,
+            "description": "amount-player4-razings"
+        },{
+            "name": "amount-player5-razings",
+            "id": 122,
+            "description": "amount-player5-razings"
+        },{
+            "name": "amount-player6-razings",
+            "id": 123,
+            "description": "amount-player6-razings"
+        },{
+            "name": "amount-player7-razings",
+            "id": 124,
+            "description": "amount-player7-razings"
+        },{
+            "name": "amount-player8-razings",
+            "id": 125,
+            "description": "amount-player8-razings"
+        },{
+            "name": "amount-player1-razing-value",
+            "id": 126,
+            "description": "amount-player1-razing-value"
+        },{
+            "name": "amount-player2-razing-value",
+            "id": 127,
+            "description": "amount-player2-razing-value"
+        },{
+            "name": "amount-player3-razing-value",
+            "id": 128,
+            "description": "amount-player3-razing-value"
+        },{
+            "name": "amount-player4-razing-value",
+            "id": 129,
+            "description": "amount-player4-razing-value"
+        },{
+            "name": "amount-player5-razing-value",
+            "id": 130,
+            "description": "amount-player5-razing-value"
+        },{
+            "name": "amount-player6-razing-value",
+            "id": 131,
+            "description": "amount-player6-razing-value"
+        },{
+            "name": "amount-player7-razing-value",
+            "id": 132,
+            "description": "amount-player7-razing-value"
+        },{
+            "name": "amount-player8-razing-value",
+            "id": 133,
+            "description": "amount-player8-razing-value"
+        },{
+            "name": "amount-castle",
+            "id": 134,
+            "description": "amount-castle"
+        },{
+            "name": "amount-kills-by-player1",
+            "id": 136,
+            "description": "amount-kills-by-player1"
+        },{
+            "name": "amount-kills-by-player2",
+            "id": 137,
+            "description": "amount-kills-by-player2"
+        },{
+            "name": "amount-kills-by-player3",
+            "id": 138,
+            "description": "amount-kills-by-player3"
+        },{
+            "name": "amount-kills-by-player4",
+            "id": 139,
+            "description": "amount-kills-by-player4"
+        },{
+            "name": "amount-kills-by-player5",
+            "id": 140,
+            "description": "amount-kills-by-player5"
+        },{
+            "name": "amount-kills-by-player6",
+            "id": 141,
+            "description": "amount-kills-by-player6"
+        },{
+            "name": "amount-kills-by-player7",
+            "id": 142,
+            "description": "amount-kills-by-player7"
+        },{
+            "name": "amount-kills-by-player8",
+            "id": 143,
+            "description": "amount-kills-by-player8"
+        },{
+            "name": "amount-razings-by-player1",
+            "id": 144,
+            "description": "amount-razings-by-player1"
+        },{
+            "name": "amount-razings-by-player2",
+            "id": 145,
+            "description": "amount-razings-by-player2"
+        },{
+            "name": "amount-razings-by-player3",
+            "id": 146,
+            "description": "amount-razings-by-player3"
+        },{
+            "name": "amount-razings-by-player4",
+            "id": 147,
+            "description": "amount-razings-by-player4"
+        },{
+            "name": "amount-razings-by-player5",
+            "id": 148,
+            "description": "amount-razings-by-player5"
+        },{
+            "name": "amount-razings-by-player6",
+            "id": 149,
+            "description": "amount-razings-by-player6"
+        },{
+            "name": "amount-razings-by-player7",
+            "id": 150,
+            "description": "amount-razings-by-player7"
+        },{
+            "name": "amount-razings-by-player8",
+            "id": 151,
+            "description": "amount-razings-by-player8"
+        },{
+            "name": "amount-value-killed-by-others",
+            "id": 152,
+            "description": "amount-value-killed-by-others"
+        },{
+            "name": "amount-value-razed-by-others",
+            "id": 153,
+            "description": "amount-value-razed-by-others"
+        },{
+            "name": "amount-killed-by-others",
+            "id": 154,
+            "description": "amount-killed-by-others"
+        },{
+            "name": "amount-razed-by-others",
+            "id": 155,
+            "description": "amount-razed-by-others"
+        },{
+            "name": "amount-tribute-from-player1",
+            "id": 156,
+            "description": "amount-tribute-from-player1"
+        },{
+            "name": "amount-tribute-from-player2",
+            "id": 157,
+            "description": "amount-tribute-from-player2"
+        },{
+            "name": "amount-tribute-from-player3",
+            "id": 158,
+            "description": "amount-tribute-from-player3"
+        },{
+            "name": "amount-tribute-from-player4",
+            "id": 159,
+            "description": "amount-tribute-from-player4"
+        },{
+            "name": "amount-tribute-from-player5",
+            "id": 160,
+            "description": "amount-tribute-from-player5"
+        },{
+            "name": "amount-tribute-from-player6",
+            "id": 161,
+            "description": "amount-tribute-from-player6"
+        },{
+            "name": "amount-tribute-from-player7",
+            "id": 162,
+            "description": "amount-tribute-from-player7"
+        },{
+            "name": "amount-tribute-from-player8",
+            "id": 163,
+            "description": "amount-tribute-from-player8"
+        },{
+            "name": "amount-value-current-units",
+            "id": 164,
+            "description": "amount-value-current-units"
+        },{
+            "name": "amount-value-current-buildings",
+            "id": 165,
+            "description": "amount-value-current-buildings"
+        },{
+            "name": "amount-food-total",
+            "id": 166,
+            "description": "amount-food-total"
+        },{
+            "name": "amount-wood-total",
+            "id": 167,
+            "description": "amount-wood-total"
+        },{
+            "name": "amount-stone-total",
+            "id": 168,
+            "description": "amount-stone-total"
+        },{
+            "name": "amount-gold-total",
+            "id": 169,
+            "description": "amount-gold-total"
+        },{
+            "name": "amount-total-value-of-kills",
+            "id": 170,
+            "description": "amount-total-value-of-kills"
+        },{
+            "name": "amount-total-tribute-received",
+            "id": 171,
+            "description": "amount-total-tribute-received"
+        },{
+            "name": "amount-total-value-of-razings",
+            "id": 172,
+            "description": "amount-total-value-of-razings"
+        },{
+            "name": "amount-total-castles-built",
+            "id": 173,
+            "description": "amount-total-castles-built"
+        },{
+            "name": "amount-total-wonders-built",
+            "id": 174,
+            "description": "amount-total-wonders-built"
+        },{
+            "name": "amount-tribute-score",
+            "id": 175,
+            "description": "amount-tribute-score"
+        },{
+            "name": "amount-convert-min-adj",
+            "id": 176,
+            "description": "amount-convert-min-adj"
+        },{
+            "name": "amount-convert-max-adj",
+            "id": 177,
+            "description": "amount-convert-max-adj"
+        },{
+            "name": "amount-convert-resist-min-adj",
+            "id": 178,
+            "description": "amount-convert-resist-min-adj"
+        },{
+            "name": "amount-convert-resist-max-adj",
+            "id": 179,
+            "description": "amount-convert-resist-max-adj"
+        },{
+            "name": "amount-convert-building-min",
+            "id": 180,
+            "description": "amount-convert-building-min"
+        },{
+            "name": "amount-convert-building-max",
+            "id": 181,
+            "description": "amount-convert-building-max"
+        },{
+            "name": "amount-convert-building-chance",
+            "id": 182,
+            "description": "amount-convert-building-chance"
+        },{
+            "name": "amount-spies",
+            "id": 183,
+            "description": "amount-spies"
+        },{
+            "name": "amount-value-wonders-castles",
+            "id": 184,
+            "description": "amount-value-wonders-castles"
+        },{
+            "name": "amount-food-score",
+            "id": 185,
+            "description": "amount-food-score"
+        },{
+            "name": "amount-wood-score",
+            "id": 186,
+            "description": "amount-wood-score"
+        },{
+            "name": "amount-stone-score",
+            "id": 187,
+            "description": "amount-stone-score"
+        },{
+            "name": "amount-gold-score",
+            "id": 188,
+            "description": "amount-gold-score"
+        },{
+            "name": "amount-wood-bonus",
+            "id": 189,
+            "description": "amount-wood-bonus"
+        },{
+            "name": "amount-food-bonus",
+            "id": 190,
+            "description": "amount-food-bonus"
+        },{
+            "name": "amount-relic-rate",
+            "id": 191,
+            "description": "amount-relic-rate"
+        },{
+            "name": "amount-heresy",
+            "id": 192,
+            "description": "amount-heresy"
+        },{
+            "name": "amount-theocracy",
+            "id": 193,
+            "description": "amount-theocracy"
+        },{
+            "name": "amount-crenellations",
+            "id": 194,
+            "description": "amount-crenellations"
+        },{
+            "name": "amount-construction-rate-mod",
+            "id": 195,
+            "description": "amount-construction-rate-mod"
+        },{
+            "name": "amount-hun-wonder-bonus",
+            "id": 196,
+            "description": "amount-hun-wonder-bonus"
+        },{
+            "name": "amount-spies-discount",
+            "id": 197,
+            "description": "amount-spies-discount"
+        },{
+            "name": "amount-unused-0",
+            "id": 220,
+            "description": "amount-unused-0"
+        },{
+            "name": "amount-unused-1",
+            "id": 221,
+            "description": "amount-unused-1"
+        },{
+            "name": "amount-unused-2",
+            "id": 222,
+            "description": "amount-unused-2"
+        },{
+            "name": "amount-unused-3",
+            "id": 223,
+            "description": "amount-unused-3"
+        },{
+            "name": "amount-unused-4",
+            "id": 224,
+            "description": "amount-unused-4"
+        }],
+    "ResearchState": [
+        {
+            "name": "research-available",
+            "description": "Checks that the given research is available to computer player's civ, and research is available at this time (tech tree prerequisites are met)."
+        },{
+            "name": "research-complete",
+            "description": "This fact checks that the given research is completed."
+        },{
+            "name": "research-pending",
+            "description": "Research is pending"
+        },{
+            "name": "research-unavailable",
+            "description": "Checks given research is unavailable to computer player's civ, or research is unavailable at this time (tech tree prerequisites are not met)."
+        }],
+    "ResourceID": [
+        {
+            "name": "food",
+            "description": "Food resource",
+            "section": "ResourceID",
+            "notes": ["none"]
+        },{
+            "name": "gold",
+            "description": "Gold resource",
+            "section": "ResourceID",
+            "notes": ["none"]
+        },{
+            "name": "stone",
+            "description": "Stone resource",
+            "section": "ResourceID",
+            "notes": ["none"]
+        },{
+            "name": "wood",
+            "description": "Wood resource",
+            "section": "ResourceID",
+            "notes": ["none"]
+        }],
+    "SearchOrder": [
+        {
+            "name": "search-order-none",
+            "id": 0,
+            "description": "No search order"
+        },{
+            "name": "search-order-asc",
+            "id": 1,
+            "description": "Ascending search order"
+        },{
+            "name": "search-order-desc",
+            "id": 2,
+            "description": "Descending search order"
+        }],
+    "SearchSource": [
+        {
+            "name": "search-local",
+            "id": 1,
+            "description": "Search locally"
+        },{
+            "name": "search-remote",
+            "id": 2,
+            "description": "Search remotely"
+        }],
+    "StartResources": [
+        {
+            "name": "low",
+            "description": "Low resources"
+        },{
+            "name": "medium",
+            "description": "Medium resources"
+        },{
+            "name": "high",
+            "description": "High resources"
+        }],
+    "TargetAction": [
+        {
+            "name": "action-default",
+            "id": 0,
+            "description": "Default action"
+        },{
+            "name": "action-move",
+            "id": 1,
+            "description": "Move action"
+        },{
+            "name": "action-patrol",
+            "id": 2,
+            "description": "Patrol action"
+        },{
+            "name": "action-guard",
+            "id": 3,
+            "description": "Guard action"
+        },{
+            "name": "action-follow",
+            "id": 4,
+            "description": "Follow action"
+        },{
+            "name": "action-stop",
+            "id": 5,
+            "description": "Stop action"
+        },{
+            "name": "action-ground",
+            "id": 6,
+            "description": "Ground action"
+        },{
+            "name": "action-garrison",
+            "id": 7,
+            "description": "Garrison action"
+        },{
+            "name": "action-delete",
+            "id": 8,
+            "description": "Delete action"
+        },{
+            "name": "action-unload",
+            "id": 9,
+            "description": "Buildings ungarrison to gather point, siege (913) eject in-place, transports to target-point"
+        },{
+            "name": "action-train",
+            "id": 10,
+            "description": "Train action"
+        },{
+            "name": "action-gather",
+            "id": 11,
+            "description": "Set gather point (for buildings only)"
+        },{
+            "name": "action-lock",
+            "id": 12,
+            "description": "Lock action"
+        },{
+            "name": "action-work",
+            "id": 13,
+            "description": "Send villagers back to work"
+        },{
+            "name": "action-ungarrison",
+            "id": 14,
+            "description": "Selected units from inside an object are ungarrisoned"
+        },{
+            "name": "action-drop-relic",
+            "id": 15,
+            "description": "Drop relic action (monk)"
+        },{
+            "name": "action-pack",
+            "id": 16,
+            "description": "Pack action (trebuchet)"
+        },{
+            "name": "action-unpack",
+            "id": 17,
+            "description": "Unpack action (trebuchet)"
+        },{
+            "name": "action-none",
+            "id": 18,
+            "description": "None action"
+        }],
+    "TauntID": [
+        {
+            "name": "1",
+            "description": "yes"
+        },{
+            "name": "2",
+            "description": "no"
+        }],
+    "TerrainID": [
+        {
+            "name": "terrain-grass",
+            "id": 0,
+            "description": "Grass terrain"
+        },{
+            "name": "terrain-grass2",
+            "id": 12,
+            "description": "Grass terrain #2"
+        },{
+            "name": "terrain-grass3",
+            "id": 9,
+            "description": "Grass terrain #3"
+        },{
+            "name": "terrain-grass-snow",
+            "id": 34,
+            "description": "Snowy grass terrain"
+        },{
+            "name": "terrain-grass-old",
+            "id": 16,
+            "description": "Old grass terrain"
+        },{
+            "name": "terrain-water",
+            "id": 1,
+            "description": "Water terrain"
+        },{
+            "name": "terrain-water-deep",
+            "id": 22,
+            "description": "Deep water terrain"
+        },{
+            "name": "terrain-water-medium",
+            "id": 23,
+            "description": "Medium water terrain"
+        },{
+            "name": "terrain-water-bridge",
+            "id": 28,
+            "description": "Bridge water terrain"
+        },{
+            "name": "terrain-water-old",
+            "id": 15,
+            "description": "Old water terrain"
+        },{
+            "name": "terrain-shallows",
+            "id": 4,
+            "description": "Shallows terrain"
+        },{
+            "name": "terrain-ice",
+            "id": 26,
+            "description": "Ice terrain"
+        },{
+            "name": "terrain-ice2",
+            "id": 35,
+            "description": "Ice terrain #2"
+        },{
+            "name": "terrain-ice-beach",
+            "id": 37,
+            "description": "Icey beach terrain"
+        },{
+            "name": "terrain-desert",
+            "id": 14,
+            "description": "Desert terrain"
+        },{
+            "name": "terrain-dirt",
+            "id": 6,
+            "description": "Dirt terrain"
+        },{
+            "name": "terrain-dirt2",
+            "id": 11,
+            "description": "Dirt terrain #2"
+        },{
+            "name": "terrain-dirt3",
+            "id": 3,
+            "description": "Dirt terrain #3"
+        },{
+            "name": "terrain-dirt-snow",
+            "id": 33,
+            "description": "Snowy dirt terrain"
+        },{
+            "name": "terrain-farm",
+            "id": 7,
+            "description": "Farm terrain"
+        },{
+            "name": "terrain-farm1",
+            "id": 29,
+            "description": "Farm terrain #1"
+        },{
+            "name": "terrain-farm2",
+            "id": 30,
+            "description": "Farm terrain #2"
+        },{
+            "name": "terrain-farm3",
+            "id": 31,
+            "description": "Farm terrain #3"
+        },{
+            "name": "terrain-farm-dead",
+            "id": 8,
+            "description": "Dead farm terrain"
+        },{
+            "name": "terrain-forest",
+            "id": 10,
+            "description": "Forest terrain"
+        },{
+            "name": "terrain-forest-bamboo",
+            "id": 18,
+            "description": "Bamboo forest terrain"
+        },{
+            "name": "terrain-forest-jungle",
+            "id": 17,
+            "description": "Jungle forest terrain"
+        },{
+            "name": "terrain-forest-oak",
+            "id": 20,
+            "description": "Oak forest terrain"
+        },{
+            "name": "terrain-forest-palm",
+            "id": 13,
+            "description": "Palm forest terrain"
+        },{
+            "name": "terrain-forest-pine",
+            "id": 19,
+            "description": "Pine forest terrain"
+        },{
+            "name": "terrain-forest-snow",
+            "id": 21,
+            "description": "Snowy forest terrain"
+        },{
+            "name": "terrain-foundation",
+            "id": 27,
+            "description": "Foundation terrain"
+        },{
+            "name": "terrain-foundation-snow",
+            "id": 36,
+            "description": "Snowy foundation terrain"
+        },{
+            "name": "terrain-koh",
+            "id": 40,
+            "description": "Koh terrain"
+        },{
+            "name": "terrain-leaves",
+            "id": 5,
+            "description": "Leaves terrain"
+        },{
+            "name": "terrain-road",
+            "id": 24,
+            "description": "Road terrain"
+        },{
+            "name": "terrain-road-broken",
+            "id": 25,
+            "description": "Broken road terrain"
+        },{
+            "name": "terrain-road-snow",
+            "id": 38,
+            "description": "Snowy road terrain"
+        },{
+            "name": "terrain-road-fungus",
+            "id": 39,
+            "description": "Fungus road terrain"
+        },{
+            "name": "terrain-snow",
+            "id": 32,
+            "description": "Snowy terrain"
+        },{
+            "name": "terrain-unknown",
+            "id": 41,
+            "description": "Unknown terrain"
+        }],
+    "TimerState": [
+        {
+            "name": "timer-disabled",
+            "description": "Timer is currently disabled"
+        },{
+            "name": "timer-running",
+            "description": "Timer is currently running"
+        },{
+            "name": "timer-triggered",
+            "description": "Checks whether a given timer has triggered"
+        }],
+    "VictoryCond": [
+        {
+            "name": "standard",
+            "description": "Wonder, relic or military victory"
+        },{
+            "name": "conquest",
+            "description": "Must destroy all enemy military and villager units and buildings"
+        },{
+            "name": "time-limit",
+            "description": "The game will end after a specified time"
+        },{
+            "name": "score",
+            "description": "Highest score wins"
+        },{
+            "name": "custom",
+            "description": "Defined by the map being played"
+        }],
+    "VillagerID": [
+        {
+            "name": "idle-villager-m",
+            "id": 83,
+            "description": "Idle villager (male)"
+        },{
+            "name": "idle-villager-f",
+            "id": 293,
+            "description": "Idle villager (female)"
+        },{
+            "name": "farmer-m",
+            "id": 259,
+            "description": "Farming villager (male)"
+        },{
+            "name": "farmer-f",
+            "id": 214,
+            "description": "Farming villager (female)"
+        },{
+            "name": "shepherd-m",
+            "id": 592,
+            "description": "Shepherd villager (male)"
+        },{
+            "name": "shepherd-f",
+            "id": 590,
+            "description": "Shepherd villager (female)"
+        },{
+            "name": "forager-m",
+            "id": 120,
+            "description": "Forager villager (male)"
+        },{
+            "name": "forager-f",
+            "id": 354,
+            "description": "Forager villager (female)"
+        },{
+            "name": "hunter-m",
+            "id": 122,
+            "description": "Hunter villager (male)"
+        },{
+            "name": "hunter-f",
+            "id": 216,
+            "description": "Hunter villager (female)"
+        },{
+            "name": "fisher-m",
+            "id": 56,
+            "description": "Fisher villager (male)"
+        },{
+            "name": "fisher-f",
+            "id": 57,
+            "description": "Fisher villager (female)"
+        },{
+            "name": "wood-chopper-m",
+            "id": 123,
+            "description": "Wood chopper villager (male)"
+        },{
+            "name": "wood-chopper-f",
+            "id": 218,
+            "description": "Wood chopper villager (female)"
+        },{
+            "name": "gold-miner-m",
+            "id": 579,
+            "description": "Gold miner villager (male)"
+        },{
+            "name": "gold-miner-f",
+            "id": 581,
+            "description": "Gold miner villager (female)"
+        },{
+            "name": "stone-miner-m",
+            "id": 124,
+            "description": "Stone miner villager (male)"
+        },{
+            "name": "stone-miner-f",
+            "id": 220,
+            "description": "Gold miner villager (female)"
+        },{
+            "name": "builder-m",
+            "id": 118,
+            "description": "Builder villager (male)"
+        },{
+            "name": "builder-f",
+            "id": 212,
+            "description": "Builder villager (female)"
+        },{
+            "name": "repair-villager-m",
+            "id": 156,
+            "description": "Repair villager (male)"
+        },{
+            "name": "repair-villager-f",
+            "id": 222,
+            "description": "Repair villager (female)"
+        }],
+    "Instruction": [
+        {
+            "name": "defconst",
+            "description": "Defines a new constant",
+            "section": "Instruction",
+            "notes": ["none"]
+        },{
+            "name": "defrule",
+            "description": "Defines the start of a new rule",
+            "section": "Instruction",
+            "notes": ["none"]
+        },{
+            "name": "load",
+            "description": "Load a file",
+            "section": "Instruction",
+            "notes": ["Takes a single filename of form './relative/path/to/file' without the '.per' extension."]
+        }]
+}

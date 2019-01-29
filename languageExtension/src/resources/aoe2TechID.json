@@ -1,24 +1,10 @@
 { "TechID": [
     {
-        "name": "ri-",
-        "description": "",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "TechID",
-        "example": [],
-        "related": [""],
-        "requires": {
-            "age": "",
-            "building": [""],
-            "civ": [""],
-            "tech": [""]
-        }
-    },{
         "name": "ri-anarchy",
         "description": "Huskarls can be trained at Barracks",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-perfusion"],
         "requires": {
@@ -32,7 +18,7 @@
         "description": "Skirmishers and Slingers minimum range removed",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-couriers"],
         "requires": {
@@ -46,7 +32,7 @@
         "description": "Upgrades Crossbowman to Arbalest",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-crossbowman"],
         "requires": {
@@ -60,7 +46,7 @@
         "description": "Buildings +10% HP, +1 armor, +1 pierce armor, +3 building armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-masonry"],
         "requires": {
@@ -74,7 +60,7 @@
         "description": "Gunpowder units fire more accurately at moving targets. Increases projectile speed of Bombard Cannons and Bombard Towers by +0.2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-carrack"],
         "requires": {
@@ -88,7 +74,7 @@
         "description": "Watch Tower/Guard Tower/Keep +1/+2/+3 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -102,7 +88,7 @@
         "description": "Infantry +2 attack vs standard buildings",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -116,7 +102,7 @@
         "description": "Bombard Tower, Bombard Cannon, and Cannon Galleon range +2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-sipahi"],
         "requires": {
@@ -130,7 +116,7 @@
         "description": "Wonder and Relic victories take +100 years -50% Spies/Treason cost",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-marauders"],
         "requires": {
@@ -144,7 +130,7 @@
         "description": "Skirmishers +1 attack and range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-garland-wars"],
         "requires": {
@@ -158,7 +144,7 @@
         "description": "Monks and Missionaries can convert enemy Monks and Missionaries",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-redemption"],
         "requires": {
@@ -172,7 +158,7 @@
         "description": "Improves missile unit's accuracy at moving targets.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -186,7 +172,7 @@
         "description": "Tributes are free",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-coinage"],
         "requires": {
@@ -200,7 +186,7 @@
         "description": "Throwing Axeman range +1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-chivalry"],
         "requires": {
@@ -214,7 +200,7 @@
         "description": "Berserks regenerate faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-chieftains"],
         "requires": {
@@ -228,7 +214,7 @@
         "description": "Infantry and cavalry +2 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-forging", "ri-iron-casting"],
         "requires": {
@@ -242,7 +228,7 @@
         "description": "Monk and Missionary conversion range +3 and line of sight +3",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -256,7 +242,7 @@
         "description": "Mounted units +20 HP",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -270,7 +256,7 @@
         "description": "Archers, Castles, Town Centers, Towers, Galleys, and Longboats +1 attack, +1 range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-fletching", "ri-bracer"],
         "requires": {
@@ -284,7 +270,7 @@
         "description": "Castles +9 bonus damage against rams",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-mahouts"],
         "requires": {
@@ -298,7 +284,7 @@
         "description": "Allows creation of Bombard Towers",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-chemistry"],
         "requires": {
@@ -312,7 +298,7 @@
         "description": "Villagers gather wood 20% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-double-bit-axe", "ri-two-man-saw"],
         "requires": {
@@ -326,7 +312,7 @@
         "description": "Archers, Castles, Town Centers, Towers, Galleys, and Longboats +1 attack, +1 range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-fletching", "ri-bodkin-arrow"],
         "requires": {
@@ -340,7 +326,7 @@
         "description": "Castles +21% HP",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -354,7 +340,7 @@
         "description": "Battle Elephants +1/+1 armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-manipur-cavalry"],
         "requires": {
@@ -368,7 +354,7 @@
         "description": "Allows creation of Cannon Galleons",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-elite-cannon-galleon"],
         "requires": {
@@ -382,7 +368,7 @@
         "description": "Trade Carts and Trade Cogs move 50% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-cartography"],
         "requires": {
@@ -396,7 +382,7 @@
         "description": "Ship armor +1, Transport Ship capacity +5",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-dry-dock"],
         "requires": {
@@ -410,7 +396,7 @@
         "description": "Ship armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-arquebus"],
         "requires": {
@@ -424,7 +410,7 @@
         "description": "See allies' Line of Sight",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-caravan"],
         "requires": {
@@ -438,7 +424,7 @@
         "description": "Upgrades Knight to Cavalier",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-paladin"],
         "requires": {
@@ -452,7 +438,7 @@
         "description": "Cavalry armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-scale-barding-armor", "ri-plate-barding-armor"],
         "requires": {
@@ -466,7 +452,7 @@
         "description": "Infantry armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-scale-mail-armor", "ri-plate-mail-armor"],
         "requires": {
@@ -480,7 +466,7 @@
         "description": "Upgrads Two Handed Swordsman to Champion",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-man-at-arms", "ri-long-swordsman", "ri-two-handed-swordsman"],
         "requires": {
@@ -494,7 +480,7 @@
         "description": "Battle Elephants +50 HP",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-paper-money"],
         "requires": {
@@ -508,7 +494,7 @@
         "description": "Allows creation of gunpowder units; +1 attack for siege units, archers, and defensive structures",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-bombard-tower"],
         "requires": {
@@ -522,7 +508,7 @@
         "description": "Infantry +5 attack vs cavalry, +4 vs camels",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-berserkergang"],
         "requires": {
@@ -536,7 +522,7 @@
         "description": "Stables work 40% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-bearded-axe"],
         "requires": {
@@ -550,7 +536,7 @@
         "description": "Tribute fee reduced to 20%",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-banking"],
         "requires": {
@@ -564,7 +550,7 @@
         "description": "Barracks, Archery Range, Stable, and Castle units train 33% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -578,7 +564,7 @@
         "description": "Kamayuks, Slingers, and Eagle Scouts +1/+2 armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-andean-sling"],
         "requires": {
@@ -592,7 +578,7 @@
         "description": "Castle range +3, garrisoned infantry fires arrows",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-ironclad"],
         "requires": {
@@ -606,7 +592,7 @@
         "description": "Farms provide +175 food before they need to be reseeded",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-horse-collar", "ri-heavy-plow"],
         "requires": {
@@ -620,7 +606,7 @@
         "description": "Upgrades Archer to Crossbowman",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-arbalest"],
         "requires": {
@@ -634,7 +620,7 @@
         "description": "Upgrades Demolition Raft to Demolition Ship",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-heavy-demolition-Ship"],
         "requires": {
@@ -648,7 +634,7 @@
         "description": "Villagers gather wood 20% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-bow-saw", "ri-two-man-saw"],
         "requires": {
@@ -662,7 +648,7 @@
         "description": "Ballista Elephants and Scorpions fire two projectiles",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-tusk-swords"],
         "requires": {
@@ -676,7 +662,7 @@
         "description": "Siege Workshop units movement speed +50%",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-nomads"],
         "requires": {
@@ -690,7 +676,7 @@
         "description": "Infantry deals trample damage",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-orthodoxy"],
         "requires": {
@@ -704,7 +690,7 @@
         "description": "Ship speed +15%, Transport Ship capacity +10",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-careening"],
         "requires": {
@@ -718,7 +704,7 @@
         "description": "Upgrades Eagle Scout to Eagle Warrior",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-elite-eagle-warrior"],
         "requires": {
@@ -732,7 +718,7 @@
         "description": "Eagle Warrior HP +40",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-obsidian-arrows"],
         "requires": {
@@ -742,11 +728,39 @@
             "tech": ["none"]
         }
     },{
+        "name": "ri-elite-arambai",
+        "description": "Upgrades Arambai to Elite Arambai",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["burmese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-ballista-elephant",
+        "description": "Upgrades Conquistador to Elite Conquistador",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["khmer"],
+            "tech": ["none"]
+        }
+    },{
         "name": "ri-elite-battle-elephant",
         "description": "Upgrades Battle Elephant to Elite Battle Elephant",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -756,11 +770,53 @@
             "tech": ["none"]
         }
     },{
+        "name": "ri-elite-berserk",
+        "description": "Upgrades Berserk to Elite Berserk",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["viking"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-boyar",
+        "description": "Upgrades Boyar to Elite Boyar",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["slav"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-camel-archer",
+        "description": "Upgrades Camel Archer to Elite Camel Archer",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["berber"],
+            "tech": ["none"]
+        }
+    },{
         "name": "ri-elite-cannon-galleon",
         "description": "Upgrades Cannon Galleons to Elite Cannon Galleons",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-cannon-galleon"],
         "requires": {
@@ -774,7 +830,7 @@
         "description": "Upgrades Caravel to Elite Caravel",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -784,11 +840,53 @@
             "tech": ["none"]
         }
     },{
+        "name": "ri-elite-cataphract",
+        "description": "Upgrades Cataphract to Elite Cataphract",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["byzantine"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-chu-ko-nu",
+        "description": "Upgrades Chu Ko Nu to Elite Chu Ko Nu",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["chinese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-conquistador",
+        "description": "Upgrades Conquistador to Elite Conquistador",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["spanish"],
+            "tech": ["none"]
+        }
+    },{
         "name": "ri-elite-eagle-warrior",
         "description": "Upgrades Eagle Warrior to Elite Eagle Warrior",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-eagle-warrior"],
         "requires": {
@@ -798,11 +896,39 @@
             "tech": ["ri-eagle-warrior"]
         }
     },{
+        "name": "ri-elite-elephant-archer",
+        "description": "Upgrades Elephant Archer to Elite Elephant Archer",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["indian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-gbeto",
+        "description": "Upgrades Gbeto to Elite Gbeto",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["spanish"],
+            "tech": ["none"]
+        }
+    },{
         "name": "ri-elite-genitour",
         "description": "Upgrades Genitour to Elite Genitour",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -812,11 +938,109 @@
             "tech": ["none"]
         }
     },{
+        "name": "ri-elite-genoese-crossbowman",
+        "description": "Upgrades Genoese Crossbowman to Elite Genoese Crossbowman",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["italian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-huskarl",
+        "description": "Upgrades Huskarl to Elite Huskarl",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["goth"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-imperial-camel",
+        "description": "Upgrades Imperial Camel to Elite Imperial Camel",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["indian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-jaguar-warrior",
+        "description": "Upgrades Jaguar Warrior to Elite Jaguar Warrior",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["aztec"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-janissary",
+        "description": "Upgrades Janissary to Elite Janissary",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["turk"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-kamayuk",
+        "description": "Upgrades Kamayuk to Elite Kamayuk",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["inca"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-karambit-warrior",
+        "description": "Upgrades Karambit Warrior to Elite Karambit Warrior",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["malay"],
+            "tech": ["none"]
+        }
+    },{
         "name": "ri-elite-longboat",
         "description": "Upgrades Longboat to Elite Longboat",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -826,11 +1050,137 @@
             "tech": ["none"]
         }
     },{
+        "name": "ri-elite-longbowman",
+        "description": "Upgrades Longbowman to Elite Longbowman",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["briton"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-magyar-huszar",
+        "description": "Upgrades Magyar Huszar to Elite Magyar Huszar",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["magyar"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-mameluke",
+        "description": "Upgrades Mameluke to Elite Mameluke",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["saracen"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-mangudai",
+        "description": "Upgrades Mangudai to Elite Mangudai",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["mongol"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-organ-gun",
+        "description": "Upgrades Organ Gun to Elite Organ Gun",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["portuguese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-plumed-archer",
+        "description": "Upgrades Plumed Archer to Elite Plumed Archer",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["mayan"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-rattan-archer",
+        "description": "Upgrades Rattan Archer to Elite Rattan Archer",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["vietnamese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-samurai",
+        "description": "Upgrades Samurai to Elite Samurai",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["japanese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-shotel-warrior",
+        "description": "Upgrades Shotel Warrior to Elite Shotel Warrior",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["ethiopian"],
+            "tech": ["none"]
+        }
+    },{
         "name": "ri-elite-skirmisher",
         "description": "Upgrades Skirmisher to Elite Skirmisher",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-imperial-skirmisher"],
         "requires": {
@@ -840,11 +1190,53 @@
             "tech": ["none"]
         }
     },{
-        "name": "ri-elite-turtleship",
-        "description": "Upgrades Turtleship to Elite Turtleship",
+        "name": "ri-elite-tarkan",
+        "description": "Upgrades Tarkan to Elite Tarkan",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["hun"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-teutonic-knight",
+        "description": "Upgrades Teutonic Knight to Elite Teutonic Knight",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["teuton"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-throwing-axeman",
+        "description": "Upgrades Throwing Axeman to Elite Throwing Axeman",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["frank"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-turtle-ship",
+        "description": "Upgrades Turtle Ship to Elite Turtle Ship",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -854,11 +1246,53 @@
             "tech": ["none"]
         }
     },{
+        "name": "ri-elite-war-elephant",
+        "description": "Upgrades War Elephant to Elite War Elephant",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["persian"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-war-wagon",
+        "description": "Upgrades War Wagon to Elite War Wagon",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["korean"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-elite-woad-raider",
+        "description": "Upgrades Woad Raider to Elite Woad Raider",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "TechId",
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["celt"],
+            "tech": ["none"]
+        }
+    },{
         "name": "ri-faith",
         "description": "Increases conversion resistance",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-heresy"],
         "requires": {
@@ -872,7 +1306,7 @@
         "description": "Stable units +5 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-tigui"],
         "requires": {
@@ -886,7 +1320,7 @@
         "description": "Upgrades Fire Ship to Fast Fire Ship",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-war-galley"],
         "requires": {
@@ -900,7 +1334,7 @@
         "description": "Monk and Missionary speed +15%",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -914,7 +1348,7 @@
         "description": "Archers, Castles, Town Centers, Towers, Galleys, and Longboats +1 attack and range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-bodkin-arrow", "ri-bracer"],
         "requires": {
@@ -928,7 +1362,7 @@
         "description": "Militia line units cost no gold",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-thalassocracy"],
         "requires": {
@@ -942,7 +1376,7 @@
         "description": "Infantry and cavalry +1 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-iron-casting", "ri-blast-furnace"],
         "requires": {
@@ -956,7 +1390,7 @@
         "description": "Upgrades your Stone Walls to Fortified Walls. Also increases hit points of gates.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -970,7 +1404,7 @@
         "description": "Siege Workshop units +40% HP",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-stronghold"],
         "requires": {
@@ -984,7 +1418,7 @@
         "description": "Upgrades War Galley to Galleon",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-war-galley"],
         "requires": {
@@ -998,7 +1432,7 @@
         "description": "Infantry attack +4",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-atlatl"],
         "requires": {
@@ -1012,7 +1446,7 @@
         "description": "Fishing Ships work +25% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1026,7 +1460,7 @@
         "description": "Villagers gather gold 15% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-gold-shaft-mining"],
         "requires": {
@@ -1040,7 +1474,7 @@
         "description": "Villagers gather gold 15% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-gold-mining"],
         "requires": {
@@ -1054,7 +1488,7 @@
         "description": "Walls and towers +30% hit points",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-rocketry"],
         "requires": {
@@ -1068,7 +1502,7 @@
         "description": "Fire Ships +1 range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-logistica"],
         "requires": {
@@ -1082,7 +1516,7 @@
         "description": "Upgrads Watch Towers to Guard Towers",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-keep", "ri-bombard-tower"],
         "requires": {
@@ -1096,7 +1530,7 @@
         "description": "Trading fee reduced to 15%",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1110,7 +1544,7 @@
         "description": "Upgrades Pikeman to Halberdier",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-pikeman"],
         "requires": {
@@ -1124,7 +1558,7 @@
         "description": "Villagers carry 50% more and move 10% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-wheelbarrow"],
         "requires": {
@@ -1138,7 +1572,7 @@
         "description": "Towers +125%, Castles and Harbors +4 attack vs ships",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1152,7 +1586,7 @@
         "description": "Upgrades Camel to Heavy Camel",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-imperial-camel"],
         "requires": {
@@ -1166,7 +1600,7 @@
         "description": "Upgrades Cavalry Archer to Heavy Cavalry Archer",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1180,7 +1614,7 @@
         "description": "Upgrades Demolition Raft to Demolition Ship",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-demolition-Ship"],
         "requires": {
@@ -1194,7 +1628,7 @@
         "description": "Farms provide +125 food, Villagers carry +1 food",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-horse-collar", "ri-crop-rotation"],
         "requires": {
@@ -1208,7 +1642,7 @@
         "description": "Quadruples the healing rate of units garrisoned inside buildings",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1222,7 +1656,7 @@
         "description": "Converted units/buildings die/are destroyed instead of taking the enemy's color",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-faith"],
         "requires": {
@@ -1236,7 +1670,7 @@
         "description": "Farms provide +75 food before they need to be reseeded",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-heavy-plow", "ri-crop-rotation"],
         "requires": {
@@ -1250,7 +1684,7 @@
         "description": "Cavalry speed +10%",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1264,7 +1698,7 @@
         "description": "Upgrades light Cavalry to Hussar",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-light-cavalry"],
         "requires": {
@@ -1278,7 +1712,7 @@
         "description": "Monks and Missionaries regain their faith faster after a successful conversion",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1292,7 +1726,7 @@
         "description": "Upgrades Heavy Camel to Imperial Camel",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-heavy-camel"],
         "requires": {
@@ -1306,7 +1740,7 @@
         "description": "Upgrades Elite Skirmisher to Imperial Skirmisher",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-elite-skirmisher"],
         "requires": {
@@ -1320,7 +1754,7 @@
         "description": "Monks convert faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-supremacy"],
         "requires": {
@@ -1334,7 +1768,7 @@
         "description": "Infantry and cavalry +1 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-forging", "ri-blast-furnace"],
         "requires": {
@@ -1348,7 +1782,7 @@
         "description": "Siege weapon melee armor +4",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-crenellations"],
         "requires": {
@@ -1362,7 +1796,7 @@
         "description": "Team Castles work +25% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-maghrabi-camels"],
         "requires": {
@@ -1376,7 +1810,7 @@
         "description": "Trebuchets pack/unpack and fire faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-yasama"],
         "requires": {
@@ -1390,7 +1824,7 @@
         "description": "Upgrads Guard Towers to Keeps",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-guard-tower", "ri-bombard-tower"],
         "requires": {
@@ -1404,7 +1838,7 @@
         "description": "Archer armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-padded-archer-armor", "ri-ring-archer-armor"],
         "requires": {
@@ -1418,7 +1852,7 @@
         "description": "Upgrades Scout Cavalry to Light Cavalry",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-hussar"],
         "requires": {
@@ -1432,7 +1866,7 @@
         "description": "Cataphracts cause trample damage, +6 attack vs infantry",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-greek-fire"],
         "requires": {
@@ -1446,7 +1880,7 @@
         "description": "Upgrads Man-at-Arms to Long Swordsman",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-man-at-arms", "ri-two-handed-swordsman", "ri-champion"],
         "requires": {
@@ -1460,7 +1894,7 @@
         "description": "Villagers +15 HP, +1/+2 armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1474,7 +1908,7 @@
         "description": "Monks return 33 gold when killed",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-zealotry"],
         "requires": {
@@ -1488,7 +1922,7 @@
         "description": "Camel troops regenerate",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-kasbah"],
         "requires": {
@@ -1502,7 +1936,7 @@
         "description": "War Elephant speed +30%",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-boiling-oil"],
         "requires": {
@@ -1516,7 +1950,7 @@
         "description": "Upgrads Milita to Man-at-Arms",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-long-swordsman", "ri-two-handed-swordsman", "ri-champion"],
         "requires": {
@@ -1530,7 +1964,7 @@
         "description": "Cavalry and Arambai +3 attack vs buildings and standard buildings",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-howdah"],
         "requires": {
@@ -1544,7 +1978,7 @@
         "description": "Tarkans can be trained at the Stable",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-atheism"],
         "requires": {
@@ -1558,7 +1992,7 @@
         "description": "Buildings +10% HP, +1 armor, +1 pierce armor, +3 building armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-architecture"],
         "requires": {
@@ -1572,7 +2006,7 @@
         "description": "Magyar Huszars cost no gold",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-recurve-bow"],
         "requires": {
@@ -1586,7 +2020,7 @@
         "description": "Removes towers and Castles minimum range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1600,7 +2034,7 @@
         "description": "Houses do not lose population when destroyed",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-drill"],
         "requires": {
@@ -1614,7 +2048,7 @@
         "description": "Archer line has +6 attack vs standard buildings and stone defense",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-el-dorado"],
         "requires": {
@@ -1628,7 +2062,7 @@
         "description": "Monks +3/+3 armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-druzhina"],
         "requires": {
@@ -1642,7 +2076,7 @@
         "description": "Archer armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-leather-archer-armor", "ri-ring-archer-armor"],
         "requires": {
@@ -1656,7 +2090,7 @@
         "description": "Upgrades Cavalier to Paladin",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-cavalier"],
         "requires": {
@@ -1670,7 +2104,7 @@
         "description": "Turtle Ships move 15% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-shinkichon"],
         "requires": {
@@ -1684,7 +2118,7 @@
         "description": "The player and all allies receive 500 gold",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-chatras"],
         "requires": {
@@ -1698,7 +2132,7 @@
         "description": "Mounted archer armor +1/+2, attack bonus of +2 or +4 against Pikemen",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1712,7 +2146,7 @@
         "description": "Foot archers +1/+1 armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-silk-road"],
         "requires": {
@@ -1726,7 +2160,7 @@
         "description": "Barracks work 100% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-anarchy"],
         "requires": {
@@ -1740,7 +2174,7 @@
         "description": "Upgrades Spearman to Pikeman",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-halberdier"],
         "requires": {
@@ -1754,7 +2188,7 @@
         "description": "Cavalry armor +1/+2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-scale-barding-armor", "ri-chain-barding-armor"],
         "requires": {
@@ -1768,7 +2202,7 @@
         "description": "Infantry armor +1/+2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-scale-mail-armor", "ri-chain-mail-armor"],
         "requires": {
@@ -1782,7 +2216,7 @@
         "description": "Cavalry Archers +1 range and attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-mercenaries"],
         "requires": {
@@ -1796,7 +2230,7 @@
         "description": "Monks can convert most buildings and siege units",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-attonement"],
         "requires": {
@@ -1810,7 +2244,7 @@
         "description": "Archer armor +1/+2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-padded-archer-armor", "ri-leather-archer-armor"],
         "requires": {
@@ -1824,7 +2258,7 @@
         "description": "Chu Ko Nu attack +2, Scorpion attack +4",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-great-wall"],
         "requires": {
@@ -1838,7 +2272,7 @@
         "description": "Shotel Warriors are created nearly instantly",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-torsion-engines"],
         "requires": {
@@ -1852,7 +2286,7 @@
         "description": "Monk and Missionary hit points +15",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1866,7 +2300,7 @@
         "description": "Villagers +15 attack against buildings and stone defense. Villagers chop down trees with one strike",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1880,7 +2314,7 @@
         "description": "Cavalry armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-chain-barding-armor", "ri-plate-barding-armor"],
         "requires": {
@@ -1894,7 +2328,7 @@
         "description": "Infantry armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-chain-mail-armor", "ri-plate-mail-armor"],
         "requires": {
@@ -1908,7 +2342,7 @@
         "description": "Hand Cannoneers +1 range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-sultans"],
         "requires": {
@@ -1922,7 +2356,7 @@
         "description": "Mangonels +1 range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-panokseon"],
         "requires": {
@@ -1936,7 +2370,7 @@
         "description": "Ships cost -20% wood and are built 54% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1950,7 +2384,7 @@
         "description": "Siege units +20% attack against buildings, +1 range (except Rams)",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1964,7 +2398,7 @@
         "description": "Trade units cost halved",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-pavise"],
         "requires": {
@@ -1978,7 +2412,7 @@
         "description": "Cavalry Archers +20 HP",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-artillery"],
         "requires": {
@@ -1992,7 +2426,7 @@
         "description": "See enemy's Line of Sight",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Spies is replaced by Treason in Regicide maps"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-treason"],
         "requires": {
@@ -2006,7 +2440,7 @@
         "description": "Infantry move 10% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -2020,7 +2454,7 @@
         "description": "Villagers gather stone 15% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-stone-shaft-mining"],
         "requires": {
@@ -2034,7 +2468,7 @@
         "description": "Villagers gather stone 15% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-stone-mining"],
         "requires": {
@@ -2048,7 +2482,7 @@
         "description": "Castles and Towers fire 25% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-furor-celtica"],
         "requires": {
@@ -2062,7 +2496,7 @@
         "description": "All gold gathering is 10% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-shatagni"],
         "requires": {
@@ -2076,7 +2510,7 @@
         "description": "Increases Villager combat skills",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-inquisition"],
         "requires": {
@@ -2090,7 +2524,7 @@
         "description": "Turns Docks into Harbors",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-forced-levy"],
         "requires": {
@@ -2104,7 +2538,7 @@
         "description": "Only one Monk or Missionary must rest after a successful conversion",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -2118,7 +2552,7 @@
         "description": "Archers fire faster and with 100% accuracy",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -2132,7 +2566,7 @@
         "description": "Town Centers fire arrows",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-farimba"],
         "requires": {
@@ -2146,7 +2580,7 @@
         "description": "Siege Workshop units blast radius increased",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-royal-heirs"],
         "requires": {
@@ -2160,7 +2594,7 @@
         "description": "Building line-of-sight +4.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-town-watch"],
         "requires": {
@@ -2174,7 +2608,7 @@
         "description": "Building line-of-sight +4.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-town-patrol"],
         "requires": {
@@ -2188,7 +2622,7 @@
         "description": "Infantry +2 line-of-sight",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -2202,7 +2636,7 @@
         "description": "Villagers construct buildings 20% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["none"],
         "requires": {
@@ -2215,8 +2649,10 @@
         "name": "ri-treason",
         "description": "See enemy Kings for a short time",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["Treason replaces Spies in Regicide maps"],
-        "section": "TechID",
+        "note": [
+            "Regicide Map only",
+            "Treason replaces Spies in Regicide maps"],
+        "section": "TechId",
         "example": [],
         "related": ["ri-spies"],
         "requires": {
@@ -2230,7 +2666,7 @@
         "description": "Battle Elephants +3 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-double-crossbow"],
         "requires": {
@@ -2244,7 +2680,7 @@
         "description": "Upgrads Long Swordsman to Two Handed Swordsman",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-man-at-arms", "ri-long-swordsman", "ri-champion"],
         "requires": {
@@ -2258,7 +2694,7 @@
         "description": "Villagers gather wood 10% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-double-bit-axe", "ri-bow-saw"],
         "requires": {
@@ -2272,7 +2708,7 @@
         "description": "Upgrades Galley to War Galley and Fire Galley to Fire Ship",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-galleon"],
         "requires": {
@@ -2286,7 +2722,7 @@
         "description": "Trebuchets do blast damage, 100% accuracy against units",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-yeoman"],
         "requires": {
@@ -2300,7 +2736,7 @@
         "description": "Villagers carry 25% more and move 10% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-hand-cart"],
         "requires": {
@@ -2314,7 +2750,7 @@
         "description": "Towers fire 2 extra arrows",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-kataparuto"],
         "requires": {
@@ -2328,7 +2764,7 @@
         "description": "Foot archer range +1, Tower attack +2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-warwolf"],
         "requires": {
@@ -2342,7 +2778,7 @@
         "description": "Camel and Mameluke +30HP",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "TechID",
+        "section": "TechId",
         "example": [],
         "related": ["ri-madrasah"],
         "requires": {

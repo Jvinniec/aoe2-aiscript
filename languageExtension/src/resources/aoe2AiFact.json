@@ -1,0 +1,3042 @@
+{ "FactId": [
+    {
+        "name": "attack-soldier-count",
+        "description": "Checks the computer player’s attack soldier count.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["An attack soldier is a land-based military unit currently assigned to attack groups. "],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "Check if the number of attacking soldiers is ",
+            "data": "(defrule\r\n\t(can-build barracks)\r\n=&gt;\r\n\t(build barracks)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "attack-warboat-count",
+        "description": "Checks the computer player’s attack warboat count.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A value to compare to"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "building-available",
+        "description": "Checks that the building is available to the computer player's civ, and that the tech tree prerequisites are met.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Does not check that there are enough resources to build the building."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "BuildingID",
+                "note": "A building ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "building-count",
+        "description": "Checks the computer player's building count.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Only existing buildings are included"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "building-count-total",
+        "description": "Checks the computer player's total building count.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["includes existing and queued buildings."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "building-type-count",
+        "description": "Checks the computer player's building count.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Only existing buildings of the given type are included"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "BuildingID",
+                "note": "A building ID"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "building-type-count-total",
+        "description": "Checks the computer player's total building count.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The total includes existing and queued buildings of the given type."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "BuildingID",
+                "note": "A building ID"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-afford-building",
+        "description": "Checks whether the computer player has enough resources to build the given building.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Does not take into account escrowed resources."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "BuildingID",
+                "note": "The building ID to check."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-afford-complete-wall",
+        "description": "Checks whether the computer player has enough resources to finish the given wall at the given perimeter",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks: That the wall type is available to the computer player’s civilization.",
+                 "Checks: That the tech tree prerequisites for using that wall type are met.",
+                 "Checks: That the resources needed for completing a wall line are available, not counting escrow amounts"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "Perimeter",
+                "note": "1 or 2 (1=between 10 and 20 tiles from the starting Town Center, 2=between 18 and 30 tiles)"
+            },{
+                "type": "WallType",
+                "note": "One of ..."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-afford-research",
+        "description": "Checks whether the computer player has enough resources to perform the given research",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Does not take into account escrowed resources."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "ResearchID",
+                "note": "A research ID to be checked"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-afford-unit",
+        "description": "Checks whether computer player has enough resources to train given unit.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Does not take into account escrowed resources."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "UnitID",
+                "note": "A unit ID to be checked"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-build",
+        "description": "Checks whether computer player can build the given building. ",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks: Building is available to the computer player’s civilization.",
+                 "Checks: Tech tree prerequisites for building are met",
+                 "Checks: Resources needed for the building are available, not counting escrow amounts."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "BuildingId",
+                "note": "A building ID"
+            }],
+        "example": [{
+            "title": "Check if a barracks can be built",
+            "data": "(defrule\r\n\t(can-build barracks)\r\n=&gt;\r\n\t(build barracks)\r\n)"
+        }],
+        "related": ["up-can-build"]
+    },{
+        "name": "can-build-gate",
+        "description": "Checks whether construction of a gate as part of the given perimeter wall can start",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks: Gate is available to the computer player’s civilization.",
+                 "Checks: Tech tree prerequisites for building a gate are met.",
+                 "Checks: Resources needed for building a gate are available, not counting escrow amounts.",
+                 "Checks: That there is a location to build a gate."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "Perimeter",
+                "note": "1 or 2 (1=between 10 and 20 tiles from the starting Town Center, 2=between 18 and 30 tiles)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-build-gate-with-escrow",
+        "description": "Checks whether construction of a gate as part of the given perimeter wall can start",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks: Gate is available to the computer player’s civilization.",
+                 "Checks: Tech tree prerequisites for building a gate are met.",
+                 "Checks: Resources needed for building a gate are available, counting escrow amounts.",
+                 "Checks: That there is a location to build a gate."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "Perimeter",
+                "note": "1 or 2 (1=between 10 and 20 tiles from the starting Town Center, 2=between 18 and 30 tiles)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-build-wall",
+        "description": "Checks whether a wall line of the given wall type can be built at the given perimeter.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks: Wall type is available to the computer player’s civilization.",
+                 "Checks: Tech tree prerequisites for using that wall type are met.",
+                 "Checks: Resources needed for completing a wall line are available, not counting escrow amounts",
+                 "Checks: That there is a location to build a wall line."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "Perimeter",
+                "note": "1 or 2 (1=between 10 and 20 tiles from the starting Town Center, 2=between 18 and 30 tiles)"
+            },{
+                "type": "WallType",
+                "note": "One of ..."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-build-wall-with-escrow",
+        "description": "Checks whether a wall line of the given wall type can be built at the given perimeter.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks: Wall type is available to the computer player’s civilization.",
+                 "Checks: Tech tree prerequisites for using that wall type are met.",
+                 "Checks: Resources needed for completing a wall line are available, counting escrow amounts",
+                 "Checks: That there is a location to build a wall line."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "Perimeter",
+                "note": "1 or 2 (1=between 10 and 20 tiles from the starting Town Center, 2=between 18 and 30 tiles)"
+            },{
+                "type": "WallType",
+                "note": "One of ..."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-build-with-escrow",
+        "description": "Checks whether the computer player can build the given building",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "BuildingID",
+                "note": "A building ID to check"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-buy-commodity",
+        "description": "Checks whether the computer player can buy one lot of the given commodity.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Does not take into account escrowed resources."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "Commodity",
+                "note": "A commodity (food, gold, stone or wood)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-research",
+        "description": "Checks if the given research can start.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks: Research item is available to the computer player's civilization.",
+                 "Checks: Tech tree prerequisites for research are met.",
+                 "Checks: Resources needed for research are available, not counting escrow amounts.",
+                 "Checks: Building that is not busy is ready to start research."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "ResearchID",
+                "note": "A research ID."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-research-with-escrow",
+        "description": "Checks if the given research can start.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks: Research item is available to the computer player's civilization.",
+                 "Checks: Tech tree prerequisites for research are met.",
+                 "Checks: Resources needed for research are available, counting escrow amounts.",
+                 "Checks: Building that is not busy is ready to start research."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "ResearchID",
+                "note": "A research ID."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-sell-commodity",
+        "description": "Checks whether the computer player can sell one lot of the given commodity.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Does not take into account escrowed resources."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "Commodity",
+                "note": "A commodity (food, gold, stone or wood)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-spy",
+        "description": "Checks if the spy command can be executed.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Takes into account escrowed resources"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-spy-with-escrow",
+        "description": "Checks if the spy command can be executed.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Does not take into account escrowed resources"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-train",
+        "description": "Checks if the training of the given unit can start.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks: Unit is available to computer player's civilization",
+                 "Checks: Tech tree prerequisites for training the unit are met.",
+                 "Checks: Resources needed for training the unit are available, not counting escrow amounts.",
+                 "Checks: There is enough housing headroom for the unit.",
+                 "Checks: There is a building that is not busy and is ready to start training the unit"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "UnitID",
+                "note": "A unit ID to check."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "can-train-with-escrow",
+        "description": "Checks if the training of the given unit can start.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks: Unit is available to computer player's civilization",
+                 "Checks: Tech tree prerequisites for training the unit are met.",
+                 "Checks: Resources needed for training the unit are available, counting escrow amounts.",
+                 "Checks: There is enough housing headroom for the unit.",
+                 "Checks: There is a building that is not busy and is ready to start training the unit"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "UnitID",
+                "note": "A unit ID to check."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "civ-selected",
+        "description": "Checks the computer player’s civ.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CivID",
+                "note": "A civilization ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "civilian-population",
+        "description": "Checks the computer player’s civilian population.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["civilian population is villagers, trade vehicles, fishing boats, etc."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CivID",
+                "note": "A civilization ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "commodity-buying-price" ,
+        "description": "Checks the current buying price for the given commodity",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "Commodity",
+                "note": "Commodity"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "commodity-selling-price" ,
+        "description": "Checks the current selling price for the given commodity",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "Commodity",
+                "note": "Commodity"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "current-age",
+        "description": "Checks computer player's current age",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "AgeID",
+                "note": "Comparison operator"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "current-age-time",
+        "description": "Checks computer player's time spent in the current age",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "current-score",
+        "description": "Checks computer player’s current score.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "death-match-game",
+        "description": "Checks if the game is a Death Match game.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "defend-soldier-count",
+        "description": "Checks the computer player's defend soldier count.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["A defend soldier is a land-based military unit not assigned to attack groups"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value to compare to"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "defend-warboat-count",
+        "description": "Checks the computer player's defend warboat count.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["A defend warboat is a boat capable of attacking and not assigned to attack groups."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value to compare to"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "difficulty",
+        "description": "Checks difficulty setting",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["easiest > easy > moderate > hard > hardest"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Difficulty",
+                "note": "Difficulty level"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "doctrine",
+        "description": "Checks the current doctrine",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "Value",
+                "note": "Value to be checked"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "dropsite-min-distance",
+        "description": "Checks computer player’s minimum dropsite walking distance for a given resource type",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["It is not recommended to use this fact for building of first dropsites necessary for age advancement"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "ResourceID",
+                "note": "A resource ID (food, wood, stone, gold)"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "enemy-buildings-in-town",
+        "description": "Checks for enemy buildings in a computer player's town",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [{
+            "type": "none",
+            "note": "none"
+        }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "enemy-captured-relics",
+        "description": "Checks if enemy has captured all relics",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["When this happens, tactical AI automatically starts targeting Monasteries and Monks",
+                 "Use this fact to intensify attacks and combine it with the attack-now action to force attacks"],
+        "section": "FactId",
+        "param": [{
+            "type": "none",
+            "note": "none"
+        }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "escrow-amount",
+        "description": "Checks a computer player’s escrow amount for a given resource type",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "ResourceID",
+                "note": "Resource to be checked"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "event-detected",
+        "description": "Checks if the given event has been detected",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The fact stays true until the event is explicitly disabled by the acknowledge-event action"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "EventType",
+                "note": "Resource to be checked"
+            },{
+                "type": "EventID",
+                "note": "A valid event ID in the range 0 - 255"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "food-amount",
+        "description": "Checks a computer player’s food amount",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value to be checked"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "game-time",
+        "description": "Checks the game time in seconds",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value to be checked in seconds"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "goal",
+        "description": "Checks what the given goal is",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks if GoalID is equal to Value"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "GoalID",
+                "note": "A valid goal ID"
+            },{
+                "type": "Value",
+                "note": "A value for direct comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "gold-amount",
+        "description": "Checks a computer player’s gold amount",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "housing-headroom",
+        "description": "Checks computer player’s housing headroom",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Housing headroom is the difference between current housing capacity and trained unit capacity."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "idle-farm-count",
+        "description": "checks the number of farms with no farmers for a computer player.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Counts existing seeded farms, not exhausted farms"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "map-size",
+        "description": "Checks map size",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "MapSize",
+                "note": "Map size to check"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "map-type",
+        "description": "Checks map type",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "MapType",
+                "note": "Map type to check"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "military-population",
+        "description": "Checks computer player’s military population",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "player-computer",
+        "description": "Checks if the given player is a computer player",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "The player(s) to check."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "player-human",
+        "description": "Checks if the given player is a human player",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "The player(s) to check."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "player-in-game",
+        "description": "Checks if the given player is a valid player and still playing",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "The player(s) to check."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "player-number",
+        "description": "Checks computer player's player number",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "The player number to check."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "player-resigned",
+        "description": "Checks if the given player has resigned",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID",
+                 "If a player has lost by any means other than resigning, this will return false"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "The player(s) to check."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "player-valid",
+        "description": "Checks if the given player is a valid player (see notes)",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID",
+                 "In games with more than 2 players, players that lost before the game is over are considered to be valid players, because their units/buildings can still be in the game."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "The player(s) to check."
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-building-count",
+        "description": "Checks the given player's building count",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID",
+                 "Both existing buildings and buildings under construction are included.",
+                 "The computer player relies only on what it has seen – no cheating."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "The player(s) to check."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-building-type-count",
+        "description": "Checks the given player's building count for a specific builing type",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID",
+                 "Both existing buildings and buildings under construction are included.",
+                 "The computer player relies only on what it has seen – no cheating."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "The player(s) to check."
+            },{
+                "type": "BuildingID",
+                "note": "Building type to be checked (accepts wildcards)"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-civ",
+        "description": "Checks a given player's civilization",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "Player ID to be checked"
+            },{
+                "type": "CivID",
+                "note": "Civilization to be checked"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-civilian-population",
+        "description": "Checks a given player’s civilian population.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for the PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "Player number to check"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Number for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-current-age",
+        "description": "Checks the given player’s current age",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "Player ID to be checked"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "AgeID",
+                "note": "A given age"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-current-age-time",
+        "description": "Checks the given player’s time spent in the current age",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "Player ID to be checked"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A given time in seconds"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-military-population",
+        "description": "Checks the given player’s military population",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "Player ID to be checked"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Number for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-population",
+        "description": "Checks the given player’s population",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "Player ID to be checked"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Number for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-score",
+        "description": "Checks the given player’s current score",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "Player ID to be checked"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Number for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-stance",
+        "description": "Checks the given player’s diplomatic stance",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "Player ID to be checked"
+            },{
+                "type": "DiplomaticStance",
+                "note": "Player diplomatic stance"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-tribute",
+        "description": "Checks the player's tribute given throughout the game",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "Player ID to be checked"
+            },{
+                "type": "ResourceID",
+                "note": "A resource type to check"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value to compare to"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-tribute-memory",
+        "description": "Checks a player's tribute given since the player's tribute memory was cleared",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "Player ID to be checked"
+            },{
+                "type": "ResourceID",
+                "note": "A resource type to check"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value to compare to"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-unit-count",
+        "description": "Checks the given player's unit count",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Computer player relies only on what it has seen – no cheating",
+                 "Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "Player ID to be checked"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value to compare to"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "players-unit-type-count",
+        "description": "Checks the given player's unit count",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Computer player relies only on what it has seen – no cheating",
+                 "For allies and self only trained units of the given type are included.",
+                 "Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "Player ID to be checked"
+            },{
+                "type": "UnitID",
+                "note": "A given unit ID"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value to compare to"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "population",
+        "description": "Checks the computer player’s population",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value to compare to"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "population-cap",
+        "description": "Checks population cap setting",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value to compare to"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "population-headroom",
+        "description": "Checks computer player’s population headroom",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Population headroom is the difference between the game’s population cap and current housing capacity"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value to compare to"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "random-number",
+        "description": "Checks random number value",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value to compare to"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "regicide-game",
+        "description": "Checks if the game is a regicide game",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "research-available",
+        "description": "Checks that the given research is available",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks: Research is available to the computer player's civ",
+                 "Checks: Research is available at this time (tech tree prerequisites are met)",
+                 "Does NOT check if sufficient resources are present to start researching"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "TechID",
+                "note": "Tech ID associated with research"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "research-completed",
+        "description": "Checks that the given research is completed",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks: Research is available to the computer player's civ",
+                 "Checks: Research is available at this time (tech tree prerequisites are met)",
+                 "Does NOT check if sufficient resources are present to start researching"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "TechID",
+                "note": "Tech ID associated with research"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "resource-found",
+        "description": "Checks whether the computer player has found the given resource",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Once it becomes true for a certain resource it stays true for that resource",
+                 "'food' refers to a forage site",
+                 "'wood' refers to forest trees (not lone trees)"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "ResourceID",
+                "note": "Resource to check for"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "shared-goal",
+        "description": "checks a given goal that is shared among computer players",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["To be used only when all computer players are on the same team"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "GoalID",
+                "note": "Shared goal ID (0 - 255)"
+            },{
+                "type": "Value",
+                "note": "Value to compare against"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "sheep-and-forage-too-far",
+        "description": "Checks whether computer player has any forage site(s) and/or sheep within 8 tiles of the drop-off location (Mill or Town Center)",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "soldier-count",
+        "description": "Checks the computer player’s soldier count",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["An attack soldier is a land-based military unit."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "stance-toward",
+        "description": "Checks computer player’s stance toward a given player",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "A valid player ID number"
+            },{
+                "type": "DiplomaticStance",
+                "note": "A diplomatic stance"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "starting-age",
+        "description": "Checks game's starting age",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["In addition to the regular age parameters, post-imperial-age can be used."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "AgeID",
+                "note": "An age ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "starting-resources",
+        "description": "checks starting resources (low, medium, or high)",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["In addition to the regular age parameters, post-imperial-age can be used."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "StartResources",
+                "note": "A starting resource level (low, medium, high)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "stone-amount",
+        "description": "Checks computer player’s stone amount",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "strategic-number",
+        "description": "Checks a strategic number’s value",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "StrategicNumber",
+                "note": "A user set strategic number"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "taunt-detected",
+        "description": "Detects a given taunt",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Check can be performed any number of times until the taunt is explicitly acknowledged.",
+                 "Allows “any”/”every” wildcard parameters for PlayerID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "A valid player ID"
+            },{
+                "type": "TauntID",
+                "note": "A valid taunt ID"
+            }],
+        "example": [{
+            "title": "Detects a request for food by an enemy player, computer or human",
+            "data": "(defrule\r\n\t(taunt-detected any-enemy 3)\r\n=&gt;\r\n\t(acknowledge-taunt this-any-enemy 3)\r\n\t(chat-to-player this-any-enemy \"No food for you\")\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "timer-triggered",
+        "description": "Checks whether a given timer has triggered",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["For disabled timers this fact is always false.",
+                 "Check can be performed any number of times until the timer is explicitly disabled."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "TimerID",
+                "note": "A valid timer ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "town-under-attack",
+        "description": "True when the computer player’s town is under attack",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "unit-available",
+        "description": "Checks that the unit is available",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Checks: Unit is available to computer player's civilization",
+                 "Checks: Tech tree prerequisites for training the unit are met",
+                 "Does NOT check that unit training can actually start",
+                 "Allows the use of unit line wildcard parameters for UnitID"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "UnitID",
+                "note": "A valid unit ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "unit-count",
+        "description": "Checks the computer player's unit count",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Only considers trained units"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "unit-count-total",
+        "description": "Checks the computer player's total unit count",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Considers both trained and queued units"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "unit-type-count",
+        "description": "Checks the computer player's unit count",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Only considers trained units"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "UnitID",
+                "note": "A valid unit ID"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "unit-type-count-total",
+        "description": "Checks the computer player's unit count",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Considers trained and queued units"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "UnitID",
+                "note": "A valid unit ID"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "victory-condition",
+        "description": "Checks game victory condition",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "VictoryCond",
+                "note": "A valid victory condition"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "wall-completed-percentage",
+        "description": "Checks the completion percentage for a given perimeter wall",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Trees and other destructible natural barriers are included and count as completed"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "Perimeter",
+                "note": "1 or 2 (1=between 10 and 20 tiles from the starting Town Center, 2=between 18 and 30 tiles)"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison (0 - 100)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "wall-invisible-percentage",
+        "description": "Checks what percentage of the potential wall placement is covered with fog",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "Perimeter",
+                "note": "1 or 2 (1=between 10 and 20 tiles from the starting Town Center, 2=between 18 and 30 tiles)"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison (0 - 100)"
+            }],
+        "example": [{
+            "title": "Check for a hole in the wall and notify that it exists",
+            "data": "(defrule\r\n\t(wall-completed-percentage 1 < 100)\r\n\t(wall-invisible-percentage 1 == 0)\r\n=&gt;\r\n\t(chat-local \"Found hole in the wall.\")\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "warboat-count",
+        "description": "Checks computer player’s warboat count",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["A warboat is a boat capable of attacking."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison (0 - 100)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "wood-amount",
+        "description": "Checks computer player’s wood amount",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["A warboat is a boat capable of attacking."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "Value for comparison"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "false",
+        "description": "this fact is always false",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [{
+            "type": "none",
+            "note": "none"
+        }],
+        "example": [{
+            "title": "Force the actions in a rule never to run",
+            "data": "(defrule\r\n\t(false)\r\n=&gt;\r\n\t(disable-self)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "true",
+        "description": "this fact is always true",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "",
+        "param": [
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [{
+            "title": "Force the actions in a rule to run",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(disable-self)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-compare-goal",
+        "description": "Perform a comparison with a goal variable.",
+        "version": {"min":"1.0c", "max":""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The goal that will be compared."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            }],
+        "example": [ {
+            "title": "Check if the goal named &quot;gl-sheep-total&quot; stores a value &lt; 4.",
+            "data": "(defconst gl-sheep-total 101)\r\n(defrule\r\n\t(up-compare-goal gl-sheep-total &lt; 4)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": ["none"]
+    },{
+        "name": "up-compare-sn",
+        "description": "Perform a comparison with a strategic number.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "SnId",
+                "note": "The strategic number that will be compared."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            }],
+        "example": [ {
+            "title": "Check if the strategic number named &quot;sn-maximum-town-size&quot; &gt; 40.",
+            "data": "(defrule\r\n\t(up-compare-sn sn-maximum-town-size &gt; 40)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-compare-const",
+        "description": "Perform a comparison with a constant value.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "Const",
+                "note": "The constant that will be compared."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            }],
+        "example": [{
+            "title": "Check if the const named &quot;feudal-villagers&quot; &gt;= 20.",
+            "data": "(defconst feudal-villagers 30)\r\n(defrule\r\n\t(up-compare-const feudal-villagers &gt;= 20)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-resource-amount",
+        "description": "Perform a comparison with an internal resource value.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ {
+            "type": "ResourceAmount",
+            "note": "The resource that will be compared."
+        },{
+            "type": "CompareOp",
+            "note": "Comparison operator"
+        },{
+            "type": "Value",
+            "note": "A number for comparison."
+        } ],
+        "example": [ {
+            "title": "Check if the AI is holding at least 1 relic.",
+            "data": "(defrule\r\n\t(up-resource-amount amount-relics &gt;= 1)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-resource-percent",
+        "description": "Perform a comparison with an internal resource value * 100.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ {
+            "type": "ResourceAmount",
+            "note": "a const from the ResourceAmount enumeration"
+        },{
+            "type": "CompareOp",
+            "note": "Comparison operator"
+        },{
+            "type": "Value",
+            "note": "A number for comparison."
+        } ],
+        "example": [ {
+            "title": "Check amount-tribute-inefficiency to see if coinage has been researched.",
+            "data": "(defrule\r\n\t(up-resource-percent amount-tribute-inefficiency &lt; 30)\r\n=&gt;\r\n\t(chat-to-all &quot;Coinage has been researched.&quot;)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-allied-resource-amount",
+        "description": "Perform a comparison with an ally's internal resource value.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ {
+                "type": "AllyID",
+                "note": "a PlayerId to check for: self, ally"
+            },{
+                "type": "ResourceAmount",
+                "note": "The resource that will be compared."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if any ally's food &lt; 50.",
+            "data": "(defrule\r\n\t(up-allied-resource-amount any-ally food &lt; 50)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-allied-resource-percent",
+        "description": "Perform a comparison with an ally's internal resource value * 100.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "AllyID",
+                "note": "a PlayerId to check for: self, ally"
+            },{
+                "type": "ResourceAmount",
+                "note": "The resource that will be compared."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } 
+        ],
+        "example": [ {
+            "title": "Check amount-tribute-inefficiency to see if coinage has been researched by an ally.",
+            "data": "(defrule\r\n\t(up-allied-resource-percent any-ally amount-tribute-inefficiency &lt; 30)\r\n=&gt;\r\n\t(chat-to-all &quot;Coinage has been researched by an ally.&quot;)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-allied-goal",
+        "description": "Perform a comparison with an allied AI's goal variable.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "ComputerAlly",
+                "note": "a PlayerId to check for: self, computer-ally"
+            },{
+                "type": "GoalId",
+                "note": "The goal that will be compared."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } ],
+            "example": [ {
+                "title": "Check if any ally has a goal with the same id as &quot;gl-sheep-total&quot; that stores a value &gt; 6.",
+                "data": "(defconst gl-sheep-total 101)\r\n(defrule\r\n\t(up-allied-goal any-ally gl-sheep-total &gt; 6)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+            } 
+        ],
+        "related": []
+    },{
+        "name": "up-allied-sn",
+        "description": "Perform a comparison with an allied AI's strategic number.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "ComputerAlly",
+                "note": "a PlayerId to check for: self, computer-ally"
+            },{
+                "type": "SnId",
+                "note": "The strategic number that will be compared."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } ],
+            "example": [ {
+                "title": "Check if any ally has &quot;sn-maximum-town-size&quot; &gt;= 30.",
+                "data": "(defrule\r\n\t(up-allied-sn any-ally sn-maximum-town-size &gt;= 30)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+            } 
+        ],
+        "related": []
+    },{
+        "name": "up-can-research",
+        "description": "Check if a technology can be researched with dynamic values.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "EscrowState",
+                "note": "Determines whether escrowed resources are considered. (0=with-escrow, 1=without-escrow)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "TechId",
+                "note": "The technology that will be checked."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if fletching can be researched with escrowed resources.",
+            "data": "(defrule\r\n\t(up-can-research 0 c: ri-fletching)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-can-train",
+        "description": "Check if a unit can be trained with dynamic values.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "EscrowState",
+                "note": "Determines whether escrowed resources are considered. (0=with-escrow, 1=without-escrow)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "UnitId",
+                "note": "The unit that will be checked."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if spearman-line can be trained with escrowed resources, using a goal.",
+            "data": "(defconst gl-escrow-state 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(set-goal gl-escrow-state with-escrow)\r\n\t(disable-self)\r\n)\r\n(defrule\r\n\t(up-can-train gl-escrow-state c: spearman-line)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-can-build",
+        "description": "Check if a building can be constructed with dynamic values.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "EscrowState",
+                "note": "Determines whether escrowed resources are considered. (0=with-escrow, 1=without-escrow)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "BuildingId",
+                "note": "The building that will be checked."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if an outpost can be built without escrowed resources.",
+            "data": "(defrule\r\n\t(up-can-build 0 c: outpost)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-gaia-type-count",
+        "description": "Check the current sighted resource count from gaia.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command may be relatively slow, since it must check the status of all discovered resources within the requested subset (food, wood, stone, or gold)."],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ResourceID",
+                "note": "The resource to check (food, wood, stone, gold, or the UnitId of the resource)"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if at least 4 sighted gold mines still exist.",
+            "data": "(defrule\r\n\t(up-gaia-type-count c: gold &gt;= 4)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        },{
+            "title": "Check if more than 6 sighted sheep or turkeys remain.",
+            "data": "(defrule\r\n\t(up-gaia-type-count c: livestock-class &gt; 6) ; livestock-class = 958\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-gaia-type-count-total",
+        "description": "Check the total sighted resource count from gaia.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["When checking food, wood, stone, or gold, this command operates very quickly. However, the required data does not exist for specific food types, including deer and sheep.",
+                 "As a fallback, it will redirect to the slower up-gaia-type-count, and the result will only reflect resources that still exist."],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ResourceID",
+                "note": "The resource to check (food, wood, stone, gold, or the UnitId of the resource)"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if the AI has discovered over 100 trees, which may or may not still exist.",
+            "data": "(defrule\r\n\t(up-gaia-type-count-total c: wood &gt; 100)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        },{
+            "title": "Check if less than 2 sighted deer remain (redirect to up-gaia-type-count).",
+            "data": "(defrule\r\n\t(up-gaia-type-count-total c: deer &lt; 2)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-object-type-count",
+        "description": "Combine unit-type-count and building-type-count checks.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ObjectId",
+                "note": "The object to check (UnitId or BuildingId)"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if there are at least 10 existing villagers.",
+            "data": "(defrule\r\n\t(up-object-type-count c: villager &gt;= 10)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-object-type-count-total",
+        "description": "Combine unit-type-count-total and building-type-count-total checks.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ObjectId",
+                "note": "The object to check (UnitId or BuildingId)"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if there are more than 20 existing + pending villagers.",
+            "data": "(defrule\r\n\t(up-object-type-count-total c: villager &gt; 20)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-pending-objects",
+        "description": "Perform a comparison with the pending count of an object.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ObjectId",
+                "note": "a UnitId or BuildingId to be checked"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if there is at least 1 house pending completion.",
+            "data": "(defrule\r\n\t(up-pending-objects c: house &gt;= 1)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-pending-placement",
+        "description": "Check if a specific type of building is waiting for placement.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "BuildingId",
+                "note": "The BuildingID to check."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if a barracks is waiting for placement on the map.",
+            "data": "(defrule\r\n\t(up-pending-placement c: barracks)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-research-status",
+        "description": "Check the research status of a specific technology.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "TechId",
+                "note": "The technology to check."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "ResearchState",
+                "note": "The research state to compare with."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if loom is either being researched or already complete.",
+            "data": "(defrule\r\n\t(up-research-status c: ri-loom &gt;= research-pending)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-timer-status",
+        "description": "Check whether a timer is disabled, triggered, running, or a combination.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ {
+                "type": "TimerId",
+                "note": "The timer to check."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "TimerState",
+                "note": "The timer status to compare with."
+            }
+        ],
+        "example": [ 
+            {
+                "title": "Check if the specified timer is disabled or triggered.",
+                "data": "(defconst tm-gathering 1)\r\n(defrule\r\n\t(up-timer-status tm-gathering &lt;= timer-triggered)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+            },{
+                "title": "Check if the specified timer is running.",
+                "data": "(defconst tm-gathering 1)\r\n(defrule\r\n\t(up-timer-status tm-gathering == timer-running)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+            }
+        ],
+        "related": []
+    },{
+        "name": "up-player-distance",
+        "description": "Check the distance in tiles to the nearest building of another player.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "PlayerId",
+                "note": "The player(s) to check."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } 
+        ],
+        "example": [ 
+            {
+                "title": "Check if player 3 is less than 50 tiles away.",
+                "data": "(defrule\r\n\t(up-player-distance 3 &lt; 50)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+            },{
+                "title": "Check if the dynamic &quot;focus-player&quot; is within &quot;gl-distance&quot; tiles.",
+                "data": "(defconst gl-distance 101)\r\n(defrule\r\n\t(up-player-distance focus-player g:&lt; gl-distance)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+            },{
+                "title": "Check if any enemy is within 40 tiles.",
+                "data": "(defrule\r\n\t(up-player-distance any-enemy &lt; 40)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+            } 
+        ],
+        "related": []
+    },{
+        "name": "up-players-in-game",
+        "description": "Check the number of active players in the game of the specified stance.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "DiplomaticStance",
+                "note": "The stance of players to check."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if there are at least 2 allies with the AI for a team of 3.",
+            "data": "(defrule\r\n\t(up-players-in-game ally &gt;= 3)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-enemy-buildings-in-town",
+        "description": "Check the number of targetable enemy buildings in town.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if there is an enemy building inside sn-maximum-town-size.",
+            "data": "(defrule\r\n\t(up-enemy-buildings-in-town &gt; 0)\r\n\t(enemy-buildings-in-town) ; this is equivalent\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-enemy-units-in-town",
+        "description": "Check the number of targetable enemy units in town.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            }
+        ],
+        "example": [ {
+            "title": "Check if there are more than 5 enemy units, except villagers, inside sn-maximum-town-size.",
+            "data": "(defrule\r\n\t(up-enemy-units-in-town &gt; 5)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-enemy-villagers-in-town",
+        "description": "Check the number of targetable enemy villagers in town.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if there are at least 2 enemy villagers inside sn-maximum-town-size.",
+            "data": "(defrule\r\n\t(up-enemy-villagers-in-town &gt;= 2)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-defender-count",
+        "description": "Check the number of units actively defending in town.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            }
+        ],
+        "example": [ {
+            "title": "Check if the AI is actively defending its town with at least 10 units.",
+            "data": "(defrule\r\n\t(up-defender-count &gt;= 10)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-projectile-detected",
+        "description": "Check the elapsed time since a type of projectile was fired at the AI.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "ProjectileType",
+                "note": "The source of the projectile to check."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "The time in milliseconds (integer)."
+            } 
+        ],
+        "example": [ {
+            "title": "Check if an enemy town center has attacked within the last 2 seconds.",
+            "data": "(defrule\r\n\t(up-projectile-detected projectile-town-center &lt; 2000)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-remaining-boar-amount",
+        "description": "Check the amount of food remaining on the current boar.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This data is only valid if the boar is lured with strategic numbers (not Direct Unit Control), while another boar is targetable and available to hunt. If this is not the case, it remains invalid (65535) to signify that this is the final boar."],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } ],
+        "example": [ {
+            "title": "Check if there is less than 210 food remaining on the boar, while another boar exists.",
+            "data": "(defrule\r\n\t(up-remaining-boar-amount &lt; 210) ; will be 65535 if invalid\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-building-type-in-town",
+        "description": "Check the number of a specific enemy building type in town.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "BuildingId",
+                "note": "The type of building that will be checked."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } ],
+        "example": [ {
+            "title": "Check if there is a targetable enemy barracks inside sn-maximum-town-size.",
+            "data": "(defrule\r\n\t(up-building-type-in-town c: barracks &gt; 0)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-attacker-class",
+        "description": "Check the class of the last enemy object to trigger town-under-attack.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "ClassId",
+                "note": "The object class id to compare with (900 to 999)."
+            }
+        ],
+        "example": [ {
+            "title": "Check if the town was last under attack by a ship.",
+            "data": "(defrule\r\n\t(up-attacker-class == warship-class) ; warship-class = 922\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-projectile-target",
+        "description": "Check the class of the target of a projectile that was fired at the AI.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "ProjectileType",
+                "note": "The source of the projectile to check."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "ClassID",
+                "note": "The class of the object that was targeted."
+            } ],
+        "example": [ {
+            "title": "Check if an enemy town center has attacked an archery-class unit within the last 2 seconds.",
+            "data": "(defrule\r\n\t(up-projectile-detected projectile-town-center &lt; 2000)\r\n\t(up-projectile-target projectile-town-center == archery-class) ; archery-class = 900\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-unit-type-in-town",
+        "description": "Check the number of a specific enemy unit type in town.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "UnitId",
+                "note": "The type of unit that will be checked."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } ],
+        "example": [ {
+            "title": "Check if there is an enemy knight inside sn-maximum-town-size.",
+            "data": "(defrule\r\n\t(up-unit-type-in-town c: knight-line &gt; 0)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-villager-type-in-town",
+        "description": "Check the number of a specific enemy villager type in town.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "VillagerID",
+                "note": "The type of villager that will be checked."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } ],
+        "example": [ {
+            "title": "Check if there is a targetable enemy gold miner inside sn-maximum-town-size.",
+            "data": "(defrule\r\n\t(or\r\n\t\t(up-villager-type-in-town c: gold-miner-m &gt; 0) ; gold-miner-m = 579\r\n\t\t(up-villager-type-in-town c: gold-miner-f &gt; 0) ; gold-miner-f = 581\r\n\t)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-train-site-ready",
+        "description": "Check if a unit's training site is ready and available.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Comparison operator"
+            },{
+                "type": "UnitID",
+                "note": "The type of unit that will be checked."
+            } ],
+        "example": [ {
+            "title": "Check if a dock is ready to train a fishing ship.",
+            "data": "(defrule\r\n\t(up-train-site-ready c: fishing-ship)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-point-distance",
+        "description": "Perform a distance check between two point goal pairs.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Set Point2 to 0 to use the point that is stored by up-set-target-point."],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510)"
+            },{
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            } ],
+        "example": [ {
+            "title": "Check if the distance from the home town-center to the map center is greater than 5.",
+            "data": "(defconst gl-self-x 100)\r\n(defconst gl-self-y 101)\r\n(defconst gl-center-x 200)\r\n(defconst gl-center-y 201)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-self gl-self-x)\r\n\t(up-get-point position-center gl-center-x)\r\n)\r\n(defrule\r\n\t(up-point-distance gl-self-x gl-center-x > 5)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-point-terrain",
+        "description": "Perform a terrain id check at a point goal pair position.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Set Point to 0 to use the point that is stored by up-set-target-point."],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "TerrainID",
+                "note": "A terrain id for comparison (0-41)"
+            } ],
+        "example": [ {
+            "title": "Check if the terrain at the map center is grass.",
+            "data": "(defconst gl-center-x 100)\r\n(defconst gl-center-y 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-center-x)\r\n)\r\n(defrule\r\n\t(up-point-terrain gl-center-x == terrain-grass)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-point-contains",
+        "description": "Check if an object exists at a point goal pair position.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Set Point to 0 to use the point that is stored by up-set-target-point. Please note that when used with all-units-class (-1), this may capture unexpected objects like birds flying over a tile, terrain plants, etc."],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ObjectId",
+                "note": "The object to check (UnitID or BuildingID)"
+            } ],
+        "example": [ {
+            "title": "Check if a tree exists at the map center.",
+            "data": "(defconst gl-center-x 100)\r\n(defconst gl-center-y 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-center-x)\r\n)\r\n(defrule\r\n\t(up-point-contains gl-center-x c: tree-class) ; tree-class = 915\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-object-data",
+        "description": "Check specific information about the selected target object.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "ObjectData",
+                "note": "The type of data to retrieve."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            }],
+        "example": [ {
+            "title": "Check if the target-object holds more than 3 units.",
+            "data": "(defrule\r\n\t(up-object-data object-data-garrison-count &gt; 3)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-can-search",
+        "description": "Check the status for either the local or remote search.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["If the result list is full or the index offset is at the end of the player object list, this will return false."],
+        "section": "FactId",
+        "param": [ 
+            {
+                "type": "SearchSource",
+                "note": "The search source to check (search-local or search-remote)"
+            }],
+        "example": [ {
+            "title": "Check if up-reset-search must be executed before up-find-local.",
+            "data": "(defrule\r\n\t(not(up-can-search search-local))\r\n=&gt;\r\n\t(up-reset-search 1 1 0 0)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-object-target-data",
+        "description": "Check specific information about the target object's target.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "ObjectData",
+                "note": "The type of data to retrieve."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            }],
+        "example": [{
+            "title": "Check if the target object's target holds more than 3 units.",
+            "data": "(defrule\r\n\t(up-object-target-data object-data-garrison-count &gt; 3)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-compare-text",
+        "description": "Perform a string comparison with the stored text.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["You must store text before using this command and the provided string parameter must be a text defconst. If the provided string cannot be found anywhere in the stored text, the value will be -1. Otherwise, the value will be the index of the match."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "String",
+                "note": "The text to match."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "The number that will be used in the operation."
+            }],
+        "example": [{
+            "title": "Check if player 1 has &quot;one&quot; in their name.",
+            "data": "(defconst text-name-one &quot;one&quot;)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-store-player-name 1)\r\n)\r\n(defrule\r\n\t(up-compare-text c: text-name-one >= 0)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-compare-flag",
+        "description": "Perform a bitwise flag test with a goal variable.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Flags allow multiple states to be stored in a single value by using powers of 2 (1, 2, 4, 8, 16, etc.).",
+                 "You can use [cgs]:== to see if a flag is stored or [cgs]:!= to see if it isn't stored."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The goal that will be compared."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "GuardFlag",
+                "note": "A flag to check."
+            }],
+        "example": [{
+            "title": "Check if the goal named &quot;gl-guard-flag&quot; contains the flag for guard-flag-resource.",
+            "data": "(defconst gl-guard-flag 103)\r\n(defrule\r\n\t(up-compare-flag gl-guard-flag == guard-flag-resource)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-point-explored",
+        "description": "Check if a point on the map has been explored.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Set Point to 0 to use the point that is stored by up-set-target-point."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ExploredState",
+                "note": "The exploration state of the point."
+            }],
+        "example": [{
+            "title": "Check if the map center point has been explored.",
+            "data": "(defconst gl-center-x 100)\r\n(defconst gl-center-y 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-center-x)\r\n)\r\n(defrule\r\n\t(up-point-explored gl-center-x != explored-no)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-point-elevation",
+        "description": "Check the elevation for a tile with a point goal pair.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            }],
+        "example": [{
+            "title": "Check the elevation at the map center.",
+            "data": "(defconst gl-center-x 100)\r\n(defconst gl-center-y 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-center-x)\r\n)\r\n(defrule\r\n\t(up-point-elevation gl-center-x > 1)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-point-zone",
+        "description": "Check the zone for a tile with a point goal pair.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Zone ids may differ if you have no villagers."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            }],
+        "example": [{
+            "title": "Check the zone at the map center.",
+            "data": "(defconst gl-center-x 100)\r\n(defconst gl-center-y 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-center-x)\r\n)\r\n(defrule\r\n\t(up-point-zone gl-center-x > 1)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-path-distance",
+        "description": "Check the distance from the target object to a specified point goal pair.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The distance will be 65535 if the point is unreachable."],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "Bool",
+                "note": "Set to 1 to require an open destination tile or 0 to allow for a few tiles of separation."
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            }],
+        "example": [{
+            "title": "Check if the stored object can reach the specified point.",
+            "data": "(defconst gl-center-x 100)\r\n(defconst gl-center-y 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-center-x)\r\n)\r\n(defrule\r\n\t(up-path-distance gl-center-x 0 != 65535)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-group-size",
+        "description": "Check the current number of units in a search group.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "FactId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "GroupId",
+                "note": "The group id (0-9)"
+            },{
+                "type": "CompareOp",
+                "note": "Comparison operator"
+            },{
+                "type": "Value",
+                "note": "A number for comparison."
+            }],
+        "example": [{
+            "title": "Check if the first search group has units.",
+            "data": "(defrule\r\n\t(up-group-size c: 0 > 0)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        }],
+        "related": []
+    }
+]}

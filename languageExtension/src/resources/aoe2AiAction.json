@@ -1,0 +1,3622 @@
+{
+    "ActionId": [
+    {
+        "name": "acknowledge-event",
+        "description": "Acknowledges a received event by resetting the associated flag",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "EventType",
+                "note": "A valid event type"
+            },{
+                "type": "EventID",
+                "note": "The event ID for the event type"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "acknowledge-taunt",
+        "description": "Acknowledges a taunt by resetting the associated flag",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerID",
+                 "Allows the use of rule variables for PlayerID"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "A valid playerID"
+            },{
+                "type": "TauntID",
+                "note": "A valid taunt ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "attack-now",
+        "description": "Forces attack with currently available attack units",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Units are designated as attack units by using `sn-percent-attack-soldiers` or `sn-percent-attack-boats`"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "build",
+        "description": "Builds the given building",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows the use of building line wildcard parameters for BuildingID"],
+        "section": "ActionId",
+        "param": [ {
+            "type": "BuildingId",
+            "note": "The building that will be constructed."
+        }],
+        "example": [ {
+            "title": "Build an outpost if one can be built.",
+            "data": "(defrule\r\n\t(can-build outpost)\r\n=&gt;\r\n\t(build outpost)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "build-forward",
+        "description": "Builds given building close to enemy",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows the use of building line wildcard parameters for BuildingID"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "BuildingID",
+                "note": "A valid building ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "build-gate",
+        "description": "builds a gate as part of the given perimeter wall",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "Perimeter",
+                "note": "1 or 2 (1=between 10 and 20 tiles from the starting Town Center, 2=between 18 and 30 tiles)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "build-wall",
+        "description": "Builds a wall line of the given wall type at the given perimeter",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows the use of wall line wildcard parameters for BuildingID"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "Perimeter",
+                "note": "1 or 2 (1=between 10 and 20 tiles from the starting Town Center, 2=between 18 and 30 tiles)"
+            },{
+                "type": "BuildingID",
+                "note": "A valid wall building ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "buy-commodity",
+        "description": "Buys one lot of the given commodity",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "Commodity",
+                "note": "A valid commodity (food, wood, stone)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-local",
+        "description": "Displays the given string as local chat message",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "String",
+                "note": "A message to be displayed"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-local-using-id",
+        "description": "(dont use) Displays a string, defined by a string id, as a local chat message",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["restricted"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "StringID",
+                "note": "A string ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-local-using-range",
+        "description": "(dont use) Displays a random string as a local chat message",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["restricted",
+                 "Random string is defined by a string ID picked randomly from a given string ID range"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "StringID",
+                "note": "Starting string ID (inclusive)"
+            },{
+                "type": "StringID",
+                "note": "Stopping string ID (inclusive)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-local-to-self",
+        "description": "Displays a given string as local chat message",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Displayed only if the user is the same player as the computer player sending the message"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "String",
+                "note": "A valid string"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-to-all",
+        "description": "Displays a given string as chat message to all players",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "String",
+                "note": "A valid string"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-to-all-using-id",
+        "description": "(dont use) Displays a given string, defined by a string id, as chat message to all players",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["restricted"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "StringID",
+                "note": "A valid string ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-to-all-using-range",
+        "description": "(dont use) Displays a random string as a chat message to all players",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["restricted",
+                 "Random string is defined by a string ID picked randomly from a given string ID range"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "StringID",
+                "note": "Starting string ID (inclusive)"
+            },{
+                "type": "StringID",
+                "note": "Stopping string ID (inclusive)"
+            }],
+        "example": [{
+            "title": "Send a random localized message with a string id between 5020 and 5024",
+            "data": "(chat-to-all-using-range 5020 5)"
+        }],
+        "related": []
+    },{
+        "name": "chat-to-allies",
+        "description": "Displays a given string as chat message to allied players",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "String",
+                "note": "A valid string"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-to-allies-using-id",
+        "description": "(dont use) Displays a given string, defined by a string ID, as chat message to allied players",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["restricted"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "StringID",
+                "note": "A valid string ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-to-allies-using-range",
+        "description": "(dont use) Displays a random string, defined by string id, as chat message to allied players",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["restricted",
+                 "Random string is defined by a string ID picked randomly from a given string ID range"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "StringID",
+                "note": "Starting string ID (inclusive)"
+            },{
+                "type": "StringID",
+                "note": "Stopping string ID (inclusive)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-to-enemies",
+        "description": "Displays a given string as chat message to enemies and neutral players",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "String",
+                "note": "A valid string"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-to-enemies-using-id",
+        "description": "(dont use) Displays a given string, defined by a string ID, as chat message to enemies and neutral players",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["restricted"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "StringID",
+                "note": "A valid string ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-to-enemies-using-range",
+        "description": "(dont use) Displays a random string, defined by string id, as chat message to enemies and neutral players",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["restricted",
+                 "Random string is defined by a string ID picked randomly from a given string ID range"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "StringID",
+                "note": "Starting string ID (inclusive)"
+            },{
+                "type": "StringID",
+                "note": "Stopping string ID (inclusive)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-to-player",
+        "description": "Displays a given string as chat message to specific player",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "A valid player ID"
+            },{
+                "type": "String",
+                "note": "A valid string"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-to-player-using-id",
+        "description": "(dont use) Displays a given string, defined by a string ID, as chat message to specific player",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["restricted"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "A valid player ID"
+            },{
+                "type": "StringID",
+                "note": "A valid string ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-to-player-using-range",
+        "description": "(dont use) Displays a random string, defined by string id, as chat message to specific player",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["restricted",
+                 "Random string is defined by a string ID picked randomly from a given string ID range"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "A valid player ID"
+            },{
+                "type": "StringID",
+                "note": "Starting string ID (inclusive)"
+            },{
+                "type": "StringID",
+                "note": "Stopping string ID (inclusive)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "chat-trace",
+        "description": "Displays given value as a chat message",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Purely for testing to check when a rule gets executed"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "Value",
+                "note": "A valid value"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "clear-tribute-memory",
+        "description": "Clears given player's tribute memory for a given resource",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Only tribute memory for the given resource is cleared",
+                 "Allows \"any\"/\"every\" wildcard parameters for the PlayerID",
+                 "Allows use of rule variables for the PlayerID"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "PlayerID",
+                "note": "A valid player ID"
+            },{
+                "type": "ResourceID",
+                "note": "A valid resource (food, wood, stone, gold)"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "delete-building",
+        "description": "Deletes exactly one building of a given type",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "BuildingID",
+                "note": "A valid building ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "delete-unit",
+        "description": "Deletes exactly one unit of a given type",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "UnitID",
+                "note": "A valid unit ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "disable-self",
+        "description": "Disables the rule that it is part of",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Disabling happens in the next pass, so actions appearing after this are still executed"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [{
+            "title": "Chat out a message and disable the rule to prevent repeated chatting",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(chat-to-all \"I am an AI\")\r\n\t(disable-self)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "disable-timer",
+        "description": "Disables the given timer ID",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TimerID",
+                "note": "A valid timer ID"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "do-nothing",
+        "description": "Does nothing",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Typically used as a placeholder for debugging"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "enable-timer",
+        "description": "Enables the given timer ID and sets it to the given time interval",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TimerID",
+                "note": "A valid timer ID"
+            },{
+                "type": "Value",
+                "note": "Time interval in seconds"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
+        "name": "enable-wall-placement",
+        "description": "Enables wall placement for the given perimeter",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Enabled wall placement causes the rest of teh placement code to do some planning and place all structures at least one tile away from future wall lines"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "Perimeter",
+                "note": "1 or 2 (1=between 10 and 20 tiles from the starting Town Center, 2=between 18 and 30 tiles)"
+            }],
+        "example": [{
+            "title": "Enable building a wall at Perimeter=2",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(enable-wall-placement 2)\r\n\t(disable-self)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "generate-random-number",
+        "description": "Generates a player-specific integer random number with range (1 - Value)",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Generated number is stored and its value can be tested",
+                 "Subsequent execution of this action overwrites existing random number"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "Value",
+                "note": "Upper bound for random number distribution"
+            }],
+        "example": [ {
+            "title": "Pick a strategy based on a random number between 1 and 100",
+            "data": "; For readability define the constants\r\n(defconst feudal-age-rush 1)\r\n(defconst castle-age-rush 2)\r\n\n; Generate a number between 1 - 100\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(generate-random-number 100)\r\n\t(disable-self)\r\n)\n; Based on outcome pick strategy\r\n; 20% chance of feudal rush\r\n; 80% chance of castle rush\r\n(defrule\r\n\t(random-number < 81)\r\n=&gt;\r\n\t(set-goal 1 castle-age-rush)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "log",
+        "description": "Writes given string to a log file",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Works only if logging is enabled"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "String",
+                "note": "String to be written to log file"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "log-trace",
+        "description": "Writes given value to a log file",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Works only if logging is enabled"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "Value",
+                "note": "Value to be written to log file"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "release-escrow",
+        "description": "Releases computer player's escrow for a given resource",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Works only if logging is enabled"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "ResourceID",
+                "note": "Resource to be released (food, wood, stone, gold)"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "research",
+        "description": "Add a technology to the research queue",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Uses the same criteria as the `can-research` fact to make sure the item can be researched"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TechId",
+                "note": "The technology or age that will be researched."
+            }],
+        "example": [ 
+            {
+                "title": "Research fletching",
+                "data": "(defrule\r\n\t(can-research ri-fletching)\r\n=&gt;\r\n\t(research ri-fletching)\r\n)"
+            },{
+                "title": "Research feudal-age",
+                "data": "(defrule\r\n\t(can-research feudal-age)\r\n=&gt;\r\n\t(research feudal-age)\r\n)"
+            }],
+        "related": []
+    },{
+        "name": "resign",
+        "description": "Causes computer player to resign",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ {
+            "type": "none",
+            "note": "none"
+        }],
+        "example": [ {
+            "title": "Resign after two hours (7200 sec) of game play",
+            "data": "(defrule\r\n\t(game-time > 7200)\r\n=&gt;\r\n\t(resign)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "sell-commodity",
+        "description": "Sells one lot of a given commodity",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "Commodity",
+                "note": "A commodity to sell (food, wood, stone)"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "set-difficulty-parameter",
+        "description": "Sets given difficulty parameter to given value",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "DifficultyParam",
+                "note": "A specified difficulty param"
+            },{
+                "type": "Value",
+                "note": "A value for difficulty parameter (range: 0-100)"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "set-doctrine",
+        "description": "Sets the doctrine to the given value",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "Value",
+                "note": "A value for doctrine"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "set-escrow-percentage",
+        "description": "Sets the computer player's escrow percentage for a given resource",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "ResourceID",
+                "note": "A valid resouce ID (food, wood, stone, gold)"
+            },{
+                "type": "Value",
+                "note": "A value in range 0-100"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "set-goal",
+        "description": "Sets a given goal to a given value",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "A valid goal ID"
+            },{
+                "type": "Value",
+                "note": "A value for the goal ID"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "set-shared-goal",
+        "description": "Sets a given goal shared among computer players to a given value",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "A valid goal ID"
+            },{
+                "type": "Value",
+                "note": "A value for the goal ID"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "set-signal",
+        "description": "Sets a given signal that can be checked by the trigger system",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "SignalID",
+                "note": "A valid signal ID"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "set-stance",
+        "description": "Sets stance toward a given player",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Allows \"any\"/\"every\" wildcard parameters for PlayerID",
+                 "Allows use of rule variables for the PlayerID"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "PlayerID",
+                "note": "A valid player ID"
+            },{
+                "type": "DiplomaticStance",
+                "note": "A valid diplomatic stance"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "set-strategic-number",
+        "description": "Sets given strategic number to a given value",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "StrategicNumber",
+                "note": "A valid strategic number"
+            },{
+                "type": "Value",
+                "note": "A valid value for the given strategic number"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "spy",
+        "description": "Executes a spy command",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "spy",
+        "description": "Executes a spy command",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "taunt",
+        "description": "Triggers taunt associated with given value",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TauntID",
+                "note": "A valid taunt ID"
+            }],
+        "example": [ {
+            "title": "Sent taunt 10 at 6000 seconds",
+            "data": "(defrule\r\n\t(game-time >= 6000)\r\n=&gt;\r\n\t(taunt 10)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "taunt-using-range",
+        "description": "Triggers random taunt picked from a given taunt range value",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TauntID",
+                "note": "Start of range for taunts (inclusive)"
+            },{
+                "type": "TauntID",
+                "note": "Stop of range for taunts (inclusive)"
+            }],
+        "example": [ {
+            "title": "Sent taunt 10 at 6000 seconds",
+            "data": "(defrule\r\n\t(game-time >= 6000)\r\n=&gt;\r\n\t(taunt 10)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "train",
+        "description": "Add a unit to the training queue",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Uses same criteria as `can-train` to make sure unit can be trained",
+                 "Allows use of unit wildcard parameters for UnitID"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "UnitId",
+                "note": "The unit that will be trained."
+            }],
+        "example": [ {
+            "title": "Train spearman-line unit",
+            "data": "(defrule\r\n\t(can-train spearman-line)\r\n=&gt;\r\n\t(train spearman-line)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "tribute-to-player",
+        "description": "Tributes given amount of specified resource to player",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["If the computer player does not have a `market` no tribute is given",
+                 "When `Value` specifies amount larger than available, only the available resources of given `ResourceID` are tributed",
+                 "Tribute action is ignored when there are no resources of the given type",
+                 "Tribute fees are paid and deducted from the tribute amount (if applicable)",
+                 "Allows \"any\"/\"every\" wildcard parameters for PlayerID",
+                 "Allows use of rule variables for PlayerID"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "PlayerID",
+                "note": "Valid player ID"
+            },{
+                "type": "ResourceID",
+                "note": "A valid resource (food, wood, stone, gold)"
+            },{
+                "type": "Value",
+                "note": "Amount of resources to be tributed"
+            }],
+        "example": [ {
+            "title": "none",
+            "data": "none"
+        } ],
+        "related": []
+    },{
+        "name": "up-modify-escrow",
+        "description": "Perform math operations to adjust escrowed resources.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "ResourceID",
+                "note": "The escrowed resource that will be modified."
+            },{
+                "type": "MathOp",
+                "note": "Math operation"
+            },{
+                "type": "Value",
+                "note": "The number that will be used in the operation."
+            }
+        ],
+        "example": [ {
+            "title": "Set the escrow-amount for food directly to 100.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-modify-escrow food c:= 100)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-modify-sn",
+        "description": "Perform math operations on a strategic number.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "SnId",
+                "note": "The strategic number that will be modified."
+            },{
+                "type": "MathOp",
+                "note": "Math operation"
+            },{
+                "type": "Value",
+                "note": "The number that will be used in the operation."
+            }
+        ],
+        "example": [{
+            "title": "Subtract 2 from &quot;sn-maximum-town-size&quot;.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-modify-sn sn-maximum-town-size c:- 2)\r\n\t(disable-self)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-release-escrow",
+        "description": "Set all escrow amounts to 0 with a single command.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [{
+            "type": "none",
+            "note": "none"
+        }],
+        "example": [ {
+            "title": "Release all escrowed resources.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-release-escrow)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-reset-cost-data",
+        "description": "Reset 4 consecutive goals storing cost data to 0.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ {
+            "type": "GoalId",
+            "note": "The first of 4 consecutive goals (from 41 to 508) that store cost data for food, wood, stone, and gold."
+        } ],
+        "example": [ {
+            "title": "Reset gl-cost-food, gl-cost-wood, gl-cost-stone, and gl-cost-gold to 0.",
+            "data": "(defconst gl-cost-food 101)\r\n(defconst gl-cost-wood 102)\r\n(defconst gl-cost-stone 103)\r\n(defconst gl-cost-gold 104)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-reset-cost-data gl-cost-food)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-setup-cost-data",
+        "description": "Set the goals to store cost data for food, wood, stone, and gold.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "ResetCost",
+                "note": "If set to 1, the values of the provided goal set will be reset to 0."
+            },{
+                "type": "GoalId",
+                "note": "The first of 4 consecutive goals to store cost data for food, wood, stone, and gold."
+            } 
+        ],
+        "example": [ {
+            "title": "Set gl-cost-food, gl-cost-wood, gl-cost-stone, and gl-cost-gold to store cost data and initialize them to 0.",
+            "data": "(defconst gl-cost-food 101)\r\n(defconst gl-cost-wood 102)\r\n(defconst gl-cost-stone 103)\r\n(defconst gl-cost-gold 104)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-setup-cost-data 1 gl-cost-food)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-add-object-cost",
+        "description": "Add or subtract objects of a specific type to the current cost data.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ObjectId",
+                "note": "The object to operate upon (UnitId or BuildingId)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The number of objects to add or subtract."
+            } 
+        ],
+        "example": [ {
+            "title": "Add the cost of 4 spearmen to the current cost data represented by gl-cost-food, etc.",
+            "data": "(defconst gl-cost-food 101)\r\n(defconst gl-cost-wood 102)\r\n(defconst gl-cost-stone 103)\r\n(defconst gl-cost-gold 104)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-setup-cost-data 0 gl-cost-food)\r\n\t(up-add-object-cost c: spearman c: 4)\r\n\t(disable-self)\r\n)"
+        },{
+            "title": "Add the cost of a town center (special exception).",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-add-object-cost c: town-center-foundation c: 1) ; town-center-foundation = 621\r\n\t;(up-add-object-cost c: town-center c: 1) ; error: this will not include the stone cost\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-add-research-cost",
+        "description": "Add or subtract techs of a specific type to the current cost data.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "TechId",
+                "note": "The technology to operate upon."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The number of techs to add or subtract."
+            } 
+        ],
+        "example": [ {
+            "title": "Subtract the cost of loom from the current cost data represented by gl-cost-food, etc.",
+            "data": "(defconst gl-cost-food 101)\r\n(defconst gl-cost-wood 102)\r\n(defconst gl-cost-stone 103)\r\n(defconst gl-cost-gold 104)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-setup-cost-data 0 gl-cost-food)\r\n\t(up-add-research-cost c: ri-loom c: -1)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-add-cost-data",
+        "description": "Add or subtract another set of cost data to the current cost data.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GoalId",
+                "note": "The first of 4 consecutive goals (from 41 to 508) that store cost data for food, wood, stone, and gold."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The number of sets of the cost data to add or subtract."
+            }],
+        "example": [ {
+            "title": "Add 2 instances of the military cost data to the current cost data represented by gl-cost-food, etc.",
+            "data": "(defconst gl-cost-food 101)\r\n(defconst gl-cost-wood 102)\r\n(defconst gl-cost-stone 103)\r\n(defconst gl-cost-gold 104)\r\n(defconst gl-military-cost-food 111)\r\n(defconst gl-military-cost-wood 112)\r\n(defconst gl-military-cost-stone 113)\r\n(defconst gl-military-cost-gold 114)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-setup-cost-data 1 gl-military-cost-food)\r\n\t(up-add-object-cost c: knight-line c: 40)\r\n\t(up-setup-cost-data 1 gl-cost-food)\r\n\t(up-add-cost-data gl-military-cost-food c: 2)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-cost-delta",
+        "description": "Get the difference between player resources and the current cost data.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ {
+            "type": "GoalId",
+            "note": "The first of 4 consecutive goals (from 41 to 508) to store the cost delta for food, wood, stone, and gold."
+        }],
+        "example": [ {
+            "title": "Store the resource difference into the 4 goals starting with gl-delta-food.",
+            "data": "(defconst gl-cost-food 101)\r\n(defconst gl-cost-wood 102)\r\n(defconst gl-cost-stone 103)\r\n(defconst gl-cost-gold 104)\r\n(defconst gl-delta-food 121)\r\n(defconst gl-delta-wood 122)\r\n(defconst gl-delta-stone 123)\r\n(defconst gl-delta-gold 124)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-setup-cost-data 1 gl-cost-food)\r\n\t(up-add-object-cost c: archer-line c: 10)\r\n\t(up-get-cost-delta gl-delta-food)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-drop-resources",
+        "description": "Request a drop by gatherers carrying a specific number of a resource.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "ResourceID",
+                "note": "The resource that will be dropped."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The minimum carried resources for a gatherer to drop."
+            }],
+        "example": [ 
+            {
+                "title": "Get all food gatherers carrying at least 15F to drop their resources.",
+                "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-drop-resources food c: 15)\r\n\t(disable-self)\r\n)"
+            },{
+                "title": "Get all farmers carrying at least 5F to drop their resources.",
+                "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-drop-resources farm-class c: 5) ; farm-class = 949\r\n\t(disable-self)\r\n)"
+            }],
+        "related": []
+    },{
+        "name": "up-retask-gatherers",
+        "description": "Retask a specific number of villagers gathering from a resource.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "ResourceID",
+                "note": "The resource that will be dropped."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The maximum number of gatherers to retask."
+            }],
+        "example": [ {
+            "title": "Request up to 3 lumberjacks to attempt to retask.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-retask-gatherers wood c: 3)\r\n\t(disable-self)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-request-hunters",
+        "description": "Attempt to request support hunters for the active boar lure.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This only applies to boars that are lured with strategic numbers (not Direct Unit Control).",
+                 "It is not guaranteed to reach the total number of requested hunters."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The total number of hunters for the AI."
+            }],
+        "example": [ {
+            "title": "Request a total of 4 hunters to support the current lure.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-request-hunters c: 4)\r\n\t(disable-self)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-research",
+        "description": "Add a technology to the research queue with dynamic values.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "EscrowState",
+                "note": "Determines whether escrowed resources are considered."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "TechId",
+                "note": "The technology that will be researched."
+            }],
+        "example": [ {
+            "title": "Research fletching without escrowed resources.",
+            "data": "(defrule\r\n\t(up-can-research 0 c: ri-fletching)\r\n=&gt;\r\n\t(up-research 0 c: ri-fletching)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-train",
+        "description": "Add a unit to the training queue with dynamic values.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "EscrowState",
+                "note": "Determines whether escrowed resources are considered."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "UnitId",
+                "note": "The unit that will be trained."
+            }],
+        "example": [ {
+            "title": "Train spearman-line with escrowed resources, using a goal.",
+            "data": "(defconst gl-escrow-state 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(set-goal gl-escrow-state with-escrow)\r\n\t(disable-self)\r\n)\r\n(defrule\r\n\t(up-can-train gl-escrow-state c: spearman-line)\r\n=&gt;\r\n\t(up-train gl-escrow-state c: spearman-line)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-build",
+        "description": "Add a building to the construction queue with dynamic values.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "PlacementType",
+                "note": "The type of placement. Execute up-set-placement-data before using place-control."
+            },{
+                "type": "EscrowState",
+                "note": "Determines whether escrowed resources are considered."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "BuildingId",
+                "note": "The building that will be constructed."
+            }],
+        "example": [ {
+            "title": "Build an outpost without escrowed resources.",
+            "data": "(defrule\r\n\t(up-can-build 0 c: outpost)\r\n=&gt;\r\n\t(up-build place-normal 0 c: outpost)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-assign-builders",
+        "description": "Assign a specific number of builders to a building type or class.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "BuildingId",
+                "note": "The building to modify."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The number of builders to assign or -1 to disable sending additional builders."
+            }],
+        "example": [ {
+            "title": "Assign at least 2 builders for houses (not per house).",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-assign-builders c: house c: 2)\r\n\t(disable-self)\r\n)"
+        },{
+            "title": "Assign at least 4 builders for town centers (special exception).",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-assign-builders c: town-center-foundation c: 4) ; town-center-foundation = 621\r\n\t;(up-assign-builders c: town-center c: 4) ; error: this will not work\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-delete-idle-units",
+        "description": "Delete all idle units of the specified type.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ {
+            "type": "IdleType",
+            "note": "The type of units that will be deleted."
+        }],
+        "example": [ {
+            "title": "Delete all idle villagers.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-delete-idle-units idle-type-villager)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-delete-objects",
+        "description": "Delete all objects with less than the specified hitpoints.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "UnitId",
+                "note": "The unit type (or class) that will be deleted."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "Units with less than this number of HP will be deleted."
+            }],
+        "example": [ {
+            "title": "Delete all walls owned by the player.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-delete-objects c: wall-class c: 32767) ; wall-class = 927\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-delete-distant-farms",
+        "description": "Delete all farms that exist outside the specified drop distance.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The drop distance at which to begin deleting farms (0-255)."
+            } ],
+        "example": [ {
+            "title": "Delete farms where the &quot;dropsite-min-distance&quot; > 8.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-delete-distant-farms c: 8)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-set-placement-data",
+        "description": "Specify placement information for managed construction.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Please ensure Player has at least a town-center to use for reference, if they don't have ObjectId. If Player has no objects left, placement will not work as expected."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "Ally",
+                "note": "The player to focus upon (self or this-any-ally)"
+            },{
+                "type": "ObjectId",
+                "note": "The object that will be the focus for placement (UnitID or BuildingID)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The distance (-254 to 254) from the focus object to place using up-build + place-control. If a target enemy has been found, the distance shifts toward or away from the closest building of that target. Otherwise, the center of the map acts as the reference position."
+            }],
+        "example": [ {
+            "title": "Place 25 tiles behind the home town center.",
+            "data": "(defrule\r\n\t(up-can-build 0 c: house)\r\n=&gt;\r\n\t(up-set-placement-data my-player-number -1 c: -25) ; home town center = -1\r\n\t(up-build place-control 0 c: house)\r\n)"
+        },{
+            "title": "Place 2 tiles in front of the focus-player's latest lumber-camp.",
+            "data": "(defrule\r\n\t(up-can-build 0 c: house)\r\n=&gt;\r\n\t(up-set-placement-data focus-player lumber-camp c: 2)\r\n\t(up-build place-control 0 c: house)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-reset-placement",
+        "description": "Clear the placement list for the specified building type when blocked.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Please use with caution."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "BuildingId",
+                "note": "The building type that will be reset."
+            }],
+        "example": [ {
+            "title": "Clear all pending barracks without a foundation.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-reset-placement c: barracks)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-threat-data",
+        "description": "Get the elapsed time, player, source, and target of the last threat.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "ElapsedTime",
+                "note": "Stores the elapsed time."
+            },{
+                "type": "PlayerId",
+                "note": "Stores the PlayerId of the attacker."
+            },{
+                "type": "SourceClass",
+                "note": "Stores the class of the attacking object."
+            },{
+                "type": "TargetClass",
+                "note": "Stores the class of the target of the attack."
+            }],
+        "example": [ {
+            "title": "Store the latest threat information from anywhere on the map.",
+            "data": "(defconst gl-threat-time 101)\r\n(defconst gl-threat-player 102)\r\n(defconst gl-threat-source 103)\r\n(defconst gl-threat-target 104)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-threat-data gl-threat-time gl-threat-player gl-threat-source gl-threat-target)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-projectile-player",
+        "description": "Get the enemy player that last attacked with a specific type of projectile.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "ProjectileType",
+                "note": "The source of the projectile."
+            },{
+                "type": "PlayerId",
+                "note": "Stores the PlayerId of the attacker."
+            }],
+        "example": [ {
+            "title": "Store the last player to attack with castle arrows in gl-player.",
+            "data": "(defconst gl-player 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-projectile-player projectile-castle gl-player)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-attacker-class",
+        "description": "Get the class of the last enemy object to trigger town-under-attack.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ {
+            "type": "SourceClass",
+            "note": "Stores the class of the attacking object."
+        }],
+        "example": [ {
+            "title": "Store the class of the attacking object in gl-class.",
+            "data": "(defconst gl-class 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-attacker-class gl-class)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-victory-data",
+        "description": "Get standard victory status information into the provided goals.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "PlayerId",
+                "note": "Stores the PlayerId of the player approaching victory, or 0 if invalid."
+            },{
+                "type": "GoalID",
+                "note": "Stores one of the following: relic, wonder, monument, or 0 if invalid."
+            },{
+                "type": "GoalID",
+                "note": "Stores 10 * the game years remaining until victory, or -1 if invalid."
+            }],
+        "example": [{
+            "title": "Store current victory data into the provided goals.",
+            "data": "(defconst gl-victory-player 101)\r\n(defconst gl-victory-type 102)\r\n(defconst gl-victory-time 103)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-victory-data gl-victory-player gl-victory-type gl-victory-time)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-victory-limit",
+        "description": "Get the time or score victory limit into the provided goal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [{
+            "type": "GoalID",
+            "note": "Stores 10 * the remaining game years for time victory, the target amount for score victory, or -1 if invalid."
+        }],
+        "example": [{
+            "title": "Store the current victory limit.",
+            "data": "(defconst gl-victory-limit 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-victory-limit gl-victory-limit)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-find-player",
+        "description": "Find the first active player based on the provided information.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "DiplomaticStance",
+                "note": "The stance of the player to find."
+            },{
+                "type": "FindPlayerMethod",
+                "note": "The search method."
+            },{
+                "type": "PlayerId",
+                "note": "Stores the PlayerId of the match."
+            }],
+        "example": [ {
+            "title": "Store the closest enemy player into gl-player.",
+            "data": "(defconst gl-player 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-find-player enemy find-closest gl-player)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-find-next-player",
+        "description": "Find the next active player based on the provided information.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "DiplomaticStance",
+                "note": "The stance of the player to find."
+            },{
+                "type": "FindPlayerMethod",
+                "note": "The search method."
+            },{
+                "type": "PlayerId",
+                "note": "Stores the PlayerId of the match, while providing the basis to begin the search."
+            }],
+        "example": [ {
+            "title": "Store the second closest enemy player into gl-player.",
+            "data": "(defconst gl-player 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-find-player enemy find-closest gl-player)\r\n\t(up-find-next-player enemy find-closest gl-player)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-guard-unit",
+        "description": "Set a single unit of a specific type to protect a random instance of another.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "ObjectId",
+                "note": "The object that will be guarded (UnitID or BuildingID)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "UnitId",
+                "note": "The type of unit that will guard."
+            }],
+        "example": [ {
+            "title": "Set a single spearman to guard a random monk.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-guard-unit monk c: spearman-line)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-reset-unit",
+        "description": "Halt the activity of all units of a specific type.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This is equivalent to clicking the &quot;stop&quot; button."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "UnitId",
+                "note": "The type of unit that will be stopped."
+            } ],
+        "example": [ {
+            "title": "Stop all spearmen on the map.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-reset-unit c: spearman-line)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-reset-building",
+        "description": "Halt the activity and research of all buildings of a specific type.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "Boolean",
+                "note": "If set to 1, buildings performing research will not be affected."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "BuildingId",
+                "note": "The type of building that will be reset."
+            }],
+        "example": [ {
+            "title": "Reset all activity at town centers, except those performing research.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-reset-building 1 c: town-center)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-reset-scouts",
+        "description": "Halt and disband all soldier explore groups on land.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [{
+            "type": "none",
+            "note": "none"
+        }],
+        "example": [ {
+            "title": "Stop all scouts on land, after configuring the necessary strategic numbers.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(set-strategic-number sn-number-explore-groups 0)\r\n\t(set-strategic-number sn-total-number-explorers 0)\r\n\t(up-reset-scouts)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-send-scout",
+        "description": "Send a land or water scout to a specific location.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GroupType",
+                "note": "The type of explore group that will be tasked."
+            },{
+                "type": "PositionType",
+                "note": "The scouting method."
+            }],
+        "example": [ {
+            "title": "Send a land scout to the opposite side of the map.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-send-scout group-type-land-explore scout-opposite)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-disband-group-type",
+        "description": "Disband all internal groups of the specified type.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ {
+            "type": "GroupType",
+            "note": "The type of groups that will be disbanded."
+        } ],
+        "example": [ {
+            "title": "Stop all land explore groups in a more direct manner.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(set-strategic-number sn-number-explore-groups 0)\r\n\t(set-strategic-number sn-total-number-explorers 0)\r\n\t(up-disband-group-type group-type-land-explore)\r\n\t(up-reset-unit c: all-units-class)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-set-attack-stance",
+        "description": "Set the attack stance for all units of a specific type.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "UnitId",
+                "note": "The unit that will be modified."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "AttackStance",
+                "note": "The new attack stance for the specified units."
+            }],
+        "example": [ {
+            "title": "Set all spearmen to the &quot;stand-ground&quot; stance.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-set-attack-stance spearman-line c: stance-stand-ground)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-set-defense-priority",
+        "description": "Set the defensive (TSA) targeting priority for a building.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This has no effect against units."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "BuildingId",
+                "note": "The building that will be modified."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The priority to use with defensive targeting system (-1 to 32767, where -1 is the lowest priority)"
+            }],
+        "example": [ {
+            "title": "Increase the defensive priority for lumber camps to 1000.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-set-defense-priority c: lumber-camp c: 1000)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-set-offense-priority",
+        "description": "Set the offensive targeting priority for an object.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ {
+            "type": "TypeOp",
+            "note": "Type operator"
+        },{
+            "type": "ObjectId",
+            "note": "The object that will be modified (UnitId or BuildingId)"
+        },{
+            "type": "TypeOp",
+            "note": "Type operator"
+        },{
+            "type": "Value",
+            "note": "The priority to use with the offensive targeting system (-1 to 11, where -1 is the lowest priority)"
+        } ],
+        "example": [ {
+            "title": "Increase the offensive priority for mining camps to 11.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-set-offense-priority c: mining-camp c: 11)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-reset-target-priorities",
+        "description": "Reset or clear offensive or defensive targeting priorities.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Restore default priorities with 0.",
+                 "For defensive priorities, setting Mode to 1 will reset all to -1.",
+                 "For offensive priorities, unit types will be reset to 0, while classes will be -1."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "PriorityType",
+                "note": "The targeting priority type to modify."
+            },{
+                "type": "Mode",
+                "note": "Determines the reset method (0 to 1)"
+            }],
+        "example": [ {
+            "title": "Reset defensive priorities to default values.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-reset-target-priorities priority-defense 0)\r\n\t(disable-self)\r\n)"
+        },{
+            "title": "Clear all offensive priorities (nothing has priority).",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-reset-target-priorities priority-offense 1)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-retreat-to",
+        "description": "Retreat all units of a specific type to a random instance of another.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "ObjectId",
+                "note": "The object that will be gather point of the retreat (UnitId or BuildingId)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "UnitId",
+                "note": "The type of units that will retreat."
+            }],
+        "example": [ {
+            "title": "Retreat all knights to a random castle, if possible.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-retreat-to castle c: knight-line)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-retreat-to",
+        "description": "Retreat all units of a specific type to a random instance of another.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "ObjectId",
+                "note": "The object that will be gather point of the retreat (UnitId or BuildingId)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "UnitId",
+                "note": "The type of units that will retreat."
+            } ],
+            "example": [ {
+                "title": "Retreat all knights to a random castle, if possible.",
+                "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-retreat-to castle c: knight-line)\r\n\t(disable-self)\r\n)"
+            }],
+        "related": []
+    },{
+        "name": "up-update-targets",
+        "description": "Perform an immediate update for objects in town size.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [{
+            "type": "none",
+            "note": "none"
+        }],
+        "example": [ {
+            "title": "Retreat to the home town center after reducing town size.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(set-strategic-number sn-maximum-town-size 15)\r\n\t(up-update-targets)\r\n\t(up-retreat-now)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-retreat-now",
+        "description": "Retreat all military units to the home town center.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [{
+            "type": "none",
+            "note": "none"
+        }],
+        "example": [ {
+            "title": "Retreat to the home town center.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-retreat-now)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-reset-attack-now",
+        "description": "Reset the infinite targeting loop flag set by attack-now.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [{
+            "type": "none",
+            "note": "none"
+        }],
+        "example": [ {
+            "title": "Unset the attack-now flag for active groups.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-reset-attack-now)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-chat-data-to-self",
+        "description": "Send a chat message with a formatted value locally.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ {
+            "type": "String",
+            "note": "Quoted text, where %d is replaced by the provided value"
+        },{
+            "type": "TypeOp",
+            "note": "Type operator"
+        },{
+            "type": "Value",
+            "note": "The value that will replace %d in the format string"
+        } ],
+        "example": [ {
+            "title": "Chat &quot;Food: 5.&quot; to self.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-chat-data-to-self &quot;Food: %d.&quot; c: 5)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-chat-data-to-player",
+        "description": "Send a chat message with a formatted value to a player.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "PlayerID",
+                "note": "a PlayerId for: self, any, every"
+            },{
+                "type": "String",
+                "note": "Quoted text, where %d is replaced by the provided value"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "Value to replace %d in the format string"
+            } ],
+        "example": [ {
+            "title": "Tell every ally know who the current target player is.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-chat-data-to-player every-ally &quot;The target is player %d.&quot; s: sn-target-player-number)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-chat-data-to-all",
+        "description": "Send a chat message with a formatted value to everyone.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ {
+            "type": "String",
+            "note": "Quoted text, where %d is replaced by the provided value"
+        },{
+            "type": "TypeOp",
+            "note": "Type operator"
+        },{
+            "type": "Value",
+            "note": "Value that will replace %d in the format string."
+        } ],
+        "example": [ {
+            "title": "Tell everyone what your player number is.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-chat-data-to-all &quot;I am player %d.&quot; c: my-player-number)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-cc-send-cheat",
+        "description": "Send a message in order to execute a cheat code.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Cheats must be enabled for this to take effect."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "String",
+                "note": "This must be a valid cheat code."
+            }],
+        "example": [ {
+            "title": "Create a saboteur unit using the &quot;to smithereens&quot; cheat code.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-cc-send-cheat &quot;to smithereens&quot;)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-gather-inside",
+        "description": "Set all existing buildings of a specific type to hold units inside.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "BuildingId",
+                "note": "The type of building that will be modified."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "(0, 1, -1). 1 = both trained and garrisoned units will be held. -1 = only garrisoned units will be held. 0 = all units will be released as usual."
+            }],
+        "example": [ {
+            "title": "Set existing docks to keep ships inside while training, then release them once the AI has 10 warships.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-gather-inside c: dock c: 1)\r\n\t(disable-self)\r\n)\r\n(defrule\r\n\t(unit-type-count warship-class &gt;= 10) ; warship-class = 922\r\n=&gt;\r\n\t(up-gather-inside c: dock c: 0)\r\n)"
+        },{
+            "title": "Prevent existing town centers from releasing garrisoned units, but allow villagers to be trained.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-gather-inside c: town-center c: -1)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-ungarrison",
+        "description": "Request all objects of the specified type to ungarrison units.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ObjectId",
+                "note": "The type of object that will release garrisoned units (UnitId or BuildingId)"
+            }],
+        "example": [ {
+            "title": "Release all garrisoned units in docks.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-ungarrison c: dock)\r\n\t(disable-self)\r\n)"
+        },{
+            "title": "Release all garrisoned units in battering rams.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-ungarrison c: battering-ram-line)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-garrison",
+        "description": "Garrison all units of the specified type into another object.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The first parameter cannot be a class or a unit-line.",
+                 "It must be a valid root object type id that can accept a garrison (battering-ram instead of battering-ram-line)."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "ObjectId",
+                "note": "The type of object that will release garrisoned units (UnitId or BuildingId)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "UnitID",
+                "note": "The type of unit that will be garrisoned."
+            }],
+        "example": [ {
+            "title": "Garrison all available infantry into battering rams.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-garrison battering-ram c: infantry-class) ; infantry-class = 906\r\n\t(disable-self)\r\n)"
+        },{
+            "title": "Garrison all available archers into towers.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-garrison watch-tower c: archer-line)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-change-name",
+        "description": "Change the name of the AI during gameplay.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "String",
+                "note": "A formatted quote of text that will be the new name."
+            } ],
+        "example": [ {
+            "title": "Change the name of the AI to \"William Wallace\".",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-change-name &quot;William Wallace&quot;)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-jump-rule",
+        "description": "Jump forward or backward within the current rule set.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Never use this command where #load blocks may make your jump target unreliable. Please ensure that the rule you are jumping to actually exists. With this action, you can either decrease rules per pass with intelligent skips, or greatly increase it with loops. Please consider game performance."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "Value",
+                "note": "Number of rules to jump (Positive values = jump forward, negative values = jump backward)."
+            } ],
+        "example": [ {
+            "title": "Skip 1 rule if a condition is true.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-jump-rule 1)\r\n)\r\n(defrule ; this rule is skipped\r\n\t(true)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        },{
+            "title": "Loop over a rule 3 times.",
+            "data": "(defconst gl-value 100)\r\n(defrule\r\n\t(true)\r\n\t=>\r\n\t(chat-local-to-self &quot;Start&quot;)\r\n\t(set-goal gl-value 0)\r\n)\r\n(defrule\r\n\t(up-compare-goal gl-value < 3)\r\n\t=>\r\n\t(up-modify-goal gl-value c:+ 1)\r\n\t(up-jump-rule -1)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-point",
+        "description": "Read a specific (x,y) position into an extended goal pair.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command writes to 2 consecutive goals and requires an extended goal pair between 41 and 510. If it fails to get a valid position, it will return (-1,-1)."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "PositionType",
+                "note": "The position to read."
+            },{
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to store the (x,y) pair."
+            } ],
+        "example": [ {
+            "title": "Get the position of the map center.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-point-x)\r\n)"
+        },{
+            "title": "Get the position of the target player.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-target gl-point-x)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-add-point",
+        "description": "Add or subtract two point goal pairs together.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["A negative value for Count will result in subtraction. Set Point2 to 0 to use the point that is stored by up-set-target-point."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+            },{
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The number of Point2 instances to add. Point2 will be multiplied by this before adding. A negative value will result in subtraction."
+            } ],
+        "example": [ {
+            "title": "Add the positions of the focus and target players together.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defconst gl-other-x 200)\r\n(defconst gl-other-y 201)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-focus gl-point-x)\r\n\t(up-get-point position-target gl-other-x)\r\n\t(up-add-point gl-point-x gl-other-x c: 1)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-lerp-percent",
+        "description": "Interpolate a point by percentage between two point goal pairs.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["A negative value for Percent will result in subtraction. Set Point2 to 0 to use the point that is stored by up-set-target-point."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+            },{
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The percent between the two points to select."
+            } ],
+        "example": [ {
+            "title": "Get the point at 25% from the home town-center to the map center.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defconst gl-center-x 200)\r\n(defconst gl-center-y 201)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-self gl-point-x)\r\n\t(up-get-point position-center gl-center-x)\r\n\t(up-lerp-percent gl-point-x gl-center-x c: 25)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-lerp-tiles",
+        "description": "Interpolate a point by tiles between two point goal pairs.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["A negative value for Tiles will result in subtraction. Set Point2 to 0 to use the point that is stored by up-set-target-point."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+            },{
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The number of tiles to move along the vector."
+            }],
+        "example": [ {
+            "title": "Get the point 10 tiles toward the map center from the home town-center.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defconst gl-center-x 200)\r\n(defconst gl-center-y 201)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-self gl-point-x)\r\n\t(up-get-point position-center gl-center-x)\r\n\t(up-lerp-tiles gl-point-x gl-center-x c: 10)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-cross-tiles",
+        "description": "Get a point perpendicular to two point goal pairs.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["A negative value for Tiles will result in subtraction.",
+                 "Set Point2 to 0 to use the point that is stored by up-set-target-point."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+            },{
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The number of tiles to move along the vector."
+            } ],
+        "example": [ {
+            "title": "Get the point 10 tiles right of the home town-center relative to the map center.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defconst gl-center-x 200)\r\n(defconst gl-center-y 201)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-self gl-point-x)\r\n\t(up-get-point position-center gl-center-x)\r\n\t(up-cross-tiles gl-point-x gl-center-x c: 10)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-copy-point",
+        "description": "Copy one point goal pair into another pair of extended goals.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+            },{
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510)"
+            } ],
+        "example": [ {
+            "title": "Copy the position of the map center.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defconst gl-other-x 200)\r\n(defconst gl-other-y 201)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-point-x)\r\n\t(up-copy-point gl-other-x gl-point-x)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-set-target-point",
+        "description": "Set the target point for other commands with an extended goal pair.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command will also safely bound the point inside the map."],
+        "section": "ActionId",
+        "param": [{
+            "type": "GoalID",
+            "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+        }],
+        "example": [{
+            "title": "Set the target point to the map center.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-point-x)\r\n\t(up-set-target-point gl-point-x)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-set-precise-target-point",
+        "description": "Set the target point with an unchecked extended goal pair.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command is identical to up-set-target-point, except it will not bound the point inside the map. Please ensure the point is valid with up-bound-precise-point. A precise point is expected to be a normal point x100 for 2 places of decimal precision."],
+        "section": "ActionId",
+        "param": [{
+            "type": "GoalID",
+            "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+        }],
+        "example": [{
+            "title": "Set the target point to the precise map center.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-point-x)\r\n\t(up-modify-goal gl-point-x c:* 100)\r\n\t(up-modify-goal gl-point-y c:* 100)\r\n\t(up-set-precise-target-point gl-point-x)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-point-distance",
+        "description": "Get the distance between two point goal pairs.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Set Point2 to 0 to use the point that is stored by up-set-target-point."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510)"
+            },{
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "GoalID",
+                "note": "Stores the distance between the two points."
+            } ],
+        "example": [ {
+            "title": "Get the distance from the home town-center to the map center.",
+            "data": "(defconst gl-self-x 100)\r\n(defconst gl-self-y 101)\r\n(defconst gl-center-x 200)\r\n(defconst gl-center-y 201)\r\n(defconst gl-distance 300)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-self gl-self-x)\r\n\t(up-get-point position-center gl-center-x)\r\n\t(up-get-point-distance gl-self-x gl-center-x gl-distance)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-point-terrain",
+        "description": "Get the terrain id at a specific point goal pair position.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Set Point to 0 to use the point that is stored by up-set-target-point."],
+        "section": "ActionId",
+        "param": [ {
+            "type": "GoalID",
+            "note": "The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
+        },{
+            "type": "GoalID",
+            "note": "Stores the terrain id at the position."
+        } ],
+        "example": [ {
+            "title": "Get the terrain id at the map center.",
+            "data": "(defconst gl-center-x 100)\r\n(defconst gl-center-y 101)\r\n(defconst gl-terrain 200)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-center-x)\r\n\t(up-get-point-terrain gl-center-x gl-terrain)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-find-flare",
+        "description": "Read the (x,y) position of an allied flare into an extended goal pair.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command writes to 2 consecutive goals and requires an extended goal pair between 41 and 510.",
+                 "If it fails to get a valid position, it will return (-1,-1). This command is equivalent to up-find-player-flare with any-ally."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+            }],
+        "example": [ {
+            "title": "Get the position of the latest ally flare.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defrule\r\n\t(unit-type-count flare > 0) ; flare = 274\r\n=&gt;\r\n\t(up-find-flare gl-point-x)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-find-player-flare",
+        "description": "Read the (x,y) position of any visible flare into an extended goal pair.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command writes to 2 consecutive goals and requires an extended goal pair between 41 and 510. If it fails to get a valid position, it will return (-1,-1)."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "PlayerID",
+                "note": "The player(s) to check (from the 'any' wildcard)"
+            },{
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+            }],
+        "example": [ {
+            "title": "Get the position of any enemy flare.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defrule\r\n\t(unit-type-count flare > 0) ; flare = 274\r\n=&gt;\r\n\t(up-find-player-flare any-enemy gl-point-x)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-send-flare",
+        "description": "Send a flare to allies from a point goal pair.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "The first of 2 consecutive goals to read the (x,y) pair (range 41-510)"
+            }],
+        "example": [ {
+            "title": "Send a flare to allies at your target position.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-target gl-point-x)\r\n\t(up-send-flare gl-point-x)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-search-state",
+        "description": "Get the search state into 4 consecutive extended goals.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The goals will be filled with data in the following order: current local search total, last local search count, current remote search total, last remote search count."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GoalID",
+                "note": "The first of 4 consecutive goals to read the state (range 41-508"
+            }],
+        "example": [ {
+            "title": "Get the search state.",
+            "data": "(defconst gl-local-total 100)\r\n(defconst gl-local-last 101)\r\n(defconst gl-remote-total 102)\r\n(defconst gl-remote-last 103)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-search-state gl-local-total)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-reset-search",
+        "description": "Reset the search state for the direct unit targeting system.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "Boolean",
+                "note": "(0 or 1) Set to 1 to clear the offset into the list of local objects to search."
+            },{
+                "type": "Boolean",
+                "note": "(0 or 1) Set to 1 to clear the local object list from previous searches."
+            },{
+                "type": "Boolean",
+                "note": "(0 or 1) Set to 1 to clear the offset into the list of remote objects to search."
+            },{
+                "type": "Boolean",
+                "note": "(0 or 1) Set to 1 to clear the remote object list from previous searches."
+            }],
+        "example": [ {
+            "title": "Clear all search states.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-reset-search 1 1 1 1)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-reset-filters",
+        "description": "Reset search indices and filter states for direct unit targeting.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["All filter states will be set to -1.",
+                 "Use up-reset-search to clear search results."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [{
+            "title": "Clear search indices and filter states.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-reset-filters)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-full-reset-search",
+        "description": "Reset all search and filter states for direct unit targeting.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command simply combines (up-reset-search 1 1 1 1) and (up-reset-filters) for rule size optimization."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [{
+            "title": "Clear all search and filter states.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-full-reset-search)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-filter-include",
+        "description": "Set include parameters for the direct targeting system.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["If any of these parameters is set to -1, then the associated condition will be ignored during search filtering."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "CmdId",
+                "note": "The command id to select (-1 to 10)"
+            },{
+                "type": "ActionId",
+                "note": "The action id to select (range -1, 600-699)"
+            },{
+                "type": "OrderId",
+                "note": "The order id to select (range -1, 700-799)"
+            },{
+                "type": "Value",
+                "note": "(-1, 0, or 1) 1 = select only objects on the mainland. 0 = select those not on the mainland."
+            }],
+        "example": [ {
+            "title": "Configure the search system to only select units with the villager command id.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-filter-include 3 -1 -1 -1)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-filter-exclude",
+        "description": "Set exclude parameters for the direct targeting system.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["If any of these parameters is set to -1, then the associated condition will be ignored during search filtering."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "CmdId",
+                "note": "The command id to reject (range -1 to 10)"
+            },{
+                "type": "ActionId",
+                "note": "The action id to reject (range -1, 600 to 699)"
+            },{
+                "type": "OrderId",
+                "note": "The order id to reject (range -1, 700 to 799)"
+            },{
+                "type": "ClassId",
+                "note": "Reject units of the specified class."
+            }],
+        "example": [ {
+            "title": "Configure the search system to reject units with the trade command id.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-filter-exclude 5 -1 -1 -1)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-filter-range",
+        "description": "Set range parameters for the direct targeting system.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["If any of these parameters is set to -1, then the associated condition will be ignored during search filtering."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "Value",
+                "note": "The minimum acceptable value for objects garrisoned."
+            },{
+                "type": "Value",
+                "note": "The maximum acceptable value for objects garrisoned."
+            },{
+                "type": "Value",
+                "note": "The minimum acceptable distance from the point specified by up-set-target-point."
+            },{
+                "type": "Value",
+                "note": "The maximum acceptable distance from the point specified by up-set-target-point."
+            }],
+        "example": [ {
+            "title": "Configure the search system to only select units within 10 tiles of the target point.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-filter-range -1 -1 -1 10)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-filter-distance",
+        "description": "Set distance parameters for the direct targeting system.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["If any of these parameters is set to -1, then the associated condition will be ignored during search filtering."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The minimum acceptable distance from the point specified by up-set-target-point."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The maximum acceptable distance from the point specified by up-set-target-point."
+            }],
+        "example": [ {
+            "title": "Configure the search system to only select units within 10 tiles of the target point.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-filter-distance c: -1 c: 10)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-filter-garrison",
+        "description": "Set garrison parameters for the direct targeting system.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["If any of these parameters is set to -1, then the associated condition will be ignored during search filtering."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The minimum acceptable value for objects garrisoned."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The maximum acceptable value for objects garrisoned"
+            }],
+        "example": [ {
+            "title": "Configure the search system to only select units with at least 5 garrisoned units.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-filter-garrison c: 5 c: -1)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-target-point",
+        "description": "Direct local search results to a specific point on the map.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command can perform all actions from the TargetAction enumeration. However, action-default, action-guard, action-follow, and action-garrison will perform as action-move.",
+                 "If you wish to action-move back into formation nearby after attacking, please action-move to -1,-1 to reset distance."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "TargetAction",
+                "note": "The action to perform with the selected units."
+            },{
+                "type": "Formation",
+                "note": "The formation to set or -1 to do nothing."
+            },{
+                "type": "AttackStance",
+                "note": "The stance to set or -1 to do nothing."
+            }],
+        "example": [ {
+            "title": "Send selected units from up-find-local to the map center.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-point-x)\r\n\t(up-target-point gl-point-x action-default -1 -1)\r\n)"
+        },{
+            "title": "Train a spearman with action-train: (up-target-point inGoalEscrowState action-train typeOp inOpTypeId). The value for inGoalEscrowState must be either 0 for without-escrow or an extended goal from 41-510.",
+            "data": "(defrule\r\n\t(up-find-local c: barracks c: 1)\r\n=&gt;\r\n\t(up-target-point 0 action-train c: spearman)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-target-objects",
+        "description": "Direct local search results against remote search results.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The action-default command is equivalent to a right-click.",
+                 "This command can only perform the following actions: action-default, action-move, action-patrol, action-guard, action-follow, action-stop, action-ground, action-garrison, action-delete, action-gather, and action-none."],
+        "section": "ActionId",
+        "param": [{
+                "type": "Bool",
+                "note": "Set to 1 to target only the object set by up-set-target-object."
+            },{
+                "type": "Action",
+                "note": "The action to perform with the selected units (action-default, action-move, action-patrol, action-guard, action-follow, action-stop, action-ground, action-garrison, action-delete, action-gather, action-none)"
+            },{
+                "type": "Formation",
+                "note": "The formation to set or -1 to do nothing."
+            },{
+                "type": "AttackStance",
+                "note": "The stance to set or -1 to do nothing."
+            }],
+        "example": [ {
+            "title": "Patrol selected units from up-find-local against those from up-find-remote.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-target-objects 0 action-patrol -1 -1)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-object-type-data",
+        "description": "Get generic information about an object type.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This can be expensive, so please consider performance."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ObjectID",
+                "note": "The object id"
+            },{
+                "type": "ObjectData",
+                "note": "The type of data to retrieve."
+            },{
+                "type": "GoalId",
+                "note": "Stores the result or -2 to indicate failure."
+            }],
+        "example": [{
+            "title": "Get the train site for skirmisher-line.",
+            "data": "(defconst gl-data 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-object-type-data c: skirmisher-line object-data-train-site gl-data)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-can-build-line",
+        "description": "Check if a building can be constructed at a point goal pair.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["For town centers and gates, please use a FoundationId, such as town-center-foundation or gate-ascending.",
+                 "Do not use town-center or gate with this command."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "EscrowState",
+                "note": "Determines whether escrowed resources are considered."
+            },{
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41 to 510)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "BuildingId",
+                "note": "The building type that will be constructed (use the associated FoundationId for town centers and gates)"
+            }],
+        "example": [{
+            "title": "Check if a palisade-wall can be constructed without escrow.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defrule\r\n\t(up-can-build-line 0 gl-point-x c: palisade-wall)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-build-line",
+        "description": "Place a line of buildings between two point goal pairs.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["For town centers and gates, please use a FoundationId, such as town-center-foundation or gate-ascending.",
+                 "Do not use town-center or gate with this command."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+            },{
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41 to 510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "BuildingId",
+                "note": "The building type that will be constructed."
+            }],
+        "example": [{
+            "title": "Build a palisade wall between 2 points.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defconst gl-other-x 200)\r\n(defconst gl-other-y 201)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-build-line gl-point-x gl-other-x c: palisade-wall)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-jump-dynamic",
+        "description": "Jump dynamically within the current rule set.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Never use this command where #load blocks may make your jump target unreliable.",
+                 "Please ensure that the rule you are jumping to actually exists.",
+                 "With this action, you can either decrease rules per pass with intelligent skips, or greatly increase it with loops. Please consider game performance."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "Number of rules to jump. Positive values will jump forward, while negative values will jump backward."
+            }],
+        "example": [{
+            "title": "Skip 1 rule if a condition is true.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-jump-dynamic c: 1)\r\n)\r\n(defrule ; this rule is skipped\r\n\t(true)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-jump-direct",
+        "description": "Jump directly within the current rule set.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Please ensure that the rule you are jumping to actually exists (no negative values)",
+                 "You can use up-get-rule-id to get a valid rule id to jump to.",
+                 "With this action, you can either decrease rules per pass with intelligent skips, or greatly increase it with loops",
+                 "Please consider game performance."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "A valid zero-based rule id (must be positive)"
+            }],
+            "example": [{
+                "title": "Skip to the second rule of the AI if a condition is true.",
+                "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-jump-direct c: 2)\r\n)"
+            }],
+        "related": []
+    },{
+        "name": "up-get-rule-id",
+        "description": "Get the zero-based id for the current rule within the rule set.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This id can be used with up-jump-direct to precisely control jump destinations."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "Stores the current zero-based rule id."
+            }],
+        "example": [{
+            "title": "Get the current rule id.",
+            "data": "(defconst gl-current-rule-id 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-rule-id gl-current-rule-id)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-guard-state",
+        "description": "Get the guard state into 4 consecutive extended goals.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The goals will be filled with data in the following order: TypeId, ResourceAmount, ResourceDelta, GuardFlags.",
+                 "Please use up-compare-flag to check the guard flags.",
+                 "If guard-flag-resource is set in GuardFlags, then ResourceDelta/100 will slowly be added to ResourceAmount as long as TypeId objects remain.",
+                 "If both guard-flag-resource and guard-flag-inverse are set, then the resources will be added only when there are no TypeId objects left.",
+                 "If the guard-flag-victory condition is set, the AI will be defeated if no TypeId objects remain."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The first of 4 consecutive goals to read the state (range 41-508)"
+            }],
+        "example": [
+            {
+                "title": "Check if the AI will be defeated if the guard type is lost.",
+                "data": "(defconst gl-guard-type 100)\r\n(defconst gl-guard-resource 101)\r\n(defconst gl-guard-delta 102)\r\n(defconst gl-guard-flags 103)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-guard-state gl-guard-type)\r\n)\r\n(defrule\r\n\t(up-compare-flag gl-guard-flags == guard-flag-victory)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+            },{
+                "title": "Check if the AI will gain resources while protecting the guard type.",
+                "data": "(defconst gl-guard-type 100)\r\n(defconst gl-guard-resource 101)\r\n(defconst gl-guard-delta 102)\r\n(defconst gl-guard-flags 103)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-guard-state gl-guard-type)\r\n)\r\n(defrule\r\n\t(up-compare-goal gl-guard-delta > 0)\r\n\t(up-compare-flag gl-guard-flags == guard-flag-resource)\r\n\t(up-compare-flag gl-guard-flags != guard-flag-inverse)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+            }],
+        "related": []
+    },{
+        "name": "up-modify-flag",
+        "description": "Modify a bitwise flag on the value stored in a goal variable.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Flags allow multiple states to be stored in a single value by using powers of 2 (1, 2, 4, 8, 16, etc.).",
+                 "The only ops allowed are [cgs]:+ to append a flag and [cgs]:- to remove a flag."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The goal that will be modified."
+            },{
+                "type": "MathOp",
+                "note": "Math operator"
+            },{
+                "type": "Const",
+                "note": "The flag that will be used in the operation."
+            }],
+        "example": [{
+            "title": "Append a flag to the value stored in &quot;gl-settings&quot;.",
+            "data": "(defconst gl-settings 101)\r\n(defconst first-state 1)\r\n(defconst second-state 2)\r\n(defconst third-state 4)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-modify-flag gl-settings c:+ second-state)\r\n\t(disable-self)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-tribute-to-player",
+        "description": "Tribute a variable amount of resources to other players.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "PlayerId",
+                "note": "The player(s) to tribute."
+            },{
+                "type": "ResourceAmount",
+                "note": "The resource that will be modified."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The amount of resources."
+            }],
+        "example": [{
+            "title": "Send 100 food to the focus-player.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(set-strategic-number sn-focus-player-number 2)\r\n\t(up-tribute-to-player focus-player food c: 100)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-buy-commodity",
+        "description": "Buy a variable amount of resources at the market.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The actual amount you receive depends on available gold."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ResourceAmount",
+                "note": "The resource that will be modified."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The amount of resources."
+            }],
+        "example": [{
+            "title": "Attempt to buy 300 food at the market.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-buy-commodity c: food c: 300)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-sell-commodity",
+        "description": "Sell a variable amount of resources at the market.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The actual amount you sell depends on available resources."],
+        "section": "ActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ResourceAmount",
+                "note": "The resource that will be modified."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The amount of resources."
+            }],
+        "example": [{
+            "title": "Attempt to sell 200 wood at the market.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-sell-commodity c: wood c: 200)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-cc-add-resource",
+        "description": "Add resources dynamically to the player stockpile.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This is considered a cheat command, but cheats do not have to be enabled."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ResourceAmount",
+                "note": "The resource that will be modified."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The amount of resources."
+            }],
+        "example": [{
+            "title": "Add 100 food to the stockpile.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-cc-add-resource c: food c: 100)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-log-data",
+        "description": "Write a formatted text line to aoelog.txt.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Set first param to 1 in order to write plain text.",
+                 "You must close the game in order to open aoelog.txt, which is located in the game folder.",
+                 "Please consider game performance when writing data."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "Bool",
+                "note": "A value to determine whether the data is formatted or plain text."
+            },{
+                "type": "String",
+                "note": "Quoted text, where %d is replaced by the provided value"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The value that will replace %d in the format string of text."
+            }],
+        "example": [{
+            "title": "Log the player number.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-log-data 0 &quot;Player number: %d&quot; c: my-player-number)\r\n\t(disable-self)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-precise-time",
+        "description": "Get a system timestamp or the elapsed time into a goal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "Determines whether a timestamp or elapsed time (i.e. '0') is retrieved."
+            },{
+                "type": "GoalId",
+                "note": "Stores the time data."
+            }],
+        "example": [
+            {
+                "title": "Get the current timestamp.",
+                "data": "(defconst gl-start-time 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-precise-time 0 gl-start-time)\r\n\t(disable-self)\r\n)"
+            },{
+                "title": "Get the elapsed time since the starting timestamp.",
+                "data": "(defconst gl-start-time 100)\r\n(defconst gl-elapsed-time 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-precise-time gl-start-time gl-elapsed-time)\r\n\t(disable-self)\r\n)"
+            }],
+        "related": []
+    },{
+        "name": "up-get-signal",
+        "description": "Get the value of a scenario trigger signal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "SignalId",
+                "note": "The signal to get (range 0-255)"
+            },{
+                "type": "GoalId",
+                "note": "Stores the signal value."
+            }],
+        "example": [{
+            "title": "Get the value of signal id 0.",
+            "data": "(defconst gl-value 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-signal c: 0 gl-value)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-set-signal",
+        "description": "Set the value of a scenario trigger signal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "SignalId",
+                "note": "The signal to set (range 0-255)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The new value for the signal."
+            }],
+        "example": [{
+            "title": "Set the value of signal id 1 to 0.",
+            "data": "(defconst gl-value 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-set-signal c: 1 c: 0)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-event",
+        "description": "Get the value of a scenario trigger event.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "EventId",
+                "note": "The event to get (range 0-255)"
+            },{
+                "type": "GoalId",
+                "note": "Stores the event value."
+            }],
+        "example": [{
+            "title": "Get the value of event id 0.",
+            "data": "(defconst gl-value 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-event c: 0 gl-value)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-set-event",
+        "description": "Set the value of a scenario trigger event.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "EventId",
+                "note": "The event to set (range 0-255)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The new value for the event."
+            }],
+        "example": [{
+            "title": "Set the value of event id 1 to 0.",
+            "data": "(defconst gl-value 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-set-event c: 1 c: 0)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-shared-goal",
+        "description": "Get the value of a shared goal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The shared goal to get (range 1-256)"
+            },{
+                "type": "GoalId",
+                "note": "Stores the shared goal value."
+            }],
+        "example": [{
+            "title": "Get the value of shared goal id 0.",
+            "data": "(defconst gl-value 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-shared-goal c: 0 gl-value)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-set-shared-goal",
+        "description": "Set the value of a shared goal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The shared goal to set (range 1-256)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The new value for the shared goal."
+            }],
+        "example": [{
+            "title": "Set the value of shared goal id 1 to 0.",
+            "data": "(defconst gl-value 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-set-shared-goal c: 1 c: 0)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-indirect-goal",
+        "description": "Get the value of a goal indirectly by reference.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "GoalId",
+                "note": "The goal to get (range 1-512)"
+            },{
+                "type": "GoalId",
+                "note": "Stores the goal value."
+            }],
+        "example": [{
+            "title": "Get the value of goal id 1 indirectly using goal id 10.",
+            "data": "(defconst gl-value 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(set-goal 10 1)\r\n\t(up-get-indirect-goal g: 10 gl-value)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-set-indirect-goal",
+        "description": "Set the value of a goal indirectly by reference.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "GoalId",
+                "note": "The goal to set (range 1-512)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The new value for the goal."
+            }],
+        "example": [{
+            "title": "Set the value of goal id 2 to 128 indirectly using goal id 10.",
+            "data": "(defconst gl-value 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(set-goal 10 2)\r\n\t(up-set-indirect-goal g: 10 c: 128)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-timer",
+        "description": "Get the trigger time for a timer in milliseconds.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "TimerId",
+                "note": "The timer to get (range 1-50)"
+            },{
+                "type": "GoalId",
+                "note": "Stores the shared goal value."
+            }],
+        "example": [{
+            "title": "Get the trigger time for timer id 20.",
+            "data": "(defconst gl-value 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-timer c: 20 gl-value)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-set-timer",
+        "description": "Disable or enable a timer by interval.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Set Value to -1 to disable the timer.",
+                 "If Value is positive, this will perform like the enable-timer action."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "TimerId",
+                "note": "The timer to set (range 1-50)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The new value for the timer."
+            }],
+        "example": [{
+            "title": "Enable timer 20 to trigger in 10 seconds.",
+            "data": "(defconst gl-value 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-set-timer c: 20 c: 10)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-upgrade-id",
+        "description": "Get the upgrade type id for an object into a goal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [{
+            "type": "PlayerId",
+            "note": "A single PlayerId for: self, this-any"
+        },{
+            "type": "Bool",
+            "note": "Set to 1 to get the current type id for counting."
+        },{
+            "type": "TypeId",
+            "note": "Set to a valid type or line id."
+        },{
+            "type": "TechId",
+            "note": "Stores the upgrade type id."
+        }],
+        "example": [{
+            "title": "Get the current upgrade type id for militia.",
+            "data": "(defconst gl-type 100)\r\n(defconst gl-upgrade 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(set-goal gl-type militiaman-line)\r\n\t(up-get-upgrade-id my-player-number 0 gl-type gl-upgrade)\r\n\t(up-store-type-name g: gl-upgrade)\r\n\t(up-chat-data-to-all &quot;Upgrade: %s&quot; c: 7031232)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-player-color",
+        "description": "Get the color id and store the name in the internal buffer.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["ColorId will range from 1 to 8.",
+                 "The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
+                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "PlayerId",
+                "note": "a single PlayerId to get for: self, this-any"
+            },{
+                "type": "GoalId",
+                "note": "Stores the color id."
+            }],
+        "example": [{
+            "title": "Get the color of the target-player.",
+            "data": "(defconst gl-value 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-player-color target-player gl-value)\r\n\t(up-chat-data-to-all &quot;Target: %s&quot; c: 7031232)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-store-text",
+        "description": "Store a language string in the internal buffer.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
+                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "LanguageId",
+                "note": "The text string."
+            }],
+        "example": [{
+            "title": "Store 'Random' in the buffer.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-store-text c: 10230) ;10230 is the language id for Random\r\n\t(up-chat-data-to-all &quot;Text: %s&quot; c: 7031232)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-store-player-chat",
+        "description": "Store a player chat message in the internal buffer.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Note that only the last word of a chat message will be stored in the buffer and the message must be present in the host's chat history log (the PageUp key can find it). The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
+                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "PlayerId",
+                "note": "A single PlayerId for: self, this-any"
+            }],
+        "example": [{
+            "title": "Store the focus-player's chat in the buffer.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-store-player-chat focus-player)\r\n\t(up-chat-data-to-all &quot;Message: %s&quot; c: 7031232)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-store-player-name",
+        "description": "Store a player name in the internal buffer.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
+                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "PlayerId",
+                "note": "A single PlayerId for: self, this-any"
+            }],
+        "example": [{
+            "title": "Store the focus-player's name in the buffer.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-store-player-name focus-player)\r\n\t(up-chat-data-to-all &quot;Player: %s&quot; c: 7031232)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-store-type-name",
+        "description": "Store an object type name in the internal buffer.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
+                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ObjectId",
+                "note": "The type id."
+            }],
+        "example": [{
+            "title": "Store the proper name for barracks in the buffer.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-store-type-name c: barracks)\r\n\t(up-chat-data-to-all &quot;Type: %s&quot; c: 7031232)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-store-tech-name",
+        "description": "Store a research tech name in the internal buffer.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
+                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "TechId",
+                "note": "The tech id."
+            }],
+        "example": [{
+            "title": "Store the unique research name in the buffer.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-store-tech-name c: my-unique-research)\r\n\t(up-chat-data-to-all &quot;Tech: %s&quot; c: 7031232)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-store-object-name",
+        "description": "Store the target object's type name in the internal buffer.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
+                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "none",
+                "note": "none"
+            }],
+        "example": [{
+            "title": "Store the type name for object id 0 in the buffer.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-set-target-by-id c: 0)\r\n\t(up-store-object-name)\r\n\t(up-chat-data-to-all &quot;Object: %s&quot; c: 7031232)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-store-map-name",
+        "description": "Store the current map name in the internal buffer.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["For rms, this is the filename of the map. However, if the map is a dynamic loader, such as Full Random, Random Land Map, or Blind Random, this will be the loader name instead of the actual map name.",
+                 "For scenarios, this will be the original save filename instead of the current filename.",
+                 "The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
+                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "Bool",
+                "note": "Set to 1 to include the map file extension."
+            }],
+        "example": [{
+            "title": "Store the current map name in the buffer.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-store-map-name 0)\r\n\t(up-chat-data-to-all &quot;Map: %s&quot; c: 7031232)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-clean-search",
+        "description": "Removes duplicate ids or sorts the search results.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["If ObjectData is set to -1, this will attempt to remove duplicates, lowering the result total.",
+                 "When removing duplicates, using search-order-none to preserve the existing order may perform slower than with asc/desc.",
+                 "If you wish to sort by ObjectData, it's best to remove duplicates first.",
+                 "Depending on the number of objects in the list, this command may be expensive, so please take care."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "SearchSource",
+                "note": "The search source to modify."
+            },{
+                "type": "ObjectData",
+                "note": "The type of data to retrieve or -1 to enable duplicate removal."
+            },{
+                "type": "SearchOrder",
+                "note": "The sort order."
+            }],
+        "example": [{
+            "title": "Clean the remote search results, ordered by oldest object to newest. After that, sort the list by hitpoints.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-clean-search search-remote -1 search-order-asc)\r\n\t(up-clean-search search-remote object-data-hitpoints search-order-asc)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-remove-objects",
+        "description": "Removes objects from the search results based on specific data.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["If ObjectData is set to -1, the object index in the search results will be used for data comparison when performing removal."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "SearchSource",
+                "note": "The search source to modify."
+            },{
+                "type": "ObjectData",
+                "note": "The type of data to retrieve or -1 to use the object index."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The amount of resources."
+            }],
+        "example": [{
+            "title": "Remove objects from the local search results with less than 20 hitpoints.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-remove-objects search-local object-data-hitpoints < 20)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-point-contains",
+        "description": "Get the id if an object exists at a point goal pair position.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Set Point to 0 to use the point that is stored by up-set-target-point.",
+                 "Please note that when used with all-units-class (-1), this may capture unexpected objects like birds flying over a tile, terrain plants, etc.",
+                 "This command can be used as either a Fact or an Action."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "TypeId",
+                "note": "The zero-based id of the object."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ObjectId",
+                "note": "The object to check (BuidingId or UnitId"
+            }],
+        "example": [{
+            "title": "Get the id of a tree if it exists at the map center.",
+            "data": "(defconst gl-center-x 100)\r\n(defconst gl-center-y 101)\r\n(defconst gl-tree-id 102)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-center-x)\r\n)\r\n(defrule\r\n\t(up-get-point-contains gl-center-x gl-tree-id c: tree-class) ; tree-class = 915\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-point-elevation",
+        "description": "Get the elevation for a tile with a point goal pair.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "GoalId",
+                "note": "Stores the result or -2 to indicate failure."
+            }],
+        "example": [{
+            "title": "Get the elevation at the map center.",
+            "data": "(defconst gl-center-x 100)\r\n(defconst gl-center-y 101)\r\n(defconst gl-center-z 200)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-center-x)\r\n\t(up-get-point-elevation gl-center-x gl-center-z)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-point-zone",
+        "description": "Get the zone for a tile with a point goal pair.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Zone ids may differ if you have no villagers."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "GoalId",
+                "note": "Stores the result or -2 to indicate failure."
+            }],
+        "example": [{
+            "title": "Get the zone at the map center.",
+            "data": "(defconst gl-center-x 100)\r\n(defconst gl-center-y 101)\r\n(defconst gl-center-z 200)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-center-x)\r\n\t(up-get-point-zone gl-center-x gl-center-z)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-bound-point",
+        "description": "Copy a point goal pair and shift it into the map bounds.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+            },{
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510)"
+            }],
+        "example": [{
+            "title": "Copy and shift a point into the map bounds.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defconst gl-store-x 200)\r\n(defconst gl-store-y 201)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-object gl-point-x)\r\n\t(up-bound-point gl-store-x gl-point-x)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-bound-precise-point",
+        "description": "Bound a point goal pair inside the map with additional control.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Please ensure that Border is a valid value and will not cause an overflow for the map size. If Precise is used, the map size will be multiplied by 100 before bounding, so the border should be adjusted accordingly."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to read and store the (x,y) pair (range 41-510)"
+            },{
+                "type": "Bool",
+                "note": "Set to 1 to bound as a precise point (x100)."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The border width for bounding the point."
+            }],
+        "example": [{
+            "title": "Bound a point inside the map with a 10 tile border.",
+            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-object gl-point-x)\r\n\t(up-bound-precise-point gl-point-x 0 c: 10)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-path-distance",
+        "description": "Get the distance from the target object to a specified point goal pair.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This will return 65535 if the point is unreachable."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+            },{
+                "type": "Bool",
+                "note": "Set to 1 to require an open destination tile or 0 to allow for a few tiles of separation."
+            },{
+                "type": "GoalId",
+                "note": "Stores the result or -2 to indicate failure."
+            }],
+        "example": [{
+            "title": "Get the path distance to the map center.",
+            "data": "(defconst gl-center-x 100)\r\n(defconst gl-center-y 101)\r\n(defconst gl-distance 200)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-point position-center gl-center-x)\r\n\t(up-get-path-distance gl-center-x 0 gl-distance)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-reset-group",
+        "description": "Clear all units in a search group.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "GroupId",
+                "note": "The group id (0-9)"
+            }],
+        "example": [{
+            "title": "Reset the first search group.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-reset-group c: 0)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-create-group",
+        "description": "Create a search group from the local search results.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["If there are no units available in the results list to create the specified group, the group will be cleared in the same way as up-reset-group."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "GoalId",
+                "note": "The zero-based index of the first local search result."
+            },{
+                "type": "GoalId",
+                "note": "The maximum number of objects (valid GoalId or 0 for count 40)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "GroupId",
+                "note": "The group id (0-9)"
+            }],
+        "example": [{
+            "title": "Create a search group of up to 10 villagers.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-reset-search 1 1 1 1)\r\n\t(up-reset-filters)\r\n\t(up-find-local c: villager-class c: 10)\r\n\t(up-create-group 0 0 c: 0)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-set-group",
+        "description": "Set the local or remote search results to a search group.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "SearchSource",
+                "note": "The search source to modify."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "GroupId",
+                "note": "The group id (0-9)"
+            }],
+        "example": [{
+            "title": "Set the local results to the first search group.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-set-group search-local c: 0)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-get-group-size",
+        "description": "Get the current number of units in a search group.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "GroupId",
+                "note": "The group id (0-9)"
+            },{
+                "type": "GoalId",
+                "note": "Stores the group size."
+            }],
+        "example": [{
+            "title": "Get the first search group's size.",
+            "data": "(defconst gl-size 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-group-size c: 0 gl-size)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-modify-group-flag",
+        "description": "Modify the ctrl group flag for units in a search group.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["You must manage the group flag carefully in order to avoid unexpected situations.",
+                 "Please remove the group flag before modifying a flagged search group.",
+                 "You can find units from a flagged search group using object-data-group-flag, which is set to the group id."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "Bool",
+                "note": "Set to 1 to append or 0 to remove."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "GroupId",
+                "note": "The group id (0-9)"
+            }],
+        "example": [{
+            "title": "Set the group id flag for units in search group id 2.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-modify-group-flag 1 c: 2) ; object-data-group-flag will be 2\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-filter-status",
+        "description": "Set the object status value for use with up-find-status.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["The default (after up-reset-filters) is 2, which should match most active objects",
+                 "Buildings that are incomplete have a status of 0, while certain resources have a status of 3.",
+                 "For remote search, up-find-remote can match enemy status values 0 to 3 if you search by object type id instead of class id."],
+        "section": "ActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ObjectStatus",
+                "note": "The status value for matching."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "ObjectList",
+                "note": "The list to search for local or allied objects (remote objects are handled separately)."
+            }],
+        "example": [{
+            "title": "Configure the system and search for only incomplete castles.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-filter-status c: status-pending c: list-active)\r\n\t(up-find-status-local c: castle c: 5)\r\n)"
+        }],
+        "related": []
+    }
+]}

@@ -1,0 +1,439 @@
+{
+    "FactActionId": [
+    {
+        "name": "up-modify-goal",
+        "description": "Perform math operations on the value stored in a goal variable.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command can be used as either a Fact or an Action."],
+        "section": "FactActionId",
+        "param": [ 
+            {
+                "type": "GoalId",
+                "note": "The goal that will be modified."
+            },{
+                "type": "MathOp",
+                "note": "Math operation"
+            },{
+                "type": "Value",
+                "note": "The number that will be used in the operation."
+            }
+        ],
+        "example": [ {
+            "title": "Add 1 to the value stored in &quot;gl-sheep-total&quot;.",
+            "data": "(defconst gl-sheep-total 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-modify-goal gl-sheep-total c:+ 1)\r\n\t(disable-self)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-fact",
+        "description": "Read a fact for my-player-number into a goal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command can be used as either a fact or an action."],
+        "section": "FactActionId",
+        "param": [ 
+            {
+                "type": "FactId",
+                "note": "The fact to query."
+            },{
+                "type": "Param",
+                "note": "A parameter for the fact (the type depends on the fact)"
+            },{
+                "type": "GoalID",
+                "note": "Stores the result of the fact."
+            }],
+        "example": [ {
+            "title": "Store the military-population value into gl-data.",
+            "data": "(defconst gl-data 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-fact military-population 0 gl-data)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-target-fact",
+        "description": "Read a fact for the target-player into a goal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command can be used as either a fact or an action."],
+        "section": "FactActionId",
+        "param": [ 
+            {
+                "type": "FactId",
+                "note": "The fact to query."
+            },{
+                "type": "Param",
+                "note": "A parameter for the fact (parameter type depends on the Fact)"
+            },{
+                "type": "GoalID",
+                "note": "Stores the result of the fact."
+            }],
+        "example": [ {
+            "title": "Store the target military-population value into gl-data.",
+            "data": "(defconst gl-data 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-target-fact military-population 0 gl-data)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-focus-fact",
+        "description": "Read a fact for the focus-player into a goal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command can be used as either a fact or an action."],
+        "section": "FactActionId",
+        "param": [ 
+            {
+                "type": "FactId",
+                "note": "The fact to query."
+            },{
+                "type": "Param",
+                "note": "A parameter for the fact."
+            },{
+                "type": "GoalID",
+                "note": "Stores the result of the fact."
+            } ],
+        "example": [ {
+            "title": "Store the focus population value into gl-data.",
+            "data": "(defconst gl-data 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-focus-fact population 0 gl-data)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-player-fact",
+        "description": "Read a fact for a specific player into a goal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command can be used as either a fact or an action.",
+                 "For better performance, please use one of the more direct commands from the up-get-fact series whenever possible."],
+        "section": "FactActionId",
+        "param": [ 
+            {
+                "type": "PlayerId",
+                "note": "The player to check (self or this-any)"
+            },{
+                "type": "FactId",
+                "note": "The fact to query."
+            },{
+                "type": "Param",
+                "note": "A parameter for the fact (depends on Fact, 0 if not required)"
+            },{
+                "type": "GoalID",
+                "note": "Stores the result of the fact."
+            }],
+        "example": [ {
+            "title": "Store the civilian-population value for player 2 into gl-data.",
+            "data": "(defconst gl-data 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-player-fact 2 civilian-population 0 gl-data)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-fact-sum",
+        "description": "Read the sum of facts for specific players into a goal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command can be used as either a fact or an action."],
+        "section": "FactActionId",
+        "param": [ 
+            {
+                "type": "PlayerID",
+                "note": "The player to check (only an any-* wildcard PlayerId)"
+            },{
+                "type": "FactId",
+                "note": "The fact to query."
+            },{
+                "type": "Param",
+                "note": "A parameter for the fact (type depends on the Fact)"
+            },{
+                "type": "GoalID",
+                "note": "Stores the sum of the facts."
+            } ],
+        "example": [ {
+            "title": "Store the sum of enemy military-population values into gl-data.",
+            "data": "(defconst gl-data 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-fact-sum any-enemy military-population 0 gl-data)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-fact-min",
+        "description": "Read the minimum value of the facts for specific players into a goal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command can be used as either a fact or an action.",
+                 "The matching player will be set to the this-any-* wildcard player id for use in the action section of the rule."],
+        "section": "FactActionId",
+        "param": [ 
+            {
+                "type": "PlayerID",
+                "note": "The player to check (only an any-* wildcard PlayerID)"
+            },{
+                "type": "FactId",
+                "note": "The fact to query."
+            },{
+                "type": "Param",
+                "note": "A parameter for the fact (type depends on the Fact)"
+            },{
+                "type": "GoalID",
+                "note": "Stores the minimum value of the facts."
+            }],
+        "example": [ {
+            "title": "Store the minimum enemy score into gl-data.",
+            "data": "(defconst gl-data 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-fact-min any-enemy current-score 0 gl-data)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-fact-max",
+        "description": "Read the maximum value of the facts for specific players into a goal.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command can be used as either a fact or an action.",
+                 "The matching player will be set to the this-any-* wildcard player id for use in the action section of the rule."],
+        "section": "FactActionId",
+        "param": [ 
+            {
+                "type": "PlayerID",
+                "note": "The player to check (only an any-* wildcard PlayerID)"
+            },{
+                "type": "FactId",
+                "note": "The fact to query."
+            },{
+                "type": "Param",
+                "note": "A parameter for the fact (type depends on the Fact)"
+            },{
+                "type": "GoalID",
+                "note": "Stores the maximum value of the facts."
+            }],
+        "example": [ {
+            "title": "Store the maximum ally score into gl-data.",
+            "data": "(defconst gl-data 101)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-fact-max any-ally current-score 0 gl-data)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-find-local",
+        "description": "Find objects owned by the local player for direct targeting.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["If UnitId changes, the search index offset will be reset. Otherwise, it will continue from where it left off.",
+                 "This command can be used as either a Fact or an Action."],
+        "section": "FactActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "UnitId",
+                "note": "The unit type that will be selected."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The number of results to find (0 to 240)"
+            }],
+        "example": [ {
+            "title": "Find up to 20 infantry units owned by the player.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-find-local c: infantry-class c: 20) ; infantry-class = 906\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-find-remote",
+        "description": "Find objects owned by the focus player for direct targeting.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Set sn-focus-player-number before using this command.",
+                "If the focus or UnitId changes, the search index offset will be reset. Otherwise, it will continue from where it left off.",
+                "This command can be used as either a Fact or an Action."],
+        "section": "FactActionId",
+        "param": [ 
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "UnitId",
+                "note": "The unit type that will be selected."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The number of results to find (0-40)"
+            }],
+        "example": [ {
+            "title": "Find up to 4 castles owned by the enemy, player 2.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(set-strategic-number sn-focus-player-number 2)\r\n\t(up-find-remote c: castle c: 4)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-set-target-object",
+        "description": "Set the target object for other commands from your search.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Reference it with up-get-point and position-object.",
+                 "If the Index is invalid, the current target object will remain unchanged.",
+                 "This command can be used as either a Fact or an Action."],
+        "section": "FactActionId",
+        "param": [ 
+            {
+                "type": "SearchSource",
+                "note": "The search source to check (search-local or search-remote)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The zero-based index of the object to set (0-240)"
+            } ],
+        "example": [ {
+            "title": "Set the target object to the first result from the local search.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-find-local c: villager-class c: 3)\r\n\t(up-set-target-object search-local c: 0)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-set-target-by-id",
+        "description": "Set the target object for other commands by id.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Reference it with up-get-point and position-object.",
+                 "If the Id is invalid, the current target object will remain unchanged.",
+                 "This command can be used as either a Fact or an Action."],
+        "section": "FactActionId",
+        "param": [ {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "GoalId",
+                "note": "The zero-based id of the object to set."
+            } ],
+        "example": [ {
+            "title": "Set the target object by a specific id obtained from up-get-object-data.",
+            "data": "(defconst gl-stored-id 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-object-data object-data-id gl-stored-id)\r\n\t(up-set-target-by-id g: gl-stored-id)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-object-data",
+        "description": "Get specific information about the selected target object.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command can be used as either a Fact or an Action."],
+        "section": "FactActionId",
+        "param": [ 
+            {
+                "type": "ObjectData",
+                "note": "The type of data to retrieve."
+            },{
+                "type": "GoalId",
+                "note": "Stores the result or -2 to indicate failure."
+            }],
+        "example": [ {
+            "title": "Get the class id of the target object.",
+            "data": "(defconst gl-data 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-object-data object-data-class gl-data)\r\n)"
+        } ],
+        "related": []
+    },{
+        "name": "up-get-object-target-data",
+        "description": "Get specific information about the target object's target.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command can be used as either a Fact or an Action."],
+        "section": "FactActionId",
+        "param": [
+            {
+                "type": "ObjectData",
+                "note": "The type of data to retrieve."
+            },{
+                "type": "GoalId",
+                "note": "Stores the result or -2 to indicate failure."
+            }],
+        "example": [{
+            "title": "Get the class id of the target object's target.",
+            "data": "(defconst gl-data 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-get-object-target-data object-data-class gl-data)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-add-object-by-id",
+        "description": "Add an object to the search results by id.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command can be used as either a Fact or an Action."],
+        "section": "FactActionId",
+        "param": [
+            {
+                "type": "SearchSource",
+                "note": "The search source to modify (search-local or search-remote)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "GoalId",
+                "note": "The zero-based id of the object to set."
+            }],
+        "example": [{
+            "title": "Add an object to the local search results by a specific id.",
+            "data": "(defconst gl-stored-id 100)\r\n(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-add-object-by-id search-local g: gl-stored-id)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-find-status-local",
+        "description": "Find objects owned by the local player filtered by status.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This is identical to up-find-local, except it will consider the status value set by up-filter-status.",
+                 "If UnitId changes, the search index offset will be reset. Otherwise, it will continue from where it left off.",
+                 "This command can be used as either a Fact or an Action."],
+        "section": "FactActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "UnitId",
+                "note": "The unit type that will be selected."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The number of results to find (0-240)"
+            }],
+        "example": [{
+            "title": "Find up to 20 infantry units owned by the player.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-filter-status c: status-ready c: list-active)\r\n\t(up-find-status-local c: infantry-class c: 20) ; infantry-class = 906\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-find-status-remote",
+        "description": "Find objects owned by the focus player for direct targeting.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Set sn-focus-player-number before using this command.",
+                 "This is identical to up-find-remote, except it will consider the status value set by up-filter-status.",
+                 "If the focus or UnitId changes, the search index offset will be reset. Otherwise, it will continue from where it left off.",
+                 "This command can be used as either a Fact or an Action."],
+        "section": "FactActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "UnitId",
+                "note": "The unit type that will be selected."
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The number of results to find (0-240)"
+            }],
+        "example": [{
+            "title": "Find up to 4 castles owned by the enemy, player 2.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(set-strategic-number sn-focus-player-number 2)\r\n\t(up-find-status-remote c: castle c: 4)\r\n)"
+        }],
+        "related": []
+    },{
+        "name": "up-find-resource",
+        "description": "Find gatherable resource objects for direct targeting.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This command stores data in the remote list and it will consider the status value set by up-filter-status.",
+                 "To find stone, gold, fallen trees, and other directly gatherable resources, status-resource is required.",
+                 "For standing trees and living objects, status-ready is required.",
+                 "Please ensure the proper status is set before searching.",
+                 "The remote index will reset automatically when switching between this command and other remote search commands like up-find-remote.",
+                 "If Resource changes, the search index offset will be reset. Otherwise, it will continue from where it left off.",
+                 "This command can be used as either a Fact or an Action."],
+        "section": "FactActionId",
+        "param": [
+            {
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Resource",
+                "note": "The resource to find (food, wood, stone, gold, or UnitId of a food resource)"
+            },{
+                "type": "TypeOp",
+                "note": "Type operator"
+            },{
+                "type": "Value",
+                "note": "The number of results to find (0-240)"
+            }],
+        "example": [{
+            "title": "Find 2 sighted gold mines and store them in remote results.",
+            "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-full-reset-search)\r\n\t(up-filter-status c: status-resource c: list-active)\r\n\t(up-find-resource c: gold c: 2)\r\n)"
+        }],
+        "related": []
+    }
+]}
