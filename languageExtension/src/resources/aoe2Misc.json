@@ -545,49 +545,49 @@
     "MapType": [
         {
             "name": "arabia",
-            "description": "none"
+            "description": "Notoriously open map with resources more thinly spread."
         },{
             "name": "archipelago",
-            "description": "none"
+            "description": "A series of islands surrounded by a large ocean."
         },{
             "name": "baltic",
-            "description": "none"
+            "description": "A sea surrounded by a medium-sized piece of land on all sides."
         },{
             "name": "black-forest",
-            "description": "none"
+            "description": "A very closed off map due to the high volume of trees."
         },{
             "name": "coastal",
-            "description": "none"
+            "description": "On average, half-water and half-land, with reduced resources on land."
         },{
             "name": "continental",
-            "description": "none"
+            "description": "A circular, giant island, surrounded by water. "
         },{
             "name": "crater-lake",
-            "description": "none"
+            "description": "An island brimming with gold in the center of a caldera lake. Steep elevation and lack of trees make it hard to build there."
         },{
             "name": "fortress",
-            "description": "none"
+            "description": "A walled city with gates and all the buildings you need to build up your forces quickly."
         },{
             "name": "gold-rush",
-            "description": "none"
+            "description": "A whole heap of gold and a few wolves in the middle of a desert."
         },{
             "name": "highland",
-            "description": "none"
+            "description": "Far from the ocean and heavily forested but with plenty of rivers and open space for maneuvers."
         },{
             "name": "islands",
-            "description": "none"
+            "description": "Each player starts alone on an island; uninhabited islands may be rich with resources so be prepared to rule the sea."
         },{
             "name": "mediterranean",
-            "description": "none"
+            "description": "An inland sea surrounded by land; sounds deceptively peaceful."
         },{
             "name": "migration",
-            "description": "none"
+            "description": "A tiny island that can't support you for long before you must move to the mainland, where the fighting is fierce."
         },{
             "name": "rivers",
-            "description": "none"
+            "description": "Players are isolated by narrow rivers; numerous shallows must be guarded at all cost."
         },{
             "name": "team-islands",
-            "description": "none"
+            "description": "Each team is placed on their own island. The map is mostly water with some land."
         },{
             "name": "scenario-map",
             "description": "none"
