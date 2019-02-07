@@ -2343,6 +2343,17 @@
             "name": "timer-triggered",
             "description": "Checks whether a given timer has triggered"
         }],
+    "TypeOp": [
+        {
+            "name": "c:",
+            "description": "Type operator for constants"
+        },{
+            "name": "g:",
+            "description": "Type operator for goals"
+        },{
+            "name": "s:",
+            "description": "Type operator for strategic numbers"
+        }],
     "VictoryCond": [
         {
             "name": "standard",
