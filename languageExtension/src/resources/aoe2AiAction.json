@@ -2580,32 +2580,6 @@
         }],
         "related": []
     },{
-        "name": "up-can-build-line",
-        "description": "Check if a building can be constructed at a point goal pair.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["For town centers and gates, please use a FoundationId, such as town-center-foundation or gate-ascending.",
-                 "Do not use town-center or gate with this command."],
-        "section": "ActionId",
-        "param": [
-            {
-                "type": "EscrowState",
-                "note": "Determines whether escrowed resources are considered."
-            },{
-                "type": "GoalId",
-                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41 to 510)"
-            },{
-                "type": "TypeOp",
-                "note": "Type operator"
-            },{
-                "type": "BuildingId",
-                "note": "The building type that will be constructed (use the associated FoundationId for town centers and gates)"
-            }],
-        "example": [{
-            "title": "Check if a palisade-wall can be constructed without escrow.",
-            "data": "(defconst gl-point-x 100)\r\n(defconst gl-point-y 101)\r\n(defrule\r\n\t(up-can-build-line 0 gl-point-x c: palisade-wall)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
-        }],
-        "related": []
-    },{
         "name": "up-build-line",
         "description": "Place a line of buildings between two point goal pairs.",
         "version": {"min": "1.0c", "max": ""},
