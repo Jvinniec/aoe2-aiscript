@@ -364,11 +364,6 @@ connection.listen();
 
 
 /*******************************************************************//**
- * BELOW HERE ARE ALL OF THE NECESSARY AOE2 HELP TEXT RELATED COMMANDS
- ***********************************************************************/
-
-
-/*******************************************************************//**
  * Fill and register the completion objects
  ***********************************************************************/
 function fillCompletions() {
@@ -392,7 +387,8 @@ function fillCompletions() {
 				}
 			}
 
-			// Define the parameter kind
+			// Define the parameter kind (determines which icon is next to the 
+			// suggestion in the popup list)
 			switch (par.section) {
 				case "BuildingId":
 					item.kind = CompletionItemKind.Struct;
@@ -402,7 +398,7 @@ function fillCompletions() {
 					break;
 				case "ActionId":
 				case "FactActionId":
-					item.kind = CompletionItemKind.Method
+					item.kind = CompletionItemKind.Method;
 					break;
 				case "FactId":
 					item.kind = CompletionItemKind.Variable;
@@ -410,8 +406,20 @@ function fillCompletions() {
 				case "TechId":
 					item.kind = CompletionItemKind.Class;
 					break;
-				default:
+				case "AgeId":
+					item.kind = CompletionItemKind.Enum;
+					break;
+				case "CompareOp":
+				case "TypeOp":
+				case "MathOp":
 					item.kind = CompletionItemKind.Operator;
+					break;
+				case "Instruction":
+					item.kind = CompletionItemKind.Interface;
+					break;
+				default:
+					item.kind = CompletionItemKind.Module;
+					break;
 			}
 
 			// Append the new completion item
