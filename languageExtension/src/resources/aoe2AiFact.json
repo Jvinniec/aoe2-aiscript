@@ -1,10 +1,10 @@
-{ "FactId": [
+{ "Fact": [
     {
         "name": "attack-soldier-count",
         "description": "Checks the computer player’s attack soldier count.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["An attack soldier is a land-based military unit currently assigned to attack groups. "],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -23,7 +23,7 @@
         "description": "Checks the computer player’s attack warboat count.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -42,7 +42,7 @@
         "description": "Checks that the building is available to the computer player's civ, and that the tech tree prerequisites are met.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Does not check that there are enough resources to build the building."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "BuildingID",
@@ -58,7 +58,7 @@
         "description": "Checks the computer player's building count.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Only existing buildings are included"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -77,7 +77,7 @@
         "description": "Checks the computer player's total building count.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["includes existing and queued buildings."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -96,7 +96,7 @@
         "description": "Checks the computer player's building count.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Only existing buildings of the given type are included"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "BuildingID",
@@ -118,7 +118,7 @@
         "description": "Checks the computer player's total building count.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The total includes existing and queued buildings of the given type."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "BuildingID",
@@ -140,7 +140,7 @@
         "description": "Checks whether the computer player has enough resources to build the given building.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Does not take into account escrowed resources."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "BuildingID",
@@ -158,7 +158,7 @@
         "note": ["Checks: That the wall type is available to the computer player’s civilization.",
                  "Checks: That the tech tree prerequisites for using that wall type are met.",
                  "Checks: That the resources needed for completing a wall line are available, not counting escrow amounts"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "Perimeter",
@@ -177,7 +177,7 @@
         "description": "Checks whether the computer player has enough resources to perform the given research",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Does not take into account escrowed resources."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "ResearchID",
@@ -193,7 +193,7 @@
         "description": "Checks whether computer player has enough resources to train given unit.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Does not take into account escrowed resources."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "UnitID",
@@ -211,7 +211,7 @@
         "note": ["Checks: Building is available to the computer player’s civilization.",
                  "Checks: Tech tree prerequisites for building are met",
                  "Checks: Resources needed for the building are available, not counting escrow amounts."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "BuildingId",
@@ -230,7 +230,7 @@
                  "Checks: Tech tree prerequisites for building a gate are met.",
                  "Checks: Resources needed for building a gate are available, not counting escrow amounts.",
                  "Checks: That there is a location to build a gate."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "Perimeter",
@@ -249,7 +249,7 @@
                  "Checks: Tech tree prerequisites for building a gate are met.",
                  "Checks: Resources needed for building a gate are available, counting escrow amounts.",
                  "Checks: That there is a location to build a gate."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "Perimeter",
@@ -268,7 +268,7 @@
                  "Checks: Tech tree prerequisites for using that wall type are met.",
                  "Checks: Resources needed for completing a wall line are available, not counting escrow amounts",
                  "Checks: That there is a location to build a wall line."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "Perimeter",
@@ -290,7 +290,7 @@
                  "Checks: Tech tree prerequisites for using that wall type are met.",
                  "Checks: Resources needed for completing a wall line are available, counting escrow amounts",
                  "Checks: That there is a location to build a wall line."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "Perimeter",
@@ -309,7 +309,7 @@
         "description": "Checks whether the computer player can build the given building",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "BuildingID",
@@ -325,7 +325,7 @@
         "description": "Checks whether the computer player can buy one lot of the given commodity.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Does not take into account escrowed resources."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "Commodity",
@@ -344,7 +344,7 @@
                  "Checks: Tech tree prerequisites for research are met.",
                  "Checks: Resources needed for research are available, not counting escrow amounts.",
                  "Checks: Building that is not busy is ready to start research."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "ResearchID",
@@ -363,7 +363,7 @@
                  "Checks: Tech tree prerequisites for research are met.",
                  "Checks: Resources needed for research are available, counting escrow amounts.",
                  "Checks: Building that is not busy is ready to start research."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "ResearchID",
@@ -379,7 +379,7 @@
         "description": "Checks whether the computer player can sell one lot of the given commodity.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Does not take into account escrowed resources."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "Commodity",
@@ -395,7 +395,7 @@
         "description": "Checks if the spy command can be executed.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Takes into account escrowed resources"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "none",
@@ -411,7 +411,7 @@
         "description": "Checks if the spy command can be executed.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Does not take into account escrowed resources"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "none",
@@ -431,7 +431,7 @@
                  "Checks: Resources needed for training the unit are available, not counting escrow amounts.",
                  "Checks: There is enough housing headroom for the unit.",
                  "Checks: There is a building that is not busy and is ready to start training the unit"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "UnitID",
@@ -451,7 +451,7 @@
                  "Checks: Resources needed for training the unit are available, counting escrow amounts.",
                  "Checks: There is enough housing headroom for the unit.",
                  "Checks: There is a building that is not busy and is ready to start training the unit"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "UnitID",
@@ -467,7 +467,7 @@
         "description": "Checks the computer player’s civ.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CivID",
@@ -483,7 +483,7 @@
         "description": "Checks the computer player’s civilian population.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["civilian population is villagers, trade vehicles, fishing boats, etc."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CivID",
@@ -499,7 +499,7 @@
         "description": "Checks the current buying price for the given commodity",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "Commodity",
@@ -521,7 +521,7 @@
         "description": "Checks the current selling price for the given commodity",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "Commodity",
@@ -543,7 +543,7 @@
         "description": "Checks computer player's current age",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -562,7 +562,7 @@
         "description": "Checks computer player's time spent in the current age",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -581,7 +581,7 @@
         "description": "Checks computer player’s current score.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -600,7 +600,7 @@
         "description": "Checks if the game is a Death Match game.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "none",
@@ -616,7 +616,7 @@
         "description": "Checks the computer player's defend soldier count.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["A defend soldier is a land-based military unit not assigned to attack groups"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -635,7 +635,7 @@
         "description": "Checks the computer player's defend warboat count.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["A defend warboat is a boat capable of attacking and not assigned to attack groups."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -654,7 +654,7 @@
         "description": "Checks difficulty setting",
         "version": {"min": "1.0c", "max": ""},
         "note": ["easiest > easy > moderate > hard > hardest"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -673,7 +673,7 @@
         "description": "Checks the current doctrine",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "Value",
@@ -689,7 +689,7 @@
         "description": "Checks computer player’s minimum dropsite walking distance for a given resource type",
         "version": {"min": "1.0c", "max": ""},
         "note": ["It is not recommended to use this fact for building of first dropsites necessary for age advancement"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "ResourceID",
@@ -711,7 +711,7 @@
         "description": "Checks for enemy buildings in a computer player's town",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [{
             "type": "none",
             "note": "none"
@@ -727,7 +727,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["When this happens, tactical AI automatically starts targeting Monasteries and Monks",
                  "Use this fact to intensify attacks and combine it with the attack-now action to force attacks"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [{
             "type": "none",
             "note": "none"
@@ -742,7 +742,7 @@
         "description": "Checks a computer player’s escrow amount for a given resource type",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "ResourceID",
@@ -764,7 +764,7 @@
         "description": "Checks if the given event has been detected",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The fact stays true until the event is explicitly disabled by the acknowledge-event action"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "EventType",
@@ -783,7 +783,7 @@
         "description": "Checks a computer player’s food amount",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -802,7 +802,7 @@
         "description": "Checks the game time in seconds",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -821,7 +821,7 @@
         "description": "Checks what the given goal is",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Checks if GoalID is equal to Value"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "GoalID",
@@ -840,7 +840,7 @@
         "description": "Checks a computer player’s gold amount",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -859,7 +859,7 @@
         "description": "Checks computer player’s housing headroom",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Housing headroom is the difference between current housing capacity and trained unit capacity."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -878,7 +878,7 @@
         "description": "checks the number of farms with no farmers for a computer player.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Counts existing seeded farms, not exhausted farms"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -897,7 +897,7 @@
         "description": "Checks map size",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "MapSize",
@@ -913,7 +913,7 @@
         "description": "Checks map type",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "MapType",
@@ -929,7 +929,7 @@
         "description": "Checks computer player’s military population",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -948,7 +948,7 @@
         "description": "Checks if the given player is a computer player",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -964,7 +964,7 @@
         "description": "Checks if the given player is a human player",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -980,7 +980,7 @@
         "description": "Checks if the given player is a valid player and still playing",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -996,7 +996,7 @@
         "description": "Checks computer player's player number",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1013,7 +1013,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID",
                  "If a player has lost by any means other than resigning, this will return false"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1030,7 +1030,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID",
                  "In games with more than 2 players, players that lost before the game is over are considered to be valid players, because their units/buildings can still be in the game."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1048,7 +1048,7 @@
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID",
                  "Both existing buildings and buildings under construction are included.",
                  "The computer player relies only on what it has seen – no cheating."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1072,7 +1072,7 @@
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID",
                  "Both existing buildings and buildings under construction are included.",
                  "The computer player relies only on what it has seen – no cheating."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1097,7 +1097,7 @@
         "description": "Checks a given player's civilization",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1116,7 +1116,7 @@
         "description": "Checks a given player’s civilian population.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for the PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1138,7 +1138,7 @@
         "description": "Checks the given player’s current age",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1160,7 +1160,7 @@
         "description": "Checks the given player’s time spent in the current age",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1182,7 +1182,7 @@
         "description": "Checks the given player’s military population",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1204,7 +1204,7 @@
         "description": "Checks the given player’s population",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1226,7 +1226,7 @@
         "description": "Checks the given player’s current score",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1248,7 +1248,7 @@
         "description": "Checks the given player’s diplomatic stance",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1267,7 +1267,7 @@
         "description": "Checks the player's tribute given throughout the game",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1292,7 +1292,7 @@
         "description": "Checks a player's tribute given since the player's tribute memory was cleared",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1318,7 +1318,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["Computer player relies only on what it has seen – no cheating",
                  "Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1342,7 +1342,7 @@
         "note": ["Computer player relies only on what it has seen – no cheating",
                  "For allies and self only trained units of the given type are included.",
                  "Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1367,7 +1367,7 @@
         "description": "Checks the computer player’s population",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -1386,7 +1386,7 @@
         "description": "Checks population cap setting",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -1405,7 +1405,7 @@
         "description": "Checks computer player’s population headroom",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Population headroom is the difference between the game’s population cap and current housing capacity"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -1424,7 +1424,7 @@
         "description": "Checks random number value",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -1443,7 +1443,7 @@
         "description": "Checks if the game is a regicide game",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "none",
@@ -1461,7 +1461,7 @@
         "note": ["Checks: Research is available to the computer player's civ",
                  "Checks: Research is available at this time (tech tree prerequisites are met)",
                  "Does NOT check if sufficient resources are present to start researching"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "TechID",
@@ -1479,7 +1479,7 @@
         "note": ["Checks: Research is available to the computer player's civ",
                  "Checks: Research is available at this time (tech tree prerequisites are met)",
                  "Does NOT check if sufficient resources are present to start researching"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "TechID",
@@ -1497,7 +1497,7 @@
         "note": ["Once it becomes true for a certain resource it stays true for that resource",
                  "'food' refers to a forage site",
                  "'wood' refers to forest trees (not lone trees)"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "ResourceID",
@@ -1513,7 +1513,7 @@
         "description": "checks a given goal that is shared among computer players",
         "version": {"min": "1.0c", "max": ""},
         "note": ["To be used only when all computer players are on the same team"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "GoalID",
@@ -1532,7 +1532,7 @@
         "description": "Checks whether computer player has any forage site(s) and/or sheep within 8 tiles of the drop-off location (Mill or Town Center)",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "none",
@@ -1548,7 +1548,7 @@
         "description": "Checks the computer player’s soldier count",
         "version": {"min": "1.0c", "max": ""},
         "note": ["An attack soldier is a land-based military unit."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -1567,7 +1567,7 @@
         "description": "Checks computer player’s stance toward a given player",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows “any”/”every” wildcard parameters for PlayerID."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1586,7 +1586,7 @@
         "description": "Checks game's starting age",
         "version": {"min": "1.0c", "max": ""},
         "note": ["In addition to the regular age parameters, post-imperial-age can be used."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -1605,7 +1605,7 @@
         "description": "checks starting resources (low, medium, or high)",
         "version": {"min": "1.0c", "max": ""},
         "note": ["In addition to the regular age parameters, post-imperial-age can be used."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -1624,7 +1624,7 @@
         "description": "Checks computer player’s stone amount",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -1643,7 +1643,7 @@
         "description": "Checks a strategic number’s value",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "StrategicNumber",
@@ -1666,7 +1666,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["Check can be performed any number of times until the taunt is explicitly acknowledged.",
                  "Allows “any”/”every” wildcard parameters for PlayerID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "PlayerID",
@@ -1686,7 +1686,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["For disabled timers this fact is always false.",
                  "Check can be performed any number of times until the timer is explicitly disabled."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "TimerID",
@@ -1702,7 +1702,7 @@
         "description": "True when the computer player’s town is under attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "none",
@@ -1721,7 +1721,7 @@
                  "Checks: Tech tree prerequisites for training the unit are met",
                  "Does NOT check that unit training can actually start",
                  "Allows the use of unit line wildcard parameters for UnitID"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "UnitID",
@@ -1737,7 +1737,7 @@
         "description": "Checks the computer player's unit count",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Only considers trained units"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -1756,7 +1756,7 @@
         "description": "Checks the computer player's total unit count",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Considers both trained and queued units"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -1775,7 +1775,7 @@
         "description": "Checks the computer player's unit count",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Only considers trained units"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "UnitID",
@@ -1797,7 +1797,7 @@
         "description": "Checks the computer player's unit count",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Considers trained and queued units"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "UnitID",
@@ -1819,7 +1819,7 @@
         "description": "Checks game victory condition",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "VictoryCond",
@@ -1835,7 +1835,7 @@
         "description": "Checks the completion percentage for a given perimeter wall",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Trees and other destructible natural barriers are included and count as completed"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "Perimeter",
@@ -1857,7 +1857,7 @@
         "description": "Checks what percentage of the potential wall placement is covered with fog",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "Perimeter",
@@ -1879,7 +1879,7 @@
         "description": "Checks computer player’s warboat count",
         "version": {"min": "1.0c", "max": ""},
         "note": ["A warboat is a boat capable of attacking."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -1898,7 +1898,7 @@
         "description": "Checks computer player’s wood amount",
         "version": {"min": "1.0c", "max": ""},
         "note": ["A warboat is a boat capable of attacking."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -1917,7 +1917,7 @@
         "description": "this fact is always false",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [{
             "type": "none",
             "note": "none"
@@ -1948,7 +1948,7 @@
         "description": "Perform a comparison with a goal variable.",
         "version": {"min":"1.0c", "max":""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "GoalId",
@@ -1970,7 +1970,7 @@
         "description": "Perform a comparison with a strategic number.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "SnId",
@@ -1992,7 +1992,7 @@
         "description": "Perform a comparison with a constant value.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "Const",
@@ -2014,7 +2014,7 @@
         "description": "Perform a comparison with an internal resource value.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ {
             "type": "ResourceAmount",
             "note": "The resource that will be compared."
@@ -2035,7 +2035,7 @@
         "description": "Perform a comparison with an internal resource value * 100.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ {
             "type": "ResourceAmount",
             "note": "a const from the ResourceAmount enumeration"
@@ -2056,7 +2056,7 @@
         "description": "Perform a comparison with an ally's internal resource value.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ {
                 "type": "AllyID",
                 "note": "a PlayerId to check for: self, ally"
@@ -2081,7 +2081,7 @@
         "description": "Perform a comparison with an ally's internal resource value * 100.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "AllyID",
@@ -2107,7 +2107,7 @@
         "description": "Perform a comparison with an allied AI's goal variable.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "ComputerAlly",
@@ -2133,7 +2133,7 @@
         "description": "Perform a comparison with an allied AI's strategic number.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "ComputerAlly",
@@ -2159,7 +2159,7 @@
         "description": "Check if a technology can be researched with dynamic values.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "EscrowState",
@@ -2182,7 +2182,7 @@
         "description": "Check if a unit can be trained with dynamic values.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "EscrowState",
@@ -2205,7 +2205,7 @@
         "description": "Check if a building can be constructed with dynamic values.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "EscrowState",
@@ -2229,7 +2229,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["For town centers and gates, please use a FoundationId, such as town-center-foundation or gate-ascending.",
                  "Do not use town-center or gate with this command."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "EscrowState",
@@ -2254,7 +2254,7 @@
         "description": "Check the current sighted resource count from gaia.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command may be relatively slow, since it must check the status of all discovered resources within the requested subset (food, wood, stone, or gold)."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -2284,7 +2284,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["When checking food, wood, stone, or gold, this command operates very quickly. However, the required data does not exist for specific food types, including deer and sheep.",
                  "As a fallback, it will redirect to the slower up-gaia-type-count, and the result will only reflect resources that still exist."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -2313,7 +2313,7 @@
         "description": "Combine unit-type-count and building-type-count checks.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -2339,7 +2339,7 @@
         "description": "Combine unit-type-count-total and building-type-count-total checks.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -2365,7 +2365,7 @@
         "description": "Perform a comparison with the pending count of an object.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -2391,7 +2391,7 @@
         "description": "Check if a specific type of building is waiting for placement.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "TypeOp",
@@ -2411,7 +2411,7 @@
         "description": "Check the research status of a specific technology.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "TypeOp",
@@ -2437,7 +2437,7 @@
         "description": "Check whether a timer is disabled, triggered, running, or a combination.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ {
                 "type": "TimerId",
                 "note": "The timer to check."
@@ -2464,7 +2464,7 @@
         "description": "Check the distance in tiles to the nearest building of another player.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "PlayerId",
@@ -2495,7 +2495,7 @@
         "description": "Check the number of active players in the game of the specified stance.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "DiplomaticStance",
@@ -2518,7 +2518,7 @@
         "description": "Check the number of targetable enemy buildings in town.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -2538,7 +2538,7 @@
         "description": "Check the number of targetable enemy units in town.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "CompareOp",
@@ -2558,7 +2558,7 @@
         "description": "Check the number of targetable enemy villagers in town.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "CompareOp",
@@ -2578,7 +2578,7 @@
         "description": "Check the number of units actively defending in town.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "CompareOp",
@@ -2598,7 +2598,7 @@
         "description": "Check the elapsed time since a type of projectile was fired at the AI.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "ProjectileType",
@@ -2621,7 +2621,7 @@
         "description": "Check the amount of food remaining on the current boar.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This data is only valid if the boar is lured with strategic numbers (not Direct Unit Control), while another boar is targetable and available to hunt. If this is not the case, it remains invalid (65535) to signify that this is the final boar."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "CompareOp",
@@ -2640,7 +2640,7 @@
         "description": "Check the number of a specific enemy building type in town.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -2665,7 +2665,7 @@
         "description": "Check the class of the last enemy object to trigger town-under-attack.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "CompareOp",
@@ -2685,7 +2685,7 @@
         "description": "Check the class of the target of a projectile that was fired at the AI.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "ProjectileType",
@@ -2707,7 +2707,7 @@
         "description": "Check the number of a specific enemy unit type in town.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -2732,7 +2732,7 @@
         "description": "Check the number of a specific enemy villager type in town.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -2757,7 +2757,7 @@
         "description": "Check if a unit's training site is ready and available.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -2776,7 +2776,7 @@
         "description": "Perform a distance check between two point goal pairs.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Set Point2 to 0 to use the point that is stored by up-set-target-point."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "GoalID",
@@ -2801,7 +2801,7 @@
         "description": "Perform a terrain id check at a point goal pair position.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Set Point to 0 to use the point that is stored by up-set-target-point."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "GoalID",
@@ -2823,7 +2823,7 @@
         "description": "Check if an object exists at a point goal pair position.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Set Point to 0 to use the point that is stored by up-set-target-point. Please note that when used with all-units-class (-1), this may capture unexpected objects like birds flying over a tile, terrain plants, etc."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "GoalID",
@@ -2845,7 +2845,7 @@
         "description": "Check specific information about the selected target object.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "ObjectData",
@@ -2867,7 +2867,7 @@
         "description": "Check the status for either the local or remote search.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["If the result list is full or the index offset is at the end of the player object list, this will return false."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [ 
             {
                 "type": "SearchSource",
@@ -2883,7 +2883,7 @@
         "description": "Check specific information about the target object's target.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "ObjectData",
@@ -2905,7 +2905,7 @@
         "description": "Perform a string comparison with the stored text.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["You must store text before using this command and the provided string parameter must be a text defconst. If the provided string cannot be found anywhere in the stored text, the value will be -1. Otherwise, the value will be the index of the match."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "TypeOp",
@@ -2931,7 +2931,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["Flags allow multiple states to be stored in a single value by using powers of 2 (1, 2, 4, 8, 16, etc.).",
                  "You can use [cgs]:== to see if a flag is stored or [cgs]:!= to see if it isn't stored."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "GoalId",
@@ -2953,7 +2953,7 @@
         "description": "Check if a point on the map has been explored.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Set Point to 0 to use the point that is stored by up-set-target-point."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "GoalId",
@@ -2975,7 +2975,7 @@
         "description": "Check the elevation for a tile with a point goal pair.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "GoalId",
@@ -2997,7 +2997,7 @@
         "description": "Check the zone for a tile with a point goal pair.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Zone ids may differ if you have no villagers."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "GoalId",
@@ -3019,7 +3019,7 @@
         "description": "Check the distance from the target object to a specified point goal pair.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The distance will be 65535 if the point is unreachable."],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "GoalId",
@@ -3044,7 +3044,7 @@
         "description": "Check the current number of units in a search group.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "FactId",
+        "section": "Fact",
         "param": [
             {
                 "type": "TypeOp",

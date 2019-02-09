@@ -1,11 +1,11 @@
 {
-    "FactActionId": [
+    "FactAction": [
     {
         "name": "up-modify-goal",
         "description": "Perform math operations on the value stored in a goal variable.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command can be used as either a Fact or an Action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [ 
             {
                 "type": "GoalId",
@@ -28,7 +28,7 @@
         "description": "Read a fact for my-player-number into a goal.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command can be used as either a fact or an action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [ 
             {
                 "type": "FactId",
@@ -50,7 +50,7 @@
         "description": "Read a fact for the target-player into a goal.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command can be used as either a fact or an action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [ 
             {
                 "type": "FactId",
@@ -72,7 +72,7 @@
         "description": "Read a fact for the focus-player into a goal.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command can be used as either a fact or an action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [ 
             {
                 "type": "FactId",
@@ -95,7 +95,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command can be used as either a fact or an action.",
                  "For better performance, please use one of the more direct commands from the up-get-fact series whenever possible."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [ 
             {
                 "type": "PlayerId",
@@ -120,7 +120,7 @@
         "description": "Read the sum of facts for specific players into a goal.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command can be used as either a fact or an action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [ 
             {
                 "type": "PlayerID",
@@ -146,7 +146,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command can be used as either a fact or an action.",
                  "The matching player will be set to the this-any-* wildcard player id for use in the action section of the rule."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [ 
             {
                 "type": "PlayerID",
@@ -172,7 +172,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command can be used as either a fact or an action.",
                  "The matching player will be set to the this-any-* wildcard player id for use in the action section of the rule."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [ 
             {
                 "type": "PlayerID",
@@ -198,7 +198,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["If UnitId changes, the search index offset will be reset. Otherwise, it will continue from where it left off.",
                  "This command can be used as either a Fact or an Action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -225,7 +225,7 @@
         "note": ["Set sn-focus-player-number before using this command.",
                 "If the focus or UnitId changes, the search index offset will be reset. Otherwise, it will continue from where it left off.",
                 "This command can be used as either a Fact or an Action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -252,7 +252,7 @@
         "note": ["Reference it with up-get-point and position-object.",
                  "If the Index is invalid, the current target object will remain unchanged.",
                  "This command can be used as either a Fact or an Action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [ 
             {
                 "type": "SearchSource",
@@ -276,7 +276,7 @@
         "note": ["Reference it with up-get-point and position-object.",
                  "If the Id is invalid, the current target object will remain unchanged.",
                  "This command can be used as either a Fact or an Action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [ {
                 "type": "TypeOp",
                 "note": "Type operator"
@@ -294,7 +294,7 @@
         "description": "Get specific information about the selected target object.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command can be used as either a Fact or an Action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [ 
             {
                 "type": "ObjectData",
@@ -313,7 +313,7 @@
         "description": "Get specific information about the target object's target.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command can be used as either a Fact or an Action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [
             {
                 "type": "ObjectData",
@@ -332,7 +332,7 @@
         "description": "Add an object to the search results by id.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command can be used as either a Fact or an Action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [
             {
                 "type": "SearchSource",
@@ -356,7 +356,7 @@
         "note": ["This is identical to up-find-local, except it will consider the status value set by up-filter-status.",
                  "If UnitId changes, the search index offset will be reset. Otherwise, it will continue from where it left off.",
                  "This command can be used as either a Fact or an Action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [
             {
                 "type": "TypeOp",
@@ -384,7 +384,7 @@
                  "This is identical to up-find-remote, except it will consider the status value set by up-filter-status.",
                  "If the focus or UnitId changes, the search index offset will be reset. Otherwise, it will continue from where it left off.",
                  "This command can be used as either a Fact or an Action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [
             {
                 "type": "TypeOp",
@@ -415,7 +415,7 @@
                  "The remote index will reset automatically when switching between this command and other remote search commands like up-find-remote.",
                  "If Resource changes, the search index offset will be reset. Otherwise, it will continue from where it left off.",
                  "This command can be used as either a Fact or an Action."],
-        "section": "FactActionId",
+        "section": "FactAction",
         "param": [
             {
                 "type": "TypeOp",
