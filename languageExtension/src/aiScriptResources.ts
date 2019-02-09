@@ -1,4 +1,6 @@
-// AoE2 Ai Scripting resources
+/**********************************************************************//**
+ * Import AI scripting resources
+ **************************************************************************/
 import * as aoe2actions    from './resources/aoe2AiAction.json';
 import * as aoe2buildings  from './resources/aoe2BuildingId.json';
 import * as aoe2civs       from './resources/aoe2CivId.json';
@@ -11,6 +13,9 @@ import * as aoe2units      from './resources/aoe2UnitId.json';
 // Methods and variables to export from this file
 export {AiScriptPar, loadAoE2Parameters};
 
+/**********************************************************************//**
+ * Defines a 'require' object, typically associated with units and techs
+ **************************************************************************/
 interface AiScriptRequires {
 	age: string;
 	building: Array<string>;
@@ -18,12 +23,19 @@ interface AiScriptRequires {
 	tech: Array<string>;
 }
 
+/**********************************************************************//**
+ * Defines a 'unique' object associated with civilizations
+ **************************************************************************/
 interface AiScriptUniques {
     building: Array<string>;
     tech: Array<string>;
     unit: Array<string>;
 }
 
+
+/**********************************************************************//**
+ * Defines a scripting parameter that can be used for completions and hovers
+ **************************************************************************/
 interface AiScriptPar {
 
 	// Basic parameters required by all parameters
@@ -45,6 +57,10 @@ interface AiScriptPar {
 	unique?: AiScriptUniques;
 }
 
+
+/**********************************************************************//**
+ * Defines variables associated with a scripting command (facts and actions)
+ **************************************************************************/
 interface AiScriptCommand {
 	name: string;
 	description: string;
@@ -57,6 +73,10 @@ interface AiScriptCommand {
 // Initialize the parameter list
 let ai_script_parameters: AiScriptPar[] = [];
 
+
+/**********************************************************************//**
+ * Loads all parameters from the resource files
+ **************************************************************************/
 function loadAoE2Parameters(): AiScriptPar[] {
 
     // Fill all the parameters
@@ -70,7 +90,10 @@ function loadAoE2Parameters(): AiScriptPar[] {
     return ai_script_parameters;
 }
 
-// Defines command itmes
+
+/**********************************************************************//**
+ * Loads facts, actions and factactions
+ **************************************************************************/
 function loadCommands() {
 	aoe2facts.FactId.forEach(element => {
 		ai_script_parameters.push(getCommandPar(element));
@@ -84,19 +107,25 @@ function loadCommands() {
 }
 
 
+/**********************************************************************//**
+ * Formats the results from a command object into an AiScriptPar
+ **************************************************************************/
 function getCommandPar(command: AiScriptCommand): AiScriptPar {
 	return {
 		label:       command.name,
         description: command.description + 
-                     getParamText(command.param) + 
-                     getExampleText(command.example),
+                        getParamText(command.param) + 
+                        getExampleText(command.example),
         section:     command.section,
         pars:        command.param,
         examples:    command.example
 	}
 }
 
-// Defines completion items for buildings
+
+/**********************************************************************//**
+ * Loads BuidingId objects into ai_script_parameters
+ **************************************************************************/
 function loadBuildings() {
 	aoe2buildings.building.forEach(building => {
 		ai_script_parameters.push( {
@@ -108,7 +137,10 @@ function loadBuildings() {
 	});
 }
 
-// Defines completion items for buildings
+
+/**********************************************************************//**
+ * Loads CivId objects into ai_script_parameters
+ **************************************************************************/
 function loadCivs() {
 
 	aoe2civs.CivId.forEach(civ => {
@@ -120,29 +152,12 @@ function loadCivs() {
 			unique:      civ.unique
 		});
 	});
-/*
-				const commandCompletion1 = new CompletionItem(element.name);
-				commandCompletion1.kind = CompletionItemKind.Property;
-				commandCompletion1.insertText = element.name;
-				
-				// Construct the unique text of the civilization
-				let text = element.name.toUpperCase() + " civilization.";
-				
-				// Add unique unit & tech information
-				text += "\n\n### Unique:";
-				text += "\n- **Unit(s):** " + getRequiresFormattedList(element.unique.unit);
-				text += "\n- **Techs:** "   + getRequiresFormattedList(element.unique.tech);
-				text += "\n- **Buildings:** " + getRequiresFormattedList(element.unique.building);
-				commandCompletion1.documentation = new MarkdownString(text);
-
-				const commandCompletion2 = new CompletionItem(element.name.toUpperCase()+"-CIV");
-				commandCompletion2.kind = CompletionItemKind.Property;
-				commandCompletion2.documentation = new MarkdownString(text);
-				//commandCompletion2.insertText = element.name;
-*/
 }
 
-// Load the miscellaneous objects
+
+/**********************************************************************//**
+ * Loads Misc resource objects into ai_script_parameters
+ **************************************************************************/
 function loadMisc() {
 
 	// Loop over all keys and all items in each key
@@ -160,7 +175,9 @@ function loadMisc() {
 }
 
 
-// Defines units
+/**********************************************************************//**
+ * Loads UnitId objects into ai_script_parameters
+ **************************************************************************/
 function loadUnits() {
 
 	aoe2units.UnitId.forEach(unit => {
@@ -173,53 +190,30 @@ function loadUnits() {
 			requires:    unit.requires
 		});
 	});
-/*
-				const commandCompletion = new CompletionItem(element.name);
-				commandCompletion.kind = CompletionItemKind.Unit;
-				commandCompletion.insertText = element.name;
-				
-				// Construct the unique text of the civilization
-				let text = element.description;
-				text    += "\n\nWildcard line: ";
-				if ((element.wildcard_line === "none") || (element.wildcard_line === "all")) {
-					text += "*" + element.wildcard_line + "*";	
-				} else {
-					text += element.wildcard_line;
-				}
-				text += getRequiresText(element.requires);
-
-				// Construct the "See also" text
-
-				commandCompletion.documentation = new MarkdownString(text);
-*/
 }
 
 
+/**********************************************************************//**
+ * Loads TechId objects into ai_script_parameters
+ **************************************************************************/
 function loadTechs() {
 
 	aoe2techs.TechID.forEach(tech => {
 		ai_script_parameters.push( {
 			label:       tech.name,
-			description: tech.description,
+			description: tech.description + getRequiresText(tech.requires),
 			section:     "TechId",
 			requires:    tech.requires
 		});
 	});
-/*				
-				const commandCompletion = new CompletionItem(element.name);
-				commandCompletion.kind = CompletionItemKind.Unit;
-				commandCompletion.insertText = element.name;
-				
-				// Construct the unique text of the civilization
-				let text = element.description;
-				text += getRequiresText(element.requires);
-
-				// Construct the "See also" text
-
-				commandCompletion.documentation = new MarkdownString(text);
-*/
 }
 
+
+/**********************************************************************//**
+ * Formats the parameters of a command into a markdown string
+ *  @param[in] params       Array of {type: string, note: string} objects
+ *  @return Markdown formatted text
+ **************************************************************************/
 function getParamText(params: Array<{type: string, note: string}>) {
 	let parText = "\n\n### Parameters\n";
 	params.forEach(par => {
@@ -234,6 +228,12 @@ function getParamText(params: Array<{type: string, note: string}>) {
 	return parText;
 }
 
+
+/**********************************************************************//**
+ * Formats the examples of a given parameter into a markdown string
+ *  @param[in] example      Array of {title: string, data: string} objects
+ *  @return Markdown formatted text
+ **************************************************************************/
 function getExampleText(example: Array<{title: string, data: string}>) {
 	let exText = "";
 	if (example.length > 0) {
@@ -252,47 +252,72 @@ function getExampleText(example: Array<{title: string, data: string}>) {
 }
 
 
+/**********************************************************************//**
+ * Formats the 'require' of a given parameter into a markdown string
+ *  @param[in] requires     AiScriptRequires compatible object
+ *  @return Markdown formatted text
+ **************************************************************************/
 function getRequiresText(requires: AiScriptRequires) {
 	let reqText = "\n\n### Requires:";
 	// Age
 	reqText += "\n- **Age:** " + requires.age;
-	reqText += "\n- **Building:** " + getRequiresFormattedList(requires.building);
-	reqText += "\n- **Techs:** " + getRequiresFormattedList(requires.tech);
-	reqText += "\n- **Civ:** " + getRequiresFormattedList(requires.civ);
+	reqText += "\n- **Building:** " + getFormattedList(requires.building);
+	reqText += "\n- **Techs:** " + getFormattedList(requires.tech);
+	reqText += "\n- **Civ:** " + getFormattedList(requires.civ);
 
 	return reqText;
 }
 
-function getRequiresFormattedList(reqList: Array<string>) {
+
+/**********************************************************************//**
+ * Formats the 'unique' attributes of a given civilization as a markdown string
+ *  @param[in] uniqList     AiScriptUniques compatible object
+ *  @return Markdown formatted text
+ **************************************************************************/
+function getUniquesText(uniqList: AiScriptUniques) {
+    let text = "\n\n### Uniques";
+    text += "\n* **Units**: " + getFormattedList(uniqList.unit);
+    text += "\n* **Techs**: " + getFormattedList(uniqList.tech);
+    if (uniqList.building[0] !== "none") {
+        text += "\n**Buildings**: " + getFormattedList(uniqList.building);
+    }
+    return text;
+}
+
+
+/**********************************************************************//**
+ * Formats a list of strings based on a set of predetermined use cases
+ *  @param[in] req      Array of {title: string, data: string} objects
+ *  @return Markdown formatted text
+ * 
+ * If the item is 'none' or 'all' the returned string is simple that word
+ * but in italics.
+ * 
+ * If the string in the array is preceded by a '!', the string is formatted
+ * with a line through it. For example, a TechId that contains '!aztec' in 
+ * its 'requires.civ' identifies that tech as not being available to Aztecs.
+ * This results in a line through that civ in the generated completion text.
+ **************************************************************************/
+function getFormattedList(myList: Array<string>) {
 	let text = "";
-	reqList.forEach(req => {
+	myList.forEach(item => {
 		// Add commas for additional items in the list
-		if (req != reqList[0]) {
+		if (item != myList[0]) {
 			text += ", ";
 		}
 
-		// Requirement is 'none' or 'all'
-		if ((req === "none") || (req === "all")) {
-			text += "*" + req + "*";
+		// Item is 'none' or 'all', format in italics
+		if ((item === "none") || (item === "all")) {
+			text += "*" + item + "*";
 		} 
-		// A '!' signifies the requirement is to NOT have this item
-		else if (req[0] === "!") {
-			text += "~~" + req.slice(1,) + "~~";
+		// A '!' signifies the need to format as a strikethrough
+		else if (item[0] === "!") {
+			text += "~~" + item.slice(1,) + "~~";
 		} 
 		// Otherwise add the item as is
 		else {
-			text += req;
+			text += item;
 		}
 	});
 	return text;
-}
-
-function getUniquesText(uniqList: AiScriptUniques) {
-    let text = "\n\n### Uniques";
-    text += "\n* **Units**: " + getRequiresFormattedList(uniqList.unit);
-    text += "\n* **Techs**: " + getRequiresFormattedList(uniqList.tech);
-    if (uniqList.building[0] !== "none") {
-        text += "\n**Buildings**: " + getRequiresFormattedList(uniqList.building);
-    }
-    return text;
 }
