@@ -1,5 +1,5 @@
 {
-    "ActionID": [
+    "ActionId": [
         {
             "name": "actionid-attack",
             "id": 600,
@@ -93,7 +93,7 @@
             "id": 631,
             "description": "Relic action"
         }],
-    "AgeID": [
+    "AgeId": [
         {
             "name": "dark-age",
             "description": "Dark age"
@@ -125,7 +125,7 @@
             "id": 3,
             "description": "Units will not move"
         }],
-    "CmdID": [
+    "CmdId": [
         {
             "name": "cmdid-flag",
             "id": 0,
@@ -182,7 +182,7 @@
             "name": "wood",
             "description": "Wood commodity"
         }],
-    "ClassID": [
+    "ClassId": [
         {
             "name": "archery-class",
             "id": 900,
@@ -1091,7 +1091,7 @@
             "name": "place-point",
             "description": "Point placement (?)"
         }],
-    "PlayerID": [
+    "PlayerId": [
         {
             "name": "1",
             "description": "Player 1"
@@ -2023,26 +2023,26 @@
             "name": "research-unavailable",
             "description": "Checks given research is unavailable to computer player's civ, or research is unavailable at this time (tech tree prerequisites are not met)."
         }],
-    "ResourceID": [
+    "ResourceId": [
         {
             "name": "food",
             "description": "Food resource",
-            "section": "ResourceID",
+            "section": "ResourceId",
             "notes": ["none"]
         },{
             "name": "gold",
             "description": "Gold resource",
-            "section": "ResourceID",
+            "section": "ResourceId",
             "notes": ["none"]
         },{
             "name": "stone",
             "description": "Stone resource",
-            "section": "ResourceID",
+            "section": "ResourceId",
             "notes": ["none"]
         },{
             "name": "wood",
             "description": "Wood resource",
-            "section": "ResourceID",
+            "section": "ResourceId",
             "notes": ["none"]
         }],
     "SearchOrder": [
@@ -2158,15 +2158,135 @@
             "id": 18,
             "description": "None action"
         }],
-    "TauntID": [
+    "TauntId": [
         {
             "name": "1",
             "description": "yes"
         },{
             "name": "2",
             "description": "no"
+        },{
+            "name": "3",
+            "description": "Food please"
+        },{
+            "name": "4",
+            "description": "Wood please"
+        },{
+            "name": "5",
+            "description": "Gold please"
+        },{
+            "name": "6",
+            "description": "Stone please"
+        },{
+            "name": "7",
+            "description": "Ahh!"
+        },{
+            "name": "8",
+            "description": "All hail, king of the losers!"
+        },{
+            "name": "9",
+            "description": "Ooh!"
+        },{
+            "name": "10",
+            "description": "I'll beat you back to Age of Empires"
+        },{
+            "name": "11",
+            "description": "(Herb laugh)"
+        },{
+            "name": "12",
+            "description": "Ah! Being rushed"
+        },{
+            "name": "13",
+            "description": "Sure, blame it on your ISP"
+        },{
+            "name": "14",
+            "description": "Start the game already!"
+        },{
+            "name": "15",
+            "description": "Don't point that thing at me!"
+        },{
+            "name": "16",
+            "description": "Enemy sighted"
+        },{
+            "name": "17",
+            "description": "It is good to be the king"
+        },{
+            "name": "18",
+            "description": "Monk! I need a monk!"
+        },{
+            "name": "19",
+            "description": "Long time, no siege"
+        },{
+            "name": "20",
+            "description": "My granny could scrap better than that"
+        },{
+            "name": "21",
+            "description": "Nice town, I'll take it"
+        },{
+            "name": "22",
+            "description": "Quit touching me!"
+        },{
+            "name": "23",
+            "description": "Raiding party!"
+        },{
+            "name": "24",
+            "description": "Dadgum"
+        },{
+            "name": "25",
+            "description": "Eh, smite me"
+        },{
+            "name": "26",
+            "description": "The wonder, the wonder, the ... no!"
+        },{
+            "name": "27",
+            "description": "You played two hours to die like this?"
+        },{
+            "name": "28",
+            "description": "Yeah, well, you should see the other guy"
+        },{
+            "name": "29",
+            "description": "Roggan"
+        },{
+            "name": "30",
+            "description": "Wololo"
+        },{
+            "name": "31",
+            "description": "Attack an enemy now"
+        },{
+            "name": "32",
+            "description": "Cease creating extra villagers"
+        },{
+            "name": "33",
+            "description": "Create extra villagers"
+        },{
+            "name": "34",
+            "description": "Build a navy"
+        },{
+            "name": "35",
+            "description": "Stop building a navy"
+        },{
+            "name": "36",
+            "description": "Wait for my signal to attack"
+        },{
+            "name": "37",
+            "description": "Build a wonder"
+        },{
+            "name": "38",
+            "description": "Give me your extra resources"
+        },{
+            "name": "39",
+            "description": "(Ally sound)"
+        },{
+            "name": "40",
+            "description": "(Enemy sound)"
+        },{
+            "name": "41",
+            "description": "(Neutral sound)"
+        },{
+            "name": "42",
+            "description": "What age are you in?"
         }],
-    "TerrainID": [
+    "TerrainId": [
         {
             "name": "terrain-grass",
             "id": 0,
@@ -2371,7 +2491,7 @@
             "name": "custom",
             "description": "Defined by the map being played"
         }],
-    "VillagerID": [
+    "VillagerId": [
         {
             "name": "idle-villager-m",
             "id": 83,
