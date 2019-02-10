@@ -11,7 +11,7 @@
 
 (defconst max-dark-villagers 20)
 
-; this is a comment
+; This is a comment
 (defrule                            ; This is the start of a new rule
     (true)                          ; This will guarantee the rule runs
     =>
@@ -25,16 +25,16 @@
 (defrule
     (current-age == dark-age)
     (unit-type-count-total villager < max-dark-villagers)
-    (can-train villager)            ; 'train' is NOT highlighted
+    (can-train villager)
     =>
-    (train villager)                ; 'train' IS highlighted
+    (train villager)
 )
 
 ; Build a house
 #load-if-not-defined HUN-CIV
 (defrule
-   (can-build house)                ; 'build' is NOT highlighted
+   (can-build house)
    =>
-   (build house)                    ; 'build' IS highlighted
+   (build house)
 )
 #end-if
