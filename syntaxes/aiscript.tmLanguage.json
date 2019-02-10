@@ -26,10 +26,10 @@
 					"match": "(#else|#end-if|#load-if-defined|#load-if-not-defined)"
 				},{
 					"name": "keyword.control.aiscript",
-					"match": "(?<!-)\\b(nor|not|or)\\b(?!-)"
+					"match": "(?<!-)(?<=\\()\\s*\\b(and|nor|not|or)\\b(?!-)"
 				},{
 					"name": "storage.type.aiscript",
-					"match": "\\b(defrule)\\b"
+					"match": "(?<=\\()\\s*\\b(defrule)\\b"
 				},{
 					"name": "constant.language.aiscript",
 					"match": "\\b(true|false)\\b"
@@ -38,7 +38,7 @@
 					"match": "=>"
 				},{
 					"name": "entity.name.function.aiscript",
-					"match": "(?<!-)\\b(up-)?(can-)?(build|research|train)\\b(?!-)"
+					"match": "(?<=\\()\\s*(\\w+-?)+"
 				},{
 					"name": "variable.other.aiscript",
 					"match": "(?<!-)\\b(food|wood|gold|stone)\\b(?!-)"
