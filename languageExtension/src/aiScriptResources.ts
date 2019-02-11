@@ -95,13 +95,13 @@ function loadAoE2Parameters(): AiScriptPar[] {
  * Loads facts, actions and factactions
  **************************************************************************/
 function loadCommands() {
-	aoe2facts.FactId.forEach(element => {
+	aoe2facts.Fact.forEach(element => {
 		ai_script_parameters.push(getCommandPar(element));
 	});
-	aoe2actions.ActionId.forEach(element => {
+	aoe2actions.Action.forEach(element => {
 		ai_script_parameters.push(getCommandPar(element));
 	});
-	aoe2factaction.FactActionId.forEach(element => {
+	aoe2factaction.FactAction.forEach(element => {
 		ai_script_parameters.push(getCommandPar(element));
 	});
 }
