@@ -396,11 +396,11 @@ function fillCompletions() {
 				case "UnitId":
 					item.kind = CompletionItemKind.Unit;
 					break;
-				case "ActionId":
-				case "FactActionId":
+				case "Action":
+				case "FactAction":
 					item.kind = CompletionItemKind.Method;
 					break;
-				case "FactId":
+				case "Fact":
 					item.kind = CompletionItemKind.Variable;
 					break;
 				case "TechId":
