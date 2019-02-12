@@ -17,8 +17,9 @@ import {
 	CompletionList,
 	TextDocumentPositionParams,
 	Hover,
-	MarkupKind,
-	SignatureHelp
+	Range,
+	SignatureHelp,
+	ParameterInformation
 } from 'vscode-languageserver';
 
 // Import the needed methods and objects
@@ -67,14 +68,13 @@ connection.onInitialize((params: InitializeParams) => {
 			// Tell the client that the server supports code completion
 			completionProvider: {
 				resolveProvider: false
-			}
-			/*
+			},
+			
 			// Tell the client we support hover text
 			hoverProvider: false,
-			signatureHelpProvider: {
-				triggerCharacters: [' ', ' ']
-			}
-			*/
+
+			// Tell client we support signature help
+			signatureHelpProvider: {triggerCharacters: [' ']}
 		}
 	};
 });
@@ -309,32 +309,117 @@ connection.onHover(
 		}
 	}
 );
-
+*/
 
 // The following provides parameter information when typing an action or fact
 connection.onSignatureHelp(
 	(textDocPos: TextDocumentPositionParams): SignatureHelp => {
-		// Description
-		let sigHelp = "**Line:** " + textDocPos.position.line +"\n"
-					  "**Char:** " + textDocPos.position.character;;
+		// Define the signature to be returned
+		let signature: SignatureHelp = undefined;
 
-		return {
-			signatures: [
-				{
-					label: "signature par1 par2 par3",
-					documentation: sigHelp,
-					parameters: [
-						{label: "par1",
-					     documentation: "Parameter 1"},
-						{label: "par2"}, 
-						{label: "par3"}]
-				}],
-			activeSignature: 0,
-			activeParameter: 0
+		// Get the document position
+		let line = textDocPos.position.line;
+		let col  = textDocPos.position.character;
+
+		let line_range : Range = {
+			start: {line: line, character: 0},
+			end:   {line: line, character: col}
+		};
+
+		// An AiScript command is defined as: (commandName par1 par2 <etc...>)
+		// We need to get all of the text back to the nearest '(' and up to the
+		// cursor position
+		let text: TextDocument = documents.get(textDocPos.textDocument.uri);
+		let line_text = text.getText(line_range)
+		
+		// Skip if we're in an ignorable situation. This is defined nere as
+		// any situation such as:
+		//		'(' : An opening bracket with nothing beyond it
+		//		')' : A closing bracket with nothing beyond it
+		//		';'   : Identifies that a comment exists somewhere in the string
+		// For the cases involving a bracket, we also catch the situation
+		// where there is an indeterminate number of spaces after it.
+		let ignore_signature_regex = /(\(|\))(\s*)$|;/g;
+		if (ignore_signature_regex.test(line_text)) {
+			connection.console.log("FAILED: " + line_text);
+			signature = undefined;
 		}
+
+		// ... otherwise get the string
+		else {
+			// Loop until we have the end of the current command/parameter name.
+			// This helps to identify what command or parameter we're looking at
+			let signature_end = /(\s+|\(|\)|\n|;)$/g;
+			while (!signature_end.test(line_text)) {
+				line_range.end.character++;
+
+				// If there are a rediculous number of characters, there's a problem
+				if (line_range.end.character - col > 1000) {
+					connection.console.error("Command is unreasonably long...");
+					return undefined;
+				}
+			
+				// Update the text
+				line_text = text.getText(line_range);
+			}
+
+			// Trim undesired characters from end
+			line_text = line_text.slice(0, line_text.length-1);
+			
+			// Now get only the text from the closest '(' until the end
+			let command_regex = /\(.*$/g;
+			let command_text = command_regex.exec(line_text)[0];
+			command_text     = command_text.substr(1);	// trim leading '('
+			let command_pars = command_text.trim().split(/\s+/g);
+			let command_str  = command_pars[0];			// Command name
+			let par_indx     = command_pars.length - 1;	// Parameter index at cursor
+
+			// Search for command
+			let command: AiScriptPar = undefined;
+			aiScriptPars.forEach(par => {
+				if (par.label == command_str)
+					command = par;
+			});
+
+			if ((command !== undefined) &&
+				((command.section === "Fact") ||
+				 (command.section === "Action") ||
+				 (command.section === "FactAction"))) {
+			
+				command_str = "(" + command.section + ") " + command_str; 
+				
+				// Load the parameters with descriptions
+				let par_info : ParameterInformation[] = [];
+				command.pars.forEach(par => {
+					if (par.type !== "none") {
+						command_str += " " + par.type;
+						par_info.push({
+							label: par.type,
+							documentation: {value: par.note, kind: 'markdown'}
+						});
+					}
+				});
+
+				// Initialize the signature object
+				signature = {
+					signatures: [{
+						label: command_str,
+						documentation: {
+							value: command.description, 
+							kind: 'markdown'
+						},
+						parameters: par_info
+					}],
+					activeSignature: 0,
+					activeParameter: par_indx
+				};
+			}
+		}
+		// Return the signature
+		return signature;
 	}
 );
-*/
+
 /*
 connection.onDidOpenTextDocument((params) => {
 	// A text document got opened in VSCode.
@@ -372,17 +457,17 @@ function fillCompletions() {
 		aiScriptCompletionList.items.pop();
 	}
 	
-	// ... otherwise fill completion items
 	if ((globalSettings.enableExperimental === false) && (aiScriptCompletionList.items.length === 0)) {
+		
+		// Loop through all parameters
 		connection.console.log("Updating completions");
 		aiScriptPars.forEach(par => {
 
-			let docText = par.description;
-
+			// Define a new completion item
 			let item: CompletionItem = {
 				label: par.label,
 				documentation: {
-					value: docText,
+					value: par.description,
 					kind: 'markdown'
 				}
 			}
