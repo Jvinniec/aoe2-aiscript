@@ -1,12 +1,13 @@
 /**********************************************************************//**
  * Import AI scripting resources
  **************************************************************************/
-import * as aoe2actions    from './resources/aoe2AiAction.json';
+import * as aoe2actions    from './resources/aoe2Action.json';
 import * as aoe2buildings  from './resources/aoe2BuildingId.json';
 import * as aoe2civs       from './resources/aoe2CivId.json';
-import * as aoe2factaction from './resources/aoe2AiFactAction.json';
-import * as aoe2facts      from './resources/aoe2AiFact.json';
+import * as aoe2facts      from './resources/aoe2Fact.json';
+import * as aoe2factaction from './resources/aoe2FactAction.json';
 import * as aoe2misc	   from './resources/aoe2Misc.json';
+import * as aoe2stratnum   from './resources/aoe2StrategicNumbers.json';
 import * as aoe2techs      from './resources/aoe2TechId.json';
 import * as aoe2units      from './resources/aoe2UnitId.json';
 
@@ -84,6 +85,7 @@ function loadAoE2Parameters(): AiScriptPar[] {
 	loadCommands();
 	loadCivs();
 	loadMisc();
+	loadStrategicNumbers();
 	loadTechs();
     loadUnits();
 
@@ -176,18 +178,15 @@ function loadMisc() {
 
 
 /**********************************************************************//**
- * Loads UnitId objects into ai_script_parameters
+ * Loads TechId objects into ai_script_parameters
  **************************************************************************/
-function loadUnits() {
+function loadStrategicNumbers() {
 
-	aoe2units.UnitId.forEach(unit => {
+	aoe2stratnum.StrategicNumber.forEach(num => {
 		ai_script_parameters.push( {
-			label:       unit.name,
-            description: unit.description + 
-                         "\n\nWildcard line: " + unit.wildcard_line + 
-                         getRequiresText(unit.requires),
-			section:     "UnitId",
-			requires:    unit.requires
+			label:       num.name,
+			description: num.notes,
+			section:     "StrategicNumber"
 		});
 	});
 }
@@ -210,6 +209,24 @@ function loadTechs() {
 
 
 /**********************************************************************//**
+ * Loads UnitId objects into ai_script_parameters
+ **************************************************************************/
+function loadUnits() {
+
+	aoe2units.UnitId.forEach(unit => {
+		ai_script_parameters.push( {
+			label:       unit.name,
+            description: unit.description + 
+                         "\n\nWildcard line: " + unit.wildcard_line + 
+                         getRequiresText(unit.requires),
+			section:     "UnitId",
+			requires:    unit.requires
+		});
+	});
+}
+
+
+/**********************************************************************//**
  * Formats the parameters of a command into a markdown string
  *  @param[in] params       Array of {type: string, note: string} objects
  *  @return Markdown formatted text
@@ -220,7 +237,7 @@ function getParamText(params: Array<{type: string, note: string}>) {
 		if (par.type === "none") {
 			parText += "*none*";
 		} else {
-			parText += "* **" + par.type + "**: " + par.note;
+			parText += "* **" + par.type + "**: *" + par.note + "*";
 		}
 		parText += "\n";
 	});
