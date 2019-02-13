@@ -71,20 +71,7 @@ export function activate(context: ExtensionContext) {
 	let langConf: LanguageConfiguration = {
 		"wordPattern": /(([a-zA-Z0-9]+-){0,}[a-zA-Z0-9]+)/g
 	}
-	languages.setLanguageConfiguration('aiscript', langConf);
-	
-	if (workspace.getConfiguration("aoe2_AiScript").get("enableExperimental")) {
-		// Register command completions
-		/*
-		let provider1 = getCompletionsForCommands();
-		let provider2 = getCompletionsForBuilding();
-		let provider3 = getCompletionsForCivs();
-		let provider4 = getCompletionsForUnits();
-		let provider5 = getCompletionsForTechs();
-		
-		context.subscriptions.push(provider1, provider2, provider3, provider4, provider5);
-		*/
-	}	
+	languages.setLanguageConfiguration('aiscript', langConf);	
 }
 
 
