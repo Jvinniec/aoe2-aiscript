@@ -22,6 +22,8 @@ import {
 	ParameterInformation
 } from 'vscode-languageserver';
 
+import {workspace} from 'vscode';
+
 // Import the needed methods and objects
 import {
 	AiScriptPar,
@@ -44,13 +46,13 @@ let hasDiagnosticRelatedInformationCapability: boolean = false;
 let aiScriptPars: AiScriptPar[] = loadAoE2Parameters();
 let aiScriptCompletionList: CompletionList = {items: [], isIncomplete: false};
 
+
+// Initialize the server connection
 connection.onInitialize((params: InitializeParams) => {
 	let capabilities = params.capabilities;
 
 	// Fill the list of completion items
 	fillCompletions();
-	connection.console.log("Num pars: " + aiScriptPars.length);
-	connection.console.log("Completios pars: " + aiScriptCompletionList.items.length);
 
 	// Does the client support the `workspace/configuration` request?
 	// If not, we will fall back using global settings
@@ -79,6 +81,7 @@ connection.onInitialize((params: InitializeParams) => {
 	};
 });
 
+// Register some things after initializing server connection
 connection.onInitialized(() => {
 	if (hasConfigurationCapability) {
 		// Register for all configuration changes.
@@ -94,12 +97,13 @@ connection.onInitialized(() => {
 	}
 });
 
-// The example settings
+// The scripting settings settings
 interface AiScriptSettings {
 	//maxNumberOfProblems: number;
 	//showExampleCode: boolean;
 	updateErrorsWhen: string;
-	enableExperimental: boolean;
+	enableCompletionHelp: boolean;
+	enableParameterHelp: boolean;
 }
 
 // The global settings, used when the `workspace/configuration` request is not supported by the client.
@@ -109,7 +113,8 @@ const defaultSettings: AiScriptSettings = {
 	//maxNumberOfProblems: 1000,
 	//showExampleCode: true,
 	updateErrorsWhen: "onSave",
-	enableExperimental: false
+	enableCompletionHelp: false,
+	enableParameterHelp: false
 };
 let globalSettings: AiScriptSettings = defaultSettings;
 
@@ -133,6 +138,8 @@ connection.onDidChangeConfiguration(change => {
 	documents.all().forEach(validateTextDocument);
 });
 
+
+// Return the current document settings
 function getDocumentSettings(resource: string): Thenable<AiScriptSettings> {
 	if (!hasConfigurationCapability) {
 		return Promise.resolve(globalSettings);
@@ -156,6 +163,7 @@ documents.onDidClose(e => {
 // The content of a text document has changed. This event is emitted
 // when the text document first opened or when its content has changed.
 documents.onDidChangeContent(change => {
+	// Check that we want to update 'onChange'
 	validateTextDocumentOnChange(change.document);
 });
 
@@ -169,12 +177,15 @@ documents.onDidOpen(change => {
 	validateTextDocument(change.document);
 });
 
+
+// Update textdocument on change if requested
 async function validateTextDocumentOnChange(textDocument: TextDocument): Promise<void> {
 	let settings = await getDocumentSettings(textDocument.uri);
 	if (settings.updateErrorsWhen === "onChange") {
 		validateTextDocument(textDocument);
 	}
 }
+
 
 async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	// In this simple example we get the settings for every validate run.
@@ -265,31 +276,27 @@ connection.onDidChangeWatchedFiles(_change => {
 
 // This handler provides the initial list of the completion items.
 connection.onCompletion(
-	(_textDocumentPosition: TextDocumentPositionParams): CompletionList => {
+	(_textDocumentPosition: TextDocumentPositionParams): Promise<CompletionList> => {
 		// The pass parameter contains the position of the text document in
 		// which code complete got requested. We ignore this info and always
 		// provide the same list of completion items.
-		return aiScriptCompletionList;
+		let doc: TextDocument = documents.get(_textDocumentPosition.textDocument.uri);
+		let complist: Promise<CompletionList> = getCompletions(doc);
+		return complist;
 	}
 );
+
+async function getCompletions(textDocument: TextDocument): Promise<CompletionList> {
+	// Check if we're running experimental features
+	let settings = await getDocumentSettings(textDocument.uri);
+	if (settings.enableCompletionHelp) {
+		return aiScriptCompletionList;
+	} else {
+		return undefined;
+	}
+}
 
 /*
-// This handler resolves additional information for the item selected in
-// the completion list.
-connection.onCompletionResolve(
-	(item: CompletionItem): CompletionItem => {
-		if (item.data === 1) {
-			item.detail = 'TypeScript details';
-			item.documentation = 'TypeScript documentation';
-		} else if (item.data === 2) {
-			item.detail = 'JavaScript details';
-			item.documentation = 'JavaScript documentation';
-		}
-		return item;
-	}
-);
-
-
 connection.onHover(
 	(_textDocumentPosition: TextDocumentPositionParams): Hover => {
 		// Need to get the word that we're hovering over
@@ -314,132 +321,139 @@ connection.onHover(
 
 // The following provides parameter information when typing an action or fact
 connection.onSignatureHelp(
-	(textDocPos: TextDocumentPositionParams): SignatureHelp => {
-		/*
-		let settings = await getDocumentSettings(textDocPos.textDocument.uri);
-		if (settings.enableExperimental === false) {
-			return undefined;
-		}
-		*/
-		// Define the signature to be returned
-		let signature: SignatureHelp = undefined;
+	(textDocPos: TextDocumentPositionParams): Promise<SignatureHelp> => {
 
-		// Get the document position
-		let line = textDocPos.position.line;
-		let col  = textDocPos.position.character;
-
-		let line_range : Range = {
-			start: {line: line, character: 0},
-			end:   {line: line, character: col}
-		};
-
-		// An AiScript command is defined as: (commandName par1 par2 <etc...>)
-		// We need to get all of the text back to the nearest '(' and up to the
-		// cursor position
-		let text: TextDocument = documents.get(textDocPos.textDocument.uri);
-		let line_text = text.getText(line_range)
-		
-		// Skip if we're in an ignorable situation. This is defined nere as
-		// any situation such as:
-		//		'(' : An opening bracket with nothing beyond it
-		//		')' : A closing bracket with nothing beyond it
-		//		';'   : Identifies that a comment exists somewhere in the string
-		// For the cases involving a bracket, we also catch the situation
-		// where there is an indeterminate number of spaces after it.
-		let ignore_signature_regex = /(\(|\))(\s*)$|;/g;
-		if (ignore_signature_regex.test(line_text)) {
-			signature = undefined;
-		}
-
-		// ... otherwise get the string
-		else {
-			// Loop until we have the end of the current command/parameter name.
-			// This helps to identify what command or parameter we're looking at
-			let signature_end = /(\s+|\(|\)|\n|;)$/g;
-			while (!signature_end.test(line_text)) {
-				line_range.end.character++;
-
-				// If there are a rediculous number of characters, there's a problem
-				if (line_range.end.character - col > 1000) {
-					connection.console.error("Command is unreasonably long...");
-					return undefined;
-				}
-			
-				// Update the text
-				line_text = text.getText(line_range);
-			}
-
-			// Trim undesired characters from end if they exist
-			if (line_text.length > col) {
-				line_text = line_text.slice(0, line_text.length-1);
-			}
-
-			connection.console.log(line_text);
-			// Now get only the text from the closest '(' until the end
-			let command_text_array = /\([^\(]+$/g.exec(line_text);
-
-			let command_text = "";
-			// Handle the case where the object doesn't begin with a '('
-			if (command_text_array === null) {
-				return undefined;
-			} else {
-				command_text = command_text_array[0];
-			}
-
-			command_text     = command_text.substr(1);	// trim leading '('
-			let command_pars = command_text.split(/\s+/g);
-			let command_str  = command_pars[0];			// Command name
-			let par_indx     = command_pars.length - 2;	// Parameter index at cursor
-
-			// Search for command
-			let command: AiScriptPar = undefined;
-			aiScriptPars.forEach(par => {
-				if (par.label === command_str)
-					command = par;
-			});
-
-			if ((command !== undefined) &&
-				((command.section === "Fact") ||
-				 (command.section === "Action") ||
-				 (command.section === "FactAction"))) {
-			
-				// Add the command type to the command definition
-				command_str = "(" + command.section + ") " + command_str; 
-				
-				// Load the parameters with descriptions
-				let par_info : ParameterInformation[] = [];
-				command.pars.forEach(par => {
-					if (par.type !== "none") {
-						command_str += " " + par.type;
-						par_info.push({
-							label: par.type,
-							documentation: {
-								value: "*"+par.note+"*", 
-								kind: 'markdown'
-							}
-						});
-					}
-				});
-
-				// Initialize the signature object
-				signature = {
-					signatures: [{
-						label: command_str,
-						documentation: {
-							value: "**Command Description**  \n"+command.description, 
-							kind: 'markdown'
-						},
-						parameters: par_info
-					}],
-					activeSignature: 0,
-					activeParameter: par_indx
-				};
-			}
-		}
-		// Return the signature
-		return signature;
+		return getSignatureHelp(textDocPos);
 	}
 );
+
+
+// Get the signature help in an asynchronous way
+async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise<SignatureHelp> {
+
+	// Make sure we actually want parameter help
+	let settings = await getDocumentSettings(textDocPos.textDocument.uri);
+	if (settings.enableParameterHelp === false) {
+		return undefined;
+	}
+																
+	// Define the signature to be returned
+	let signature: SignatureHelp = undefined;
+
+	// Get the document position
+	let line = textDocPos.position.line;
+	let col  = textDocPos.position.character;
+
+	let line_range : Range = {
+		start: {line: line, character: 0},
+		end:   {line: line, character: col}
+	};
+
+	// An AiScript command is defined as: (commandName par1 par2 <etc...>)
+	// We need to get all of the text back to the nearest '(' and up to the
+	// cursor position
+	let text: TextDocument = documents.get(textDocPos.textDocument.uri);
+	let line_text = text.getText(line_range)
+	
+	// Skip if we're in an ignorable situation. This is defined nere as
+	// any situation such as:
+	//		'(' : An opening bracket with nothing beyond it
+	//		')' : A closing bracket with nothing beyond it
+	//		';'   : Identifies that a comment exists somewhere in the string
+	// For the cases involving a bracket, we also catch the situation
+	// where there is an indeterminate number of spaces after it.
+	let ignore_signature_regex = /(\(|\))(\s*)$|;/g;
+	if (ignore_signature_regex.test(line_text)) {
+		signature = undefined;
+	}
+
+	// ... otherwise get the string
+	else {
+		// Loop until we have the end of the current command/parameter name.
+		// This helps to identify what command or parameter we're looking at
+		let signature_end = /(\s+|\(|\)|\n|;)$/g;
+		while (!signature_end.test(line_text)) {
+			line_range.end.character++;
+
+			// If there are a rediculous number of characters, there's a problem
+			if (line_range.end.character - col > 1000) {
+				connection.console.error("Command is unreasonably long...");
+				return undefined;
+			}
+		
+			// Update the text
+			line_text = text.getText(line_range);
+		}
+
+		// Trim undesired characters from end if they exist
+		if (line_text.length > col) {
+			line_text = line_text.slice(0, line_text.length-1);
+		}
+
+		// Now get only the text from the closest '(' until the end
+		let command_text_array = /\([^\(]+$/g.exec(line_text);
+
+		let command_text = "";
+		// Handle the case where the object doesn't begin with a '('
+		if (command_text_array === null) {
+			return undefined;
+		} else {
+			command_text = command_text_array[0];
+		}
+
+		command_text     = command_text.substr(1);	// trim leading '('
+		let command_pars = command_text.split(/\s+/g);
+		let command_str  = command_pars[0];			// Command name
+		let par_indx     = command_pars.length - 2;	// Parameter index at cursor
+
+		// Search for command
+		let command: AiScriptPar = undefined;
+		aiScriptPars.forEach(par => {
+			if (par.label === command_str)
+				command = par;
+		});
+
+		if ((command !== undefined) &&
+			((command.section === "Fact") ||
+				(command.section === "Action") ||
+				(command.section === "FactAction"))) {
+		
+			// Add the command type to the command definition
+			command_str = "(" + command.section + ") " + command_str; 
+			
+			// Load the parameters with descriptions
+			let par_info : ParameterInformation[] = [];
+			command.pars.forEach(par => {
+				if (par.type !== "none") {
+					command_str += " " + par.type;
+					par_info.push({
+						label: par.type,
+						documentation: {
+							value: "**"+par.type +":** *"+par.note+"*\n\n----", 
+							kind: 'markdown'
+						}
+					});
+				}
+			});
+
+			// Initialize the signature object
+			signature = {
+				signatures: [{
+					label: command_str,
+					documentation: {
+						value: "**Command Description**  \n"+command.description, 
+						kind: 'markdown'
+					},
+					parameters: par_info
+				}],
+				activeSignature: 0,
+				activeParameter: par_indx
+			};
+		}
+	}
+	// Return the signature
+	return signature;
+};
 
 /*
 connection.onDidOpenTextDocument((params) => {
@@ -478,11 +492,18 @@ function fillCompletions() {
 		aiScriptCompletionList.items.pop();
 	}
 	
-	if ((globalSettings.enableExperimental === false) && (aiScriptCompletionList.items.length === 0)) {
+	if (aiScriptCompletionList.items.length === 0) {
 		
 		// Loop through all parameters
-		connection.console.log("Updating completions");
 		aiScriptPars.forEach(par => {
+
+			// Construct a detailed call signature
+			let detail = "(" + par.section + ") " + par.label;
+			if (par.pars !== undefined) {
+				par.pars.forEach(p => {
+					detail += " " + p.type;
+				})
+			}
 
 			// Define a new completion item
 			let item: CompletionItem = {
@@ -491,7 +512,7 @@ function fillCompletions() {
 					value: par.description,
 					kind: 'markdown'
 				},
-				detail: par.section
+				detail: detail
 			}
 
 			// Define the parameter kind (determines which icon is next to the 
@@ -539,8 +560,4 @@ function fillCompletions() {
 			}
 		});
 	} // end-if
-	else {
-		connection.console.log("Failed");
-		connection.console.log("blah "+globalSettings.enableExperimental);
-	}
 }
