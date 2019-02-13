@@ -858,7 +858,7 @@
         "name": "housing-headroom",
         "description": "Checks computer player’s housing headroom",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["Housing headroom is the difference between current housing capacity and trained unit capacity."],
+        "note": ["Housing headroom is the difference between current housing capacity and trained unit population."],
         "section": "Fact",
         "param": [
             {
@@ -869,8 +869,8 @@
                 "note": "A value for comparison"
             }],
         "example": [{
-            "title": "none",
-            "data": "none"
+            "title": "Check if there exists enough housing space to train a villager",
+            "data": "(defrule\r\n\t(housing-headroom > 0)\r\n=&gt;\r\n\t(train villager)\r\n)"
         }],
         "related": []
     },{
