@@ -26,9 +26,10 @@ These are features that are considered good enough to be tested by people, but m
 
 Current experimental features:
 - Auto completion suggestions
+- Command signature help text (i.e. provides parameter description as you type out the command)
 
 By default experimental features are turned off to ensure the average person has a stable experience with the extension.
-To turn them on, go to settings (`Code`->`Preferences`->`Settings`), search for *'aoe2 enable experimental'* and set to `true`. You may need to reload your VSCode instance for some features to be enabled.
+To turn them on, go to the settings (`Code`->`Preferences`->`Settings`), search for *'aoe2 ai script'* and set the desired feature values. You may need to reload your VSCode instance for your changes to take effect.
 
 ## Why ANOTHER code editor?
 
