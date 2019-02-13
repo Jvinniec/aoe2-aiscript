@@ -273,6 +273,7 @@ connection.onCompletion(
 	}
 );
 
+/*
 // This handler resolves additional information for the item selected in
 // the completion list.
 connection.onCompletionResolve(
@@ -288,7 +289,7 @@ connection.onCompletionResolve(
 	}
 );
 
-/*
+
 connection.onHover(
 	(_textDocumentPosition: TextDocumentPositionParams): Hover => {
 		// Need to get the word that we're hovering over
@@ -314,6 +315,12 @@ connection.onHover(
 // The following provides parameter information when typing an action or fact
 connection.onSignatureHelp(
 	(textDocPos: TextDocumentPositionParams): SignatureHelp => {
+		/*
+		let settings = await getDocumentSettings(textDocPos.textDocument.uri);
+		if (settings.enableExperimental === false) {
+			return undefined;
+		}
+		*/
 		// Define the signature to be returned
 		let signature: SignatureHelp = undefined;
 
@@ -341,7 +348,6 @@ connection.onSignatureHelp(
 		// where there is an indeterminate number of spaces after it.
 		let ignore_signature_regex = /(\(|\))(\s*)$|;/g;
 		if (ignore_signature_regex.test(line_text)) {
-			connection.console.log("FAILED: " + line_text);
 			signature = undefined;
 		}
 
@@ -363,21 +369,32 @@ connection.onSignatureHelp(
 				line_text = text.getText(line_range);
 			}
 
-			// Trim undesired characters from end
-			line_text = line_text.slice(0, line_text.length-1);
-			
+			// Trim undesired characters from end if they exist
+			if (line_text.length > col) {
+				line_text = line_text.slice(0, line_text.length-1);
+			}
+
+			connection.console.log(line_text);
 			// Now get only the text from the closest '(' until the end
-			let command_regex = /\(.*$/g;
-			let command_text = command_regex.exec(line_text)[0];
+			let command_text_array = /\([^\(]+$/g.exec(line_text);
+
+			let command_text = "";
+			// Handle the case where the object doesn't begin with a '('
+			if (command_text_array === null) {
+				return undefined;
+			} else {
+				command_text = command_text_array[0];
+			}
+
 			command_text     = command_text.substr(1);	// trim leading '('
-			let command_pars = command_text.trim().split(/\s+/g);
+			let command_pars = command_text.split(/\s+/g);
 			let command_str  = command_pars[0];			// Command name
-			let par_indx     = command_pars.length - 1;	// Parameter index at cursor
+			let par_indx     = command_pars.length - 2;	// Parameter index at cursor
 
 			// Search for command
 			let command: AiScriptPar = undefined;
 			aiScriptPars.forEach(par => {
-				if (par.label == command_str)
+				if (par.label === command_str)
 					command = par;
 			});
 
@@ -386,6 +403,7 @@ connection.onSignatureHelp(
 				 (command.section === "Action") ||
 				 (command.section === "FactAction"))) {
 			
+				// Add the command type to the command definition
 				command_str = "(" + command.section + ") " + command_str; 
 				
 				// Load the parameters with descriptions
@@ -395,7 +413,10 @@ connection.onSignatureHelp(
 						command_str += " " + par.type;
 						par_info.push({
 							label: par.type,
-							documentation: {value: par.note, kind: 'markdown'}
+							documentation: {
+								value: "*"+par.note+"*", 
+								kind: 'markdown'
+							}
 						});
 					}
 				});
@@ -405,7 +426,7 @@ connection.onSignatureHelp(
 					signatures: [{
 						label: command_str,
 						documentation: {
-							value: command.description, 
+							value: "**Command Description**  \n"+command.description, 
 							kind: 'markdown'
 						},
 						parameters: par_info
@@ -469,7 +490,8 @@ function fillCompletions() {
 				documentation: {
 					value: par.description,
 					kind: 'markdown'
-				}
+				},
+				detail: par.section
 			}
 
 			// Define the parameter kind (determines which icon is next to the 
