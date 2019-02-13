@@ -22,8 +22,6 @@ import {
 	ParameterInformation
 } from 'vscode-languageserver';
 
-import {workspace} from 'vscode';
-
 // Import the needed methods and objects
 import {
 	AiScriptPar,
