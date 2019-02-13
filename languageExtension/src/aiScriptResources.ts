@@ -215,7 +215,7 @@ function loadTechs() {
  *  @return Markdown formatted text
  **************************************************************************/
 function getParamText(params: Array<{type: string, note: string}>) {
-	let parText = "\n\n### Parameters\n";
+	let parText = "\n\n**Parameters**  \n";
 	params.forEach(par => {
 		if (par.type === "none") {
 			parText += "*none*";
@@ -243,7 +243,7 @@ function getExampleText(example: Array<{title: string, data: string}>) {
 		elementData = elementData.split('&gt;').join('>');
 		elementData = elementData.split('&quot;').join('"');
 
-		exText = "\n\n### Example\n" + example[0].title;
+		exText = "\n\n**Example**  \n" + example[0].title;
 		if (example[0].title !== "none") {
 			exText += "\n" + "```\n" + elementData + "\n```";
 		}
