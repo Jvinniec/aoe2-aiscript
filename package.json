@@ -44,12 +44,6 @@
             "type": "object",
             "title": "AoE2 AiScript",
             "properties": {
-                "aoe2_AiScript.maxNumberOfProblems": {
-                    "scope": "resource",
-                    "type": "number",
-                    "default": 100,
-                    "description": "Controls the maximum number of problems produced by the server."
-                },
                 "aoe2_AiScript.updateErrorsWhen": {
                     "scope": "resource",
                     "type": "string",
@@ -60,7 +54,7 @@
                     "default": "onSave",
                     "description": "Controls when error squiggles are updated. Default: update only when the file is saved. Change to 'onChange' to update whenever the file is edited (this may have some performance cost for large files)."
                 },
-                "aoe2_AiScript.enableExperimental": {
+                "aoe2_AiScript.enableCompletionHelp": {
                     "scope": "resource",
                     "type": "boolean",
                     "enum": [
@@ -68,7 +62,17 @@
                         false
                     ],
                     "default": false,
-                    "description": "Controls whether experimental features will be enabled. These features are in progress and may not work properly. (this allows you to give feedback before they are formally released)."
+                    "description": "Controls whether completion suggestions features will be enabled."
+                },
+                "aoe2_AiScript.enableParameterHelp": {
+                    "scope": "resource",
+                    "type": "boolean",
+                    "enum": [
+                        true,
+                        false
+                    ],
+                    "default": false,
+                    "description": "Controls whether parameter help will be provided as you write commands."
                 }
             }
         },
