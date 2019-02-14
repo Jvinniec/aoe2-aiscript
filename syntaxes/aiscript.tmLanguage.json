@@ -26,7 +26,7 @@
 					"match": "(#else|#end-if|#load-if-defined|#load-if-not-defined)"
 				},{
 					"name": "keyword.control.aiscript",
-					"match": "(?<!-)(?<=\\()\\s*\\b(and|nor|not|or)\\b(?!-)"
+					"match": "(?<!-)(?<=\\()\\s*\\b(and|nand|nor|not|or)\\b(?!-)"
 				},{
 					"name": "storage.type.aiscript",
 					"match": "(?<=\\()\\s*\\b(defrule)\\b"
