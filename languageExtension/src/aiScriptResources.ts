@@ -173,7 +173,6 @@ function loadMisc() {
 			});
 		});
 	});
-
 }
 
 
@@ -277,10 +276,10 @@ function getExampleText(example: Array<{title: string, data: string}>) {
 function getRequiresText(requires: AiScriptRequires) {
 	let reqText = "\n\n### Requires:";
 	// Age
-	reqText += "\n- **Age:** " + requires.age;
+	reqText += "\n- **Age:** "      + requires.age;
 	reqText += "\n- **Building:** " + getFormattedList(requires.building);
-	reqText += "\n- **Techs:** " + getFormattedList(requires.tech);
-	reqText += "\n- **Civ:** " + getFormattedList(requires.civ);
+	reqText += "\n- **Techs:** "    + getFormattedList(requires.tech);
+	reqText += "\n- **Civ:** "      + getFormattedList(requires.civ);
 
 	return reqText;
 }
