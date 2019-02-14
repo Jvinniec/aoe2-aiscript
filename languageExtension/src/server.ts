@@ -36,8 +36,8 @@ let connection = createConnection(ProposedFeatures.all);
 // supports full document sync only
 let documents: TextDocuments = new TextDocuments();
 
-let hasConfigurationCapability: boolean = false;
-let hasWorkspaceFolderCapability: boolean = false;
+let hasConfigurationCapability: boolean                = false;
+let hasWorkspaceFolderCapability: boolean              = false;
 let hasDiagnosticRelatedInformationCapability: boolean = false;
 
 // List of parameters
@@ -45,7 +45,10 @@ let aiScriptPars: AiScriptPar[] = loadAoE2Parameters();
 let aiScriptCompletionList: CompletionList = {items: [], isIncomplete: false};
 
 
-// Initialize the server connection
+/**********************************************************************//**
+ * Initialize the server connection
+ * 	@param params 			Parameters for initialization
+ **************************************************************************/
 connection.onInitialize((params: InitializeParams) => {
 	let capabilities = params.capabilities;
 
@@ -79,7 +82,10 @@ connection.onInitialize((params: InitializeParams) => {
 	};
 });
 
-// Register some things after initializing server connection
+
+/**********************************************************************//**
+ * Register some things after initializing server connection
+ **************************************************************************/
 connection.onInitialized(() => {
 	if (hasConfigurationCapability) {
 		// Register for all configuration changes.
@@ -95,21 +101,21 @@ connection.onInitialized(() => {
 	}
 });
 
-// The scripting settings settings
+
+/**********************************************************************//**
+ * The scripting settings
+ **************************************************************************/
 interface AiScriptSettings {
-	//maxNumberOfProblems: number;
-	//showExampleCode: boolean;
-	updateErrorsWhen: string;
-	enableCompletionHelp: boolean;
-	enableParameterHelp: boolean;
+	updateErrorsWhen: string;			// Specifies when to update Errors
+	enableCompletionHelp: boolean;		// Turns on/off completion suggestions
+	enableParameterHelp: boolean;		// Turns on/off signature help
 }
 
-// The global settings, used when the `workspace/configuration` request is not supported by the client.
-// Please note that this is not the case when using this server with the client provided in this example
-// but could happen with other clients.
+/**********************************************************************//**
+ * The global settings, used when the `workspace/configuration` request is 
+ * not supported by the client.
+ **************************************************************************/
 const defaultSettings: AiScriptSettings = { 
-	//maxNumberOfProblems: 1000,
-	//showExampleCode: true,
 	updateErrorsWhen: "onSave",
 	enableCompletionHelp: false,
 	enableParameterHelp: false
@@ -119,6 +125,11 @@ let globalSettings: AiScriptSettings = defaultSettings;
 // Cache the settings of all open documents
 let documentSettings: Map<string, Thenable<AiScriptSettings>> = new Map();
 
+
+/**********************************************************************//**
+ * Update configuration parameters when user changes them
+ * 	@param change			New configuration settings
+ **************************************************************************/
 connection.onDidChangeConfiguration(change => {
 	if (hasConfigurationCapability) {
 		// Reset all cached document settings
@@ -137,7 +148,10 @@ connection.onDidChangeConfiguration(change => {
 });
 
 
-// Return the current document settings
+/**********************************************************************//**
+ * Return the current document settings. Also caches them for future reference.
+ * 	@param resource			URI of the document in question
+ **************************************************************************/
 function getDocumentSettings(resource: string): Thenable<AiScriptSettings> {
 	if (!hasConfigurationCapability) {
 		return Promise.resolve(globalSettings);
@@ -153,30 +167,32 @@ function getDocumentSettings(resource: string): Thenable<AiScriptSettings> {
 	return result;
 }
 
-// Only keep settings for open documents
+
+/**********************************************************************//**
+ * Deletes cached settings when a document is closed
+ * 	@param e				TextDocumentChangeEvent 
+ **************************************************************************/
 documents.onDidClose(e => {
 	documentSettings.delete(e.document.uri);
 });
 
-// The content of a text document has changed. This event is emitted
-// when the text document first opened or when its content has changed.
+
+/**********************************************************************//**
+ * The content of a text document has changed. This event is emitted
+ * when the text document first opened or when its content has changed.
+ * 	@param change			TextDocumentChangeEvent 
+ **************************************************************************/
 documents.onDidChangeContent(change => {
 	// Check that we want to update 'onChange'
 	validateTextDocumentOnChange(change.document);
 });
 
-// When a file is saved, update the error squiggles
-documents.onDidSave(change => {
-	validateTextDocument(change.document);
-});
 
-// When a file is opened, update the error squiggles
-documents.onDidOpen(change => {
-	validateTextDocument(change.document);
-});
-
-
-// Update textdocument on change if requested
+/**********************************************************************//**
+ * Re-evaluate a document for errors if the user has specified 
+ * 'updateErrorsWhen === "onChnage".
+ * 	@param textDocument		Document to be re-evaluated 
+ **************************************************************************/
 async function validateTextDocumentOnChange(textDocument: TextDocument): Promise<void> {
 	let settings = await getDocumentSettings(textDocument.uri);
 	if (settings.updateErrorsWhen === "onChange") {
@@ -184,7 +200,28 @@ async function validateTextDocumentOnChange(textDocument: TextDocument): Promise
 	}
 }
 
+/**********************************************************************//**
+ * When a file is saved, re-evaluate the document for errors
+ * 	@param change			TextDocumentChangeEvent 
+ **************************************************************************/
+documents.onDidSave(change => {
+	validateTextDocument(change.document);
+});
 
+
+/**********************************************************************//**
+ * When a file is opened, evaluate the document for errors
+ * 	@param change			TextDocumentChangeEvent 
+ **************************************************************************/
+documents.onDidOpen(change => {
+	validateTextDocument(change.document);
+});
+
+
+/**********************************************************************//**
+ * Evaluates a given text document for errors
+ * 	@param textDocument		Document to be evaluated 
+ **************************************************************************/
 async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	// In this simple example we get the settings for every validate run.
 	let settings = await getDocumentSettings(textDocument.uri);
@@ -267,26 +304,40 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	connection.sendDiagnostics({ uri: textDocument.uri, diagnostics });
 }
 
+
+/**********************************************************************//**
+ * Registers when a watched file has been changed
+ * 	@param change			Parameters related to the watched file change
+ **************************************************************************/
 connection.onDidChangeWatchedFiles(_change => {
 	// Monitored files have change in VSCode
-	connection.console.log('We received an file change event');
+	connection.console.log('We received a file change event');
 });
 
-// This handler provides the initial list of the completion items.
+
+/**********************************************************************//**
+ * Provides the initial list of the completion items.
+ * 	@param _textDocumentPosition	Document to be evaluated 
+ * 	@returns List of completion items (or [undefined] if completions are turned off)
+ **************************************************************************/
 connection.onCompletion(
 	(_textDocumentPosition: TextDocumentPositionParams): Promise<CompletionList> => {
 		// The pass parameter contains the position of the text document in
 		// which code complete got requested. We ignore this info and always
 		// provide the same list of completion items.
-		let doc: TextDocument = documents.get(_textDocumentPosition.textDocument.uri);
-		let complist: Promise<CompletionList> = getCompletions(doc);
-		return complist;
+		return getCompletions(_textDocumentPosition);
 	}
 );
 
-async function getCompletions(textDocument: TextDocument): Promise<CompletionList> {
-	// Check if we're running experimental features
-	let settings = await getDocumentSettings(textDocument.uri);
+
+/**********************************************************************//**
+ * Returns a list of completion items
+ * 	@param textDocument		Document to be evaluated
+ * 	@returns List of completion items (or [undefined] if completions are turned off)
+ **************************************************************************/
+async function getCompletions(_textDocumentPosition: TextDocumentPositionParams): Promise<CompletionList> {
+	// Check if completions are turned on
+	let settings = await getDocumentSettings(_textDocumentPosition.textDocument.uri);
 	if (settings.enableCompletionHelp) {
 		return aiScriptCompletionList;
 	} else {
@@ -294,6 +345,17 @@ async function getCompletions(textDocument: TextDocument): Promise<CompletionLis
 	}
 }
 
+
+/**********************************************************************//**
+ * Returns a Hover item based on the current document position
+ * 	@param _textDocumentPosition	Position in current document (line & char)
+ * 	@returns A single Hover item
+ * 
+ * Based on the current position of the cursor, this method returns a Hover
+ * object to be displayed. If the item is not in the list of AoE2 script
+ * parameters or HoverHelp is not enabled, an [undefined] is returned 
+ * resulting in nothing being displayed.
+ **************************************************************************/
 /*
 connection.onHover(
 	(_textDocumentPosition: TextDocumentPositionParams): Hover => {
@@ -317,16 +379,34 @@ connection.onHover(
 );
 */
 
-// The following provides parameter information when typing an action or fact
+
+/**********************************************************************//**
+ * Provides parameter information when typing an action or fact
+ * 	@param textDocPos		Position of cursor in current document
+ * 	@returns List of a single Hover item
+ * 
+ * Based on the current position of the cursor, this method returns a Hover
+ * object to be displayed. If the item is not in the list of AoE2 script
+ * parameters or HoverHelp is not enabled, an [undefined] is returned 
+ * resulting in nothing being displayed.
+ **************************************************************************/
 connection.onSignatureHelp(
 	(textDocPos: TextDocumentPositionParams): Promise<SignatureHelp> => {
-
 		return getSignatureHelp(textDocPos);
 	}
 );
 
 
-// Get the signature help in an asynchronous way
+/**********************************************************************//**
+ * Get the signature help in an asynchronous way
+ * 	@param textDocPos		Current line/character of cursor in document
+ * 	@returns List of a single Hover item
+ * 
+ * Based on the current position of the cursor, this method returns a 
+ * SignatureHelp object to be displayed. If the item is not in the list of 
+ * AoE2 script parameters or HoverHelp is not enabled, an [undefined] is 
+ * returned resulting in nothing being displayed.
+ **************************************************************************/
 async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise<SignatureHelp> {
 
 	// Make sure we actually want parameter help
@@ -399,7 +479,7 @@ async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise
 			command_text = command_text_array[0];
 		}
 
-		command_text     = command_text.substr(1);	// trim leading '('
+		command_text     = command_text.substr(1,);	// trim leading '('
 		let command_pars = command_text.split(/\s+/g);
 		let command_str  = command_pars[0];			// Command name
 		let par_indx     = command_pars.length - 2;	// Parameter index at cursor
@@ -413,8 +493,8 @@ async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise
 
 		if ((command !== undefined) &&
 			((command.section === "Fact") ||
-				(command.section === "Action") ||
-				(command.section === "FactAction"))) {
+			 (command.section === "Action") ||
+			 (command.section === "FactAction"))) {
 		
 			// Add the command type to the command definition
 			command_str = "(" + command.section + ") " + command_str; 
@@ -473,11 +553,16 @@ connection.onDidCloseTextDocument((params) => {
 });
 */
 
-// Make the text document manager listen on the connection
-// for open, change and close text document events
+/**********************************************************************//**
+ * Make the text document manager listen on the connection for open, change,
+ * and close text document events
+ **************************************************************************/
 documents.listen(connection);
 
-// Listen on the connection
+
+/**********************************************************************//**
+ * Listen on the connection
+ **************************************************************************/
 connection.listen();
 
 
