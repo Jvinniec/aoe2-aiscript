@@ -2583,6 +2583,11 @@
         }],
     "Instruction": [
         {
+            "name": "and",
+            "description": "Used to check if two Facts are BOTH true",
+            "section": "Instruction",
+            "notes": ["none"]
+        },{
             "name": "defconst",
             "description": "Defines a new constant",
             "section": "Instruction",
@@ -2596,6 +2601,26 @@
             "name": "load",
             "description": "Load a file",
             "section": "Instruction",
-            "notes": ["Takes a single filename of form './relative/path/to/file' without the '.per' extension."]
+            "notes": ["Takes a single filename of form 'relative/path/to/file' without the '.per' extension."]
+        },{
+            "name": "nand",
+            "description": "Checks two Facts and evaluates to 'false' if BOTH facts are 'true' (logical opposite of 'and')",
+            "section": "Instruction",
+            "notes": ["none"]
+        },{
+            "name": "nor",
+            "description": "Checks two Facts and evaluates to 'true' if BOTH facts are 'false' (logical opposite of 'or')",
+            "section": "Instruction",
+            "notes": ["none"]
+        },{
+            "name": "not",
+            "description": "Checks a single Fact and evaluates to 'true' if Fact is 'false'",
+            "section": "Instruction",
+            "notes": ["none"]
+        },{
+            "name": "or",
+            "description": "Used to check if at least one of two Facts is true",
+            "section": "Instruction",
+            "notes": ["none"]
         }]
 }
