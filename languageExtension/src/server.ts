@@ -74,7 +74,7 @@ connection.onInitialize((params: InitializeParams) => {
 			},
 			
 			// Tell the client we support hover text
-			hoverProvider: false,
+			hoverProvider: true,
 
 			// Tell client we support signature help
 			signatureHelpProvider: {triggerCharacters: [' ']}
@@ -108,7 +108,8 @@ connection.onInitialized(() => {
 interface AiScriptSettings {
 	updateErrorsWhen: string;			// Specifies when to update Errors
 	enableCompletionHelp: boolean;		// Turns on/off completion suggestions
-	enableParameterHelp: boolean;		// Turns on/off signature help
+	enableHoverHelp:      boolean;		// Turns on/off hover help
+	enableParameterHelp:  boolean;		// Turns on/off signature help
 }
 
 /**********************************************************************//**
@@ -118,6 +119,7 @@ interface AiScriptSettings {
 const defaultSettings: AiScriptSettings = { 
 	updateErrorsWhen: "onSave",
 	enableCompletionHelp: false,
+	enableHoverHelp: false,
 	enableParameterHelp: false
 };
 let globalSettings: AiScriptSettings = defaultSettings;
@@ -348,7 +350,19 @@ async function getCompletions(_textDocumentPosition: TextDocumentPositionParams)
 
 /**********************************************************************//**
  * Returns a Hover item based on the current document position
- * 	@param _textDocumentPosition	Position in current document (line & char)
+ * 	@param textDocPos		Position in current document (line & char)
+ * 	@returns A single Hover item
+ **************************************************************************/
+connection.onHover(
+	(textDocPos: TextDocumentPositionParams): Promise<Hover> => {
+		return getHover(textDocPos);
+	}
+);
+
+
+/**********************************************************************//**
+ * Returns a Hover item based on the current document position
+ * 	@param textDocPos		Position in current document (line & char)
  * 	@returns A single Hover item
  * 
  * Based on the current position of the cursor, this method returns a Hover
@@ -356,28 +370,104 @@ async function getCompletions(_textDocumentPosition: TextDocumentPositionParams)
  * parameters or HoverHelp is not enabled, an [undefined] is returned 
  * resulting in nothing being displayed.
  **************************************************************************/
-/*
-connection.onHover(
-	(_textDocumentPosition: TextDocumentPositionParams): Hover => {
-		// Need to get the word that we're hovering over
-		let hoverWord = "**Line:** " + _textDocumentPosition.position.line +"\n"
-						"**Char:** " + _textDocumentPosition.position.character;
+async function getHover(textDocPos: TextDocumentPositionParams): Promise<Hover> {
+	// Make sure hover text is requested
+	let settings = await getDocumentSettings(textDocPos.textDocument.uri);
+	if (settings.enableHoverHelp === false) {
+		return undefined;
+	}
 
-		// Get the line text
+	// Need to get the word that we're hovering over
+	let hoverWord = "**Line:** " + textDocPos.position.line +"\n"
+					"**Char:** " + textDocPos.position.character;
 
-		// Split line on known delimiters
+	// Define the signature to be returned
+	let hover: Hover = undefined;
 
-		// Find the "command" at this position
+	// Get the document position
+	let line = textDocPos.position.line;
+	let col  = textDocPos.position.character;
 
-		return {
-			contents: {
-				kind: MarkupKind.Markdown,
-				value: hoverWord
+	// Get the range of the current line
+	let line_range : Range = {
+		start: {line: line, character: 0},
+		end:   {line: line, character: 10000}
+	};
+
+	// An AiScript command is defined as: (commandName par1 par2 <etc...>)
+	// We need to get all of the text back to the nearest '(' and up to the
+	// cursor position
+	let text: TextDocument = documents.get(textDocPos.textDocument.uri);
+	let line_text = text.getText(line_range).trimRight();
+	
+	// Skip if we're hovering inside a comment
+	let comment_regex = /;/g;
+	if (comment_regex.test(line_text.substr(0,col))) {
+		hover = undefined;
+		connection.console.log("Hovering on a comment");
+	}
+
+	// ... otherwise get the string
+	else {
+		// Loop until we have the end of the current command/parameter name.
+		// This helps to identify what command or parameter we're looking at
+		let word_end = /(\s+|\(|\)|\n|;)$/g;
+		connection.console.log("col: "+col)
+		while ((!word_end.test(line_text.substr(0,col))) && (col <= line_text.length)) {
+			connection.console.log("2:"+line_text.substr(0,col) + " fail");
+
+			col++;
+
+			// If there are a rediculous number of characters, there's a problem
+			if (col > 1000) {
+				connection.console.error("Command is unreasonably long...");
+				return undefined;
 			}
 		}
+		// Update the text
+		line_text = line_text.substr(0,col-1);
+		connection.console.log("3:"+line_text);
+
+		// Now get only the text from the closest '(' until the end
+		//let word_begin      = /(\s|\()[a-zA-Z0-9-:<>*\/+]+(\s|\)|\n|;)$/g;
+		let word_begin      = /(\(|\s|^)[^\(\s]+$/g;
+		let hover_txt_array = word_begin.exec(line_text);
+		let hover_txt       = "";
+
+		// Handle the case where the object doesn't begin with a '('
+		if (hover_txt_array === null) {
+			connection.console.log("4: LINE PARSE FAILED");
+			return undefined;
+		} else {
+			connection.console.log("5:"+hover_txt_array.join('|'));
+
+			hover_txt = hover_txt_array[0];
+			if (/(\(|\s)/g.test(hover_txt))
+				hover_txt = hover_txt.substr(1,);
+		}
+
+		// Search for command
+		let hover_par: AiScriptPar = undefined;
+		aiScriptPars.forEach(par => {
+			if (par.label === hover_txt)
+				hover_par = par;
+		});
+
+		if (hover_par !== undefined) {
+		
+			// Generate the output hover text
+			let hover_str = "(" + hover_par.section + ") " + hover_par.label + 
+						    "\n\n" + hover_par.description; 
+
+			// Initialize the signature object
+			hover = {
+				contents: {kind: 'markdown', value: hover_str}
+			};
+		}
 	}
-);
-*/
+	// Return the signature
+	return hover;
+}
 
 
 /**********************************************************************//**
@@ -408,7 +498,6 @@ connection.onSignatureHelp(
  * returned resulting in nothing being displayed.
  **************************************************************************/
 async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise<SignatureHelp> {
-
 	// Make sure we actually want parameter help
 	let settings = await getDocumentSettings(textDocPos.textDocument.uri);
 	if (settings.enableParameterHelp === false) {
@@ -433,7 +522,7 @@ async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise
 	let text: TextDocument = documents.get(textDocPos.textDocument.uri);
 	let line_text = text.getText(line_range)
 	
-	// Skip if we're in an ignorable situation. This is defined nere as
+	// Skip if we're in an ignorable situation. This is defined here as
 	// any situation such as:
 	//		'(' : An opening bracket with nothing beyond it
 	//		')' : A closing bracket with nothing beyond it
