@@ -1932,7 +1932,7 @@
         "description": "this fact is always true",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "",
+        "section": "Fact",
         "param": [
             {
                 "type": "none",
