@@ -73,6 +73,16 @@
                     ],
                     "default": false,
                     "description": "Controls whether parameter help will be provided as you write commands."
+                },
+                "aoe2_AiScript.enableHoverHelp": {
+                    "scope": "resource",
+                    "type": "boolean",
+                    "enum": [
+                        true,
+                        false
+                    ],
+                    "default": false,
+                    "description": "Controls whether parameter help will be provided when you hover over a parameter."
                 }
             }
         },
