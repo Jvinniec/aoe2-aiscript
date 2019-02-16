@@ -412,11 +412,7 @@ async function getHover(textDocPos: TextDocumentPositionParams): Promise<Hover> 
 		// Loop until we have the end of the current command/parameter name.
 		// This helps to identify what command or parameter we're looking at
 		let word_end = /(\s+|\(|\)|\n|;)$/g;
-		connection.console.log("col: "+col)
-		while ((!word_end.test(line_text.substr(0,col))) && (col <= line_text.length)) {
-			connection.console.log("2:"+line_text.substr(0,col) + " fail");
-
-			col++;
+		while ((!word_end.test(line_text.substr(0,++col))) && (col <= line_text.length)) {
 
 			// If there are a rediculous number of characters, there's a problem
 			if (col > 1000) {
@@ -426,7 +422,6 @@ async function getHover(textDocPos: TextDocumentPositionParams): Promise<Hover> 
 		}
 		// Update the text
 		line_text = line_text.substr(0,col-1);
-		connection.console.log("3:"+line_text);
 
 		// Now get only the text from the closest '(' until the end
 		//let word_begin      = /(\s|\()[a-zA-Z0-9-:<>*\/+]+(\s|\)|\n|;)$/g;
@@ -436,11 +431,8 @@ async function getHover(textDocPos: TextDocumentPositionParams): Promise<Hover> 
 
 		// Handle the case where the object doesn't begin with a '('
 		if (hover_txt_array === null) {
-			connection.console.log("4: LINE PARSE FAILED");
 			return undefined;
 		} else {
-			connection.console.log("5:"+hover_txt_array.join('|'));
-
 			hover_txt = hover_txt_array[0];
 			if (/(\(|\s)/g.test(hover_txt))
 				hover_txt = hover_txt.substr(1,);
