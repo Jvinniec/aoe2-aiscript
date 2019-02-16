@@ -22,14 +22,15 @@ Snippets are also provided to quickly create new rules.
 
 ### Experimental Features
 
-These are features that are considered good enough to be tested by people, but may still need some tweaking. 
+These are features that are considered good enough to be tested by people, but may still need some tweaking. By default experimental features are turned off to ensure the average person has a stable experience with the extension.
+To turn them on, go to the settings (`Preferences`->`Settings`), search for *'aoe2 ai script'* and set the desired feature values. You may need to reload your VSCode instance for your changes to take effect.
 
 Current experimental features:
 - Auto completion suggestions
 - Command signature help text (i.e. provides parameter description as you type out the command)
+- Hover help text (i.e. hover over a command or ID and it will provide information about that command or ID)
 
-By default experimental features are turned off to ensure the average person has a stable experience with the extension.
-To turn them on, go to the settings (`Code`->`Preferences`->`Settings`), search for *'aoe2 ai script'* and set the desired feature values. You may need to reload your VSCode instance for your changes to take effect.
+![image](images/help_text_example.gif "help text")
 
 ## Why ANOTHER code editor?
 
