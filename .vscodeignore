@@ -2,3 +2,8 @@
 .vscode-test/**
 .gitignore
 languageExtension/node_modules/**
+!languageExtension/node_modules/vscode-jsonrpc/**
+!languageExtension/node_modules/vscode-languageclient/**
+!languageExtension/node_modules/vscode-languageserver/**
+!languageExtension/node_modules/vscode-languageserver-protocol/**
+!languageExtension/node_modules/vscode-languageserver-types/**
