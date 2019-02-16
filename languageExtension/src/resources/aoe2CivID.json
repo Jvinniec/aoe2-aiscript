@@ -77,7 +77,7 @@
             "tech": ["ri-marauders", "ri-atheism"]
         }
     },{
-        "name": "inca",
+        "name": "incan",
         "unique": {
             "unit": ["kamayuk", "slinger"],
             "building": ["none"],
