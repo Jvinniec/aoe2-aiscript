@@ -32,7 +32,10 @@
 					"match": "\\s-?\\d+(?!-)"
 				},{
 					"name": "keyword.control.aiscript.defconst",
-					"match": "\\b(defconst|disable-self|do-nothing)\\b"
+					"match": "\\b(defconst)\\b"
+				},{
+					"name": "keyword.control.aiscript.defaultaction",
+					"match": "\\b(disable-self|do-nothing)\\b"
 				},{
 					"name": "keyword.control.aiscript.loadifelse",
 					"match": "(#else|#end-if|#load-if-(not-)*defined)"
