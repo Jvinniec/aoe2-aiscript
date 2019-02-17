@@ -34,7 +34,7 @@ The following are not specially colored by default, but have been made available
 
 In order to apply your own custom coloring you need to modify your settings file. If you place these modifications in your main Users Settings file then any color definitions you make will be applied to all files.
 
-As an example, if you want to color `defconst` and `defrule` as red (hex `#ff0000`), add the following settings somewhere in your settings.json file. Note that this will apply these colorings regardless of the 
+As an example, if you want to color `defconst` and `defrule` as red (hex `#ff0000`), add the following settings somewhere in your settings.json file. Note that this will apply these colorings regardless of which color theme you are using:
 
 ```json
 {
