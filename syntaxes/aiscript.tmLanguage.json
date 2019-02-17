@@ -40,6 +40,9 @@
 					"name": "keyword.control.aiscript.loadifelse",
 					"match": "(#else|#end-if|#load-if-(not-)*defined)"
 				},{
+					"name": "keyword.control.aiscript.loadfile",
+					"match": "(?<=\\()\\s*(load|load-random)(?=\\s)"
+				},{
 					"name": "keyword.control.aiscript.control",
 					"match": "(?<!-)(?<=\\()\\s*\\b(and|nand|nor|not|or)\\b(?!-)"
 				},{

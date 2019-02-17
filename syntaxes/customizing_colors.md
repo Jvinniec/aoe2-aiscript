@@ -14,6 +14,7 @@ The individual components are defined using a set of regular expressions that ca
 | keyword.control.aiscript.defconst          | `defconst` tag
 | keyword.control.aiscript.defaultaction     | `disable-self` and `do-nothing`
 | keyword.control.aiscript.loadifelse        | `#load-if-...`, `#else`, and `#endif` tags
+| keyword.control.aiscript.loadfile          | `load` and `load-random`
 | keyword.control.aiscript.control           | `and`, `nand`, `nor`, `not`, and `or`
 | storage.type.aiscript.defrule              | `defrule`
 | constant.language.aiscript.truefalse       | `true` and `false`
