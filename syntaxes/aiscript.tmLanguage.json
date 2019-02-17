@@ -16,32 +16,41 @@
 		"keywords": {
 			"patterns": [
 				{
+					"name": "variable.other.aiscript.resource",
+					"match": "(?<!-)\\b(food|wood|gold|stone)\\b(?!-)"
+				},{
+					"name": "aiscript.age",
+					"match": "\\b(dark|feudal|castle|imperial)-age\\b"
+				},{
+					"name": "entity.name.function.aiscript.command.jump",
+					"match": "(?<=\\()\\s*(up-jump-\\w+)"
+				},{
+					"name": "aiscript.tech",
+					"match": "\\bri-(\\w+-?)+\\b"
+				},{
 					"name": "constant.numeric.aiscript",
 					"match": "\\s-?\\d+(?!-)"
 				},{
-					"name": "keyword.control.aiscript",
-					"match": "\\b(defconst|disable-self|do-nothing|#end-if)\\b"
+					"name": "keyword.control.aiscript.defconst",
+					"match": "\\b(defconst|disable-self|do-nothing)\\b"
 				},{
-					"name": "keyword.control.aiscript",
+					"name": "keyword.control.aiscript.loadifelse",
 					"match": "(#else|#end-if|#load-if-(not-)*defined)"
 				},{
-					"name": "keyword.control.aiscript",
+					"name": "keyword.control.aiscript.control",
 					"match": "(?<!-)(?<=\\()\\s*\\b(and|nand|nor|not|or)\\b(?!-)"
 				},{
-					"name": "storage.type.aiscript",
+					"name": "storage.type.aiscript.defrule",
 					"match": "(?<=\\()\\s*\\b(defrule)\\b"
 				},{
-					"name": "constant.language.aiscript",
+					"name": "constant.language.aiscript.truefalse",
 					"match": "\\b(true|false)\\b"
 				},{
-					"name": "support.type.aiscript",
+					"name": "support.type.aiscript.yields",
 					"match": "=>"
 				},{
-					"name": "entity.name.function.aiscript",
+					"name": "entity.name.function.aiscript.command",
 					"match": "(?<=\\()\\s*(\\w+-?)+"
-				},{
-					"name": "variable.other.aiscript",
-					"match": "(?<!-)\\b(food|wood|gold|stone)\\b(?!-)"
 				}
 			]
 		},
