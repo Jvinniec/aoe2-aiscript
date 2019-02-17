@@ -2,7 +2,7 @@
     "name": "aoe2-aiscript",
     "displayName": "Aoe2 AiScript",
     "description": "Syntax highlighting for Age of Empires 2 AI scripts",
-    "version": "0.1.3",
+    "version": "0.2.0-dev",
     "license": "GPL-3.0-or-later",
     "author": "jvinniec",
     "publisher": "jvinniec",

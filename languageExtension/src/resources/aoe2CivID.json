@@ -7,14 +7,14 @@
             "tech": ["ri-atlatl", "ri-garland-wars"]
         }
     },{
-        "name": "berber",
+        "name": "berbers",
         "unique": {
             "unit": ["camel-archer", "genitour"],
             "building": ["none"],
             "tech": ["ri-kasbah", "ri-maghrabi-camels"]
         }
     },{
-        "name": "britons",
+        "name": "briton",
         "unique": {
             "unit": ["longbowman"],
             "building": ["none"],
@@ -35,7 +35,7 @@
             "tech": ["ri-greek-fire", "ri-logistica"]
         }
     },{
-        "name": "celt",
+        "name": "celtic",
         "unique": {
             "unit": ["woad-raider"],
             "building": ["none"],
@@ -56,14 +56,14 @@
             "tech": ["ri-royal-heirs", "ri-torsion-engines"]
         }
     },{
-        "name": "frank",
+        "name": "frankish",
         "unique": {
             "unit": ["throwing-axeman"],
             "building": ["none"],
             "tech": ["ri-chivalry", "ri-bearded-axe"]
         }
     },{
-        "name": "goth",
+        "name": "gothic",
         "unique": {
             "unit": ["huskarl"],
             "building": ["none"],
@@ -175,7 +175,7 @@
             "tech": ["ri-madrasah", "ri-zealotry"]
         }
     },{
-        "name": "slav",
+        "name": "slavic",
         "unique": {
             "unit": ["boyar"],
             "building": ["none"],
@@ -189,14 +189,14 @@
             "tech": ["ri-inquisition", "ri-supremacy"]
         }
     },{
-        "name": "teuton",
+        "name": "teutonic",
         "unique": {
             "unit": ["teutonic-knight"],
             "building": ["none"],
             "tech": ["ri-ironclad", "ri-crenellations"]
         }
     },{
-        "name": "turk",
+        "name": "turkish",
         "unique": {
             "unit": ["janissary"],
             "building": ["none"],

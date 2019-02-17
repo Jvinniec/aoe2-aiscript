@@ -14,6 +14,8 @@ This extension currently provides very rudimentary syntax highlighting as demons
 
 ![image](images/syntax_highlighting.png "syntax highlighting")
 
+See [this example](syntaxes/customizing_colors.md) for how to define your own colors for the different syntax components.
+
 ### Snippets
 
 Snippets are also provided to quickly create new rules.
