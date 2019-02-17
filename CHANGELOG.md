@@ -3,7 +3,7 @@ All notable changes to the "aoe2-aiscript" extension will be documented in this 
 
     <major>.<minor>.<patch>
 
-## v0.1.4 [unreleased]
+## v0.1.4
 - Add tutorial for defining custom colors
 - Add additional syntax highlighting groups for finer grained coloring
 - Fix several incorrect civilization IDs

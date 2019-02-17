@@ -14,7 +14,7 @@ This extension currently provides very rudimentary syntax highlighting as demons
 
 ![image](images/syntax_highlighting.png "syntax highlighting")
 
-See [syntaxes/customizing_colors.md] for an example of how to define your own colors for the different syntax components.
+See [this example](syntaxes/customizing_colors.md) for how to define your own colors for the different syntax components.
 
 ### Snippets
 
