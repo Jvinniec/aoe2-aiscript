@@ -106,7 +106,8 @@ connection.onInitialized(() => {
  * The scripting settings
  **************************************************************************/
 interface AiScriptSettings {
-	updateErrorsWhen: string;			// Specifies when to update Errors
+	updateErrorsWhen: 	  string;		// Specifies when to update Errors
+	maxErrorsReported: 	  number;		// Maximum number of errors to report
 	enableCompletionHelp: boolean;		// Turns on/off completion suggestions
 	enableHoverHelp:      boolean;		// Turns on/off hover help
 	enableParameterHelp:  boolean;		// Turns on/off signature help
@@ -117,10 +118,11 @@ interface AiScriptSettings {
  * not supported by the client.
  **************************************************************************/
 const defaultSettings: AiScriptSettings = { 
-	updateErrorsWhen: "onSave",
+	updateErrorsWhen: 	  "onSave",
+	maxErrorsReported:    100,
 	enableCompletionHelp: false,
-	enableHoverHelp: false,
-	enableParameterHelp: false
+	enableHoverHelp:      false,
+	enableParameterHelp:  false
 };
 let globalSettings: AiScriptSettings = defaultSettings;
 
@@ -230,75 +232,73 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	let diagnostics: Diagnostic[] = [];
 
 	/* Skip if experimental features are not requested */
-	if (true) {
-		connection.sendDiagnostics({ uri: textDocument.uri, diagnostics });
-		return;
-	}
+	if (settings.maxErrorsReported !== 0) {
 
-	// The validator creates diagnostics for all uppercase words length 2 and more
-	let text = textDocument.getText();
-	let pattern = /\(\s*(\w+-?)+/g;
-	let m: RegExpExecArray | null;
+		// The validator creates diagnostics for all uppercase words length 2 and more
+		let text = textDocument.getText();
+		let pattern = /\(\s*(\w+-?)+/g;
+		let m: RegExpExecArray | null;
 
-	let problems = 0;
-	while ((m = pattern.exec(text)) && problems < 0/*settings.maxNumberOfProblems*/) {
-		problems++;
+		let problems = 0;
+		while ((m = pattern.exec(text)) && problems < 0/*settings.maxNumberOfProblems*/) {
+			problems++;
 
-		// Search for matching command
-		let test_str = m[0].slice(1,).replace(/\s*/g,'');
-		let offset = m[0].length - test_str.length;
-		let com_match = "";
-		/*
-		aiScriptPars.forEach(el => {
-			if (el.name === test_str) {
-				//connection.console.log(el.name);
-				com_match = el.description;
-				
-				com_match += "\nexample:\n```"+el.example[0].data+"```";
-				return true;
-			}
-		});
-		*/
-		// Note the match
-		if (com_match.length > 0) {
-			let hover: Hover = {
-				contents: {
-					language: "markdown",
-					value: `${test_str}\n${com_match}`
+			// Search for matching command
+			let test_str = m[0].slice(1,).replace(/\s*/g,'');
+			let offset = m[0].length - test_str.length;
+			let com_match = "";
+			/*
+			aiScriptPars.forEach(el => {
+				if (el.name === test_str) {
+					//connection.console.log(el.name);
+					com_match = el.description;
+					
+					com_match += "\nexample:\n```"+el.example[0].data+"```";
+					return true;
 				}
-			}
-			
-		}
-		// ... otherwise if no command is found, produce an error
-		else {
-			let diagnosic: Diagnostic = {
-				severity: DiagnosticSeverity.Warning,
-				range: {
-					start: textDocument.positionAt(m.index+offset),
-					end: textDocument.positionAt(m.index + m[0].length)
-				},
-				message: `${test_str}\n${com_match}`,
-				source: 'AiScript'
-			};
-			if (hasDiagnosticRelatedInformationCapability) {
-				diagnosic.relatedInformation = [
-					{
-						location: {
-							uri: textDocument.uri,
-							range: Object.assign({}, diagnosic.range)
-						},
-						message: 'Spelling matters'
-					},
-					{
-						location: {
-							uri: textDocument.uri,
-							range: Object.assign({}, diagnosic.range)
-						},
-						message: 'Particularly for names'
+			});
+			*/
+			// Note the match
+			if (com_match.length > 0) {
+				let hover: Hover = {
+					contents: {
+						language: "markdown",
+						value: `${test_str}\n${com_match}`
 					}
-				];
+				}
+				
 			}
-			diagnostics.push(diagnosic);
+			// ... otherwise if no command is found, produce an error
+			else {
+				let diagnosic: Diagnostic = {
+					severity: DiagnosticSeverity.Warning,
+					range: {
+						start: textDocument.positionAt(m.index+offset),
+						end: textDocument.positionAt(m.index + m[0].length)
+					},
+					message: `${test_str}\n${com_match}`,
+					source: 'AiScript'
+				};
+				if (hasDiagnosticRelatedInformationCapability) {
+					diagnosic.relatedInformation = [
+						{
+							location: {
+								uri: textDocument.uri,
+								range: Object.assign({}, diagnosic.range)
+							},
+							message: 'Spelling matters'
+						},
+						{
+							location: {
+								uri: textDocument.uri,
+								range: Object.assign({}, diagnosic.range)
+							},
+							message: 'Particularly for names'
+						}
+					];
+				}
+				diagnostics.push(diagnosic);
+			}
 		}
 	}
 
