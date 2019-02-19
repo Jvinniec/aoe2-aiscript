@@ -9,32 +9,20 @@
 ;       to ensure that everything works correctly.
 ;---------------------------------------------------------------------;
 
-(defconst max-dark-villagers 20)
+
+(load "ai_sample\get2feudal.per")
+
+(defconst go-to-feudal 1)           ; Specifies if we should go to feudal age
+(defconst gl-game-time 1)           ; Most recently stored value of `game-time`
+
 
 ; This is a comment
 (defrule                            ; This is the start of a new rule
     (true)                          ; This will guarantee the rule runs
     =>
     (chat-to-all "I'm alive!!!")
+    (chat-to-all "I'm going to go to feudal-age and resign")
     (disable-self)                  ; Stop the rule from constantly running
 )
 
 ; defrule is not highlighted when placed in a comment
-
-; train villagers in the dark age
-(defrule
-    (current-age == dark-age)
-    (unit-type-count-total villager < max-dark-villagers)
-    (can-train villager)
-    =>
-    (train villager)
-)
-
-; Build a house
-#load-if-not-defined HUN-CIV
-(defrule
-    (can-build house)
-    =>
-    (build house)
-)
-#end-if
