@@ -66,12 +66,13 @@
                 },
                 "aoe2_AiScript.enableParameterHelp": {
                     "scope": "resource",
-                    "type": "boolean",
+                    "type": "string",
                     "enum": [
-                        true,
-                        false
+                        "off",
+                        "parametersOnly",
+                        "full"
                     ],
-                    "default": false,
+                    "default": "parametersOnly",
                     "description": "Controls whether parameter help will be provided as you write commands."
                 },
                 "aoe2_AiScript.enableHoverHelp": {

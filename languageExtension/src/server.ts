@@ -19,7 +19,8 @@ import {
 	Hover,
 	Range,
 	SignatureHelp,
-	ParameterInformation
+	ParameterInformation,
+	MarkupContent
 } from 'vscode-languageserver';
 
 // Import the needed methods and objects
@@ -109,7 +110,7 @@ interface AiScriptSettings {
 	updateErrorsWhen: string;			// Specifies when to update Errors
 	enableCompletionHelp: boolean;		// Turns on/off completion suggestions
 	enableHoverHelp:      boolean;		// Turns on/off hover help
-	enableParameterHelp:  boolean;		// Turns on/off signature help
+	enableParameterHelp:  string;		// Turns on/off signature help
 }
 
 /**********************************************************************//**
@@ -120,7 +121,7 @@ const defaultSettings: AiScriptSettings = {
 	updateErrorsWhen: "onSave",
 	enableCompletionHelp: false,
 	enableHoverHelp: false,
-	enableParameterHelp: false
+	enableParameterHelp: "parametersOnly"
 };
 let globalSettings: AiScriptSettings = defaultSettings;
 
@@ -404,7 +405,6 @@ async function getHover(textDocPos: TextDocumentPositionParams): Promise<Hover> 
 	let comment_regex = /;/g;
 	if (comment_regex.test(line_text.substr(0,col))) {
 		hover = undefined;
-		connection.console.log("Hovering on a comment");
 	}
 
 	// ... otherwise get the string
@@ -492,7 +492,7 @@ connection.onSignatureHelp(
 async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise<SignatureHelp> {
 	// Make sure we actually want parameter help
 	let settings = await getDocumentSettings(textDocPos.textDocument.uri);
-	if (settings.enableParameterHelp === false) {
+	if (settings.enableParameterHelp === "off") {
 		return undefined;
 	}
 																
@@ -558,6 +558,7 @@ async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise
 			return undefined;
 		} else {
 			command_text = command_text_array[0];
+			connection.console.log(command_text_array.join(' | '))
 		}
 
 		command_text     = command_text.substr(1,);	// trim leading '('
@@ -588,21 +589,23 @@ async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise
 					par_info.push({
 						label: par.type,
 						documentation: {
-							value: "**"+par.type +":** *"+par.note+"*\n\n----", 
+							value: "**"+par.type +":** *"+par.note+"*", 
 							kind: 'markdown'
 						}
 					});
 				}
 			});
 
+			let descrip: MarkupContent = {value: "", kind: 'markdown'};
+			if (settings.enableParameterHelp === "full") {
+				descrip.value = "\n----\n**Command Description**  \n"+command.description;
+			}
+
 			// Initialize the signature object
 			signature = {
 				signatures: [{
 					label: command_str,
-					documentation: {
-						value: "**Command Description**  \n"+command.description, 
-						kind: 'markdown'
-					},
+					documentation: descrip,
 					parameters: par_info
 				}],
 				activeSignature: 0,
