@@ -3,6 +3,9 @@ All notable changes to the "aoe2-aiscript" extension will be documented in this 
 
     <major>.<minor>.<patch>
 
+## v0.2.0 [dev]
+- Fix signatures issue where signatures would highlight the wrong variable [#8]
+
 ## v0.1.4
 - Add tutorial for defining custom colors
 - Add additional syntax highlighting groups for finer grained coloring
