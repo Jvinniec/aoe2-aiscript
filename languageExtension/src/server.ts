@@ -558,7 +558,6 @@ async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise
 			return undefined;
 		} else {
 			command_text = command_text_array[0];
-			connection.console.log(command_text_array.join(' | '))
 		}
 
 		command_text     = command_text.substr(1,);	// trim leading '('
@@ -583,17 +582,20 @@ async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise
 			
 			// Load the parameters with descriptions
 			let par_info : ParameterInformation[] = [];
+			let offset = command_str.length + 1;
 			command.pars.forEach(par => {
 				if (par.type !== "none") {
 					command_str += " " + par.type;
 					par_info.push({
-						label: par.type,
+						label: [offset, offset+par.type.length],
 						documentation: {
 							value: "**"+par.type +":** *"+par.note+"*", 
 							kind: 'markdown'
 						}
 					});
+					offset += par.type.length+1;
 				}
+				
 			});
 
 			let descrip: MarkupContent = {value: "", kind: 'markdown'};
