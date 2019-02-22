@@ -50,7 +50,7 @@ export function activate(context: ExtensionContext) {
 	// Options to control the language client
 	let clientOptions: LanguageClientOptions = {
 		// Register the server for plain text documents
-		documentSelector: [{ scheme: 'file', language: 'aiscript' }],
+		documentSelector: [{ scheme: 'file', language: 'aoe2aiscript' }],
 		synchronize: {
 			// Notify the server about file changes to '.clientrc files contained in the workspace
 			fileEvents: workspace.createFileSystemWatcher('**/.clientrc')
@@ -71,7 +71,7 @@ export function activate(context: ExtensionContext) {
 	let langConf: LanguageConfiguration = {
 		"wordPattern": /(([a-zA-Z0-9]+-){0,}[a-zA-Z0-9]+)/g
 	}
-	languages.setLanguageConfiguration('aiscript', langConf);	
+	languages.setLanguageConfiguration('aoe2aiscript', langConf);	
 }
 
 

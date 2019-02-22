@@ -16,57 +16,57 @@
 		"keywords": {
 			"patterns": [
 				{
-					"name": "variable.other.aiscript.resource",
+					"name": "variable.other.aoe2aiscript.resource",
 					"match": "(?<!-)\\b(food|wood|gold|stone)\\b(?!-)"
 				},{
-					"name": "aiscript.age",
+					"name": "aoe2aiscript.age",
 					"match": "\\b(dark|feudal|castle|imperial)-age\\b"
 				},{
-					"name": "entity.name.function.aiscript.command.jump",
+					"name": "entity.name.function.aoe2aiscript.command.jump",
 					"match": "(?<=\\()\\s*(up-jump-\\w+)"
 				},{
-					"name": "aiscript.tech",
+					"name": "aoe2aiscript.tech",
 					"match": "\\bri-(\\w+-?)+\\b"
 				},{
-					"name": "constant.numeric.aiscript",
+					"name": "constant.numeric.aoe2aiscript",
 					"match": "\\s-?\\d+(?!-)"
 				},{
-					"name": "keyword.control.aiscript.defconst",
+					"name": "keyword.control.aoe2aiscript.defconst",
 					"match": "\\b(defconst)\\b"
 				},{
-					"name": "keyword.control.aiscript.defaultaction",
+					"name": "keyword.control.aoe2aiscript.defaultaction",
 					"match": "\\b(disable-self|do-nothing)\\b"
 				},{
-					"name": "keyword.control.aiscript.loadifelse",
+					"name": "keyword.control.aoe2aiscript.loadifelse",
 					"match": "(#else|#end-if|#load-if-(not-)*defined)"
 				},{
-					"name": "keyword.control.aiscript.loadfile",
+					"name": "keyword.control.aoe2aiscript.loadfile",
 					"match": "(?<=\\()\\s*(load|load-random)(?=\\s)"
 				},{
-					"name": "keyword.control.aiscript.control",
+					"name": "keyword.control.aoe2aiscript.control",
 					"match": "(?<!-)(?<=\\()\\s*\\b(and|nand|nor|not|or)\\b(?!-)"
 				},{
-					"name": "storage.type.aiscript.defrule",
+					"name": "storage.type.aoe2aiscript.defrule",
 					"match": "(?<=\\()\\s*\\b(defrule)\\b"
 				},{
-					"name": "constant.language.aiscript.truefalse",
+					"name": "constant.language.aoe2aiscript.truefalse",
 					"match": "\\b(true|false)\\b"
 				},{
-					"name": "support.type.aiscript.yields",
+					"name": "support.type.aoe2aiscript.yields",
 					"match": "=>"
 				},{
-					"name": "entity.name.function.aiscript.command",
+					"name": "entity.name.function.aoe2aiscript.command",
 					"match": "(?<=\\()\\s*(\\w+-?)+"
 				}
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.aiscript",
+			"name": "string.quoted.double.aoe2aiscript",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.aiscript",
+					"name": "constant.character.escape.aoe2aiscript",
 					"match": "\\\\."
 				}
 			]
