@@ -72,7 +72,7 @@
                         "parametersOnly",
                         "full"
                     ],
-                    "default": "parametersOnly",
+                    "default": "off",
                     "description": "Controls whether parameter help will be provided as you write commands."
                 },
                 "aoe2_AiScript.enableHoverHelp": {
