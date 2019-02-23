@@ -1,4 +1,4 @@
-# Aoe2 AiScript
+# AoE2 AiScript
 
 [![Version-GH](https://badge.fury.io/gh/jvinniec%2Faoe2-aiscript.svg)](https://github.com/Jvinniec/aoe2-aiscript.git)
 [![Version](https://vsmarketplacebadge.apphb.com/version-short/jvinniec.aoe2-aiscript.svg)](https://marketplace.visualstudio.com/items?itemName=jvinniec.aoe2-aiscript)
@@ -27,7 +27,7 @@ These are features that are considered good enough to be tested by people, but m
 To turn them on, go to the settings (`Preferences`->`Settings`), search for *'aoe2 ai script'* and set the desired feature values. You may need to reload your VSCode instance for your changes to take effect.
 
 Current experimental features:
-- Auto completion suggestions
+- Auto completion suggestions for facts, actions, units, techs, civilizations, etc...
 - Command signature help text (i.e. provides parameter description as you type out the command)
 - Hover help text (i.e. hover over a command or ID and it will provide information about that command or ID)
 
