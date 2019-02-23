@@ -50,7 +50,7 @@ To be clear, the original author of this code has never used or attempted to use
 
 
 ## Known Issues
-This is an alpha version after all, so there are going to be issues. If you come across a bug using the extension, please submit an issue to the github repository.
+This is an alpha version after all, so there are going to be issues. For example, missing or incorrect commands/unit/building/tech IDs. If you come across a bug using the extension, please submit an issue to the github repository or via [this thread](http://forums.aiscripters.com/viewtopic.php?f=3&t=3485) on the aiscripters forums.
 
 
 ## Contributing

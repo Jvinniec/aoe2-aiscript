@@ -44,6 +44,10 @@ interface AiScriptPar {
 	description: string;
 	section: string;
 
+	// Parent and child categories
+	parentcategories?: Array<{type: string}>;
+	subcategories?: Array<{type: string}>;
+	
 	// Optional parameters
 	altLabel?: string;
 	id?: number;
@@ -65,7 +69,6 @@ interface AiScriptPar {
 interface AiScriptCommand {
 	name: string;
 	description: string;
-	section: string;
 	note: Array<string>;
 	param: Array<{type: string, note: string}>;
 	example: Array<{title: string, data: string}>;
@@ -97,14 +100,14 @@ function loadAoE2Parameters(): AiScriptPar[] {
  * Loads facts, actions and factactions
  **************************************************************************/
 function loadCommands() {
-	aoe2facts.Fact.forEach(element => {
-		ai_script_parameters.push(getCommandPar(element));
+	aoe2facts.Fact.values.forEach(element => {
+		ai_script_parameters.push(getCommandPar(element, "Fact"));
 	});
-	aoe2actions.Action.forEach(element => {
-		ai_script_parameters.push(getCommandPar(element));
+	aoe2actions.Action.values.forEach(element => {
+		ai_script_parameters.push(getCommandPar(element, "Action"));
 	});
-	aoe2factaction.FactAction.forEach(element => {
-		ai_script_parameters.push(getCommandPar(element));
+	aoe2factaction.FactAction.values.forEach(element => {
+		ai_script_parameters.push(getCommandPar(element, "FactAction"));
 	});
 }
 
@@ -112,13 +115,13 @@ function loadCommands() {
 /**********************************************************************//**
  * Formats the results from a command object into an AiScriptPar
  **************************************************************************/
-function getCommandPar(command: AiScriptCommand): AiScriptPar {
+function getCommandPar(command: AiScriptCommand, section: string): AiScriptPar {
 	return {
 		label:       command.name,
         description: command.description + 
                         getParamText(command.param) + 
                         getExampleText(command.example),
-        section:     command.section,
+        section:     section,
         pars:        command.param,
         examples:    command.example
 	}
@@ -129,12 +132,19 @@ function getCommandPar(command: AiScriptCommand): AiScriptPar {
  * Loads BuidingId objects into ai_script_parameters
  **************************************************************************/
 function loadBuildings() {
-	aoe2buildings.building.forEach(building => {
-		ai_script_parameters.push( {
-			label:       building.name,
-			description: building.description + getRequiresText(building.requires),
-            section:     "BuildingId",
-            requires:    building.requires
+	Object.keys(aoe2buildings).forEach(buildkey => {
+		aoe2buildings[buildkey].values.forEach(building => {
+			// Construct building description
+			let build_descrip = building.description;
+			if (building.requires !== undefined)
+				build_descrip += getRequiresText(building.requires);
+
+			ai_script_parameters.push( {
+				label:       building.name,
+				description: build_descrip,
+				section:     buildkey,
+				requires:    building.requires
+			});
 		});
 	});
 }
@@ -145,13 +155,31 @@ function loadBuildings() {
  **************************************************************************/
 function loadCivs() {
 
-	aoe2civs.CivId.forEach(civ => {
-		ai_script_parameters.push( {
-			label:       civ.name,
-			altLabel:    civ.name.toUpperCase() + "-CIV",
-			description: civ.name.toUpperCase() + " civilization" + getUniquesText(civ.unique),
-			section:     "CivId",
-			unique:      civ.unique
+	Object.keys(aoe2civs).forEach(civkey => {
+		aoe2civs[civkey].values.forEach(civ => {
+			// Get description and unique info
+			let civ_descrip = civ.name.toUpperCase() + " civilization";
+			let civ_unique  = "none";
+			if (civ.link === undefined) {
+				civ_descrip += getUniquesText(civ.unique);
+				civ_unique   = civ.unique;
+			} else {
+				let civ_par = undefined;
+				ai_script_parameters.forEach(element => {
+					if ((element.section == civ.link.type) && (element.label == civ.link.value))
+						civ_par = element;
+				});
+				civ_descrip = civ_par.description;
+				civ_unique  = civ_par.unique;
+			}
+
+			// Add the civ info
+			ai_script_parameters.push({
+				label:       civ.name,
+				description: civ_descrip,
+				section:     civkey,
+				unique:      civ.unique
+			});
 		});
 	});
 }
@@ -164,8 +192,8 @@ function loadMisc() {
 
 	// Loop over all keys and all items in each key
 	Object.keys(aoe2misc).forEach(misc => {
-		aoe2misc[misc].forEach(item => {
-			ai_script_parameters.push( {
+		aoe2misc[misc].values.forEach(item => {
+			ai_script_parameters.push({
 				label:       item.name,
 				description: item.description,
 				section:     misc,
@@ -212,14 +240,21 @@ function loadTechs() {
  **************************************************************************/
 function loadUnits() {
 
-	aoe2units.UnitId.forEach(unit => {
-		ai_script_parameters.push( {
-			label:       unit.name,
-            description: unit.description + 
-                         "\n\nWildcard line: " + unit.wildcard_line + 
-                         getRequiresText(unit.requires),
-			section:     "UnitId",
-			requires:    unit.requires
+	Object.keys(aoe2units).forEach(unitkey => {
+		aoe2units[unitkey].values.forEach(unit => {
+			// Construct unit description
+			let unit_descrip: string = unit.description;
+			if (unit.line !== undefined)
+				unit_descrip += "\n\n* line: " + unit.line;
+			if (unit.class !== undefined)
+				unit_descrip += "\n* class: " + unit.class;
+
+			ai_script_parameters.push( {
+				label:       unit.name,
+				description: unit_descrip,
+				section:     unitkey,
+				requires:    unit.requires
+			});
 		});
 	});
 }
