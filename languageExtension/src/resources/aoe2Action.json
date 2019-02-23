@@ -1,17 +1,17 @@
-{
-    "Action": [
+{ "Action": {
+    "description": "Action commands",
+    "values": [
     {
         "name": "acknowledge-event",
         "description": "Acknowledges a received event by resetting the associated flag",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "Action",
+        "note": ["This is useful for scenarios; events are those done by triggers"],
         "param": [
             {
                 "type": "EventType",
                 "note": "A valid event type"
             },{
-                "type": "EventID",
+                "type": "EventId",
                 "note": "The event ID for the event type"
             }],
         "example": [{
@@ -23,15 +23,14 @@
         "name": "acknowledge-taunt",
         "description": "Acknowledges a taunt by resetting the associated flag",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["Allows “any”/”every” wildcard parameters for PlayerID",
-                 "Allows the use of rule variables for PlayerID"],
-        "section": "Action",
+        "note": ["Allows “any”/”every” wildcard parameters for PlayerId",
+                "Allows the use of rule variables for PlayerId"],
         "param": [
             {
-                "type": "PlayerID",
-                "note": "A valid playerID"
+                "type": "PlayerId",
+                "note": "A valid player ID"
             },{
-                "type": "TauntID",
+                "type": "TauntId",
                 "note": "A valid taunt ID"
             }],
         "example": [{
@@ -43,11 +42,11 @@
         "name": "attack-now",
         "description": "Forces attack with currently available attack units",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["Units are designated as attack units by using `sn-percent-attack-soldiers` or `sn-percent-attack-boats`"],
-        "section": "Action",
+        "note": ["Units are designated as attack units by using `sn-percent-attack-soldiers` or `sn-percent-attack-boats`",
+                "To disable `attack-now` groups use `up-reset-attack-now`"],
         "param": [
             {
-                "type": "none",
+                "type": "noop",
                 "note": "none"
             }],
         "example": [{
@@ -59,12 +58,12 @@
         "name": "build",
         "description": "Builds the given building",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["Allows the use of building line wildcard parameters for BuildingID"],
-        "section": "Action",
-        "param": [ {
-            "type": "BuildingId",
-            "note": "The building that will be constructed."
-        }],
+        "note": ["Allows the use of building line wildcard parameters for BuildingId"],
+        "param": [ 
+            {
+                "type": "BuildingId",
+                "note": "The building that will be constructed."
+            }],
         "example": [ {
             "title": "Build an outpost if one can be built.",
             "data": "(defrule\r\n\t(can-build outpost)\r\n=&gt;\r\n\t(build outpost)\r\n)"
@@ -74,11 +73,10 @@
         "name": "build-forward",
         "description": "Builds given building close to enemy",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["Allows the use of building line wildcard parameters for BuildingID"],
-        "section": "Action",
+        "note": ["Allows the use of building line wildcard parameters for BuildingId"],
         "param": [
             {
-                "type": "BuildingID",
+                "type": "BuildingId",
                 "note": "A valid building ID"
             }],
         "example": [{
@@ -91,7 +89,6 @@
         "description": "builds a gate as part of the given perimeter wall",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "Perimeter",
@@ -106,15 +103,14 @@
         "name": "build-wall",
         "description": "Builds a wall line of the given wall type at the given perimeter",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["Allows the use of wall line wildcard parameters for BuildingID"],
-        "section": "Action",
+        "note": ["Allows the use of wall line wildcard parameters for BuildingId"],
         "param": [
             {
                 "type": "Perimeter",
                 "note": "1 or 2 (1=between 10 and 20 tiles from the starting Town Center, 2=between 18 and 30 tiles)"
             },{
-                "type": "BuildingID",
-                "note": "A valid wall building ID"
+                "type": "BuildingLine",
+                "note": "A valid wall-line ID (palisade-wall or stone-wall-line)"
             }],
         "example": [{
             "title": "none",
@@ -125,8 +121,7 @@
         "name": "buy-commodity",
         "description": "Buys one lot of the given commodity",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "Action",
+        "note": ["Only one of each commodity can be purchased per-script pass"],
         "param": [
             {
                 "type": "Commodity",
@@ -138,11 +133,28 @@
         }],
         "related": []
     },{
+        "name": "cc-add-resources",
+        "description": "Cheat action that adds the given resource amount to the computer player",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "param": [
+            {
+                "type": "ResourceId",
+                "note": "A resource to be added (`food`, `wood`, `stone`, `gold`)"
+            },{
+                "type": "Value",
+                "note": "Amount of resource to add"
+            }],
+        "example": [{
+            "title": "none",
+            "data": "none"
+        }],
+        "related": []
+    },{
         "name": "chat-local",
         "description": "Displays the given string as local chat message",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "String",
@@ -158,7 +170,6 @@
         "description": "(dont use) Displays a string, defined by a string id, as a local chat message",
         "version": {"min": "1.0c", "max": ""},
         "note": ["restricted"],
-        "section": "Action",
         "param": [
             {
                 "type": "StringID",
@@ -174,8 +185,7 @@
         "description": "(dont use) Displays a random string as a local chat message",
         "version": {"min": "1.0c", "max": ""},
         "note": ["restricted",
-                 "Random string is defined by a string ID picked randomly from a given string ID range"],
-        "section": "Action",
+                "Random string is defined by a string ID picked randomly from a given string ID range"],
         "param": [
             {
                 "type": "StringID",
@@ -194,7 +204,6 @@
         "description": "Displays a given string as local chat message",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Displayed only if the user is the same player as the computer player sending the message"],
-        "section": "Action",
         "param": [
             {
                 "type": "String",
@@ -210,7 +219,6 @@
         "description": "Displays a given string as chat message to all players",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "String",
@@ -226,7 +234,6 @@
         "description": "(dont use) Displays a given string, defined by a string id, as chat message to all players",
         "version": {"min": "1.0c", "max": ""},
         "note": ["restricted"],
-        "section": "Action",
         "param": [
             {
                 "type": "StringID",
@@ -242,8 +249,7 @@
         "description": "(dont use) Displays a random string as a chat message to all players",
         "version": {"min": "1.0c", "max": ""},
         "note": ["restricted",
-                 "Random string is defined by a string ID picked randomly from a given string ID range"],
-        "section": "Action",
+                "Random string is defined by a string ID picked randomly from a given string ID range"],
         "param": [
             {
                 "type": "StringID",
@@ -262,7 +268,6 @@
         "description": "Displays a given string as chat message to allied players",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "String",
@@ -278,7 +283,6 @@
         "description": "(dont use) Displays a given string, defined by a string ID, as chat message to allied players",
         "version": {"min": "1.0c", "max": ""},
         "note": ["restricted"],
-        "section": "Action",
         "param": [
             {
                 "type": "StringID",
@@ -294,8 +298,7 @@
         "description": "(dont use) Displays a random string, defined by string id, as chat message to allied players",
         "version": {"min": "1.0c", "max": ""},
         "note": ["restricted",
-                 "Random string is defined by a string ID picked randomly from a given string ID range"],
-        "section": "Action",
+                "Random string is defined by a string ID picked randomly from a given string ID range"],
         "param": [
             {
                 "type": "StringID",
@@ -314,7 +317,6 @@
         "description": "Displays a given string as chat message to enemies and neutral players",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "String",
@@ -330,7 +332,6 @@
         "description": "(dont use) Displays a given string, defined by a string ID, as chat message to enemies and neutral players",
         "version": {"min": "1.0c", "max": ""},
         "note": ["restricted"],
-        "section": "Action",
         "param": [
             {
                 "type": "StringID",
@@ -346,8 +347,7 @@
         "description": "(dont use) Displays a random string, defined by string id, as chat message to enemies and neutral players",
         "version": {"min": "1.0c", "max": ""},
         "note": ["restricted",
-                 "Random string is defined by a string ID picked randomly from a given string ID range"],
-        "section": "Action",
+                "Random string is defined by a string ID picked randomly from a given string ID range"],
         "param": [
             {
                 "type": "StringID",
@@ -366,11 +366,10 @@
         "description": "Displays a given string as chat message to specific player",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
-                "type": "PlayerID",
-                "note": "A valid player ID"
+                "type": "PlayerId",
+                "note": "A valid PlayerId or `any-`/`every-` wildcard"
             },{
                 "type": "String",
                 "note": "A valid string"
@@ -385,11 +384,10 @@
         "description": "(dont use) Displays a given string, defined by a string ID, as chat message to specific player",
         "version": {"min": "1.0c", "max": ""},
         "note": ["restricted"],
-        "section": "Action",
         "param": [
             {
-                "type": "PlayerID",
-                "note": "A valid player ID"
+                "type": "PlayerId",
+                "note": "A valid PlayerId or `any-`/`every-` wildcard"
             },{
                 "type": "StringID",
                 "note": "A valid string ID"
@@ -404,12 +402,11 @@
         "description": "(dont use) Displays a random string, defined by string id, as chat message to specific player",
         "version": {"min": "1.0c", "max": ""},
         "note": ["restricted",
-                 "Random string is defined by a string ID picked randomly from a given string ID range"],
-        "section": "Action",
+                "Random string is defined by a string ID picked randomly from a given string ID range"],
         "param": [
             {
                 "type": "PlayerID",
-                "note": "A valid player ID"
+                "note": "A valid PlayerId or `any-`/`every-` wildcard"
             },{
                 "type": "StringID",
                 "note": "Starting string ID (inclusive)"
@@ -427,7 +424,6 @@
         "description": "Displays given value as a chat message",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Purely for testing to check when a rule gets executed"],
-        "section": "Action",
         "param": [
             {
                 "type": "Value",
@@ -443,16 +439,15 @@
         "description": "Clears given player's tribute memory for a given resource",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Only tribute memory for the given resource is cleared",
-                 "Allows \"any\"/\"every\" wildcard parameters for the PlayerID",
-                 "Allows use of rule variables for the PlayerID"],
-        "section": "Action",
+                "Allows `any-`/`every` wildcard parameters for the PlayerId",
+                "Allows use of rule variables for the PlayerId"],
         "param": [
             {
-                "type": "PlayerID",
-                "note": "A valid player ID"
+                "type": "PlayerId",
+                "note": "A valid PlayerId or `any-`/`every-` wildcard"
             },{
-                "type": "ResourceID",
-                "note": "A valid resource (food, wood, stone, gold)"
+                "type": "ResourceId",
+                "note": "A valid resource (`food`, `wood`, `stone`, `gold`)"
             }],
         "example": [{
             "title": "none",
@@ -461,14 +456,14 @@
         "related": []
     },{
         "name": "delete-building",
-        "description": "Deletes exactly one building of a given type",
+        "description": "Deletes exactly one building (the oldest) of a given type",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "Action",
+        "note": ["Deletes the oldest building of the given type",
+                 "Only one delete action can occur per building type"],
         "param": [
             {
-                "type": "BuildingID",
-                "note": "A valid building ID"
+                "type": "BuildingId",
+                "note": "A valid BuildingId"
             }],
         "example": [{
             "title": "none",
@@ -480,11 +475,10 @@
         "description": "Deletes exactly one unit of a given type",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
-                "type": "UnitID",
-                "note": "A valid unit ID"
+                "type": "UnitId",
+                "note": "A valid UnitId"
             }],
         "example": [{
             "title": "none",
@@ -496,10 +490,9 @@
         "description": "Disables the rule that it is part of",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Disabling happens in the next pass, so actions appearing after this are still executed"],
-        "section": "Action",
         "param": [
             {
-                "type": "none",
+                "type": "noop",
                 "note": "none"
             }],
         "example": [{
@@ -511,12 +504,11 @@
         "name": "disable-timer",
         "description": "Disables the given timer ID",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "Action",
+        "note": ["Limit of 10 timers in 1.0c and 50 timers in Userpatch"],
         "param": [
             {
-                "type": "TimerID",
-                "note": "A valid timer ID"
+                "type": "TimerId",
+                "note": "A valid TimerId (1-10 in 1.0c, 1-50 in Userpatch)"
             }],
         "example": [{
             "title": "none",
@@ -528,10 +520,9 @@
         "description": "Does nothing",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Typically used as a placeholder for debugging"],
-        "section": "Action",
         "param": [
             {
-                "type": "none",
+                "type": "noop",
                 "note": "none"
             }],
         "example": [{
@@ -541,14 +532,14 @@
         "related": []
     },{
         "name": "enable-timer",
-        "description": "Enables the given timer ID and sets it to the given time interval",
+        "description": "Enables the given TimerId and sets it to the given time interval",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "Action",
+        "note": ["Limit of 10 timers in 1.0c and 50 timers in Userpatch",
+                 "Can be used without disabling a given timer"],
         "param": [
             {
-                "type": "TimerID",
-                "note": "A valid timer ID"
+                "type": "TimerId",
+                "note": "A valid TimerId (1-10 for 1.0c, 1-50 for Userpatch)"
             },{
                 "type": "Value",
                 "note": "Time interval in seconds"
@@ -562,8 +553,8 @@
         "name": "enable-wall-placement",
         "description": "Enables wall placement for the given perimeter",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["Enabled wall placement causes the rest of teh placement code to do some planning and place all structures at least one tile away from future wall lines"],
-        "section": "Action",
+        "note": ["Wall placement cannot be disabled once it has been enabled",
+                 "Enabled wall placement causes the rest of the placement code to do some planning and place all structures at least one tile away from future wall lines"],
         "param": [
             {
                 "type": "Perimeter",
@@ -578,9 +569,8 @@
         "name": "generate-random-number",
         "description": "Generates a player-specific integer random number with range (1 - Value)",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["Generated number is stored and its value can be tested",
+        "note": ["Generated number is stored and its value can be tested using `random-number` fact",
                  "Subsequent execution of this action overwrites existing random number"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "Value",
@@ -596,7 +586,6 @@
         "description": "Writes given string to a log file",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Works only if logging is enabled"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "String",
@@ -612,7 +601,6 @@
         "description": "Writes given value to a log file",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Works only if logging is enabled"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "Value",
@@ -628,7 +616,6 @@
         "description": "Releases computer player's escrow for a given resource",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Works only if logging is enabled"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "ResourceID",
@@ -644,7 +631,6 @@
         "description": "Add a technology to the research queue",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Uses the same criteria as the `can-research` fact to make sure the item can be researched"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "TechId",
@@ -664,11 +650,11 @@
         "description": "Causes computer player to resign",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
-        "param": [ {
-            "type": "none",
-            "note": "none"
-        }],
+        "param": [ 
+            {
+                "type": "noop",
+                "note": "none"
+            }],
         "example": [ {
             "title": "Resign after two hours (7200 sec) of game play",
             "data": "(defrule\r\n\t(game-time > 7200)\r\n=&gt;\r\n\t(resign)\r\n)"
@@ -679,7 +665,6 @@
         "description": "Sells one lot of a given commodity",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "Commodity",
@@ -695,7 +680,6 @@
         "description": "Sets given difficulty parameter to given value",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "DifficultyParam",
@@ -714,7 +698,6 @@
         "description": "Sets the doctrine to the given value",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "Value",
@@ -730,7 +713,6 @@
         "description": "Sets the computer player's escrow percentage for a given resource",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "ResourceID",
@@ -749,7 +731,6 @@
         "description": "Sets a given goal to a given value",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "GoalID",
@@ -768,7 +749,6 @@
         "description": "Sets a given goal shared among computer players to a given value",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "GoalID",
@@ -787,7 +767,6 @@
         "description": "Sets a given signal that can be checked by the trigger system",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "SignalID",
@@ -803,8 +782,7 @@
         "description": "Sets stance toward a given player",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Allows \"any\"/\"every\" wildcard parameters for PlayerID",
-                 "Allows use of rule variables for the PlayerID"],
-        "section": "Action",
+                "Allows use of rule variables for the PlayerID"],
         "param": [ 
             {
                 "type": "PlayerID",
@@ -823,7 +801,6 @@
         "description": "Sets given strategic number to a given value",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "StrategicNumber",
@@ -842,10 +819,9 @@
         "description": "Executes a spy command",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
-                "type": "none",
+                "type": "noop",
                 "note": "none"
             }],
         "example": [ {
@@ -858,10 +834,9 @@
         "description": "Executes a spy command",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
-                "type": "none",
+                "type": "noop",
                 "note": "none"
             }],
         "example": [ {
@@ -874,7 +849,6 @@
         "description": "Triggers taunt associated with given value",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "TauntID",
@@ -890,7 +864,6 @@
         "description": "Triggers random taunt picked from a given taunt range value",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "TauntID",
@@ -909,8 +882,7 @@
         "description": "Add a unit to the training queue",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Uses same criteria as `can-train` to make sure unit can be trained",
-                 "Allows use of unit wildcard parameters for UnitID"],
-        "section": "Action",
+                "Allows use of unit wildcard parameters for UnitId"],
         "param": [ 
             {
                 "type": "UnitId",
@@ -926,12 +898,11 @@
         "description": "Tributes given amount of specified resource to player",
         "version": {"min": "1.0c", "max": ""},
         "note": ["If the computer player does not have a `market` no tribute is given",
-                 "When `Value` specifies amount larger than available, only the available resources of given `ResourceID` are tributed",
-                 "Tribute action is ignored when there are no resources of the given type",
-                 "Tribute fees are paid and deducted from the tribute amount (if applicable)",
-                 "Allows \"any\"/\"every\" wildcard parameters for PlayerID",
-                 "Allows use of rule variables for PlayerID"],
-        "section": "Action",
+                "When `Value` specifies amount larger than available, only the available resources of given `ResourceID` are tributed",
+                "Tribute action is ignored when there are no resources of the given type",
+                "Tribute fees are paid and deducted from the tribute amount (if applicable)",
+                "Allows \"any\"/\"every\" wildcard parameters for PlayerID",
+                "Allows use of rule variables for PlayerID"],
         "param": [ 
             {
                 "type": "PlayerID",
@@ -953,7 +924,6 @@
         "description": "Perform math operations to adjust escrowed resources.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "ResourceID",
@@ -976,7 +946,6 @@
         "description": "Perform math operations on a strategic number.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "SnId",
@@ -999,11 +968,11 @@
         "description": "Set all escrow amounts to 0 with a single command.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
-        "param": [{
-            "type": "none",
-            "note": "none"
-        }],
+        "param": [
+            {
+                "type": "noop",
+                "note": "none"
+            }],
         "example": [ {
             "title": "Release all escrowed resources.",
             "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-release-escrow)\r\n\t(disable-self)\r\n)"
@@ -1014,7 +983,6 @@
         "description": "Reset 4 consecutive goals storing cost data to 0.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ {
             "type": "GoalId",
             "note": "The first of 4 consecutive goals (from 41 to 508) that store cost data for food, wood, stone, and gold."
@@ -1029,7 +997,6 @@
         "description": "Set the goals to store cost data for food, wood, stone, and gold.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "ResetCost",
@@ -1048,14 +1015,14 @@
         "name": "up-add-object-cost",
         "description": "Add or subtract objects of a specific type to the current cost data.",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "Action",
+        "note": ["Civ bonuses are applied to cost data",
+                 "Use `town-center-foundation` instead of `town-center`"],
         "param": [ 
             {
                 "type": "TypeOp",
                 "note": "Type operator"
             },{
-                "type": "ObjectId",
+                "type": "inObjectId",
                 "note": "The object to operate upon (UnitId or BuildingId)"
             },{
                 "type": "TypeOp",
@@ -1078,7 +1045,6 @@
         "description": "Add or subtract techs of a specific type to the current cost data.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -1091,7 +1057,7 @@
                 "note": "Type operator"
             },{
                 "type": "Value",
-                "note": "The number of techs to add or subtract."
+                "note": "The number of techs to add or subtract (typically 1 or -1)"
             } 
         ],
         "example": [ {
@@ -1104,17 +1070,16 @@
         "description": "Add or subtract another set of cost data to the current cost data.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
-                "type": "GoalId",
-                "note": "The first of 4 consecutive goals (from 41 to 508) that store cost data for food, wood, stone, and gold."
+                "type": "inGoalId",
+                "note": "The first of 4 consecutive goals (from 41 to 508) that store cost data for food, wood, stone, and gold, in that order"
             },{
                 "type": "TypeOp",
                 "note": "Type operator"
             },{
                 "type": "Value",
-                "note": "The number of sets of the cost data to add or subtract."
+                "note": "The number of sets of the cost data to add (use negative values to subtract)"
             }],
         "example": [ {
             "title": "Add 2 instances of the military cost data to the current cost data represented by gl-cost-food, etc.",
@@ -1126,7 +1091,6 @@
         "description": "Get the difference between player resources and the current cost data.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ {
             "type": "GoalId",
             "note": "The first of 4 consecutive goals (from 41 to 508) to store the cost delta for food, wood, stone, and gold."
@@ -1141,7 +1105,6 @@
         "description": "Request a drop by gatherers carrying a specific number of a resource.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "ResourceID",
@@ -1167,7 +1130,6 @@
         "description": "Retask a specific number of villagers gathering from a resource.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "ResourceID",
@@ -1189,8 +1151,7 @@
         "description": "Attempt to request support hunters for the active boar lure.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This only applies to boars that are lured with strategic numbers (not Direct Unit Control).",
-                 "It is not guaranteed to reach the total number of requested hunters."],
-        "section": "Action",
+                "It is not guaranteed to reach the total number of requested hunters."],
         "param": [ 
             {
                 "type": "TypeOp",
@@ -1209,7 +1170,6 @@
         "description": "Add a technology to the research queue with dynamic values.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "EscrowState",
@@ -1231,7 +1191,6 @@
         "description": "Add a unit to the training queue with dynamic values.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "EscrowState",
@@ -1253,7 +1212,6 @@
         "description": "Add a building to the construction queue with dynamic values.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "PlacementType",
@@ -1278,17 +1236,16 @@
         "description": "Assign a specific number of builders to a building type or class.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
-                "note": "Type operator"
+                "note": "Type operator (`c:`)"
             },{
                 "type": "BuildingId",
                 "note": "The building to modify."
             },{
                 "type": "TypeOp",
-                "note": "Type operator"
+                "note": "Type operator (`c:`)"
             },{
                 "type": "Value",
                 "note": "The number of builders to assign or -1 to disable sending additional builders."
@@ -1306,7 +1263,6 @@
         "description": "Delete all idle units of the specified type.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ {
             "type": "IdleType",
             "note": "The type of units that will be deleted."
@@ -1321,7 +1277,6 @@
         "description": "Delete all objects with less than the specified hitpoints.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -1346,7 +1301,6 @@
         "description": "Delete all farms that exist outside the specified drop distance.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -1365,14 +1319,13 @@
         "description": "Specify placement information for managed construction.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Please ensure Player has at least a town-center to use for reference, if they don't have ObjectId. If Player has no objects left, placement will not work as expected."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "Ally",
                 "note": "The player to focus upon (self or this-any-ally)"
             },{
                 "type": "ObjectId",
-                "note": "The object that will be the focus for placement (UnitID or BuildingID)"
+                "note": "The object that will be the focus for placement (UnitId or BuildingId)"
             },{
                 "type": "TypeOp",
                 "note": "Type operator"
@@ -1393,7 +1346,6 @@
         "description": "Clear the placement list for the specified building type when blocked.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Please use with caution."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -1412,7 +1364,6 @@
         "description": "Get the elapsed time, player, source, and target of the last threat.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "ElapsedTime",
@@ -1437,7 +1388,6 @@
         "description": "Get the enemy player that last attacked with a specific type of projectile.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "ProjectileType",
@@ -1456,7 +1406,6 @@
         "description": "Get the class of the last enemy object to trigger town-under-attack.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ {
             "type": "SourceClass",
             "note": "Stores the class of the attacking object."
@@ -1471,7 +1420,6 @@
         "description": "Get standard victory status information into the provided goals.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "PlayerId",
@@ -1493,7 +1441,6 @@
         "description": "Get the time or score victory limit into the provided goal.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [{
             "type": "GoalID",
             "note": "Stores 10 * the remaining game years for time victory, the target amount for score victory, or -1 if invalid."
@@ -1508,7 +1455,6 @@
         "description": "Find the first active player based on the provided information.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "DiplomaticStance",
@@ -1530,7 +1476,6 @@
         "description": "Find the next active player based on the provided information.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "DiplomaticStance",
@@ -1552,11 +1497,10 @@
         "description": "Set a single unit of a specific type to protect a random instance of another.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "ObjectId",
-                "note": "The object that will be guarded (UnitID or BuildingID)"
+                "note": "The object that will be guarded (UnitId or BuildingId)"
             },{
                 "type": "TypeOp",
                 "note": "Type operator"
@@ -1574,7 +1518,6 @@
         "description": "Halt the activity of all units of a specific type.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This is equivalent to clicking the &quot;stop&quot; button."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -1593,7 +1536,6 @@
         "description": "Halt the activity and research of all buildings of a specific type.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "Boolean",
@@ -1615,11 +1557,11 @@
         "description": "Halt and disband all soldier explore groups on land.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
-        "param": [{
-            "type": "none",
-            "note": "none"
-        }],
+        "param": [
+            {
+                "type": "noop",
+                "note": "none"
+            }],
         "example": [ {
             "title": "Stop all scouts on land, after configuring the necessary strategic numbers.",
             "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(set-strategic-number sn-number-explore-groups 0)\r\n\t(set-strategic-number sn-total-number-explorers 0)\r\n\t(up-reset-scouts)\r\n\t(disable-self)\r\n)"
@@ -1630,7 +1572,6 @@
         "description": "Send a land or water scout to a specific location.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "GroupType",
@@ -1649,7 +1590,6 @@
         "description": "Disband all internal groups of the specified type.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ {
             "type": "GroupType",
             "note": "The type of groups that will be disbanded."
@@ -1664,7 +1604,6 @@
         "description": "Set the attack stance for all units of a specific type.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "UnitId",
@@ -1686,7 +1625,6 @@
         "description": "Set the defensive (TSA) targeting priority for a building.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This has no effect against units."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -1711,7 +1649,6 @@
         "description": "Set the offensive targeting priority for an object.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ {
             "type": "TypeOp",
             "note": "Type operator"
@@ -1735,9 +1672,8 @@
         "description": "Reset or clear offensive or defensive targeting priorities.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Restore default priorities with 0.",
-                 "For defensive priorities, setting Mode to 1 will reset all to -1.",
-                 "For offensive priorities, unit types will be reset to 0, while classes will be -1."],
-        "section": "Action",
+                "For defensive priorities, setting Mode to 1 will reset all to -1.",
+                "For offensive priorities, unit types will be reset to 0, while classes will be -1."],
         "param": [ 
             {
                 "type": "PriorityType",
@@ -1759,7 +1695,6 @@
         "description": "Retreat all units of a specific type to a random instance of another.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "ObjectId",
@@ -1781,7 +1716,6 @@
         "description": "Retreat all units of a specific type to a random instance of another.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "ObjectId",
@@ -1803,11 +1737,11 @@
         "description": "Perform an immediate update for objects in town size.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
-        "param": [{
-            "type": "none",
-            "note": "none"
-        }],
+        "param": [
+            {
+                "type": "noop",
+                "note": "none"
+            }],
         "example": [ {
             "title": "Retreat to the home town center after reducing town size.",
             "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(set-strategic-number sn-maximum-town-size 15)\r\n\t(up-update-targets)\r\n\t(up-retreat-now)\r\n\t(disable-self)\r\n)"
@@ -1818,11 +1752,11 @@
         "description": "Retreat all military units to the home town center.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
-        "param": [{
-            "type": "none",
-            "note": "none"
-        }],
+        "param": [
+            {
+                "type": "noop",
+                "note": "none"
+            }],
         "example": [ {
             "title": "Retreat to the home town center.",
             "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-retreat-now)\r\n\t(disable-self)\r\n)"
@@ -1833,11 +1767,11 @@
         "description": "Reset the infinite targeting loop flag set by attack-now.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
-        "param": [{
-            "type": "none",
-            "note": "none"
-        }],
+        "param": [
+            {
+                "type": "noop",
+                "note": "none"
+            }],
         "example": [ {
             "title": "Unset the attack-now flag for active groups.",
             "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-reset-attack-now)\r\n\t(disable-self)\r\n)"
@@ -1848,7 +1782,6 @@
         "description": "Send a chat message with a formatted value locally.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ {
             "type": "String",
             "note": "Quoted text, where %d is replaced by the provided value"
@@ -1869,7 +1802,6 @@
         "description": "Send a chat message with a formatted value to a player.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "PlayerID",
@@ -1894,7 +1826,6 @@
         "description": "Send a chat message with a formatted value to everyone.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ {
             "type": "String",
             "note": "Quoted text, where %d is replaced by the provided value"
@@ -1915,7 +1846,6 @@
         "description": "Send a message in order to execute a cheat code.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Cheats must be enabled for this to take effect."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "String",
@@ -1931,7 +1861,6 @@
         "description": "Set all existing buildings of a specific type to hold units inside.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -1959,7 +1888,6 @@
         "description": "Request all objects of the specified type to ungarrison units.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -1981,8 +1909,7 @@
         "description": "Garrison all units of the specified type into another object.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The first parameter cannot be a class or a unit-line.",
-                 "It must be a valid root object type id that can accept a garrison (battering-ram instead of battering-ram-line)."],
-        "section": "Action",
+                "It must be a valid root object type id that can accept a garrison (battering-ram instead of battering-ram-line)."],
         "param": [ 
             {
                 "type": "ObjectId",
@@ -1991,7 +1918,7 @@
                 "type": "TypeOp",
                 "note": "Type operator"
             },{
-                "type": "UnitID",
+                "type": "UnitId",
                 "note": "The type of unit that will be garrisoned."
             }],
         "example": [ {
@@ -2007,7 +1934,6 @@
         "description": "Change the name of the AI during gameplay.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "String",
@@ -2023,7 +1949,6 @@
         "description": "Jump forward or backward within the current rule set.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Never use this command where #load blocks may make your jump target unreliable. Please ensure that the rule you are jumping to actually exists. With this action, you can either decrease rules per pass with intelligent skips, or greatly increase it with loops. Please consider game performance."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "Value",
@@ -2041,14 +1966,14 @@
         "name": "up-get-point",
         "description": "Read a specific (x,y) position into an extended goal pair.",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["This command writes to 2 consecutive goals and requires an extended goal pair between 41 and 510. If it fails to get a valid position, it will return (-1,-1)."],
-        "section": "Action",
+        "note": ["This command writes to 2 consecutive goals and requires an extended goal pair between 41 and 510",
+                 "If it fails to get a valid position, it will return (-1,-1)."],
         "param": [ 
             {
-                "type": "PositionType",
+                "type": "inPositionType",
                 "note": "The position to read."
             },{
-                "type": "GoalID",
+                "type": "outGoalId",
                 "note": "The first of 2 consecutive goals to store the (x,y) pair."
             } ],
         "example": [ {
@@ -2064,14 +1989,13 @@
         "description": "Add or subtract two point goal pairs together.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["A negative value for Count will result in subtraction. Set Point2 to 0 to use the point that is stored by up-set-target-point."],
-        "section": "Action",
         "param": [ 
             {
-                "type": "GoalID",
-                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+                "type": "inGoalId",
+                "note": "(Point1) The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
             },{
-                "type": "GoalID",
-                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+                "type": "inGoalId",
+                "note": "(Point2) The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
             },{
                 "type": "TypeOp",
                 "note": "Type operator"
@@ -2089,17 +2013,16 @@
         "description": "Interpolate a point by percentage between two point goal pairs.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["A negative value for Percent will result in subtraction. Set Point2 to 0 to use the point that is stored by up-set-target-point."],
-        "section": "Action",
         "param": [ 
             {
-                "type": "GoalID",
-                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+                "type": "inGoalID",
+                "note": "(Point1) The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
             },{
-                "type": "GoalID",
-                "note": "The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
+                "type": "inGoalID",
+                "note": "(Point2) The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
             },{
                 "type": "TypeOp",
-                "note": "Type operator"
+                "note": "Type operator (`c:`)"
             },{
                 "type": "Value",
                 "note": "The percent between the two points to select."
@@ -2113,18 +2036,17 @@
         "name": "up-lerp-tiles",
         "description": "Interpolate a point by tiles between two point goal pairs.",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["A negative value for Tiles will result in subtraction. Set Point2 to 0 to use the point that is stored by up-set-target-point."],
-        "section": "Action",
+        "note": ["A negative value for Tiles will result in subtraction. Set Point2 to 0 to use the point that is stored by `up-set-target-point`."],
         "param": [ 
             {
-                "type": "GoalID",
-                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+                "type": "inGoalID",
+                "note": "(Point1) The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
             },{
-                "type": "GoalID",
-                "note": "The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
+                "type": "inGoalID",
+                "note": "(Point2) The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by `up-set-target-point`)"
             },{
                 "type": "TypeOp",
-                "note": "Type operator"
+                "note": "Type operator (`c:`)"
             },{
                 "type": "Value",
                 "note": "The number of tiles to move along the vector."
@@ -2139,18 +2061,17 @@
         "description": "Get a point perpendicular to two point goal pairs.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["A negative value for Tiles will result in subtraction.",
-                 "Set Point2 to 0 to use the point that is stored by up-set-target-point."],
-        "section": "Action",
+                "Set Point2 to 0 to use the point that is stored by `up-set-target-point`."],
         "param": [ 
             {
-                "type": "GoalID",
-                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+                "type": "inGoalID",
+                "note": "(Point1) The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
             },{
-                "type": "GoalID",
-                "note": "The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
+                "type": "inGoalID",
+                "note": "(Point2) The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by `up-set-target-point`)"
             },{
                 "type": "TypeOp",
-                "note": "Type operator"
+                "note": "Type operator (`c:`)"
             },{
                 "type": "Value",
                 "note": "The number of tiles to move along the vector."
@@ -2165,14 +2086,13 @@
         "description": "Copy one point goal pair into another pair of extended goals.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
-                "type": "GoalID",
-                "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+                "type": "outGoalID",
+                "note": "(Point1) The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
             },{
-                "type": "GoalID",
-                "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510)"
+                "type": "inGoalID",
+                "note": "(Point2) The first of 2 consecutive goals to read an (x,y) pair (range 41-510)"
             } ],
         "example": [ {
             "title": "Copy the position of the map center.",
@@ -2184,9 +2104,8 @@
         "description": "Set the target point for other commands with an extended goal pair.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command will also safely bound the point inside the map."],
-        "section": "Action",
         "param": [{
-            "type": "GoalID",
+            "type": "inGoalID",
             "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
         }],
         "example": [{
@@ -2198,10 +2117,9 @@
         "name": "up-set-precise-target-point",
         "description": "Set the target point with an unchecked extended goal pair.",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["This command is identical to up-set-target-point, except it will not bound the point inside the map. Please ensure the point is valid with up-bound-precise-point. A precise point is expected to be a normal point x100 for 2 places of decimal precision."],
-        "section": "Action",
+        "note": ["This command is identical to `up-set-target-point`, except it will not bound the point inside the map. Please ensure the point is valid with up-bound-precise-point. A precise point is expected to be a normal point x100 for 2 places of decimal precision."],
         "param": [{
-            "type": "GoalID",
+            "type": "inGoalID",
             "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
         }],
         "example": [{
@@ -2214,7 +2132,6 @@
         "description": "Get the distance between two point goal pairs.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Set Point2 to 0 to use the point that is stored by up-set-target-point."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "GoalID",
@@ -2236,7 +2153,6 @@
         "description": "Get the terrain id at a specific point goal pair position.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Set Point to 0 to use the point that is stored by up-set-target-point."],
-        "section": "Action",
         "param": [ {
             "type": "GoalID",
             "note": "The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
@@ -2254,8 +2170,7 @@
         "description": "Read the (x,y) position of an allied flare into an extended goal pair.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command writes to 2 consecutive goals and requires an extended goal pair between 41 and 510.",
-                 "If it fails to get a valid position, it will return (-1,-1). This command is equivalent to up-find-player-flare with any-ally."],
-        "section": "Action",
+                "If it fails to get a valid position, it will return (-1,-1). This command is equivalent to up-find-player-flare with any-ally."],
         "param": [ 
             {
                 "type": "GoalID",
@@ -2271,7 +2186,6 @@
         "description": "Read the (x,y) position of any visible flare into an extended goal pair.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command writes to 2 consecutive goals and requires an extended goal pair between 41 and 510. If it fails to get a valid position, it will return (-1,-1)."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "PlayerID",
@@ -2290,7 +2204,6 @@
         "description": "Send a flare to allies from a point goal pair.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "GoalID",
@@ -2306,7 +2219,6 @@
         "description": "Get the search state into 4 consecutive extended goals.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The goals will be filled with data in the following order: current local search total, last local search count, current remote search total, last remote search count."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "GoalID",
@@ -2322,7 +2234,6 @@
         "description": "Reset the search state for the direct unit targeting system.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [ 
             {
                 "type": "Boolean",
@@ -2347,11 +2258,10 @@
         "description": "Reset search indices and filter states for direct unit targeting.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["All filter states will be set to -1.",
-                 "Use up-reset-search to clear search results."],
-        "section": "Action",
+                "Use up-reset-search to clear search results."],
         "param": [
             {
-                "type": "none",
+                "type": "noop",
                 "note": "none"
             }],
         "example": [{
@@ -2364,10 +2274,9 @@
         "description": "Reset all search and filter states for direct unit targeting.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command simply combines (up-reset-search 1 1 1 1) and (up-reset-filters) for rule size optimization."],
-        "section": "Action",
         "param": [
             {
-                "type": "none",
+                "type": "noop",
                 "note": "none"
             }],
         "example": [{
@@ -2380,7 +2289,6 @@
         "description": "Set include parameters for the direct targeting system.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["If any of these parameters is set to -1, then the associated condition will be ignored during search filtering."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "CmdId",
@@ -2405,7 +2313,6 @@
         "description": "Set exclude parameters for the direct targeting system.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["If any of these parameters is set to -1, then the associated condition will be ignored during search filtering."],
-        "section": "Action",
         "param": [
             {
                 "type": "CmdId",
@@ -2430,7 +2337,6 @@
         "description": "Set range parameters for the direct targeting system.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["If any of these parameters is set to -1, then the associated condition will be ignored during search filtering."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "Value",
@@ -2455,7 +2361,6 @@
         "description": "Set distance parameters for the direct targeting system.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["If any of these parameters is set to -1, then the associated condition will be ignored during search filtering."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -2480,7 +2385,6 @@
         "description": "Set garrison parameters for the direct targeting system.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["If any of these parameters is set to -1, then the associated condition will be ignored during search filtering."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -2505,8 +2409,7 @@
         "description": "Direct local search results to a specific point on the map.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command can perform all actions from the TargetAction enumeration. However, action-default, action-guard, action-follow, and action-garrison will perform as action-move.",
-                 "If you wish to action-move back into formation nearby after attacking, please action-move to -1,-1 to reset distance."],
-        "section": "Action",
+                "If you wish to action-move back into formation nearby after attacking, please action-move to -1,-1 to reset distance."],
         "param": [ 
             {
                 "type": "GoalId",
@@ -2534,8 +2437,7 @@
         "description": "Direct local search results against remote search results.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The action-default command is equivalent to a right-click.",
-                 "This command can only perform the following actions: action-default, action-move, action-patrol, action-guard, action-follow, action-stop, action-ground, action-garrison, action-delete, action-gather, and action-none."],
-        "section": "Action",
+                "This command can only perform the following actions: action-default, action-move, action-patrol, action-guard, action-follow, action-stop, action-ground, action-garrison, action-delete, action-gather, and action-none."],
         "param": [{
                 "type": "Bool",
                 "note": "Set to 1 to target only the object set by up-set-target-object."
@@ -2559,7 +2461,6 @@
         "description": "Get generic information about an object type.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This can be expensive, so please consider performance."],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -2584,8 +2485,7 @@
         "description": "Place a line of buildings between two point goal pairs.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["For town centers and gates, please use a FoundationId, such as town-center-foundation or gate-ascending.",
-                 "Do not use town-center or gate with this command."],
-        "section": "Action",
+                "Do not use town-center or gate with this command."],
         "param": [
             {
                 "type": "GoalId",
@@ -2610,9 +2510,8 @@
         "description": "Jump dynamically within the current rule set.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Never use this command where #load blocks may make your jump target unreliable.",
-                 "Please ensure that the rule you are jumping to actually exists.",
-                 "With this action, you can either decrease rules per pass with intelligent skips, or greatly increase it with loops. Please consider game performance."],
-        "section": "Action",
+                "Please ensure that the rule you are jumping to actually exists.",
+                "With this action, you can either decrease rules per pass with intelligent skips, or greatly increase it with loops. Please consider game performance."],
         "param": [
             {
                 "type": "TypeOp",
@@ -2631,10 +2530,9 @@
         "description": "Jump directly within the current rule set.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Please ensure that the rule you are jumping to actually exists (no negative values)",
-                 "You can use up-get-rule-id to get a valid rule id to jump to.",
-                 "With this action, you can either decrease rules per pass with intelligent skips, or greatly increase it with loops",
-                 "Please consider game performance."],
-        "section": "Action",
+                "You can use up-get-rule-id to get a valid rule id to jump to.",
+                "With this action, you can either decrease rules per pass with intelligent skips, or greatly increase it with loops",
+                "Please consider game performance."],
         "param": [
             {
                 "type": "TypeOp",
@@ -2653,7 +2551,6 @@
         "description": "Get the zero-based id for the current rule within the rule set.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This id can be used with up-jump-direct to precisely control jump destinations."],
-        "section": "Action",
         "param": [
             {
                 "type": "GoalId",
@@ -2669,11 +2566,10 @@
         "description": "Get the guard state into 4 consecutive extended goals.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The goals will be filled with data in the following order: TypeId, ResourceAmount, ResourceDelta, GuardFlags.",
-                 "Please use up-compare-flag to check the guard flags.",
-                 "If guard-flag-resource is set in GuardFlags, then ResourceDelta/100 will slowly be added to ResourceAmount as long as TypeId objects remain.",
-                 "If both guard-flag-resource and guard-flag-inverse are set, then the resources will be added only when there are no TypeId objects left.",
-                 "If the guard-flag-victory condition is set, the AI will be defeated if no TypeId objects remain."],
-        "section": "Action",
+                "Please use up-compare-flag to check the guard flags.",
+                "If guard-flag-resource is set in GuardFlags, then ResourceDelta/100 will slowly be added to ResourceAmount as long as TypeId objects remain.",
+                "If both guard-flag-resource and guard-flag-inverse are set, then the resources will be added only when there are no TypeId objects left.",
+                "If the guard-flag-victory condition is set, the AI will be defeated if no TypeId objects remain."],
         "param": [
             {
                 "type": "GoalId",
@@ -2693,8 +2589,7 @@
         "description": "Modify a bitwise flag on the value stored in a goal variable.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Flags allow multiple states to be stored in a single value by using powers of 2 (1, 2, 4, 8, 16, etc.).",
-                 "The only ops allowed are [cgs]:+ to append a flag and [cgs]:- to remove a flag."],
-        "section": "Action",
+                "The only ops allowed are [cgs]:+ to append a flag and [cgs]:- to remove a flag."],
         "param": [
             {
                 "type": "GoalId",
@@ -2716,7 +2611,6 @@
         "description": "Tribute a variable amount of resources to other players.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "PlayerId",
@@ -2741,7 +2635,6 @@
         "description": "Buy a variable amount of resources at the market.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The actual amount you receive depends on available gold."],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -2766,7 +2659,6 @@
         "description": "Sell a variable amount of resources at the market.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The actual amount you sell depends on available resources."],
-        "section": "Action",
         "param": [ 
             {
                 "type": "TypeOp",
@@ -2791,13 +2683,12 @@
         "description": "Add resources dynamically to the player stockpile.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This is considered a cheat command, but cheats do not have to be enabled."],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
                 "note": "Type operator"
             },{
-                "type": "ResourceAmount",
+                "type": "ResourceId",
                 "note": "The resource that will be modified."
             },{
                 "type": "TypeOp",
@@ -2816,9 +2707,8 @@
         "description": "Write a formatted text line to aoelog.txt.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Set first param to 1 in order to write plain text.",
-                 "You must close the game in order to open aoelog.txt, which is located in the game folder.",
-                 "Please consider game performance when writing data."],
-        "section": "Action",
+                "You must close the game in order to open aoelog.txt, which is located in the game folder.",
+                "Please consider game performance when writing data."],
         "param": [
             {
                 "type": "Bool",
@@ -2843,7 +2733,6 @@
         "description": "Get a system timestamp or the elapsed time into a goal.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "GoalId",
@@ -2866,7 +2755,6 @@
         "description": "Get the value of a scenario trigger signal.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -2888,7 +2776,6 @@
         "description": "Set the value of a scenario trigger signal.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -2913,7 +2800,6 @@
         "description": "Get the value of a scenario trigger event.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -2935,7 +2821,6 @@
         "description": "Set the value of a scenario trigger event.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -2960,7 +2845,6 @@
         "description": "Get the value of a shared goal.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -2982,7 +2866,6 @@
         "description": "Set the value of a shared goal.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -3007,7 +2890,6 @@
         "description": "Get the value of a goal indirectly by reference.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -3029,7 +2911,6 @@
         "description": "Set the value of a goal indirectly by reference.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -3054,7 +2935,6 @@
         "description": "Get the trigger time for a timer in milliseconds.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -3076,8 +2956,7 @@
         "description": "Disable or enable a timer by interval.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Set Value to -1 to disable the timer.",
-                 "If Value is positive, this will perform like the enable-timer action."],
-        "section": "Action",
+                "If Value is positive, this will perform like the enable-timer action."],
         "param": [
             {
                 "type": "TypeOp",
@@ -3102,7 +2981,6 @@
         "description": "Get the upgrade type id for an object into a goal.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [{
             "type": "PlayerId",
             "note": "A single PlayerId for: self, this-any"
@@ -3126,9 +3004,8 @@
         "description": "Get the color id and store the name in the internal buffer.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["ColorId will range from 1 to 8.",
-                 "The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
-                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
-        "section": "Action",
+                "The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
+                "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
         "param": [
             {
                 "type": "PlayerId",
@@ -3147,8 +3024,7 @@
         "description": "Store a language string in the internal buffer.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
-                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
-        "section": "Action",
+                "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
         "param": [
             {
                 "type": "TypeOp",
@@ -3167,8 +3043,7 @@
         "description": "Store a player chat message in the internal buffer.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Note that only the last word of a chat message will be stored in the buffer and the message must be present in the host's chat history log (the PageUp key can find it). The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
-                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
-        "section": "Action",
+                "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
         "param": [
             {
                 "type": "PlayerId",
@@ -3184,8 +3059,7 @@
         "description": "Store a player name in the internal buffer.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
-                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
-        "section": "Action",
+                "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
         "param": [
             {
                 "type": "PlayerId",
@@ -3201,8 +3075,7 @@
         "description": "Store an object type name in the internal buffer.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
-                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
-        "section": "Action",
+                "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
         "param": [
             {
                 "type": "TypeOp",
@@ -3221,8 +3094,7 @@
         "description": "Store a research tech name in the internal buffer.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
-                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
-        "section": "Action",
+                "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
         "param": [
             {
                 "type": "TypeOp",
@@ -3241,11 +3113,10 @@
         "description": "Store the target object's type name in the internal buffer.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
-                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
-        "section": "Action",
+                "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
         "param": [
             {
-                "type": "none",
+                "type": "noop",
                 "note": "none"
             }],
         "example": [{
@@ -3258,10 +3129,9 @@
         "description": "Store the current map name in the internal buffer.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["For rms, this is the filename of the map. However, if the map is a dynamic loader, such as Full Random, Random Land Map, or Blind Random, this will be the loader name instead of the actual map name.",
-                 "For scenarios, this will be the original save filename instead of the current filename.",
-                 "The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
-                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
-        "section": "Action",
+                "For scenarios, this will be the original save filename instead of the current filename.",
+                "The buffer can be referenced by the chat-data commands using %s instead of %d with c: 7031232 (7031232 cannot be stored in a defconst).",
+                "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
         "param": [
             {
                 "type": "Bool",
@@ -3277,10 +3147,9 @@
         "description": "Removes duplicate ids or sorts the search results.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["If ObjectData is set to -1, this will attempt to remove duplicates, lowering the result total.",
-                 "When removing duplicates, using search-order-none to preserve the existing order may perform slower than with asc/desc.",
-                 "If you wish to sort by ObjectData, it's best to remove duplicates first.",
-                 "Depending on the number of objects in the list, this command may be expensive, so please take care."],
-        "section": "Action",
+                "When removing duplicates, using search-order-none to preserve the existing order may perform slower than with asc/desc.",
+                "If you wish to sort by ObjectData, it's best to remove duplicates first.",
+                "Depending on the number of objects in the list, this command may be expensive, so please take care."],
         "param": [
             {
                 "type": "SearchSource",
@@ -3302,7 +3171,6 @@
         "description": "Removes objects from the search results based on specific data.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["If ObjectData is set to -1, the object index in the search results will be used for data comparison when performing removal."],
-        "section": "Action",
         "param": [
             {
                 "type": "SearchSource",
@@ -3327,9 +3195,8 @@
         "description": "Get the id if an object exists at a point goal pair position.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Set Point to 0 to use the point that is stored by up-set-target-point.",
-                 "Please note that when used with all-units-class (-1), this may capture unexpected objects like birds flying over a tile, terrain plants, etc.",
-                 "This command can be used as either a Fact or an Action."],
-        "section": "Action",
+                "Please note that when used with all-units-class (-1), this may capture unexpected objects like birds flying over a tile, terrain plants, etc.",
+                "This command can be used as either a Fact or an Action."],
         "param": [
             {
                 "type": "GoalId",
@@ -3354,7 +3221,6 @@
         "description": "Get the elevation for a tile with a point goal pair.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "GoalId",
@@ -3373,7 +3239,6 @@
         "description": "Get the zone for a tile with a point goal pair.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Zone ids may differ if you have no villagers."],
-        "section": "Action",
         "param": [
             {
                 "type": "GoalId",
@@ -3392,7 +3257,6 @@
         "description": "Copy a point goal pair and shift it into the map bounds.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "GoalId",
@@ -3411,7 +3275,6 @@
         "description": "Bound a point goal pair inside the map with additional control.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Please ensure that Border is a valid value and will not cause an overflow for the map size. If Precise is used, the map size will be multiplied by 100 before bounding, so the border should be adjusted accordingly."],
-        "section": "Action",
         "param": [
             {
                 "type": "GoalId",
@@ -3436,7 +3299,6 @@
         "description": "Get the distance from the target object to a specified point goal pair.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["This will return 65535 if the point is unreachable."],
-        "section": "Action",
         "param": [
             {
                 "type": "GoalId",
@@ -3458,7 +3320,6 @@
         "description": "Clear all units in a search group.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -3477,7 +3338,6 @@
         "description": "Create a search group from the local search results.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["If there are no units available in the results list to create the specified group, the group will be cleared in the same way as up-reset-group."],
-        "section": "Action",
         "param": [
             {
                 "type": "GoalId",
@@ -3502,7 +3362,6 @@
         "description": "Set the local or remote search results to a search group.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "SearchSource",
@@ -3524,7 +3383,6 @@
         "description": "Get the current number of units in a search group.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
-        "section": "Action",
         "param": [
             {
                 "type": "TypeOp",
@@ -3546,9 +3404,8 @@
         "description": "Modify the ctrl group flag for units in a search group.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["You must manage the group flag carefully in order to avoid unexpected situations.",
-                 "Please remove the group flag before modifying a flagged search group.",
-                 "You can find units from a flagged search group using object-data-group-flag, which is set to the group id."],
-        "section": "Action",
+                "Please remove the group flag before modifying a flagged search group.",
+                "You can find units from a flagged search group using object-data-group-flag, which is set to the group id."],
         "param": [
             {
                 "type": "Bool",
@@ -3570,9 +3427,8 @@
         "description": "Set the object status value for use with up-find-status.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The default (after up-reset-filters) is 2, which should match most active objects",
-                 "Buildings that are incomplete have a status of 0, while certain resources have a status of 3.",
-                 "For remote search, up-find-remote can match enemy status values 0 to 3 if you search by object type id instead of class id."],
-        "section": "Action",
+                "Buildings that are incomplete have a status of 0, while certain resources have a status of 3.",
+                "For remote search, up-find-remote can match enemy status values 0 to 3 if you search by object type id instead of class id."],
         "param": [
             {
                 "type": "TypeOp",
@@ -3592,5 +3448,5 @@
             "data": "(defrule\r\n\t(true)\r\n=&gt;\r\n\t(up-filter-status c: status-pending c: list-active)\r\n\t(up-find-status-local c: castle c: 5)\r\n)"
         }],
         "related": []
-    }
-]}
+    }]
+}}

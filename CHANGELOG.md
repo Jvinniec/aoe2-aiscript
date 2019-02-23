@@ -4,7 +4,11 @@ All notable changes to the "aoe2-aiscript" extension will be documented in this 
     <major>.<minor>.<patch>
 
 ## v0.2.0 [dev]
-- Fix signatures issue where signatures would highlight the wrong variable [#8]
+
+## v0.1.5
+- Add additional resource information and add additional categories
+- Fix signatures issue where signatures would highlight the wrong variable [issue #8]
+- Add leveled parameter help (added 'parametersOnly' option) to prevent saturating the screen with text
 
 ## v0.1.4
 - Add tutorial for defining custom colors

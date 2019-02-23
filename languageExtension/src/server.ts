@@ -688,9 +688,15 @@ function fillCompletions() {
 			// suggestion in the popup list)
 			switch (par.section) {
 				case "BuildingId":
+				case "BuildingClass":
+				case "WallId":
+				case "WallLine":
 					item.kind = CompletionItemKind.Struct;
 					break;
 				case "UnitId":
+				case "UnitClass":
+				case "UnitLine":
+				case "UnitSet":
 					item.kind = CompletionItemKind.Unit;
 					break;
 				case "Action":
@@ -706,12 +712,13 @@ function fillCompletions() {
 				case "AgeId":
 					item.kind = CompletionItemKind.Enum;
 					break;
-				case "CompareOp":
+				case "RelOp":
+				case "UpRelOp":
 				case "TypeOp":
 				case "MathOp":
 					item.kind = CompletionItemKind.Operator;
 					break;
-				case "Instruction":
+				case "Control":
 					item.kind = CompletionItemKind.Interface;
 					break;
 				default:

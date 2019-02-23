@@ -1,1998 +1,2194 @@
-{ "UnitId": [
-    {
-        "name": "arambai",
-        "description": "Burmese unique unit. Mounted dart thrower.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "arambai-line",
-        "example": [],
-        "related": ["elite-arambai"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["burmese"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "arbalest",
-        "description": "Stronger than Crosbowman. Quick and light.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "archer-line",
-        "example": [],
-        "related": ["archer", "crossbowman"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["archery-range"],
-            "civ": ["!berber", "!burmese", "!celt", "!frank", "!goth", "!hun", "!indian", "!persian", "!slav", "!spanish", "!teuton", "!turk"],
-            "tech": ["ri-arbalest"]
-        }
-    },{
-        "name": "archer",
-        "description": "Quick and light. Weak at close range; excels at battle from distance.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "archer-line",
-        "example": [],
-        "related": ["crossbowman", "arbalest"],
-        "requires": {
-            "age": "feudal-age",
-            "building": ["archery-range"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "ballista-elephant",
-        "description": "Khmer unique unit. Heavy cavalry equipped with a Scorpion. Can fell trees.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "ballista-elephant-line",
-        "example": [],
-        "related": ["elite-ballista-elephant"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["khmer"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "battering-ram",
-        "description": "Slow, lumbering siege weapon used to reduce enemy towns to ruins.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "battering-ram-line",
-        "example": [],
-        "related": ["capped-ram", "siege-ram"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["siege-workshop"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "battle-elephant",
-        "description": "Slow and heavy cavalry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["elite-battle-elephant"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["stable"],
-            "civ": ["burmese", "khmer", "malay", "vietnamese"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "berserk",
-        "description": "Viking unique unit. Infantry that slowly heals itself.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "berserk-line",
-        "example": [],
-        "related": ["elite-berserk"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["viking"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "bombard-canon",
-        "description": "Powerful mobile anti-building siege weapon.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["none"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["siege-workshop"],
-            "civ": ["!aztec", "!briton", "!celt", "!chinese", "!hun", "!inca", "!indian", "!magyar", "!mayan", "!mongol", "!slav", "!viking"],
-            "tech": ["ri-chemistry"]
-        }
-    },{
-        "name": "boyar",
-        "description": "Slavic Unique Unit. Heavily armored cavalry; resistant to melee attack.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "boyar-line",
-        "example": [],
-        "related": ["elite-boyar"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["slav"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "camel",
-        "description": "Excels at killing other mounted units.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "camel-line",
-        "example": [],
-        "related": ["heavy-camel", "imperial-camel"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["stable"],
-            "civ": ["berber", "byzantine", "chinese", "ethiopian", "indian", "malian", "mongol", "persian", "saracen", "turk"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "camel-archer",
-        "description": "Berber unique unit. Cavalry archer with an attack bonus vs. cavalry archers.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "camel-archer-line",
-        "example": [],
-        "related": ["elite-camel-archer"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["berber"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "cannon-galleon",
-        "description": "Long-range warship used to attack targets on shore to establish beachhead.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "cannon-galleon-line",
-        "example": [],
-        "related": ["elite-cannon-galleon"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["dock"],
-            "civ": ["!aztec", "!hun", "!inca", "!mayan"],
-            "tech": ["ri-cannon-galleon"]
-        }
-    },{
-        "name": "capped-ram",
-        "description": "Stronger than Battering Ram. Slow, lumbering siege weapon used to reduce enemy towns to ruins.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "battering-ram-line",
-        "example": [],
-        "related": ["battering-ram", "siege-ram"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["siege-workshop"],
-            "civ": ["all"],
-            "tech": ["ri-capped-ram"]
-        }
-    },{
-        "name": "caravel",
-        "description": "Portuguese unique unit. Boat effective vs. large fleets because each shot damages multiple units.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "caravel-line",
-        "example": [],
-        "related": ["elite-caravel"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["dock"],
-            "civ": ["portuguese"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "cataphract",
-        "description": "Byzantine unique unit. Heavily armored cavalry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "cataphract-line",
-        "example": [],
-        "related": ["elite-cataphract"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["byzantine"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "cavalier",
-        "description": "Stronger than Knight. Fast and heavy cavalry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "knight-line",
-        "example": [],
-        "related": ["knight", "paladin"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["stable"],
-            "civ": ["!aztec", "!inca", "!indian", "!mayan", "!saracen"],
-            "tech": ["ri-cavalier"]
-        }
-    },{
-        "name": "cavalry-archer",
-        "description": "Fast, with ranged attack. Ideal for hit-and-run attacks.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "cavalry-archer-line",
-        "example": [],
-        "related": ["heavy-cavalry-archer"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["archery-range"],
-            "civ": ["!aztec", "!inca", "!mayan"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "champion",
-        "description": "Stronger than Two-Handed Swordsman. Cheap and quick to create.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "militiaman-line",
-        "example": [],
-        "related": ["militia", "man-at-arms", "long-swordsman", "long-swordsman"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["barracks"],
-            "civ": ["!ethiopian", "!hun", "!khmer", "!malay", "!mayan", "!persian"],
-            "tech": ["ri-champion"]
-        }
-    },{
-        "name": "chu-ko-nu",
-        "description": "Chinese unique unit. Archer with mediocre range. Fires large number of arrows very quickly.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "chu-ko-nu-line",
-        "example": [],
-        "related": ["elite-chu-ko-nu"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["chinese"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "condottiero",
-        "description": "Italian mercenary unit. Quick infantry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["none"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["barracks"],
-            "civ": ["italian"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "conquistador",
-        "description": "Spanish unique unit. Mounted Hand Cannoneer. Powerful close attack, but inaccurate at range.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "conquistador-line",
-        "example": [],
-        "related": ["elite-conquistador"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["spanish"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "crossbowman",
-        "description": "Stronger than Archer. Quick and light.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "archer-line",
-        "example": [],
-        "related": ["archer", "arbalest"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["archery-range"],
-            "civ": ["!spanish"],
-            "tech": ["ri-crossbowman"]
-        }
-    },{
-        "name": "demolition-raft",
-        "description": "Filled with explosives. Self-destructs when used.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "demolition-raft-line",
-        "example": [],
-        "related": ["demolition-ship", "heavy-demolition-ship"],
-        "requires": {
-            "age": "feudal-age",
-            "building": ["dock"],
-            "civ": ["!korean"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "demolition-ship",
-        "description": "Filled with explosives. Self-destructs when used.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "demolition-raft-line",
-        "example": [],
-        "related": ["demolition-raft", "heavy-demolition-ship"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["dock"],
-            "civ": ["!korean"],
-            "tech": ["ri-war-galley"]
-        }
-    },{
-        "name": "eagle-scout",
-        "description": "Fast infantry with extensive sight.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "eagle-warrior-line",
-        "example": [],
-        "related": ["eagle-warrior", "elite-eagle-warrior"],
-        "requires": {
-            "age": "feudal-age",
-            "building": ["barracks"],
-            "civ": ["aztec", "inca", "mayan"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "eagle-warrior",
-        "description": "Stronger than Eagle Scout. Fast infantry with extensive sight.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "eagle-warrior-line",
-        "example": [],
-        "related": ["eagle-scout", "elite-eagle-warrior"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["barracks"],
-            "civ": ["aztec", "inca", "mayan"],
-            "tech": ["ri-eagle-warrior"]
-        }
-    },{
-        "name": "elephant-archer",
-        "description": "Indian unique unit. Heavy mounted archer.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "elephant-archer-line",
-        "example": [],
-        "related": ["elite-elephant-archer"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["indian"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "elite-arambai",
-        "description": "Burmese unique unit. Mounted dart thrower.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "arambai-line",
-        "example": [],
-        "related": ["arambai"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["burmese"],
-            "tech": ["ri-elite-arambai"]
-        }
-    },{
-        "name": "elite-ballista-elephant",
-        "description": "Khmer unique unit. Heavy cavalry equipped with a Scorpion. Can fell trees.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "ballista-elephant-line",
-        "example": [],
-        "related": ["ballista-elephant"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["khmer"],
-            "tech": ["ri-elite-ballista-elephant"]
-        }
-    },{
-        "name": "elite-battle-elephant",
-        "description": "Stronger than Battle Elephant. Slow and heavy cavalry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["battle-elephant"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["stable"],
-            "civ": ["burmese", "khmer", "malay", "vietnamese"],
-            "tech": ["ri-elite-battle-elephant"]
-        }
-    },{
-        "name": "elite-berserk",
-        "description": "Viking unique unit. Infantry that slowly heals itself.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "berserk-line",
-        "example": [],
-        "related": ["berserk"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["viking"],
-            "tech": ["ri-elite-berserk"]
-        }
-    },{
-        "name": "elite-boyar",
-        "description": "Slavic Unique Unit. Heavily armored cavalry; resistant to melee attack.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "boyar-line",
-        "example": [],
-        "related": ["boyar"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["slav"],
-            "tech": ["ri-elite-boyar"]
-        }
-    },{
-        "name": "elite-camel-archer",
-        "description": "Berber unique unit. Cavalry archer with an attack bonus vs. cavalry archers.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "camel-archer-line",
-        "example": [],
-        "related": ["camel-archer"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["berber"],
-            "tech": ["ri-elite-camel-archer"]
-        }
-    },{
-        "name": "elite-cannon-galleon",
-        "description": "Stronger than Cannon Galleon. Long-range warship used to attack targets on shore to establish beachhead.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "cannon-galleon-line",
-        "example": [],
-        "related": ["cannon-galleon"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["dock"],
-            "civ": ["berber", "burmese", "byzantine", "indian", "italian", "japanese", "khmer", "malay", "persian", "portuguese", "saracen", "spanish", "turk", "vietnamese", "viking"],
-            "tech": ["ri-elite-cannon-galleon"]
-        }
-    },{
-        "name": "elite-caravel",
-        "description": "Portuguese unique unit. Boat effective vs. large fleets because each shot damages multiple units.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "caravel-line",
-        "example": [],
-        "related": ["caravel"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["dock"],
-            "civ": ["portuguese"],
-            "tech": ["ri-elite-caravel"]
-        }
-    },{
-        "name": "elite-cataphract",
-        "description": "Byzantine unique unit. Heavily armored cavalry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "cataphract-line",
-        "example": [],
-        "related": ["cataphract"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["byzantine"],
-            "tech": ["ri-elite-cataphract"]
-        }
-    },{
-        "name": "elite-chu-ko-nu",
-        "description": "Chinese unique unit. Archer with mediocre range. Fires large number of arrows very quickly.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "chu-ko-nu-line",
-        "example": [],
-        "related": ["chu-ko-nu"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["chinese"],
-            "tech": ["ri-elite-chu-ko-nu"]
-        }
-    },{
-        "name": "elite-conquistador",
-        "description": "Spanish unique unit. Mounted Hand Cannoneer. Powerful close attack, but inaccurate at range.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "conquistador-line",
-        "example": [],
-        "related": ["conquistador"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["spanish"],
-            "tech": ["ri-elite-conquistador"]
-        }
-    },{
-        "name": "elite-eagle-warrior",
-        "description": "Stronger than Eagle Warrior. Fast infantry with extensive sight.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "eagle-warrior-line",
-        "example": [],
-        "related": ["eagle-scout", "eagle-warrior"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["barracks"],
-            "civ": ["aztec", "inca", "mayan"],
-            "tech": ["ri-elite-eagle-warrior"]
-        }
-    },{
-        "name": "elite-elephant-archer",
-        "description": "Indian unique unit. Heavy mounted archer.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "elephant-archer-line",
-        "example": [],
-        "related": ["elephant-archer"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["indian"],
-            "tech": ["ri-elite-elephant-archer"]
-        }
-    },{
-        "name": "elite-gbeto",
-        "description": "Malian unique unit. Quick infantry unit with a high ranged attack.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "gbeto-line",
-        "example": [],
-        "related": ["gbeto"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["malian"],
-            "tech": ["ri-elite-gbeto"]
-        }
-    },{
-        "name": "elite-genitour",
-        "description": "Berber unique unit. Mounted Skirmisher.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["genitour"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["archery-range"],
-            "civ": ["berber"],
-            "tech": ["ri-elite-genitour"]
-        }
-    },{
-        "name": "elite-genoese-crossbowman",
-        "description": "Italian unique unit. Anti cavalry archery unit.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "genoese-crossbowman-line",
-        "example": [],
-        "related": ["genoese-crossbowman"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["italian"],
-            "tech": ["ri-elite-genoese-crossbowman"]
-        }
-    },{
-        "name": "elite-huskarl",
-        "description": "Gothic unique unit. Infantry with substantial pierce armor, virtually immune to archer fire.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "huskarl-line",
-        "example": [],
-        "related": ["huskarl"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["goth"],
-            "tech": ["ri-elite-huskarl"]
-        }
-    },{
-        "name": "elite-jaguar-warrior",
-        "description": "Aztec unique unit. Attack bonus vs. other infantry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "janguar-warrior-line",
-        "example": [],
-        "related": ["jaguar-warrior"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["aztec"],
-            "tech": ["ri-elite-jaguar-warrior"]
-        }
-    },{
-        "name": "elite-janissary",
-        "description": "Turkish unique unit. Hand Cannoneer with longer range and no minimum range. Powerful close attack, but inaccurate at range.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "janissary-line",
-        "example": [],
-        "related": ["janissary"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["turk"],
-            "tech": ["ri-elite-janissary"]
-        }
-    },{
-        "name": "elite-kamayuk",
-        "description": "Inca unique unit. Infantry unit with attack bonus vs. cavalry. Carries a long spear to infiltrate formations.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "kamayuk-line",
-        "example": [],
-        "related": ["kamayuk"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["inca"],
-            "tech": ["ri-elite-kamayuk"]
-        }
-    },{
-        "name": "elite-karambit-warrior",
-        "description": "Malay unique unit. Cheap and weak infantry unit that only takes half a population spot.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "karambit-warrior-line",
-        "example": [],
-        "related": ["karambit-warrior"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["malay"],
-            "tech": ["ri-elite-karambit-warrior"]
-        }
-    },{
-        "name": "elite-longboat",
-        "description": "Viking unique unit. Fires multiple arrows.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "longboat-line",
-        "example": [],
-        "related": ["longboat"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["viking"],
-            "tech": ["ri-elite-longboat"]
-        }
-    },{
-        "name": "elite-longbowman",
-        "description": "British unique unit. Powerful archer with long range.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "longbowman-line",
-        "example": [],
-        "related": ["longbowman"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["briton"],
-            "tech": ["ri-elite-longbowman"]
-        }
-    },{
-        "name": "elite-magyar-huszar",
-        "description": "Magyar unique unit. Light cavalry unit with a bonus vs. siege.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "magyar-huszar-line",
-        "example": [],
-        "related": ["magyar-huszar"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["magyar"],
-            "tech": ["ri-elite-magyar-huszar"]
-        }
-    },{
-        "name": "elite-mameluke",
-        "description": "Saracen unique unit. Camel with hand-to-hand attack at distance. Excels vs. other mounted units.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "mameluke-line",
-        "example": [],
-        "related": ["mameluke"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["saracen"],
-            "tech": ["ri-elite-mameluke"]
-        }
-    },{
-        "name": "elite-mangudai",
-        "description": "Mongol unique unit. Cavalry archer with attack bonus vs. siege weapons.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "mangudai-line",
-        "example": [],
-        "related": ["mangudai"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["mongol"],
-            "tech": ["ri-elite-mangudai"]
-        }
-    },{
-        "name": "elite-organ-gun",
-        "description": "Portuguese unique unit. Siege weapon that fires a volley of bullets. Very effective against large groups of units.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "organ-gun-line",
-        "example": [],
-        "related": ["organ-gun"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["portuguese"],
-            "tech": ["ri-elite-organ-gun"]
-        }
-    },{
-        "name": "elite-plumed-archer",
-        "description": "Mayan unique unit. Strong, fast, well-armored archer with less attack than other archers.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "plumed-archer-line",
-        "example": [],
-        "related": ["plumed-archer"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["mayan"],
-            "tech": ["ri-elite-plumed-archer"]
-        }
-    },{
-        "name": "elite-rattan-archer",
-        "description": "Vietnamese unique unit. Heavily armored Archer.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "rattan-archer-line",
-        "example": [],
-        "related": ["rattan-archer"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["vietnamese"],
-            "tech": ["ri-elite-rattan-archer"]
-        }
-    },{
-        "name": "elite-samurai",
-        "description": "Japanese unique unit. Infantry with fast attack.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "samurai-line",
-        "example": [],
-        "related": ["samurai"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["apanese"],
-            "tech": ["ri-elite-samurai"]
-        }
-    },{
-        "name": "elite-shotel-warrior",
-        "description": "Ethiopian unique unit. Cheap infantry unit with high creation speed.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "shotel-warrior-line",
-        "example": [],
-        "related": ["shotel-warrior"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["ethiopian"],
-            "tech": ["ri-elite-shotel-warrior"]
-        }
-    },{
-        "name": "elite-skirmisher",
-        "description": "Stronger than Skirmisher. Ranged unit equipped with armor vs. archer attacks.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "skirmisher-line",
-        "example": [],
-        "related": ["skirmisher", "imperial-skirmisher"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["archery-range"],
-            "civ": ["!turk"],
-            "tech": ["ri-elite-skirmisher"]
-        }
-    },{
-        "name": "elite-tarkan",
-        "description": "Hun unique unit. Cavalry with attack bonus vs. buildings.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["tarkan"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["hun"],
-            "tech": ["ri-elite-tarkan"]
-        }
-    },{
-        "name": "elite-teutonic-knight",
-        "description": "Teutonic unique unit. Infantry with effective armor and slow but powerful attack.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "teutonic-knight-line",
-        "example": [],
-        "related": ["teutonic-knight"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["teuton"],
-            "tech": ["ri-elite-teutonic-knight"]
-        }
-    },{
-        "name": "elite-throwing-axeman",
-        "description": "Frankish unique unit. Infantry with ranged attack.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "throwing-axeman-line",
-        "example": [],
-        "related": ["throwing-axeman"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["frank"],
-            "tech": ["ri-elite-throwing-axeman"]
-        }
-    },{
-        "name": "elite-turtle-ship",
-        "description": "Korean unique unit. Slow, ironclad battleship used to destroy other ships at close range.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "turtle-ship-line",
-        "example": [],
-        "related": ["turtle-ship"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["dock"],
-            "civ": ["korean"],
-            "tech": ["ri-elite-turtle-ship"]
-        }
-    },{
-        "name": "elite-war-elephant",
-        "description": "Persian unique unit. Slow, powerful, strong, and well-armored cavalry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "war-elephant-line",
-        "example": [],
-        "related": ["war-elephant"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["persian"],
-            "tech": ["ri-elite-war-elephant"]
-        }
-    },{
-        "name": "elite-war-wagon",
-        "description": "Korean unique unit. Heavily armored horse-drawn archer unit.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "war-wagon-line",
-        "example": [],
-        "related": ["war-wagon"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["korean"],
-            "tech": ["ri-elite-war-wagon"]
-        }
-    },{
-        "name": "elite-woad-raider",
-        "description": "Celtic unique unit. Exceptionally quick infantry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "woad-raider-line",
-        "example": [],
-        "related": ["woad-raider"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["celt"],
-            "tech": ["ri-elite-woad-raider"]
-        }
-    },{
-        "name": "fast-fire-ship",
-        "description": "Stronger than Fire Ship. Spews fire at other ships.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "fire-galley-line",
-        "example": [],
-        "related": ["fire-galley", "fire-ship"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["dock"],
-            "civ": ["!burmese", "!celt", "!chinese", "!ethiopian", "!hun", "!indian", "!malian", "!portuguese", "!saracen", "!turk", "!vietnamese", "!viking"],
-            "tech": ["ri-fast-fire-ship"]
-        }
-    },{
-        "name": "fire-galley",
-        "description": "Spews fire at other ships. Good at sinking Galleys.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "fire-galley-line",
-        "example": [],
-        "related": ["fire-ship", "fast-fire-ship"],
-        "requires": {
-            "age": "feudal-age",
-            "building": ["dock"],
-            "civ": ["!viking"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "fire-ship",
-        "description": "Spews fire at other ships. Good at sinking Galleys.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "fire-galley-line",
-        "example": [],
-        "related": ["fire-galley", "fast-fire-ship"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["dock"],
-            "civ": ["!viking"],
-            "tech": ["ri-war-galley"]
-        }
-    },{
-        "name": "fishing-ship",
-        "description": "Gathers food from jumping fish and Fish Traps.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["none"],
-        "requires": {
-            "age": "dark-age",
-            "building": ["dock"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "galleon",
-        "description": "Stronger than War Galley.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "galley-line",
-        "example": [],
-        "related": ["galley", "war-galley"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["dock"],
-            "civ": ["!aztec"],
-            "tech": ["ri-galleon"]
-        }
-    },{
-        "name": "galley",
-        "description": "Small, fast ship with weak attack.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "galley-line",
-        "example": [],
-        "related": ["war-galley", "galleon"],
-        "requires": {
-            "age": "feudal-age",
-            "building": ["dock"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "gbeto",
-        "description": "Malian unique unit. Quick infantry unit with a high ranged attack.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "gbeto-line",
-        "example": [],
-        "related": ["elite-gbeto"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["malian"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "genitour",
-        "description": "Berber unique unit. Mounted Skirmisher.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["elite-genitour"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["archery-range"],
-            "civ": ["berber"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "genoese-crossbowman",
-        "description": "Italian unique unit. Anti cavalry archery unit.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "genoese-crossbowman-line",
-        "example": [],
-        "related": ["elite-genoese-crossbowman"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["italian"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "halberdier",
-        "description": "Stronger than Spearman. Medium infantry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "spearman-line",
-        "example": [],
-        "related": ["spearman", "pikeman"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["barracks"],
-            "civ": ["!aztec", "!berber", "!italian", "!malian", "!mongol", "!saracen", "!turk", "!viking"],
-            "tech": ["ri-halberdier"]
-        }
-    },{
-        "name": "hand-cannoneer",
-        "description": "Powerful close attack; inaccurate at range.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["none"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["archery-range"],
-            "civ": ["!aztec", "!briton", "!burmese", "!celt", "!chinese", "!ethiopian", "!hun", "!inca", "!magyar", "!malay", "!mayan", "!mongol", "!slav", "!vietnamese", "!viking"],
-            "tech": ["ri-chemistry"]
-        }
-    },{
-        "name": "heavy-camel",
-        "description": "Stronger than Camel. Excels at killing other mounted units.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "camel-line",
-        "example": [],
-        "related": ["camel", "imperial-camel"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["stable"],
-            "civ": ["berber", "byzantine", "chinese", "ethiopian", "indian", "malian", "mongol", "persian", "saracen", "turk"],
-            "tech": ["ri-heavy-camel"]
-        }
-    },{
-        "name": "heavy-cavalry-archer",
-        "description": "Stronger than Cavalry Archer. Fast, with ranged attack.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "cavalry-archer-line",
-        "example": [],
-        "related": ["cavalry-archer"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["archery-range"],
-            "civ": ["!aztec", "!inca", "!italian", "!malay", "!mayan", "!portuguese", "!teuton", "!viking"],
-            "tech": ["ri-heavy-cavalry-archer"]
-        }
-    },{
-        "name": "heavy-demolition-ship",
-        "description": "Stronger than Demolition Ship. Filled with explosives. Self-destructs when used.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "demolition-raft-line",
-        "example": [],
-        "related": ["demolition-raft", "demolition-ship"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["dock"],
-            "civ": ["!aztec", "!burmese", "!ethiopian", "!inca", "!italian", "!japanese", "!khmer", "!korean", "!magyar", "!malay", "!slav"],
-            "tech": ["ri-heavy-demolition-ship"]
-        }
-    },{
-        "name": "heavy-scorpion",
-        "description": "Stronger than Scorpion. Light artillery that fires large arrowlike bolts.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "scorpion-line",
-        "example": [],
-        "related": ["scorpion"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["siege-workshop"],
-            "civ": ["!aztec", "!byzantine", "!hun", "!indian", "!italian", "!korean", "!malian", "!portuguese", "!saracen", "!spanish", "!vietnamese"],
-            "tech": ["ri-heavy-scorpion"]
-        }
-    },{
-        "name": "huskarl",
-        "description": "Gothic unique unit. Infantry with substantial pierce armor, virtually immune to archer fire.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "huskarl-line",
-        "example": [],
-        "related": ["elite-huskarl"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["goth"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "hussar",
-        "description": "Stronger than Light Cavalry. Fast with extensive line of sight.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "scout-cavalry-line",
-        "example": [],
-        "related": ["scout-cavalry", "light-cavalry"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["stable"],
-            "civ": ["!aztec", "!briton", "!chinese", "!frank", "!inca", "!japanese", "!khmer", "!malay", "!malian", "!mayan", "!portuguese", "!teuton", "!viking", "!vietnamese"],
-            "tech": ["ri-hussar"]
-        }
-    },{
-        "name": "imperial-camel",
-        "description": "Stronger than Heavy Camel. Excels at killing other mounted units.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "camel-line",
-        "example": [],
-        "related": ["camel", "heavy-camel"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["stable"],
-            "civ": ["indian"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "imperial-skirmisher",
-        "description": "Stronger than Skirmisher. Ranged unit equipped with armor vs. archer attacks.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "skirmisher-line",
-        "example": [],
-        "related": ["skirmisher", "elite-skirmisher"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["archery-range"],
-            "civ": ["vietnamese"],
-            "tech": ["ri-imperial-skirmisher"]
-        }
-    },{
-        "name": "jaguar-warrior",
-        "description": "Aztec unique unit. Attack bonus vs. other infantry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "janguar-warrior-line",
-        "example": [],
-        "related": ["elite-jaguar-warrior"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["aztec"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "janissary",
-        "description": "Turkish unique unit. Hand Cannoneer with longer range and no minimum range. Powerful close attack, but inaccurate at range.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "janissary-line",
-        "example": [],
-        "related": ["elite-janissary"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["turk"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "kamayuk",
-        "description": "Inca unique unit. Infantry unit with attack bonus vs. cavalry. Carries a long spear to infiltrate formations.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "kamayuk-line",
-        "example": [],
-        "related": ["elite-kamayuk"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["inca"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "karambit-warrior",
-        "description": "Malay unique unit. Cheap and weak infantry unit that only takes half a population spot.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "karambit-warrior-line",
-        "example": [],
-        "related": ["elite-karambit-warrior"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["malay"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "knight",
-        "description": "Fast and heavy cavalry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "knight-line",
-        "example": [],
-        "related": ["cavalier", "paladin"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["stable"],
-            "civ": ["!aztec", "!inca", "!indian", "!mayan"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "light-cavalry",
-        "description": "Stronger than Scout Cavalry. Fast with extensive line of sight.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "scout-cavalry-line",
-        "example": [],
-        "related": ["scout-cavalry", "hussar"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["stable"],
-            "civ": ["!aztec", "!inca", "!mayan", "!teuton"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "long-swordsman",
-        "description": "Stronger than Man-at-Arms. Cheap and quick to create.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "militiaman-line",
-        "example": [],
-        "related": ["militia", "man-at-arms", "two-handed-swordsman", "champion"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["barracks"],
-            "civ": ["all"],
-            "tech": ["ri-long-swordsman"]
-        }
-    },{
-        "name": "longboat",
-        "description": "Viking unique unit. Fires multiple arrows.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "longboat-line",
-        "example": [],
-        "related": ["elite-longboat"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["viking"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "longbowman",
-        "description": "British unique unit. Powerful archer with long range.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "longbowman-line",
-        "example": [],
-        "related": ["elite-longbowman"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["briton"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "magyar-huszar",
-        "description": "Magyar unique unit. Light cavalry unit with a bonus vs. siege.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "magyar-huszar-line",
-        "example": [],
-        "related": ["elite-magyar-huszar"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["magyar"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "mameluke",
-        "description": "Saracen unique unit. Camel with hand-to-hand attack at distance. Excels vs. other mounted units.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "mameluke-line",
-        "example": [],
-        "related": ["elite-mameluke"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["saracen"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "man-at-arms",
-        "description": "Stronger than Militia. Cheap and quick to create.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "militiaman-line",
-        "example": [],
-        "related": ["militia", "long-swordsman", "two-handed-swordsman", "champion"],
-        "requires": {
-            "age": "feudal-age",
-            "building": ["barracks"],
-            "civ": ["all"],
-            "tech": ["ri-man-at-arms"]
-        }
-    },{
-        "name": "mangonel",
-        "description": "Wheeled siege weapon used to attack a small mass of units.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "mangonel-line",
-        "example": [],
-        "related": ["onager", "siege-onager"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["siege-workshop"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "mangudai",
-        "description": "Mongol unique unit. Cavalry archer with attack bonus vs. siege weapons.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "mangudai-line",
-        "example": [],
-        "related": ["elite-mangudai"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["mongol"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "militia",
-        "description": "Basic infantry swordsman. Cheap and quick to create.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "militiaman-line",
-        "example": [],
-        "related": ["man-at-arms", "long-swordsman", "two-handed-swordsman", "champion"],
-        "requires": {
-            "age": "dark-age",
-            "building": ["barracks"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "missionary",
-        "description": "Spanish unique unit. Mounted Monk. Converts enemy units and heals friendly units like Monks, but cannot pick up Relics.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["monk"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["monastery"],
-            "civ": ["spanish"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "monk",
-        "description": "Slow and weak. Converts enemy units, ships to your civilization (player color). Heals wounded villagers, military units (except siege weapons).",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["missionary"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["monastery"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "onager",
-        "description": "Stronger than Mangonel. Wheeled siege weapon used to attack a small mass of units.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "mangonel-line",
-        "example": [],
-        "related": ["mangonel", "siege-onager"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["siege-workshop"],
-            "civ": ["!hun", "!turk"],
-            "tech": ["ri-onager"]
-        }
-    },{
-        "name": "organ-gun",
-        "description": "Portuguese unique unit. Siege weapon that fires a volley of bullets. Very effective against large groups of units.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "organ-gun-line",
-        "example": [],
-        "related": ["elite-organ-gun"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["portuguese"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "paladin",
-        "description": "Stronger than Cavalier. Fast and heavy cavalry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "knight-line",
-        "example": [],
-        "related": ["knight", "cavalier"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["stable"],
-            "civ": ["byzantine", "celt", "frank", "hun", "magyar", "persian", "spanish", "teuton"],
-            "tech": ["ri-paladin"]
-        }
-    },{
-        "name": "petard",
-        "description": "Demolition infantry unit armed with explosives. Devastating vs. buildings, ineffective vs. other units. Self-destructs when used.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["none"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "pikeman",
-        "description": "Stronger than Spearman. Medium infantry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "spearman-line",
-        "example": [],
-        "related": ["spearman", "halberdier"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["barracks"],
-            "civ": ["!turk"],
-            "tech": ["ri-pikeman"]
-        }
-    },{
-        "name": "plumed-archer",
-        "description": "Mayan unique unit. Strong, fast, well-armored archer with less attack than other archers.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "plumed-archer-line",
-        "example": [],
-        "related": ["elite-plumed-archer"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["mayan"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "rattan-archer",
-        "description": "Vietnamese unique unit. Heavily armored Archer.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "rattan-archer-line",
-        "example": [],
-        "related": ["elite-rattan-archer"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["vietnamese"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "samurai",
-        "description": "Japanese unique unit. Infantry with fast attack.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "samurai-line",
-        "example": [],
-        "related": ["elite-samurai"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["japanese"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "scorpion",
-        "description": "Light artillery that fires large arrowlike bolts.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "scorpion-line",
-        "example": [],
-        "related": ["heavy-scorpion"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["siege-workshop"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "scout-cavalry",
-        "description": "Fast with extensive line of sight.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "scout-cavalry-line",
-        "example": [],
-        "related": ["light-cavalry", "hussar"],
-        "requires": {
-            "age": "feudal-age",
-            "building": ["stable"],
-            "civ": ["!aztec", "!inca", "!mayan"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "shotel-warrior",
-        "description": "Ethiopian unique unit. Cheap infantry unit with high creation speed.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "shotel-warrior-line",
-        "example": [],
-        "related": ["elite-shotel-warrior"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["ethiopian"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "siege-onager",
-        "description": "Stronger than Onager. Wheeled siege weapon used to attack a small mass of units.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "mangonel-line",
-        "example": [],
-        "related": ["mangonel", "onager"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["siege-workshop"],
-            "civ": ["aztec", "celt", "ethiopian", "korean", "malian", "mongol", "saracen", "slav", "teuton"],
-            "tech": ["ri-siege-onager"]
-        }
-    },{
-        "name": "siege-ram",
-        "description": "Stronger than Capped Ram. Slow, lumbering siege weapon used to reduce enemy towns to ruins.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "battering-ram-line",
-        "example": [],
-        "related": ["battering-ram", "capped-ram"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["siege-workshop"],
-            "civ": ["!berber", "!briton", "!burmese", "!frank", "!goth", "!indian", "!italian", "!japanese", "!korean", "!magyar", "!malay", "!malian", "!portuguese", "!teuton", "!vietnamese"],
-            "tech": ["ri-siege-ram"]
-        }
-    },{
-        "name": "siege-tower",
-        "description": "Siege weapon used to scale enemy walls; resistant to archer attack.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["none"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["siege-workshop"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "skirmisher",
-        "description": "Ranged unit equipped with armor vs. archer attacks.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "skirmisher-line",
-        "example": [],
-        "related": ["elite-skirmisher", "imperial-skirmisher"],
-        "requires": {
-            "age": "feudal-age",
-            "building": ["archery-range"],
-            "civ": ["any"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "slinger",
-        "description": "Inca unique unit. Ranged unit with attack bonus vs. infantry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["none"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["archery-range"],
-            "civ": ["inca"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "spearman",
-        "description": "Stronger than Long Swordsman. Cheap and quick to create.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "spearman-line",
-        "example": [],
-        "related": ["pikeman", "halberdier"],
-        "requires": {
-            "age": "feudal-age",
-            "building": ["barracks"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "tarkan",
-        "description": "Hun unique unit. Cavalry with attack bonus vs. buildings.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["elite-tarkan"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["hun"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "teutonic-knight",
-        "description": "Teutonic unique unit. Infantry with effective armor and slow but powerful attack.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "teutonic-knight-line",
-        "example": [],
-        "related": ["elite-teutonic-knight"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["teuton"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "throwing-axeman",
-        "description": "Frankish unique unit. Infantry with ranged attack.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "throwing-axeman-line",
-        "example": [],
-        "related": ["elite-throwing-axeman"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["frank"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "trade-cart",
-        "description": "Used to trade with other players by land.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["trade-cog"],
-        "requires": {
-            "age": "feudal-age",
-            "building": ["market"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "trade-cog",
-        "description": "Used to trade with other players by sea.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["trade-cart"],
-        "requires": {
-            "age": "feudal-age",
-            "building": ["dock"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "transport-ship",
-        "description": "Used to move your units across water.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["none"],
-        "requires": {
-            "age": "dark-age",
-            "building": ["dock"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "trebuchet",
-        "description": "Powerful siege weapon used to destroy buildings, walls from long distance.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["none"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "turtle-ship",
-        "description": "Korean unique unit. Slow, ironclad battleship used to destroy other ships at close range.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "turtle-ship-line",
-        "example": [],
-        "related": ["elite-turtle-ship"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["dock"],
-            "civ": ["korean"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "two-handed-swordsman",
-        "description": "Stronger than Long Swordsman. Cheap and quick to create.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "militiaman-line",
-        "example": [],
-        "related": ["militia", "man-at-arms", "long-swordsman", "champion"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["barracks"],
-            "civ": ["!persian"],
-            "tech": ["ri-two-handed-swordsman"]
-        }
-    },{
-        "name": "villager",
-        "description": "Gathers wood, food, stone, gold. Builds and repairs buildings. Also repairs ships, siege weapons.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "none",
-        "example": [],
-        "related": ["none"],
-        "requires": {
-            "age": "dark-age",
-            "building": ["town-center"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "war-elephant",
-        "description": "Persian unique unit. Slow, powerful, strong, and well-armored cavalry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "war-elephant-line",
-        "example": [],
-        "related": ["elite-war-elephant"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["persian"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "war-galley",
-        "description": "Stronger than Galley.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "galley-line",
-        "example": [],
-        "related": ["galley", "galleon"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["dock"],
-            "civ": ["all"],
-            "tech": ["ri-war-galley"]
-        }
-    },{
-        "name": "war-wagon",
-        "description": "Korean unique unit. Heavily armored horse-drawn archer unit.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "war-wagon-line",
-        "example": [],
-        "related": ["elite-war-wagon"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["korean"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "woad-raider",
-        "description": "Celtic unique unit. Exceptionally quick infantry.",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "section": "UnitId",
-        "wildcard_line": "woad-raider-line",
-        "example": [],
-        "related": ["elite-woad-raider"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["celt"],
-            "tech": ["none"]
-        }
-    }
-]}
+{ 
+    "UnitId": {
+        "description": "Units defined in the game.",
+        "parentcategories": ["ObjectId"],
+        "subcategories": ["UnitClass"],
+        "values": [
+            {
+                "name": "arambai",
+                "description": "Burmese unique unit. Mounted dart thrower.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "arambai-line",
+                "class": "",
+                "related": ["elite-arambai"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["burmese"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "arbalest",
+                "id": 492,
+                "description": "Stronger than Crosbowman. Quick and light.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "archer-line",
+                "class": "archery-class",
+                "related": ["archer", "crossbowman"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["archery-range"],
+                    "civ": ["!berber", "!burmese", "!celt", "!frank", "!goth", "!hun", "!indian", "!persian", "!slav", "!spanish", "!teuton", "!turk"],
+                    "tech": ["ri-arbalest"]
+                }
+            },{
+                "name": "archer",
+                "id": 4,
+                "description": "Quick and light. Weak at close range; excels at battle from distance.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "archer-line",
+                "class": "archery-class",
+                "related": ["crossbowman", "arbalest"],
+                "requires": {
+                    "age": "feudal-age",
+                    "building": ["archery-range"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "ballista-elephant",
+                "description": "Khmer unique unit. Heavy cavalry equipped with a Scorpion. Can fell trees.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "ballista-elephant-line",
+                "example": [],
+                "related": ["elite-ballista-elephant"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["khmer"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "battering-ram",
+                "id": 35,
+                "description": "Slow, lumbering siege weapon used to reduce enemy towns to ruins.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "battering-ram-line",
+                "example": [],
+                "related": ["capped-ram", "siege-ram"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["siege-workshop"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "battle-elephant",
+                "description": "Slow and heavy cavalry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "class": "none",
+                "related": ["elite-battle-elephant"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["stable"],
+                    "civ": ["burmese", "khmer", "malay", "vietnamese"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "berserk",
+                "id": 692,
+                "description": "Viking unique unit. Infantry that slowly heals itself.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "berserk-line",
+                "class": "infantry-class",
+                "related": ["elite-berserk"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["viking"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "bombard-canon",
+                "id": 36,
+                "description": "Powerful mobile anti-building siege weapon.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "class": "siege-weapon-class",
+                "related": ["none"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["siege-workshop"],
+                    "civ": ["!aztec", "!briton", "!celt", "!chinese", "!hun", "!inca", "!indian", "!magyar", "!mayan", "!mongol", "!slav", "!viking"],
+                    "tech": ["ri-chemistry"]
+                }
+            },{
+                "name": "boyar",
+                "description": "Slavic Unique Unit. Heavily armored cavalry; resistant to melee attack.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "boyar-line",
+                "example": [],
+                "related": ["elite-boyar"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["slav"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "camel",
+                "id": 329,
+                "description": "Excels at killing other mounted units.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "camel-line",
+                "class": "cavalry-class",
+                "related": ["heavy-camel", "imperial-camel"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["stable"],
+                    "civ": ["berber", "byzantine", "chinese", "ethiopian", "indian", "malian", "mongol", "persian", "saracen", "turk"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "camel-archer",
+                "description": "Berber unique unit. Cavalry archer with an attack bonus vs. cavalry archers.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "camel-archer-line",
+                "class": "none",
+                "related": ["elite-camel-archer"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["berber"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "cannon-galleon",
+                "description": "Long-range warship used to attack targets on shore to establish beachhead.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "cannon-galleon-line",
+                "class": "none",
+                "related": ["elite-cannon-galleon"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["dock"],
+                    "civ": ["!aztec", "!hun", "!inca", "!mayan"],
+                    "tech": ["ri-cannon-galleon"]
+                }
+            },{
+                "name": "capped-ram",
+                "description": "Stronger than Battering Ram. Slow, lumbering siege weapon used to reduce enemy towns to ruins.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "battering-ram-line",
+                "class": "none",
+                "related": ["battering-ram", "siege-ram"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["siege-workshop"],
+                    "civ": ["all"],
+                    "tech": ["ri-capped-ram"]
+                }
+            },{
+                "name": "caravel",
+                "description": "Portuguese unique unit. Boat effective vs. large fleets because each shot damages multiple units.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "caravel-line",
+                "example": [],
+                "related": ["elite-caravel"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["dock"],
+                    "civ": ["portuguese"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "cataphract",
+                "description": "Byzantine unique unit. Heavily armored cavalry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "cataphract-line",
+                "class": "none",
+                "related": ["elite-cataphract"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["byzantine"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "cavalier",
+                "description": "Stronger than Knight. Fast and heavy cavalry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "knight-line",
+                "class": "none",
+                "related": ["knight", "paladin"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["stable"],
+                    "civ": ["!aztec", "!inca", "!indian", "!mayan", "!saracen"],
+                    "tech": ["ri-cavalier"]
+                }
+            },{
+                "name": "cavalry-archer",
+                "description": "Fast, with ranged attack. Ideal for hit-and-run attacks.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "cavalry-archer-line",
+                "example": [],
+                "related": ["heavy-cavalry-archer"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["archery-range"],
+                    "civ": ["!aztec", "!inca", "!mayan"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "champion",
+                "description": "Stronger than Two-Handed Swordsman. Cheap and quick to create.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "militiaman-line",
+                "example": [],
+                "related": ["militia", "man-at-arms", "long-swordsman", "long-swordsman"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["barracks"],
+                    "civ": ["!ethiopian", "!hun", "!khmer", "!malay", "!mayan", "!persian"],
+                    "tech": ["ri-champion"]
+                }
+            },{
+                "name": "chu-ko-nu",
+                "description": "Chinese unique unit. Archer with mediocre range. Fires large number of arrows very quickly.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "chu-ko-nu-line",
+                "example": [],
+                "related": ["elite-chu-ko-nu"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["chinese"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "condottiero",
+                "description": "Italian mercenary unit. Quick infantry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["none"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["barracks"],
+                    "civ": ["italian"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "conquistador",
+                "description": "Spanish unique unit. Mounted Hand Cannoneer. Powerful close attack, but inaccurate at range.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "conquistador-line",
+                "example": [],
+                "related": ["elite-conquistador"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["spanish"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "crossbowman",
+                "description": "Stronger than Archer. Quick and light.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "archer-line",
+                "example": [],
+                "related": ["archer", "arbalest"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["archery-range"],
+                    "civ": ["!spanish"],
+                    "tech": ["ri-crossbowman"]
+                }
+            },{
+                "name": "demolition-raft",
+                "description": "Filled with explosives. Self-destructs when used.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "demolition-raft-line",
+                "example": [],
+                "related": ["demolition-ship", "heavy-demolition-ship"],
+                "requires": {
+                    "age": "feudal-age",
+                    "building": ["dock"],
+                    "civ": ["!korean"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "demolition-ship",
+                "description": "Filled with explosives. Self-destructs when used.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "demolition-raft-line",
+                "example": [],
+                "related": ["demolition-raft", "heavy-demolition-ship"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["dock"],
+                    "civ": ["!korean"],
+                    "tech": ["ri-war-galley"]
+                }
+            },{
+                "name": "eagle-scout",
+                "description": "Fast infantry with extensive sight.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "eagle-warrior-line",
+                "example": [],
+                "related": ["eagle-warrior", "elite-eagle-warrior"],
+                "requires": {
+                    "age": "feudal-age",
+                    "building": ["barracks"],
+                    "civ": ["aztec", "inca", "mayan"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "eagle-warrior",
+                "description": "Stronger than Eagle Scout. Fast infantry with extensive sight.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "eagle-warrior-line",
+                "example": [],
+                "related": ["eagle-scout", "elite-eagle-warrior"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["barracks"],
+                    "civ": ["aztec", "inca", "mayan"],
+                    "tech": ["ri-eagle-warrior"]
+                }
+            },{
+                "name": "elephant-archer",
+                "description": "Indian unique unit. Heavy mounted archer.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "elephant-archer-line",
+                "example": [],
+                "related": ["elite-elephant-archer"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["indian"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "elite-arambai",
+                "description": "Burmese unique unit. Mounted dart thrower.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "arambai-line",
+                "example": [],
+                "related": ["arambai"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["burmese"],
+                    "tech": ["ri-elite-arambai"]
+                }
+            },{
+                "name": "elite-ballista-elephant",
+                "description": "Khmer unique unit. Heavy cavalry equipped with a Scorpion. Can fell trees.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "ballista-elephant-line",
+                "example": [],
+                "related": ["ballista-elephant"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["khmer"],
+                    "tech": ["ri-elite-ballista-elephant"]
+                }
+            },{
+                "name": "elite-battle-elephant",
+                "description": "Stronger than Battle Elephant. Slow and heavy cavalry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["battle-elephant"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["stable"],
+                    "civ": ["burmese", "khmer", "malay", "vietnamese"],
+                    "tech": ["ri-elite-battle-elephant"]
+                }
+            },{
+                "name": "elite-berserk",
+                "description": "Viking unique unit. Infantry that slowly heals itself.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "berserk-line",
+                "example": [],
+                "related": ["berserk"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["viking"],
+                    "tech": ["ri-elite-berserk"]
+                }
+            },{
+                "name": "elite-boyar",
+                "description": "Slavic Unique Unit. Heavily armored cavalry; resistant to melee attack.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "boyar-line",
+                "example": [],
+                "related": ["boyar"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["slav"],
+                    "tech": ["ri-elite-boyar"]
+                }
+            },{
+                "name": "elite-camel-archer",
+                "description": "Berber unique unit. Cavalry archer with an attack bonus vs. cavalry archers.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "camel-archer-line",
+                "example": [],
+                "related": ["camel-archer"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["berber"],
+                    "tech": ["ri-elite-camel-archer"]
+                }
+            },{
+                "name": "elite-cannon-galleon",
+                "description": "Stronger than Cannon Galleon. Long-range warship used to attack targets on shore to establish beachhead.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "cannon-galleon-line",
+                "example": [],
+                "related": ["cannon-galleon"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["dock"],
+                    "civ": ["berber", "burmese", "byzantine", "indian", "italian", "japanese", "khmer", "malay", "persian", "portuguese", "saracen", "spanish", "turk", "vietnamese", "viking"],
+                    "tech": ["ri-elite-cannon-galleon"]
+                }
+            },{
+                "name": "elite-caravel",
+                "description": "Portuguese unique unit. Boat effective vs. large fleets because each shot damages multiple units.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "caravel-line",
+                "example": [],
+                "related": ["caravel"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["dock"],
+                    "civ": ["portuguese"],
+                    "tech": ["ri-elite-caravel"]
+                }
+            },{
+                "name": "elite-cataphract",
+                "description": "Byzantine unique unit. Heavily armored cavalry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "cataphract-line",
+                "example": [],
+                "related": ["cataphract"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["byzantine"],
+                    "tech": ["ri-elite-cataphract"]
+                }
+            },{
+                "name": "elite-chu-ko-nu",
+                "description": "Chinese unique unit. Archer with mediocre range. Fires large number of arrows very quickly.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "chu-ko-nu-line",
+                "example": [],
+                "related": ["chu-ko-nu"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["chinese"],
+                    "tech": ["ri-elite-chu-ko-nu"]
+                }
+            },{
+                "name": "elite-conquistador",
+                "description": "Spanish unique unit. Mounted Hand Cannoneer. Powerful close attack, but inaccurate at range.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "conquistador-line",
+                "example": [],
+                "related": ["conquistador"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["spanish"],
+                    "tech": ["ri-elite-conquistador"]
+                }
+            },{
+                "name": "elite-eagle-warrior",
+                "description": "Stronger than Eagle Warrior. Fast infantry with extensive sight.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "eagle-warrior-line",
+                "example": [],
+                "related": ["eagle-scout", "eagle-warrior"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["barracks"],
+                    "civ": ["aztec", "inca", "mayan"],
+                    "tech": ["ri-elite-eagle-warrior"]
+                }
+            },{
+                "name": "elite-elephant-archer",
+                "description": "Indian unique unit. Heavy mounted archer.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "elephant-archer-line",
+                "example": [],
+                "related": ["elephant-archer"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["indian"],
+                    "tech": ["ri-elite-elephant-archer"]
+                }
+            },{
+                "name": "elite-gbeto",
+                "description": "Malian unique unit. Quick infantry unit with a high ranged attack.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "gbeto-line",
+                "example": [],
+                "related": ["gbeto"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["malian"],
+                    "tech": ["ri-elite-gbeto"]
+                }
+            },{
+                "name": "elite-genitour",
+                "description": "Berber unique unit. Mounted Skirmisher.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["genitour"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["archery-range"],
+                    "civ": ["berber"],
+                    "tech": ["ri-elite-genitour"]
+                }
+            },{
+                "name": "elite-genoese-crossbowman",
+                "description": "Italian unique unit. Anti cavalry archery unit.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "genoese-crossbowman-line",
+                "example": [],
+                "related": ["genoese-crossbowman"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["italian"],
+                    "tech": ["ri-elite-genoese-crossbowman"]
+                }
+            },{
+                "name": "elite-huskarl",
+                "description": "Gothic unique unit. Infantry with substantial pierce armor, virtually immune to archer fire.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "huskarl-line",
+                "example": [],
+                "related": ["huskarl"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["goth"],
+                    "tech": ["ri-elite-huskarl"]
+                }
+            },{
+                "name": "elite-jaguar-warrior",
+                "description": "Aztec unique unit. Attack bonus vs. other infantry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "janguar-man-line",
+                "class": "infantry-class",
+                "related": ["jaguar-warrior"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["aztec"],
+                    "tech": ["ri-elite-jaguar-warrior"]
+                }
+            },{
+                "name": "elite-janissary",
+                "description": "Turkish unique unit. Hand Cannoneer with longer range and no minimum range. Powerful close attack, but inaccurate at range.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "janissary-line",
+                "example": [],
+                "related": ["janissary"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["turk"],
+                    "tech": ["ri-elite-janissary"]
+                }
+            },{
+                "name": "elite-kamayuk",
+                "description": "Inca unique unit. Infantry unit with attack bonus vs. cavalry. Carries a long spear to infiltrate formations.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "kamayuk-line",
+                "example": [],
+                "related": ["kamayuk"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["inca"],
+                    "tech": ["ri-elite-kamayuk"]
+                }
+            },{
+                "name": "elite-karambit-warrior",
+                "description": "Malay unique unit. Cheap and weak infantry unit that only takes half a population spot.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "karambit-warrior-line",
+                "example": [],
+                "related": ["karambit-warrior"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["malay"],
+                    "tech": ["ri-elite-karambit-warrior"]
+                }
+            },{
+                "name": "elite-longboat",
+                "description": "Viking unique unit. Fires multiple arrows.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "longboat-line",
+                "example": [],
+                "related": ["longboat"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["viking"],
+                    "tech": ["ri-elite-longboat"]
+                }
+            },{
+                "name": "elite-longbowman",
+                "description": "British unique unit. Powerful archer with long range.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "longbowman-line",
+                "example": [],
+                "related": ["longbowman"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["briton"],
+                    "tech": ["ri-elite-longbowman"]
+                }
+            },{
+                "name": "elite-magyar-huszar",
+                "description": "Magyar unique unit. Light cavalry unit with a bonus vs. siege.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "magyar-huszar-line",
+                "example": [],
+                "related": ["magyar-huszar"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["magyar"],
+                    "tech": ["ri-elite-magyar-huszar"]
+                }
+            },{
+                "name": "elite-mameluke",
+                "description": "Saracen unique unit. Camel with hand-to-hand attack at distance. Excels vs. other mounted units.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "mameluke-line",
+                "example": [],
+                "related": ["mameluke"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["saracen"],
+                    "tech": ["ri-elite-mameluke"]
+                }
+            },{
+                "name": "elite-mangudai",
+                "description": "Mongol unique unit. Cavalry archer with attack bonus vs. siege weapons.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "mangudai-line",
+                "example": [],
+                "related": ["mangudai"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["mongol"],
+                    "tech": ["ri-elite-mangudai"]
+                }
+            },{
+                "name": "elite-organ-gun",
+                "description": "Portuguese unique unit. Siege weapon that fires a volley of bullets. Very effective against large groups of units.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "organ-gun-line",
+                "example": [],
+                "related": ["organ-gun"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["portuguese"],
+                    "tech": ["ri-elite-organ-gun"]
+                }
+            },{
+                "name": "elite-plumed-archer",
+                "description": "Mayan unique unit. Strong, fast, well-armored archer with less attack than other archers.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "plumed-archer-line",
+                "example": [],
+                "related": ["plumed-archer"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["mayan"],
+                    "tech": ["ri-elite-plumed-archer"]
+                }
+            },{
+                "name": "elite-rattan-archer",
+                "description": "Vietnamese unique unit. Heavily armored Archer.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "rattan-archer-line",
+                "example": [],
+                "related": ["rattan-archer"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["vietnamese"],
+                    "tech": ["ri-elite-rattan-archer"]
+                }
+            },{
+                "name": "elite-samurai",
+                "description": "Japanese unique unit. Infantry with fast attack.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "samurai-line",
+                "example": [],
+                "related": ["samurai"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["apanese"],
+                    "tech": ["ri-elite-samurai"]
+                }
+            },{
+                "name": "elite-shotel-warrior",
+                "description": "Ethiopian unique unit. Cheap infantry unit with high creation speed.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "shotel-warrior-line",
+                "example": [],
+                "related": ["shotel-warrior"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["ethiopian"],
+                    "tech": ["ri-elite-shotel-warrior"]
+                }
+            },{
+                "name": "elite-skirmisher",
+                "description": "Stronger than Skirmisher. Ranged unit equipped with armor vs. archer attacks.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "skirmisher-line",
+                "example": [],
+                "related": ["skirmisher", "imperial-skirmisher"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["archery-range"],
+                    "civ": ["!turk"],
+                    "tech": ["ri-elite-skirmisher"]
+                }
+            },{
+                "name": "elite-tarkan",
+                "description": "Hun unique unit. Cavalry with attack bonus vs. buildings.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["tarkan"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["hun"],
+                    "tech": ["ri-elite-tarkan"]
+                }
+            },{
+                "name": "elite-teutonic-knight",
+                "description": "Teutonic unique unit. Infantry with effective armor and slow but powerful attack.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "teutonic-knight-line",
+                "example": [],
+                "related": ["teutonic-knight"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["teuton"],
+                    "tech": ["ri-elite-teutonic-knight"]
+                }
+            },{
+                "name": "elite-throwing-axeman",
+                "description": "Frankish unique unit. Infantry with ranged attack.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "throwing-axeman-line",
+                "example": [],
+                "related": ["throwing-axeman"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["frank"],
+                    "tech": ["ri-elite-throwing-axeman"]
+                }
+            },{
+                "name": "elite-turtle-ship",
+                "description": "Korean unique unit. Slow, ironclad battleship used to destroy other ships at close range.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "turtle-ship-line",
+                "example": [],
+                "related": ["turtle-ship"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["dock"],
+                    "civ": ["korean"],
+                    "tech": ["ri-elite-turtle-ship"]
+                }
+            },{
+                "name": "elite-war-elephant",
+                "description": "Persian unique unit. Slow, powerful, strong, and well-armored cavalry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "war-elephant-line",
+                "example": [],
+                "related": ["war-elephant"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["persian"],
+                    "tech": ["ri-elite-war-elephant"]
+                }
+            },{
+                "name": "elite-war-wagon",
+                "description": "Korean unique unit. Heavily armored horse-drawn archer unit.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "war-wagon-line",
+                "example": [],
+                "related": ["war-wagon"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["korean"],
+                    "tech": ["ri-elite-war-wagon"]
+                }
+            },{
+                "name": "elite-woad-raider",
+                "description": "Celtic unique unit. Exceptionally quick infantry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "woad-raider-line",
+                "example": [],
+                "related": ["woad-raider"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["celt"],
+                    "tech": ["ri-elite-woad-raider"]
+                }
+            },{
+                "name": "fast-fire-ship",
+                "description": "Stronger than Fire Ship. Spews fire at other ships.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "fire-galley-line",
+                "example": [],
+                "related": ["fire-galley", "fire-ship"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["dock"],
+                    "civ": ["!burmese", "!celt", "!chinese", "!ethiopian", "!hun", "!indian", "!malian", "!portuguese", "!saracen", "!turk", "!vietnamese", "!viking"],
+                    "tech": ["ri-fast-fire-ship"]
+                }
+            },{
+                "name": "fire-galley",
+                "description": "Spews fire at other ships. Good at sinking Galleys.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "fire-galley-line",
+                "example": [],
+                "related": ["fire-ship", "fast-fire-ship"],
+                "requires": {
+                    "age": "feudal-age",
+                    "building": ["dock"],
+                    "civ": ["!viking"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "fire-ship",
+                "description": "Spews fire at other ships. Good at sinking Galleys.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "fire-galley-line",
+                "example": [],
+                "related": ["fire-galley", "fast-fire-ship"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["dock"],
+                    "civ": ["!viking"],
+                    "tech": ["ri-war-galley"]
+                }
+            },{
+                "name": "fishing-ship",
+                "description": "Gathers food from jumping fish and Fish Traps.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["none"],
+                "requires": {
+                    "age": "dark-age",
+                    "building": ["dock"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "galleon",
+                "description": "Stronger than War Galley.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "galley-line",
+                "example": [],
+                "related": ["galley", "war-galley"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["dock"],
+                    "civ": ["!aztec"],
+                    "tech": ["ri-galleon"]
+                }
+            },{
+                "name": "galley",
+                "description": "Small, fast ship with weak attack.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "galley-line",
+                "example": [],
+                "related": ["war-galley", "galleon"],
+                "requires": {
+                    "age": "feudal-age",
+                    "building": ["dock"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "gbeto",
+                "description": "Malian unique unit. Quick infantry unit with a high ranged attack.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "gbeto-line",
+                "example": [],
+                "related": ["elite-gbeto"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["malian"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "genitour",
+                "description": "Berber unique unit. Mounted Skirmisher.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["elite-genitour"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["archery-range"],
+                    "civ": ["berber"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "genoese-crossbowman",
+                "description": "Italian unique unit. Anti cavalry archery unit.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "genoese-crossbowman-line",
+                "example": [],
+                "related": ["elite-genoese-crossbowman"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["italian"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "halberdier",
+                "description": "Stronger than Spearman. Medium infantry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "spearman-line",
+                "example": [],
+                "related": ["spearman", "pikeman"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["barracks"],
+                    "civ": ["!aztec", "!berber", "!italian", "!malian", "!mongol", "!saracen", "!turk", "!viking"],
+                    "tech": ["ri-halberdier"]
+                }
+            },{
+                "name": "hand-cannoneer",
+                "description": "Powerful close attack; inaccurate at range.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["none"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["archery-range"],
+                    "civ": ["!aztec", "!briton", "!burmese", "!celt", "!chinese", "!ethiopian", "!hun", "!inca", "!magyar", "!malay", "!mayan", "!mongol", "!slav", "!vietnamese", "!viking"],
+                    "tech": ["ri-chemistry"]
+                }
+            },{
+                "name": "heavy-camel",
+                "description": "Stronger than Camel. Excels at killing other mounted units.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "camel-line",
+                "example": [],
+                "related": ["camel", "imperial-camel"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["stable"],
+                    "civ": ["berber", "byzantine", "chinese", "ethiopian", "indian", "malian", "mongol", "persian", "saracen", "turk"],
+                    "tech": ["ri-heavy-camel"]
+                }
+            },{
+                "name": "heavy-cavalry-archer",
+                "description": "Stronger than Cavalry Archer. Fast, with ranged attack.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "cavalry-archer-line",
+                "example": [],
+                "related": ["cavalry-archer"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["archery-range"],
+                    "civ": ["!aztec", "!inca", "!italian", "!malay", "!mayan", "!portuguese", "!teuton", "!viking"],
+                    "tech": ["ri-heavy-cavalry-archer"]
+                }
+            },{
+                "name": "heavy-demolition-ship",
+                "description": "Stronger than Demolition Ship. Filled with explosives. Self-destructs when used.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "demolition-raft-line",
+                "example": [],
+                "related": ["demolition-raft", "demolition-ship"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["dock"],
+                    "civ": ["!aztec", "!burmese", "!ethiopian", "!inca", "!italian", "!japanese", "!khmer", "!korean", "!magyar", "!malay", "!slav"],
+                    "tech": ["ri-heavy-demolition-ship"]
+                }
+            },{
+                "name": "heavy-scorpion",
+                "description": "Stronger than Scorpion. Light artillery that fires large arrowlike bolts.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "scorpion-line",
+                "example": [],
+                "related": ["scorpion"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["siege-workshop"],
+                    "civ": ["!aztec", "!byzantine", "!hun", "!indian", "!italian", "!korean", "!malian", "!portuguese", "!saracen", "!spanish", "!vietnamese"],
+                    "tech": ["ri-heavy-scorpion"]
+                }
+            },{
+                "name": "huskarl",
+                "description": "Gothic unique unit. Infantry with substantial pierce armor, virtually immune to archer fire.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "huskarl-line",
+                "example": [],
+                "related": ["elite-huskarl"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["goth"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "hussar",
+                "description": "Stronger than Light Cavalry. Fast with extensive line of sight.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "scout-cavalry-line",
+                "example": [],
+                "related": ["scout-cavalry", "light-cavalry"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["stable"],
+                    "civ": ["!aztec", "!briton", "!chinese", "!frank", "!inca", "!japanese", "!khmer", "!malay", "!malian", "!mayan", "!portuguese", "!teuton", "!viking", "!vietnamese"],
+                    "tech": ["ri-hussar"]
+                }
+            },{
+                "name": "imperial-camel",
+                "description": "Stronger than Heavy Camel. Excels at killing other mounted units.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "camel-line",
+                "example": [],
+                "related": ["camel", "heavy-camel"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["stable"],
+                    "civ": ["indian"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "imperial-skirmisher",
+                "description": "Stronger than Skirmisher. Ranged unit equipped with armor vs. archer attacks.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "skirmisher-line",
+                "class": "class",
+                "related": ["skirmisher", "elite-skirmisher"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["archery-range"],
+                    "civ": ["vietnamese"],
+                    "tech": ["ri-imperial-skirmisher"]
+                }
+            },{
+                "name": "jaguar-warrior",
+                "description": "Aztec unique unit. Attack bonus vs. other infantry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "janguar-man-line",
+                "class": "infantry-class",
+                "related": ["elite-jaguar-warrior"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["aztec"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "janissary",
+                "description": "Turkish unique unit. Hand Cannoneer with longer range and no minimum range. Powerful close attack, but inaccurate at range.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "janissary-line",
+                "example": [],
+                "related": ["elite-janissary"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["turk"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "kamayuk",
+                "description": "Inca unique unit. Infantry unit with attack bonus vs. cavalry. Carries a long spear to infiltrate formations.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "kamayuk-line",
+                "example": [],
+                "related": ["elite-kamayuk"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["inca"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "karambit-warrior",
+                "description": "Malay unique unit. Cheap and weak infantry unit that only takes half a population spot.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "karambit-warrior-line",
+                "example": [],
+                "related": ["elite-karambit-warrior"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["malay"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "king",
+                "id": 434,
+                "description": "The king unit",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["Only available in certain maps, such as Regicide"],
+                "line": "none",
+                "class": "king-class",
+                "related": [],
+                "requires": {
+                    "age": "dark-age",
+                    "building": ["none"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "knight",
+                "description": "Fast and heavy cavalry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "knight-line",
+                "example": [],
+                "related": ["cavalier", "paladin"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["stable"],
+                    "civ": ["!aztec", "!inca", "!indian", "!mayan"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "light-cavalry",
+                "description": "Stronger than Scout Cavalry. Fast with extensive line of sight.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "scout-cavalry-line",
+                "example": [],
+                "related": ["scout-cavalry", "hussar"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["stable"],
+                    "civ": ["!aztec", "!inca", "!mayan", "!teuton"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "long-swordsman",
+                "description": "Stronger than Man-at-Arms. Cheap and quick to create.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "militiaman-line",
+                "example": [],
+                "related": ["militia", "man-at-arms", "two-handed-swordsman", "champion"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["barracks"],
+                    "civ": ["all"],
+                    "tech": ["ri-long-swordsman"]
+                }
+            },{
+                "name": "longboat",
+                "description": "Viking unique unit. Fires multiple arrows.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "longboat-line",
+                "example": [],
+                "related": ["elite-longboat"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["viking"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "longbowman",
+                "description": "British unique unit. Powerful archer with long range.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "longbowman-line",
+                "example": [],
+                "related": ["elite-longbowman"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["briton"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "magyar-huszar",
+                "description": "Magyar unique unit. Light cavalry unit with a bonus vs. siege.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "magyar-huszar-line",
+                "example": [],
+                "related": ["elite-magyar-huszar"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["magyar"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "mameluke",
+                "description": "Saracen unique unit. Camel with hand-to-hand attack at distance. Excels vs. other mounted units.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "mameluke-line",
+                "example": [],
+                "related": ["elite-mameluke"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["saracen"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "man-at-arms",
+                "description": "Stronger than Militia. Cheap and quick to create.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "militiaman-line",
+                "example": [],
+                "related": ["militia", "long-swordsman", "two-handed-swordsman", "champion"],
+                "requires": {
+                    "age": "feudal-age",
+                    "building": ["barracks"],
+                    "civ": ["all"],
+                    "tech": ["ri-man-at-arms"]
+                }
+            },{
+                "name": "mangonel",
+                "description": "Wheeled siege weapon used to attack a small mass of units.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "mangonel-line",
+                "example": [],
+                "related": ["onager", "siege-onager"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["siege-workshop"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "mangudai",
+                "description": "Mongol unique unit. Cavalry archer with attack bonus vs. siege weapons.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "mangudai-line",
+                "example": [],
+                "related": ["elite-mangudai"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["mongol"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "militia",
+                "description": "Basic infantry swordsman. Cheap and quick to create.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "militiaman-line",
+                "example": [],
+                "related": ["man-at-arms", "long-swordsman", "two-handed-swordsman", "champion"],
+                "requires": {
+                    "age": "dark-age",
+                    "building": ["barracks"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "missionary",
+                "description": "Spanish unique unit. Mounted Monk. Converts enemy units and heals friendly units like Monks, but cannot pick up Relics.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["monk"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["monastery"],
+                    "civ": ["spanish"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "monk",
+                "description": "Slow and weak. Converts enemy units, ships to your civilization (player color). Heals wounded villagers, military units (except siege weapons).",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["missionary"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["monastery"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "onager",
+                "description": "Stronger than Mangonel. Wheeled siege weapon used to attack a small mass of units.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "mangonel-line",
+                "example": [],
+                "related": ["mangonel", "siege-onager"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["siege-workshop"],
+                    "civ": ["!hun", "!turk"],
+                    "tech": ["ri-onager"]
+                }
+            },{
+                "name": "organ-gun",
+                "description": "Portuguese unique unit. Siege weapon that fires a volley of bullets. Very effective against large groups of units.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "organ-gun-line",
+                "example": [],
+                "related": ["elite-organ-gun"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["portuguese"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "paladin",
+                "description": "Stronger than Cavalier. Fast and heavy cavalry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "knight-line",
+                "example": [],
+                "related": ["knight", "cavalier"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["stable"],
+                    "civ": ["byzantine", "celt", "frank", "hun", "magyar", "persian", "spanish", "teuton"],
+                    "tech": ["ri-paladin"]
+                }
+            },{
+                "name": "petard",
+                "description": "Demolition infantry unit armed with explosives. Devastating vs. buildings, ineffective vs. other units. Self-destructs when used.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["none"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "pikeman",
+                "description": "Stronger than Spearman. Medium infantry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "spearman-line",
+                "example": [],
+                "related": ["spearman", "halberdier"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["barracks"],
+                    "civ": ["!turk"],
+                    "tech": ["ri-pikeman"]
+                }
+            },{
+                "name": "plumed-archer",
+                "description": "Mayan unique unit. Strong, fast, well-armored archer with less attack than other archers.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "plumed-archer-line",
+                "example": [],
+                "related": ["elite-plumed-archer"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["mayan"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "rattan-archer",
+                "description": "Vietnamese unique unit. Heavily armored Archer.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "rattan-archer-line",
+                "example": [],
+                "related": ["elite-rattan-archer"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["vietnamese"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "samurai",
+                "description": "Japanese unique unit. Infantry with fast attack.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "samurai-line",
+                "example": [],
+                "related": ["elite-samurai"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["japanese"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "scorpion",
+                "description": "Light artillery that fires large arrowlike bolts.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "scorpion-line",
+                "example": [],
+                "related": ["heavy-scorpion"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["siege-workshop"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "scout-cavalry",
+                "description": "Fast with extensive line of sight.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "scout-cavalry-line",
+                "example": [],
+                "related": ["light-cavalry", "hussar"],
+                "requires": {
+                    "age": "feudal-age",
+                    "building": ["stable"],
+                    "civ": ["!aztec", "!inca", "!mayan"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "shotel-warrior",
+                "description": "Ethiopian unique unit. Cheap infantry unit with high creation speed.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "shotel-warrior-line",
+                "example": [],
+                "related": ["elite-shotel-warrior"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["ethiopian"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "siege-onager",
+                "description": "Stronger than Onager. Wheeled siege weapon used to attack a small mass of units.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "mangonel-line",
+                "example": [],
+                "related": ["mangonel", "onager"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["siege-workshop"],
+                    "civ": ["aztec", "celt", "ethiopian", "korean", "malian", "mongol", "saracen", "slav", "teuton"],
+                    "tech": ["ri-siege-onager"]
+                }
+            },{
+                "name": "siege-ram",
+                "description": "Stronger than Capped Ram. Slow, lumbering siege weapon used to reduce enemy towns to ruins.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "battering-ram-line",
+                "example": [],
+                "related": ["battering-ram", "capped-ram"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["siege-workshop"],
+                    "civ": ["!berber", "!briton", "!burmese", "!frank", "!goth", "!indian", "!italian", "!japanese", "!korean", "!magyar", "!malay", "!malian", "!portuguese", "!teuton", "!vietnamese"],
+                    "tech": ["ri-siege-ram"]
+                }
+            },{
+                "name": "siege-tower",
+                "description": "Siege weapon used to scale enemy walls; resistant to archer attack.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["none"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["siege-workshop"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "skirmisher",
+                "description": "Ranged unit equipped with armor vs. archer attacks.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "skirmisher-line",
+                "example": [],
+                "related": ["elite-skirmisher", "imperial-skirmisher"],
+                "requires": {
+                    "age": "feudal-age",
+                    "building": ["archery-range"],
+                    "civ": ["any"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "slinger",
+                "description": "Inca unique unit. Ranged unit with attack bonus vs. infantry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["none"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["archery-range"],
+                    "civ": ["inca"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "spearman",
+                "description": "Stronger than Long Swordsman. Cheap and quick to create.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "spearman-line",
+                "example": [],
+                "related": ["pikeman", "halberdier"],
+                "requires": {
+                    "age": "feudal-age",
+                    "building": ["barracks"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "tarkan",
+                "description": "Hun unique unit. Cavalry with attack bonus vs. buildings.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["elite-tarkan"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["hun"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "teutonic-knight",
+                "description": "Teutonic unique unit. Infantry with effective armor and slow but powerful attack.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "teutonic-knight-line",
+                "example": [],
+                "related": ["elite-teutonic-knight"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["teuton"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "throwing-axeman",
+                "description": "Frankish unique unit. Infantry with ranged attack.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "throwing-axeman-line",
+                "example": [],
+                "related": ["elite-throwing-axeman"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["frank"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "trade-cart",
+                "description": "Used to trade with other players by land.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["trade-cog"],
+                "requires": {
+                    "age": "feudal-age",
+                    "building": ["market"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "trade-cog",
+                "description": "Used to trade with other players by sea.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["trade-cart"],
+                "requires": {
+                    "age": "feudal-age",
+                    "building": ["dock"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "transport-ship",
+                "description": "Used to move your units across water.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["none"],
+                "requires": {
+                    "age": "dark-age",
+                    "building": ["dock"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "trebuchet",
+                "description": "Powerful siege weapon used to destroy buildings, walls from long distance.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["none"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "turtle-ship",
+                "description": "Korean unique unit. Slow, ironclad battleship used to destroy other ships at close range.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "turtle-ship-line",
+                "example": [],
+                "related": ["elite-turtle-ship"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["dock"],
+                    "civ": ["korean"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "two-handed-swordsman",
+                "description": "Stronger than Long Swordsman. Cheap and quick to create.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "militiaman-line",
+                "example": [],
+                "related": ["militia", "man-at-arms", "long-swordsman", "champion"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["barracks"],
+                    "civ": ["!persian"],
+                    "tech": ["ri-two-handed-swordsman"]
+                }
+            },{
+                "name": "villager",
+                "id": 83,
+                "description": "Gathers wood, food, stone, gold. Builds and repairs buildings. Also repairs ships, siege weapons.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["none"],
+                "requires": {
+                    "age": "dark-age",
+                    "building": ["town-center"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "war-elephant",
+                "id": 239,
+                "description": "Persian unique unit. Slow, powerful, strong, and well-armored cavalry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "war-elephant-line",
+                "class": "none",
+                "related": ["elite-war-elephant"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["persian"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "war-galley",
+                "description": "Stronger than Galley.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "galley-line",
+                "example": [],
+                "related": ["galley", "galleon"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["dock"],
+                    "civ": ["all"],
+                    "tech": ["ri-war-galley"]
+                }
+            },{
+                "name": "war-wagon",
+                "description": "Korean unique unit. Heavily armored horse-drawn archer unit.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "war-wagon-line",
+                "example": [],
+                "related": ["elite-war-wagon"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["korean"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "woad-raider",
+                "description": "Celtic unique unit. Exceptionally quick infantry.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "woad-raider-line",
+                "example": [],
+                "related": ["elite-woad-raider"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["celt"],
+                    "tech": ["none"]
+                }
+            }
+        ]},
+    "UnitClass": {
+        "description": "Unit classes that define general unit types",
+        "parentcategories": ["UnitId"],
+        "values": [
+            {
+                "name": "all-units-class",
+                "id": -1,
+                "description": "Needs defining with number -1. Class contains all units in the game",
+                "note": ["Usage: Piority setting, unit counting, villager management."]
+            },{
+                "name": "archery-cannon-class",
+                "id": 944,
+                "description": "Class containing all hand cannoneer units",
+                "note": ["Included: hand-cannoneer, janissary-line"]
+            },{
+                "name": "archery-class",
+                "id": 900,
+                "description": "Class containing all unmounted ranged archers",
+                "note": ["Included: archer-line, skirmisher-line, chu-ko-nu-line, longbowman-line, plumed-archer-line"]
+            },{
+                "name": "cavalry-archer-class",
+                "id": 936,
+                "description": "Mounted ranged units",
+                "note": ["Included: `cavalry-archer-line`, `mangudai-line`, `war-wagon-line`"]
+            },{
+                "name": "cavalry-cannon-class",
+                "id": 923,
+                "description": "Consists only of conquistador-line",
+                "note": ["Included: `conquistador-line`"]
+            },{
+                "name": "cavalry-class",
+                "id": 912,
+                "description": "Mounted melee units except scout-cavalry",
+                "note": ["Included: `light-cavalry`, `hussar`, `knight-line`, `camel-line`, `cataphract-line`, `war-elephant-line`, `mameluke-line`, `tarkan-line`"]
+            },{
+                "name": "fishing-ship-class",
+                "id": 921,
+                "description": "Contains fishing-ship unit",
+                "note": ["Included: `fishing-ship`"]
+            },{
+                "name": "forage-bush-class",
+                "id": 907,
+                "description": "Contains only gaia forage bush units",
+                "note": ["Included: `forage-bush`"]
+            },{
+                "name": "infantry-class",
+                "id": 906,
+                "description": "Infantry units",
+                "note": ["Included: `militiaman-line`, `spearman-line`, `eagle-warrior-line`, `teutonic-knight-line`, `huskarl-set`, `berserk-line`, `woad-raider-line`, `throwing-axeman-line`, `samurai-line`, `jaguar-man-line`"]
+            },{
+                "name": "king-class",
+                "id": 959,
+                "description": "Containing king units and related heroes",
+                "note": ["Included: `king`"]
+            },{
+                "name": "monastery-class",
+                "id": 918,
+                "description": "Contains all monastery trainable units",
+                "note": ["Included: `monk`, `missionary`"]
+            },{
+                "name": "monk-with-relic-class",
+                "id": 943,
+                "description": "Monks actively holding relics",
+                "note": ["Included: `king`"]
+            },{
+                "name": "packed-trebuchet-class",
+                "id": 951,
+                "description": "Class containing only the packed trebuchet unit, which is the referenced unit \"trebuchet\" (331)",
+                "note": ["Usage: Piority setting, unit counting, villager management."]
+            },{
+                "name": "siege-weapon-class",
+                "id": 913,
+                "description": "All siege weapons",
+                "notes": ["Included: battering-ram-line, mangonel-line, bombard-cannon"]
+            },{
+                "name": "unpacked-trebuchet-class",
+                "id": 954,
+                "description": "Class containing only the unpacked trebuchet unit (42)",
+                "note": ["Usage: Piority setting, unit counting, villager management."]
+            }
+        ]},
+    "UnitLine": {
+        "description": "Unit lines that define progressive unit research lines",
+        "parentcategory": ["UnitId"],
+        "values": [
+            {
+                "name": "archer-line",
+                "id": -299,
+                "description": "Archer line: `archer`, `crossbowman`, `arbalest`"
+            },{
+                "name": "battering-ram-line",
+                "id": -291,
+                "description": "Battering ram line: `battering-ram`, `capped-ram`, `siege-ram`"
+            },{
+                "name": "berserk-line",
+                "id": -282,
+                "description": "Berserk line: `berserk`, `elite-berserk`"
+            },{
+                "name": "camel-line",
+                "id": -288,
+                "description": "Camel line: `camel`, `heavy-camel`"
+            },{
+                "name": "cannon-galleon-line",
+                "id": -285,
+                "description": "Cannon galleon line: `cannon-galleon`, `elite-cannon-galleon`"
+            },{
+                "name": "cataphract-line",
+                "id": -281,
+                "description": "Cataphract line: `cataphract`, `elite-cataphract`"
+            },{
+                "name": "cavalry-archer-line",
+                "id": -298,
+                "description": "Cavalry archer line: `cavalry-archer`, `heavy-cavalry-archer`"
+            },{
+                "name": "chu-ko-nu-line",
+                "id": -280,
+                "description": "Chu ko nu line: `chu-ko-nu`, `elite-chu-ko-nu`"
+            },{
+                "name": "conquistador-line",
+                "id": -264,
+                "description": "Conquistador line: `conquistador`, `elite-conquistador`"
+            },{
+                "name": "demolition-ship-line",
+                "id": -294,
+                "description": "Demolition ship line: `demolition-ship`, `heavy-demolition-ship`"
+            },{
+                "name": "eagle-warrior-line",
+                "id": -267,
+                "description": "Eagle warrior line: `eagle-warrior`, `elite-eagle-warrior`"
+            },{
+                "name": "fire-ship-line",
+                "id": -293,
+                "description": "Fire ship line: `fire-ship`, `fast-fire-ship`"
+            },{
+                "name": "galley-line",
+                "id": -292,
+                "description": "Galley line: `galley`, `war-galley`, `galleon`"
+            },{
+                "name": "huskarl-line",
+                "id": -279,
+                "description": "Huskarl line: `huskarl`, `elite-huskarl`"
+            },{
+                "name": "jaguar-man-line",
+                "id": -268,
+                "description": "Jaguar warrior line: `jaguar-warrior`, `elite-jaguar-warrior`"
+            },{
+                "name": "janissary-line",
+                "id": -278,
+                "description": "Janissary line: `janissary`, `elite-janissary`"
+            },{
+                "name": "knight-line",
+                "id": -287,
+                "description": "Knight line: `knight`, `cavalier`, `paladin`"
+            },{
+                "name": "longboat-line",
+                "id": -284,
+                "description": "Longboat line: `longboat`, `elite-longboat`"
+            },{
+                "name": "longbowman-line",
+                "id": -277,
+                "description": "Longbowman line: `longbowman`, `elite-longbowman`"
+            },{
+                "name": "militiaman-line",
+                "id": -296,
+                "description": "Militiaman line: `militiaman`, `man-at-arms`, `long-swordsman`, `two-handed-swordsman`, `champion`"
+            },{
+                "name": "mameluke-line",
+                "id": -276,
+                "description": "Mameluke line: `mameluke`, `elite-mameluke`"
+            },{
+                "name": "mangonel-line",
+                "id": -290,
+                "description": "Mangonel line: `mangonel`, `onager`, `siege-onager`"
+            },{
+                "name": "mangudai-line",
+                "id": -275,
+                "description": "Mangudai line: `mangudai`, `elite-mangudai`"
+            },{
+                "name": "plumed-archer-line",
+                "id": -266,
+                "description": "Plumed archer line: `plumed-archer`, `elite-plumed-archer`"
+            },{
+                "name": "samurai-line",
+                "id": -274,
+                "description": "Samurai line: `samurai`, `elite-samurai`"
+            },{
+                "name": "scorpion-line",
+                "id": -289,
+                "description": "Scorpion line: `scorpion`, `heavy-scorpion`"
+            },{
+                "name": "scout-cavalry-line",
+                "id": -286,
+                "description": "Scout cavalry line: `scout-cavalry`, `light-cavalry`, `hussar`"
+            },{
+                "name": "skirmisher-line",
+                "id": -297,
+                "description": "Skirmisher line: `skirmisher`, `elite-skirmisher`, `imperial-skirmisher`"
+            },{
+                "name": "spearman-line",
+                "id": -295,
+                "description": "Spearman line: `spearman`, `pikeman`, `halberdier`"
+            },{
+                "name": "tarkan-line",
+                "id": -265,
+                "description": "Tarkan line: `tarkan`, `elite-tarkan`"
+            },{
+                "name": "teutonic-knight-line",
+                "id": -273,
+                "description": "Teutonic knight line: `teutonic-knight`, `elite-teutonic-knight`"
+            },{
+                "name": "throwing-axeman-line",
+                "id": -272,
+                "description": "Throwing axeman line: `throwing-axeman`, `elite-throwing-axeman`"
+            },{
+                "name": "turtle-ship-line",
+                "id": -283,
+                "description": "Turtle ship line: `turtle-ship`, `elite-turtle-ship`"
+            },{
+                "name": "villager",
+                "id": 83,
+                "description": "All villagers of both gender and any occupation (there's 21 separate villager types)"
+            },{
+                "name": "war-elephant-line",
+                "id": -271,
+                "description": "War elephant line: `war-elephant`, `elite-war-elephant`"
+            },{
+                "name": "war-wagon-line",
+                "id": -270,
+                "description": "War wagon line: `war-wagon`, `elite-war-wagon`"
+            },{
+                "name": "woad-raider-line",
+                "id": -269,
+                "description": "Woad raider line: `woad-raider`, `elite-woad-raider`"
+            }
+        ]},
+    "UnitSet": {
+        "description": "Userpatch sets that allow better counting of units (should not use with training actions). Only use with UP counting facts",
+        "values": [
+            {
+                "name": "huskarl-set",
+                "id": 972,
+                "description": "Castle and barracks huskarls"
+            },{
+                "name": "monk-set",
+                "id": 970,
+                "description": "Monks and monks with relics"
+            },{
+                "name": "trebuchet-set",
+                "id": 971,
+                "description": "Packed and unpacked trebuchets"
+            },{
+                "name": "villager-base",
+                "id": 984,
+                "description": "Untasked and attacking villagers"
+            },{
+                "name": "villager-builder",
+                "id": 982,
+                "description": "All builders (male and female)"
+            },{
+                "name": "villager-farmer",
+                "id": 975,
+                "description": "All farmers (male and female)"
+            },{
+                "name": "villager-fisherman",
+                "id": 977,
+                "description": "All fishers (male and female)"
+            },{
+                "name": "villager-food",
+                "id": 978,
+                "description": "All food gatherers (male and female fishers, farmers, foragers, hunters, sheperds)"
+            },{
+                "name": "villager-forager",
+                "id": 974,
+                "description": "All foragers (male and female)"
+            },{
+                "name": "villager-gold",
+                "id": 981,
+                "description": "All gold miners (male and female)"
+            },{
+                "name": "villager-hunter",
+                "id": 976,
+                "description": "All hunters (male and female boar/deer hunters)"
+            },{
+                "name": "villager-repairer",
+                "id": 983,
+                "description": "All repairers (male and female)"
+            },{
+                "name": "villager-shepherd",
+                "id": 973,
+                "description": "All shepherds (male and female)"
+            },{
+                "name": "villager-stone",
+                "id": 980,
+                "description": "All stone miners (male and female)"
+            },{
+                "name": "villager-wood",
+                "id": 979,
+                "description": "All wood choppers (male and female)"
+            }
+        ]}
+}

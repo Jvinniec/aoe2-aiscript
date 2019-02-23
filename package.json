@@ -1,7 +1,14 @@
 {
     "name": "aoe2-aiscript",
-    "displayName": "Aoe2 AiScript",
+    "displayName": "AoE2 AiScript",
     "description": "Command tooltips and syntax highlighting for Age of Empires 2 AI scripts",
+    "keywords": [
+        "aoe2",
+        "aoe II",
+        "age of empires",
+        "age of empires II",
+        "ai scripting"
+    ],
     "version": "0.2.0-dev",
     "license": "GPL-3.0-or-later",
     "author": "jvinniec",
@@ -12,7 +19,7 @@
         "url": "https://github.com/Jvinniec/aoe2-aiscript.git"
     },
     "activationEvents": [
-        "onLanguage:aiscript"
+        "onLanguage:aoe2aiscript"
     ],
     "main": "./languageExtension/out/extension",
     "badges": [
@@ -29,10 +36,10 @@
     "contributes": {
         "languages": [
             {
-                "id": "aiscript",
+                "id": "aoe2aiscript",
                 "aliases": [
-                    "AiScript",
-                    "aiscript"
+                    "Aoe2 AiScript",
+                    "aoe2aiscript"
                 ],
                 "extensions": [
                     ".per"
@@ -72,7 +79,7 @@
                         "parametersOnly",
                         "full"
                     ],
-                    "default": "parametersOnly",
+                    "default": "off",
                     "description": "Controls whether parameter help will be provided as you write commands."
                 },
                 "aoe2_AiScript.enableHoverHelp": {
@@ -89,15 +96,15 @@
         },
         "grammars": [
             {
-                "language": "aiscript",
+                "language": "aoe2aiscript",
                 "scopeName": "source.per",
-                "path": "./syntaxes/aiscript.tmLanguage.json"
+                "path": "./syntaxes/aoe2aiscript.tmLanguage.json"
             }
         ],
         "snippets": [
             {
-                "language": "aiscript",
-                "path": "./snippets/aiscript.tmSnippets.json"
+                "language": "aoe2aiscript",
+                "path": "./snippets/aoe2aiscript.tmSnippets.json"
             }
         ]
     },
