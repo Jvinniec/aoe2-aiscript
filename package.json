@@ -2,14 +2,14 @@
     "name": "aoe2-aiscript",
     "displayName": "AoE2 AiScript",
     "description": "Command tooltips and syntax highlighting for Age of Empires 2 AI scripts",
+    "version": "0.1.5",
     "keywords": [
         "aoe2",
-        "aoe II",
+        "empires",
         "age of empires",
         "age of empires II",
         "ai scripting"
     ],
-    "version": "0.1.5",
     "license": "GPL-3.0-or-later",
     "author": "jvinniec",
     "publisher": "jvinniec",
