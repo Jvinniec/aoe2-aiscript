@@ -1,11 +1,10 @@
 # AoE2 AiScript
 
-[![Version-GH](https://badge.fury.io/gh/jvinniec%2Faoe2-aiscript.svg)](https://github.com/Jvinniec/aoe2-aiscript.git)
 [![Version](https://vsmarketplacebadge.apphb.com/version-short/jvinniec.aoe2-aiscript.svg)](https://marketplace.visualstudio.com/items?itemName=jvinniec.aoe2-aiscript)
 [![Installs](https://vsmarketplacebadge.apphb.com/installs/jvinniec.aoe2-aiscript.svg)](https://marketplace.visualstudio.com/items?itemName=jvinniec.aoe2-aiscript)
 [![Rating](https://vsmarketplacebadge.apphb.com/rating-short/jvinniec.aoe2-aiscript.svg)](https://marketplace.visualstudio.com/items?itemName=jvinniec.aoe2-aiscript)
 
-This extension serves as a syntax highlighting tool for writing ai scripts in AoE2. It will apply this highlighting to any `.per` files that are loaded in vscode.
+This extension serves as a syntax highlighting tool for writing AI scripts in Age of Empires 2. It will apply this highlighting to any `.per` files that are loaded in vscode. See the 'Experimental Features' section for a list of additional features that are available.
 
 
 ## Features
