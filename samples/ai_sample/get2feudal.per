@@ -12,8 +12,6 @@
 (defconst max-dark-villagers 20)    ; Maximum villagers in dark-age
 (defconst max-dark-houses 5)        ; Maximum houses in dark-age
 
-(defconst gl-game-time 1)           ; Most recently stored value of `game-time`
-
 ; Set the default values for dark-age
 (defrule
     (true)
@@ -66,12 +64,13 @@
 (defrule
     (unit-type-count villager > 0)
     (up-can-build 0 c: town-center)
+    (building-type-count-total town-center-foundation > 0)
     =>
     (up-build place-normal 0 c: town-center)
     (up-jump-rule 1)
 )
 
-; Resign because we don't have the town center
+; Resign because we don't have a town center and no way to build one
 (defrule
     (true)
     =>
@@ -84,8 +83,8 @@
 (defrule
     (current-age == feudal-age)
     =>
-    (up-get-fact game-time 0 gl-game-time)
-    (up-chat-data-to-all "I made it to the feudal-age in %d seconds!" c: gl-game-time)
+    (up-get-fact game-time 0 cur-game-time)
+    (up-chat-data-to-all "I made it to the feudal-age in %d seconds!" c: cur-game-time)
     (chat-to-all "This was my only mission in life. Good-bye and GG!")
     (resign)
 )
