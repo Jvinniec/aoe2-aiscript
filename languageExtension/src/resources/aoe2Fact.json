@@ -61,7 +61,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A value for comparison"
@@ -79,7 +79,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A value for comparison"
@@ -100,7 +100,7 @@
                 "note": "A building ID"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A value for comparison"
@@ -121,7 +121,7 @@
                 "note": "A building ID"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A value for comparison"
@@ -462,7 +462,7 @@
                 "note": "A player number or one of the `any-`/`every-` PlayerId wildcards"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -489,7 +489,7 @@
                 "note": "Valid BuildingId or BuildingLine wildcard"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -512,7 +512,7 @@
                 "note": "A player number or one of the `any-`/`every-` PlayerId wildcards"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -538,7 +538,7 @@
                 "note": "A valid UnitId or UnitLine wildcard"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -751,7 +751,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Difficulty",
                 "note": "Difficulty level (`easiest` > `easy` > `moderate` > `hard` > `hardest`)"
@@ -789,7 +789,7 @@
                 "note": "A resource ID (`food`, `wood`, `stone`, `gold`, `deer-hunting`, `boar-hunting`, `hunting`, `live-boar`)"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -878,7 +878,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value to be checked"
@@ -1093,7 +1093,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -1235,7 +1235,7 @@
                 "note": "Building type to be checked (accepts wildcards)"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -1274,7 +1274,7 @@
                 "note": "Player number to check"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Number for comparison"
@@ -1295,7 +1295,7 @@
                 "note": "Player ID to be checked"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "AgeId",
                 "note": "A given age"
@@ -1316,7 +1316,7 @@
                 "note": "Player ID to be checked"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A given time in seconds"
@@ -1337,7 +1337,7 @@
                 "note": "Player ID to be checked"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Number for comparison"
@@ -1358,7 +1358,7 @@
                 "note": "Player ID to be checked"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Number for comparison"
@@ -1379,7 +1379,7 @@
                 "note": "Player ID to be checked"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Number for comparison"
@@ -1421,7 +1421,7 @@
                 "note": "A resource type to check"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value to compare to"
@@ -1445,7 +1445,7 @@
                 "note": "A resource type to check"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value to compare to"
@@ -1467,7 +1467,7 @@
                 "note": "Player ID to be checked"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value to compare to"
@@ -1493,7 +1493,7 @@
                 "note": "A given unit ID"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value to compare to"
@@ -1511,7 +1511,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value to compare to"
@@ -1529,7 +1529,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value to compare to"
@@ -1547,7 +1547,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value to compare to"
@@ -1565,7 +1565,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value to compare to"
@@ -1682,7 +1682,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -1718,7 +1718,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "AgeId",
                 "note": "An age ID"
@@ -1754,7 +1754,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -1775,7 +1775,7 @@
                 "note": "A user set strategic number"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -1861,7 +1861,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -1879,7 +1879,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -1900,7 +1900,7 @@
                 "note": "A valid unit ID"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -1921,7 +1921,7 @@
                 "note": "A valid unit ID"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -1957,7 +1957,7 @@
                 "note": "1 or 2 (1=between 10 and 20 tiles from the starting Town Center, 2=between 18 and 30 tiles)"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison (0 - 100)"
@@ -1978,7 +1978,7 @@
                 "note": "1 or 2 (1=between 10 and 20 tiles from the starting Town Center, 2=between 18 and 30 tiles)"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison (0 - 100)"
@@ -1996,7 +1996,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison (0 - 100)"
@@ -2014,7 +2014,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "Value for comparison"
@@ -2065,7 +2065,7 @@
                 "note": "The goal that will be compared."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2086,7 +2086,7 @@
                 "note": "The strategic number that will be compared."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2107,7 +2107,7 @@
                 "note": "The constant that will be compared."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2361,7 +2361,7 @@
                 "note": "The resource to check (food, wood, stone, gold, or the UnitId of the resource)"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2390,7 +2390,7 @@
                 "note": "The resource to check (food, wood, stone, gold, or the UnitId of the resource)"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2418,7 +2418,7 @@
                 "note": "The object to check (UnitId or BuildingId)"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2443,7 +2443,7 @@
                 "note": "The object to check (UnitId or BuildingId)"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2468,7 +2468,7 @@
                 "note": "a UnitId or BuildingId to be checked"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2512,7 +2512,7 @@
                 "note": "The technology to check."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "ResearchState",
                 "note": "The research state to compare with."
@@ -2533,7 +2533,7 @@
                 "note": "The timer to check."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "TimerState",
                 "note": "The timer status to compare with."
@@ -2560,7 +2560,7 @@
                 "note": "The player(s) to check."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2590,7 +2590,7 @@
                 "note": "The stance of players to check."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2609,7 +2609,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2628,7 +2628,7 @@
         "param": [ 
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2647,7 +2647,7 @@
         "param": [ 
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2666,7 +2666,7 @@
         "param": [
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2688,7 +2688,7 @@
                 "note": "The source of the projectile to check."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "The time in milliseconds (integer)."
@@ -2707,7 +2707,7 @@
         "param": [ 
             {
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2731,7 +2731,7 @@
                 "note": "The type of building that will be checked."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2771,7 +2771,7 @@
                 "note": "The source of the projectile to check."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "ClassID",
                 "note": "The class of the object that was targeted."
@@ -2795,7 +2795,7 @@
                 "note": "The type of unit that will be checked."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2819,7 +2819,7 @@
                 "note": "The type of villager that will be checked."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2861,7 +2861,7 @@
                 "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -2882,7 +2882,7 @@
                 "note": "The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "TerrainID",
                 "note": "A terrain id for comparison (0-41)"
@@ -2984,7 +2984,7 @@
                 "note": "The text to match."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "The number that will be used in the operation."
@@ -3006,7 +3006,7 @@
                 "note": "The goal that will be compared."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "GuardFlag",
                 "note": "A flag to check."
@@ -3048,7 +3048,7 @@
                 "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -3069,7 +3069,7 @@
                 "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -3093,7 +3093,7 @@
                 "note": "Set to 1 to require an open destination tile or 0 to allow for a few tiles of separation."
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
@@ -3117,7 +3117,7 @@
                 "note": "The group id (0-9)"
             },{
                 "type": "RelOp",
-                "note": "Relational operator"
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."

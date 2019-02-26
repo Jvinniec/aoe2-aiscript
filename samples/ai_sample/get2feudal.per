@@ -1,0 +1,90 @@
+;---------------------------------------------------------------------;
+; Filename: get2feudal.per
+; Author: J.V. Cardenzana
+;---------------------------------------------------------------------;
+; Discription:
+;       This file provides a sample of a few rules that demonstrate
+;       how the syntax hylighting is suppose to behave. It allows for
+;       testing the different syntax highlighting regular expressions
+;       to ensure that everything works correctly.
+;---------------------------------------------------------------------;
+
+(defconst max-dark-villagers 20)    ; Maximum villagers in dark-age
+(defconst max-dark-houses 5)        ; Maximum houses in dark-age
+
+; Set the default values for dark-age
+(defrule
+    (true)
+    =>
+    (set-strategic-number sn-percent-civilian-explorers  0)
+    (set-strategic-number sn-food-gatherer-percentage   60)
+    (set-strategic-number sn-wood-gatherer-percentage   35)
+    (set-strategic-number sn-stone-gatherer-percentage   5)
+    (disable-self)
+)
+
+; Train villagers in the dark age
+(defrule
+    (current-age == dark-age)
+    (unit-type-count-total villager < max-dark-villagers)
+    (can-train villager)
+    =>
+    (train villager)
+)
+
+; Build houses, but only if we're not huns
+#load-if-not-defined HUN-CIV
+(defrule
+    (current-age == dark-age)
+    (building-type-count house < max-dark-houses)
+    (can-build house)
+    =>
+    (build house)
+)
+#end-if
+
+; Advance to the feudal-age if we can
+(defrule
+    (up-compare-const go-to-feudal == 1)        ; Tests if we can get consts from higher up
+    (current-age == dark-age)
+    (up-can-research 0 c: feudal-age)
+    =>
+    (research feudal-age)
+    ; dont disable, just in case the TC is destroyed
+)
+
+; Make sure we still have a TC
+(defrule
+    (building-type-count town-center > 0)
+    =>
+    (up-jump-rule 2)
+)
+
+; Rebuild the TC if it is destroyed
+(defrule
+    (unit-type-count villager > 0)
+    (up-can-build 0 c: town-center)
+    (building-type-count-total town-center-foundation > 0)
+    =>
+    (up-build place-normal 0 c: town-center)
+    (up-jump-rule 1)
+)
+
+; Resign because we don't have a town center and no way to build one
+(defrule
+    (true)
+    =>
+    (chat-to-all "I have no town-center and I cannot build one :(")
+    (chat-to-all "You have bested me. GG")
+    (resign)
+)
+
+; Resign if we reach feudal age
+(defrule
+    (current-age == feudal-age)
+    =>
+    (up-get-fact game-time 0 cur-game-time)
+    (up-chat-data-to-all "I made it to the feudal-age in %d seconds!" c: cur-game-time)
+    (chat-to-all "This was my only mission in life. Good-bye and GG!")
+    (resign)
+)

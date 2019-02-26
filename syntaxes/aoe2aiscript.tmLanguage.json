@@ -3,12 +3,16 @@
 	"name": "AiScript",
 	"patterns": [
 		{
+			"include": "#fact-expression"
+		},{
+			"include": "#loads"
+		},{
+			"include": "#action"
+		},{
 			"include": "#keywords"
-		},
-		{
+		},{
 			"include": "#strings"
-		},
-		{
+		},{
 			"include": "#comments"
 		}
 	],
@@ -19,47 +23,73 @@
 					"name": "variable.other.aoe2aiscript.resource",
 					"match": "(?<!-)\\b(food|wood|gold|stone)\\b(?!-)"
 				},{
+					"name": "constant.numeric.aoe2aiscript",
+					"match": "\\s-?\\d+(?!-)"
+				},{
 					"name": "aoe2aiscript.age",
 					"match": "\\b(dark|feudal|castle|imperial)-age\\b"
-				},{
-					"name": "entity.name.function.aoe2aiscript.command.jump",
-					"match": "(?<=\\()\\s*(up-jump-\\w+)"
 				},{
 					"name": "aoe2aiscript.tech",
 					"match": "\\bri-(\\w+-?)+\\b"
 				},{
-					"name": "constant.numeric.aoe2aiscript",
-					"match": "\\s-?\\d+(?!-)"
-				},{
-					"name": "keyword.control.aoe2aiscript.defconst",
-					"match": "\\b(defconst)\\b"
-				},{
-					"name": "keyword.control.aoe2aiscript.defaultaction",
-					"match": "\\b(disable-self|do-nothing)\\b"
-				},{
-					"name": "keyword.control.aoe2aiscript.loadifelse",
-					"match": "(#else|#end-if|#load-if-(not-)*defined)"
-				},{
-					"name": "keyword.control.aoe2aiscript.loadfile",
-					"match": "(?<=\\()\\s*(load|load-random)(?=\\s)"
-				},{
 					"name": "keyword.control.aoe2aiscript.control",
 					"match": "(?<!-)(?<=\\()\\s*\\b(and|nand|nor|not|or)\\b(?!-)"
 				},{
-					"name": "storage.type.aoe2aiscript.defrule",
-					"match": "(?<=\\()\\s*\\b(defrule)\\b"
-				},{
 					"name": "constant.language.aoe2aiscript.truefalse",
-					"match": "\\b(true|false)\\b"
+					"match": "(?<=\\()(?:\\s*)\\b(true|false)\\b(?:\\s*)(?=\\))"
+				}
+			]},
+		"action": {
+			"patterns": [
+				{
+					"name": "keyword.control.aoe2aiscript.defact.disableself",
+					"match": "\\b(disable-self)\\b"
 				},{
-					"name": "support.type.aoe2aiscript.yields",
-					"match": "=>"
+					"name": "keyword.control.aoe2aiscript.defact.donothing",
+					"match": "\\b(do-nothing)\\b"
 				},{
-					"name": "entity.name.function.aoe2aiscript.command",
+					"name": "entity.name.function.aoe2aiscript.action.jump",
+					"match": "(?<=\\()\\s*(up-jump-\\w+)"
+				},{
+					"name": "storage.type.aoe2aiscript.def.const",
+					"match": "\\b(defconst)\\b"
+				},{
+					"name": "entity.name.function.aoe2aiscript.action",
 					"match": "(?<=\\()\\s*(\\w+-?)+"
 				}
-			]
-		},
+			]},
+		"loads": {
+			"patterns": [
+				{
+					"name": "keyword.control.aoe2aiscript.load.if",
+					"match": "(#load-if-(not-)*defined)"
+				},{
+					"name": "keyword.control.aoe2aiscript.load.elseend",
+					"match": "(#else|#end-if)"
+				},{
+					"name": "keyword.control.aoe2aiscript.load.file",
+					"match": "(?<=\\()\\s*(load|load-random)(?=\\s)"
+				}
+			]},
+		"fact-expression": {
+			"begin": "(?<=\\()defrule",
+			"end": "=>",
+			"beginCaptures": {
+				"0": {"name": "storage.type.aoe2aiscript.def.rule"}
+			},
+			"endCaptures": {
+				"0": {"name": "support.type.aoe2aiscript.yields"}
+			},
+			"name": "keywords.factgroup",
+			"patterns": [
+				{"include": "#keywords"},
+				{"include": "#comments"},
+				{"include": "#strings"},
+				{
+					"name": "entity.name.function.aoe2aiscript.fact",
+					"match": "(?<=\\()\\s*(\\w+-?)+"
+				}
+			]},
 		"strings": {
 			"name": "string.quoted.double.aoe2aiscript",
 			"begin": "\"",
@@ -69,8 +99,7 @@
 					"name": "constant.character.escape.aoe2aiscript",
 					"match": "\\\\."
 				}
-			]
-		},
+			]},
 		"comments": {
 			"name": "comment.line.semicolon",
 			"begin": ";",
@@ -80,8 +109,7 @@
 					"name": "comment.line.double-slash",
 					"match": "\\\\."
 				}
-			]
-		}
+			]}
 	},
 	"scopeName": "source.per"
 }

@@ -52,7 +52,7 @@
             "title": "AoE2 AiScript",
             "properties": {
                 "aoe2_AiScript.updateErrorsWhen": {
-                    "scope": "resource",
+                    "scope": "resource.aiscript",
                     "type": "string",
                     "enum": [
                         "onSave",
@@ -61,8 +61,15 @@
                     "default": "onSave",
                     "description": "Controls when error squiggles are updated. Default: update only when the file is saved. Change to 'onChange' to update whenever the file is edited (this may have some performance cost for large files)."
                 },
+                "aoe2_AiScript.maxErrorsReported": {
+                    "scope": "resource.aiscript",
+                    "type": "integer",
+                    "minimum": -1,
+                    "default": 100,
+                    "description": "Controls the maximum number of errors reported in a file. '-1' means no limit."
+                },
                 "aoe2_AiScript.enableCompletionHelp": {
-                    "scope": "resource",
+                    "scope": "resource.aiscript",
                     "type": "boolean",
                     "enum": [
                         true,
@@ -72,8 +79,8 @@
                     "description": "Controls whether completion suggestions features will be enabled."
                 },
                 "aoe2_AiScript.enableParameterHelp": {
-                    "scope": "resource",
                     "type": "string",
+                    "scope": "resource.aiscript",
                     "enum": [
                         "off",
                         "parametersOnly",
@@ -83,7 +90,7 @@
                     "description": "Controls whether parameter help will be provided as you write commands."
                 },
                 "aoe2_AiScript.enableHoverHelp": {
-                    "scope": "resource",
+                    "scope": "resource.aiscript",
                     "type": "boolean",
                     "enum": [
                         true,
