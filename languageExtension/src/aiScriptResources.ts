@@ -75,13 +75,12 @@ interface AiScriptCommand {
 }
 
 // Initialize the parameter list
-let ai_script_parameters: AiScriptPar[] = [];
-
+let ai_script_parameters: Map<string, AiScriptPar> = new Map();
 
 /**********************************************************************//**
  * Loads all parameters from the resource files
  **************************************************************************/
-function loadAoE2Parameters(): AiScriptPar[] {
+function loadAoE2Parameters(): Map<string, AiScriptPar> {
 
     // Fill all the parameters
 	loadBuildings();
@@ -100,14 +99,14 @@ function loadAoE2Parameters(): AiScriptPar[] {
  * Loads facts, actions and factactions
  **************************************************************************/
 function loadCommands() {
-	aoe2facts.Fact.values.forEach(element => {
-		ai_script_parameters.push(getCommandPar(element, "Fact"));
+	aoe2facts.Fact.values.forEach(fact => {
+		ai_script_parameters[fact.name] = getCommandPar(fact, "Fact");
 	});
-	aoe2actions.Action.values.forEach(element => {
-		ai_script_parameters.push(getCommandPar(element, "Action"));
+	aoe2actions.Action.values.forEach(action => {
+		ai_script_parameters[action.name] = getCommandPar(action, "Action");
 	});
-	aoe2factaction.FactAction.values.forEach(element => {
-		ai_script_parameters.push(getCommandPar(element, "FactAction"));
+	aoe2factaction.FactAction.values.forEach(faction => {
+		ai_script_parameters[faction.name] = getCommandPar(faction, "FactAction");
 	});
 }
 
@@ -139,12 +138,12 @@ function loadBuildings() {
 			if (building.requires !== undefined)
 				build_descrip += getRequiresText(building.requires);
 
-			ai_script_parameters.push( {
+			ai_script_parameters[building.name] = {
 				label:       building.name,
 				description: build_descrip,
 				section:     buildkey,
 				requires:    building.requires
-			});
+			};
 		});
 	});
 }
@@ -165,7 +164,8 @@ function loadCivs() {
 				civ_unique   = civ.unique;
 			} else {
 				let civ_par = undefined;
-				ai_script_parameters.forEach(element => {
+				Object.keys(ai_script_parameters).forEach(key => {
+					let element = ai_script_parameters[key];
 					if ((element.section == civ.link.type) && (element.label == civ.link.value))
 						civ_par = element;
 				});
@@ -174,12 +174,12 @@ function loadCivs() {
 			}
 
 			// Add the civ info
-			ai_script_parameters.push({
+			ai_script_parameters[civ.name] = {
 				label:       civ.name,
 				description: civ_descrip,
 				section:     civkey,
-				unique:      civ.unique
-			});
+				unique:      civ_unique
+			};
 		});
 	});
 }
@@ -193,12 +193,12 @@ function loadMisc() {
 	// Loop over all keys and all items in each key
 	Object.keys(aoe2misc).forEach(misc => {
 		aoe2misc[misc].values.forEach(item => {
-			ai_script_parameters.push({
+			ai_script_parameters[item.name] = {
 				label:       item.name,
 				description: item.description,
 				section:     misc,
 				id:          item.id
-			});
+			};
 		});
 	});
 }
@@ -210,11 +210,11 @@ function loadMisc() {
 function loadStrategicNumbers() {
 
 	aoe2stratnum.StrategicNumber.forEach(num => {
-		ai_script_parameters.push( {
+		ai_script_parameters[num.name] = {
 			label:       num.name,
 			description: num.notes,
 			section:     "StrategicNumber"
-		});
+		};
 	});
 }
 
@@ -225,12 +225,12 @@ function loadStrategicNumbers() {
 function loadTechs() {
 
 	aoe2techs.TechID.forEach(tech => {
-		ai_script_parameters.push( {
+		ai_script_parameters[tech.name] = {
 			label:       tech.name,
 			description: tech.description + getRequiresText(tech.requires),
 			section:     "TechId",
 			requires:    tech.requires
-		});
+		};
 	});
 }
 
@@ -249,12 +249,12 @@ function loadUnits() {
 			if (unit.class !== undefined)
 				unit_descrip += "\n* class: " + unit.class;
 
-			ai_script_parameters.push( {
+			ai_script_parameters[unit.name] = {
 				label:       unit.name,
 				description: unit_descrip,
 				section:     unitkey,
 				requires:    unit.requires
-			});
+			};
 		});
 	});
 }
@@ -288,7 +288,7 @@ function getParamText(params: Array<{type: string, note: string}>) {
 function getExampleText(example: Array<{title: string, data: string}>) {
 	let exText = "";
 	if (example.length > 0) {
-		// Replace '>', '<'
+		// Replace '>', '<', '"'
 		let elementData = example[0].data;
 		elementData = elementData.split('&lt;').join('<');
 		elementData = elementData.split('&gt;').join('>');

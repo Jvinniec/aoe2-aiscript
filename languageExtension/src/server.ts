@@ -29,6 +29,10 @@ import {
 	loadAoE2Parameters
 } from './aiScriptResources';
 
+import {
+	AiScriptParser
+} from './aiScriptParser';
+
 // Create a connection for the server. The connection uses Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
 let connection = createConnection(ProposedFeatures.all);
@@ -42,7 +46,7 @@ let hasWorkspaceFolderCapability: boolean              = false;
 let hasDiagnosticRelatedInformationCapability: boolean = false;
 
 // List of parameters
-let aiScriptPars: AiScriptPar[] = loadAoE2Parameters();
+let aiScriptPars: Map<string, AiScriptPar> = loadAoE2Parameters();
 let aiScriptCompletionList: CompletionList = {items: [], isIncomplete: false};
 
 
@@ -232,42 +236,47 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	let settings = await getDocumentSettings(textDocument.uri);
 	let diagnostics: Diagnostic[] = [];
 
+	let script_parser: AiScriptParser = new AiScriptParser("ai_sample.ai", aiScriptPars);
+	let loadfile = textDocument.uri.substring(7);
+	script_parser.findFiles(loadfile);
+	connection.console.log(loadfile);
+	connection.console.log(script_parser.filesToParse()[0]);
+
 	/* Skip if experimental features are not requested */
 	if (settings.maxErrorsReported !== 0) {
 
 		// The validator creates diagnostics for all uppercase words length 2 and more
 		let text = textDocument.getText();
-		let pattern = /\(\s*(\w+-?)+/g;
+		let command_pattern = /(?:\(\s*)\w[^\(\)]*(\".*\")*[^\(\)]*(?=\))/g;
 		let m: RegExpExecArray | null;
 
 		let problems = 0;
-		while ((m = pattern.exec(text)) && problems < 0/*settings.maxNumberOfProblems*/) {
-			problems++;
+		while ((m = command_pattern.exec(text)) && problems < settings.maxErrorsReported) {
 
 			// Search for matching command
-			let test_str = m[0].slice(1,).replace(/\s*/g,'');
+			let test_str = m[0].slice(1,).replace(/^\s+/g,'');
+			//connection.console.log(test_str);
 			let offset = m[0].length - test_str.length;
-			let com_match = "";
-			/*
-			aiScriptPars.forEach(el => {
-				if (el.name === test_str) {
-					//connection.console.log(el.name);
-					com_match = el.description;
-					
-					com_match += "\nexample:\n```"+el.example[0].data+"```";
-					return true;
-				}
-			});
-			*/
+
+			// Replace strings with a single word, for ease of parsing
+			test_str      = test_str.replace(/"[\s\S]*"/g, '"string"');
+			let test_arr  = test_str.split(/\s+/g);
+			let com_match = aiScriptPars[test_arr[0]];
+			
 			// Note the match
-			if (com_match.length > 0) {
-				let hover: Hover = {
-					contents: {
-						language: "markdown",
-						value: `${test_str}\n${com_match}`
-					}
-				}
-				
+			let diagnostic: Diagnostic = undefined;
+			if (com_match == undefined) {
+				// Failure to find a match for the command
+				diagnostic = {
+					severity: DiagnosticSeverity.Error,
+					range: {
+						start: textDocument.positionAt(m.index+offset),
+						end: textDocument.positionAt(m.index + offset + test_arr[0].length)
+					},
+					message: 'Unknown command: `'+test_arr[0]+'`',
+					source: 'Aoe2AiScript'
+				};
+				problems++;
 			}
 			// ... otherwise if no command is found, produce an error
 			else {
@@ -278,7 +287,7 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 						end: textDocument.positionAt(m.index + m[0].length)
 					},
 					message: `${test_str}\n${com_match}`,
-					source: 'AiScript'
+					source: 'Aoe2AiScript'
 				};
 				if (hasDiagnosticRelatedInformationCapability) {
 					diagnosic.relatedInformation = [
@@ -298,7 +307,10 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 						}
 					];
 				}
-				diagnostics.push(diagnosic);
+			}
+
+			if (diagnostic != undefined) {
+				diagnostics.push(diagnostic);
 			}
 		}
 	}
@@ -439,12 +451,7 @@ async function getHover(textDocPos: TextDocumentPositionParams): Promise<Hover> 
 		}
 
 		// Search for command
-		let hover_par: AiScriptPar = undefined;
-		aiScriptPars.forEach(par => {
-			if (par.label === hover_txt)
-				hover_par = par;
-		});
-
+		let hover_par: AiScriptPar = aiScriptPars[hover_txt];
 		if (hover_par !== undefined) {
 		
 			// Generate the output hover text
@@ -566,11 +573,7 @@ async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise
 		let par_indx     = command_pars.length - 2;	// Parameter index at cursor
 
 		// Search for command
-		let command: AiScriptPar = undefined;
-		aiScriptPars.forEach(par => {
-			if (par.label === command_str)
-				command = par;
-		});
+		let command: AiScriptPar = aiScriptPars[command_str];
 
 		if ((command !== undefined) &&
 			((command.section === "Fact") ||
@@ -584,7 +587,7 @@ async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise
 			let par_info : ParameterInformation[] = [];
 			let offset = command_str.length + 1;
 			command.pars.forEach(par => {
-				if (par.type !== "none") {
+				if (par.type !== "noop") {
 					command_str += " " + par.type;
 					par_info.push({
 						label: [offset, offset+par.type.length],
@@ -664,8 +667,8 @@ function fillCompletions() {
 	if (aiScriptCompletionList.items.length === 0) {
 		
 		// Loop through all parameters
-		aiScriptPars.forEach(par => {
-
+		Object.keys(aiScriptPars).forEach(key => {
+			let par = aiScriptPars[key];
 			// Construct a detailed call signature
 			let detail = "(" + par.section + ") " + par.label;
 			if (par.pars !== undefined) {
