@@ -1,5 +1,6 @@
 { "Action": {
     "description": "Action commands",
+    "subcategories": ["FactAction"],
     "values": [
     {
         "name": "acknowledge-event",
@@ -733,7 +734,7 @@
         "note": ["none"],
         "param": [ 
             {
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "A valid goal ID"
             },{
                 "type": "Value",
@@ -751,7 +752,7 @@
         "note": ["none"],
         "param": [ 
             {
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "A valid goal ID"
             },{
                 "type": "Value",
@@ -1282,8 +1283,8 @@
                 "type": "TypeOp",
                 "note": "Type operator"
             },{
-                "type": "UnitId",
-                "note": "The unit type (or class) that will be deleted."
+                "type": "ObjectId",
+                "note": "The unit/building type (or class) that will be deleted."
             },{
                 "type": "TypeOp",
                 "note": "Type operator"
@@ -1425,10 +1426,10 @@
                 "type": "PlayerId",
                 "note": "Stores the PlayerId of the player approaching victory, or 0 if invalid."
             },{
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "Stores one of the following: relic, wonder, monument, or 0 if invalid."
             },{
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "Stores 10 * the game years remaining until victory, or -1 if invalid."
             }],
         "example": [{
@@ -1442,7 +1443,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
         "param": [{
-            "type": "GoalID",
+            "type": "GoalId",
             "note": "Stores 10 * the remaining game years for time victory, the target amount for score victory, or -1 if invalid."
         }],
         "example": [{
@@ -2015,10 +2016,10 @@
         "note": ["A negative value for Percent will result in subtraction. Set Point2 to 0 to use the point that is stored by up-set-target-point."],
         "param": [ 
             {
-                "type": "inGoalID",
+                "type": "inGoalId",
                 "note": "(Point1) The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
             },{
-                "type": "inGoalID",
+                "type": "inGoalId",
                 "note": "(Point2) The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
             },{
                 "type": "TypeOp",
@@ -2039,10 +2040,10 @@
         "note": ["A negative value for Tiles will result in subtraction. Set Point2 to 0 to use the point that is stored by `up-set-target-point`."],
         "param": [ 
             {
-                "type": "inGoalID",
+                "type": "inGoalId",
                 "note": "(Point1) The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
             },{
-                "type": "inGoalID",
+                "type": "inGoalId",
                 "note": "(Point2) The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by `up-set-target-point`)"
             },{
                 "type": "TypeOp",
@@ -2064,10 +2065,10 @@
                 "Set Point2 to 0 to use the point that is stored by `up-set-target-point`."],
         "param": [ 
             {
-                "type": "inGoalID",
+                "type": "inGoalId",
                 "note": "(Point1) The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
             },{
-                "type": "inGoalID",
+                "type": "inGoalId",
                 "note": "(Point2) The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by `up-set-target-point`)"
             },{
                 "type": "TypeOp",
@@ -2088,10 +2089,10 @@
         "note": ["none"],
         "param": [ 
             {
-                "type": "outGoalID",
+                "type": "outGoalId",
                 "note": "(Point1) The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
             },{
-                "type": "inGoalID",
+                "type": "inGoalId",
                 "note": "(Point2) The first of 2 consecutive goals to read an (x,y) pair (range 41-510)"
             } ],
         "example": [ {
@@ -2105,7 +2106,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command will also safely bound the point inside the map."],
         "param": [{
-            "type": "inGoalID",
+            "type": "inGoalId",
             "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
         }],
         "example": [{
@@ -2119,7 +2120,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["This command is identical to `up-set-target-point`, except it will not bound the point inside the map. Please ensure the point is valid with up-bound-precise-point. A precise point is expected to be a normal point x100 for 2 places of decimal precision."],
         "param": [{
-            "type": "inGoalID",
+            "type": "inGoalId",
             "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
         }],
         "example": [{
@@ -2134,13 +2135,13 @@
         "note": ["Set Point2 to 0 to use the point that is stored by up-set-target-point."],
         "param": [ 
             {
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510)"
             },{
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
             },{
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "Stores the distance between the two points."
             } ],
         "example": [ {
@@ -2154,10 +2155,10 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["Set Point to 0 to use the point that is stored by up-set-target-point."],
         "param": [ {
-            "type": "GoalID",
+            "type": "GoalId",
             "note": "The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
         },{
-            "type": "GoalID",
+            "type": "GoalId",
             "note": "Stores the terrain id at the position."
         } ],
         "example": [ {
@@ -2173,7 +2174,7 @@
                 "If it fails to get a valid position, it will return (-1,-1). This command is equivalent to up-find-player-flare with any-ally."],
         "param": [ 
             {
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
             }],
         "example": [ {
@@ -2191,7 +2192,7 @@
                 "type": "PlayerID",
                 "note": "The player(s) to check (from the 'any' wildcard)"
             },{
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
             }],
         "example": [ {
@@ -2206,7 +2207,7 @@
         "note": ["none"],
         "param": [ 
             {
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "The first of 2 consecutive goals to read the (x,y) pair (range 41-510)"
             }],
         "example": [ {
@@ -2221,7 +2222,7 @@
         "note": ["The goals will be filled with data in the following order: current local search total, last local search count, current remote search total, last remote search count."],
         "param": [ 
             {
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "The first of 4 consecutive goals to read the state (range 41-508"
             }],
         "example": [ {
@@ -2442,7 +2443,7 @@
                 "type": "Bool",
                 "note": "Set to 1 to target only the object set by up-set-target-object."
             },{
-                "type": "Action",
+                "type": "TargetAction",
                 "note": "The action to perform with the selected units (action-default, action-move, action-patrol, action-guard, action-follow, action-stop, action-ground, action-garrison, action-delete, action-gather, action-none)"
             },{
                 "type": "Formation",
@@ -3179,7 +3180,7 @@
                 "type": "ObjectData",
                 "note": "The type of data to retrieve or -1 to use the object index."
             },{
-                "type": "TypeOp",
+                "type": "UpRelOp",
                 "note": "Type operator"
             },{
                 "type": "Value",
@@ -3437,7 +3438,7 @@
                 "type": "ObjectStatus",
                 "note": "The status value for matching."
             },{
-                "type": "TypeOp",
+                "type": "RelOp",
                 "note": "Type operator"
             },{
                 "type": "ObjectList",

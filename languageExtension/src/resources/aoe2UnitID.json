@@ -2,10 +2,11 @@
     "UnitId": {
         "description": "Units defined in the game.",
         "parentcategories": ["ObjectId"],
-        "subcategories": ["UnitClass"],
+        "subcategories": ["UnitClass", "UnitLine", "UnitSet", "GaiaUnitId"],
         "values": [
             {
                 "name": "arambai",
+                "id": 823,
                 "description": "Burmese unique unit. Mounted dart thrower.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -50,6 +51,7 @@
                 }
             },{
                 "name": "ballista-elephant",
+                "id": 760,
                 "description": "Khmer unique unit. Heavy cavalry equipped with a Scorpion. Can fell trees.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -79,6 +81,7 @@
                 }
             },{
                 "name": "battle-elephant",
+                "id": 774,
                 "description": "Slow and heavy cavalry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -123,6 +126,7 @@
                 }
             },{
                 "name": "boyar",
+                "id": 876,
                 "description": "Slavic Unique Unit. Heavily armored cavalry; resistant to melee attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -152,6 +156,7 @@
                 }
             },{
                 "name": "camel-archer",
+                "id": 203,
                 "description": "Berber unique unit. Cavalry archer with an attack bonus vs. cavalry archers.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -166,6 +171,7 @@
                 }
             },{
                 "name": "cannon-galleon",
+                "id": 420,
                 "description": "Long-range warship used to attack targets on shore to establish beachhead.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -180,6 +186,7 @@
                 }
             },{
                 "name": "capped-ram",
+                "id": 422,
                 "description": "Stronger than Battering Ram. Slow, lumbering siege weapon used to reduce enemy towns to ruins.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -194,6 +201,7 @@
                 }
             },{
                 "name": "caravel",
+                "id": 861,
                 "description": "Portuguese unique unit. Boat effective vs. large fleets because each shot damages multiple units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -208,6 +216,7 @@
                 }
             },{
                 "name": "cataphract",
+                "id": 40,
                 "description": "Byzantine unique unit. Heavily armored cavalry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -222,6 +231,7 @@
                 }
             },{
                 "name": "cavalier",
+                "id": 283,
                 "description": "Stronger than Knight. Fast and heavy cavalry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -236,6 +246,7 @@
                 }
             },{
                 "name": "cavalry-archer",
+                "id": 39,
                 "description": "Fast, with ranged attack. Ideal for hit-and-run attacks.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -250,6 +261,7 @@
                 }
             },{
                 "name": "champion",
+                "id": 567,
                 "description": "Stronger than Two-Handed Swordsman. Cheap and quick to create.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -264,6 +276,7 @@
                 }
             },{
                 "name": "chu-ko-nu",
+                "id": 73,
                 "description": "Chinese unique unit. Archer with mediocre range. Fires large number of arrows very quickly.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -278,6 +291,7 @@
                 }
             },{
                 "name": "condottiero",
+                "id": 882,
                 "description": "Italian mercenary unit. Quick infantry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -292,6 +306,7 @@
                 }
             },{
                 "name": "conquistador",
+                "id": 771,
                 "description": "Spanish unique unit. Mounted Hand Cannoneer. Powerful close attack, but inaccurate at range.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -306,6 +321,7 @@
                 }
             },{
                 "name": "crossbowman",
+                "id": 24,
                 "description": "Stronger than Archer. Quick and light.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -320,6 +336,7 @@
                 }
             },{
                 "name": "demolition-raft",
+                "id": 527,
                 "description": "Filled with explosives. Self-destructs when used.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -334,6 +351,7 @@
                 }
             },{
                 "name": "demolition-ship",
+                "id": 653,
                 "description": "Filled with explosives. Self-destructs when used.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -347,27 +365,14 @@
                     "tech": ["ri-war-galley"]
                 }
             },{
-                "name": "eagle-scout",
-                "description": "Fast infantry with extensive sight.",
-                "version": {"min": "1.0c", "max": ""},
-                "note": ["none"],
-                "line": "eagle-warrior-line",
-                "example": [],
-                "related": ["eagle-warrior", "elite-eagle-warrior"],
-                "requires": {
-                    "age": "feudal-age",
-                    "building": ["barracks"],
-                    "civ": ["aztec", "inca", "mayan"],
-                    "tech": ["none"]
-                }
-            },{
                 "name": "eagle-warrior",
+                "id": 751,
                 "description": "Stronger than Eagle Scout. Fast infantry with extensive sight.",
                 "version": {"min": "1.0c", "max": ""},
-                "note": ["none"],
+                "note": ["This unit also references the eagle-scout"],
                 "line": "eagle-warrior-line",
                 "example": [],
-                "related": ["eagle-scout", "elite-eagle-warrior"],
+                "related": ["elite-eagle-warrior"],
                 "requires": {
                     "age": "castle-age",
                     "building": ["barracks"],
@@ -376,6 +381,7 @@
                 }
             },{
                 "name": "elephant-archer",
+                "id": 926,
                 "description": "Indian unique unit. Heavy mounted archer.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -390,6 +396,7 @@
                 }
             },{
                 "name": "elite-arambai",
+                "id": 811,
                 "description": "Burmese unique unit. Mounted dart thrower.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -404,6 +411,7 @@
                 }
             },{
                 "name": "elite-ballista-elephant",
+                "id": 891,
                 "description": "Khmer unique unit. Heavy cavalry equipped with a Scorpion. Can fell trees.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -418,6 +426,7 @@
                 }
             },{
                 "name": "elite-battle-elephant",
+                "id": 766,
                 "description": "Stronger than Battle Elephant. Slow and heavy cavalry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -432,6 +441,7 @@
                 }
             },{
                 "name": "elite-berserk",
+                "id": 694,
                 "description": "Viking unique unit. Infantry that slowly heals itself.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -446,6 +456,7 @@
                 }
             },{
                 "name": "elite-boyar",
+                "id": 876,
                 "description": "Slavic Unique Unit. Heavily armored cavalry; resistant to melee attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -460,6 +471,7 @@
                 }
             },{
                 "name": "elite-camel-archer",
+                "id": 208,
                 "description": "Berber unique unit. Cavalry archer with an attack bonus vs. cavalry archers.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -474,6 +486,7 @@
                 }
             },{
                 "name": "elite-cannon-galleon",
+                "id": 691,
                 "description": "Stronger than Cannon Galleon. Long-range warship used to attack targets on shore to establish beachhead.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -484,10 +497,11 @@
                     "age": "imperial-age",
                     "building": ["dock"],
                     "civ": ["berber", "burmese", "byzantine", "indian", "italian", "japanese", "khmer", "malay", "persian", "portuguese", "saracen", "spanish", "turk", "vietnamese", "viking"],
-                    "tech": ["ri-elite-cannon-galleon"]
+                    "tech": ["ri-deck-guns"]
                 }
             },{
                 "name": "elite-caravel",
+                "id": 183,
                 "description": "Portuguese unique unit. Boat effective vs. large fleets because each shot damages multiple units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -502,6 +516,7 @@
                 }
             },{
                 "name": "elite-cataphract",
+                "id": 553,
                 "description": "Byzantine unique unit. Heavily armored cavalry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -516,6 +531,7 @@
                 }
             },{
                 "name": "elite-chu-ko-nu",
+                "id": 559,
                 "description": "Chinese unique unit. Archer with mediocre range. Fires large number of arrows very quickly.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -530,6 +546,7 @@
                 }
             },{
                 "name": "elite-conquistador",
+                "id": 773,
                 "description": "Spanish unique unit. Mounted Hand Cannoneer. Powerful close attack, but inaccurate at range.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -544,12 +561,13 @@
                 }
             },{
                 "name": "elite-eagle-warrior",
+                "id": 752,
                 "description": "Stronger than Eagle Warrior. Fast infantry with extensive sight.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
                 "line": "eagle-warrior-line",
                 "example": [],
-                "related": ["eagle-scout", "eagle-warrior"],
+                "related": ["eagle-warrior"],
                 "requires": {
                     "age": "imperial-age",
                     "building": ["barracks"],
@@ -558,6 +576,7 @@
                 }
             },{
                 "name": "elite-elephant-archer",
+                "id": 875,
                 "description": "Indian unique unit. Heavy mounted archer.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -572,6 +591,7 @@
                 }
             },{
                 "name": "elite-gbeto",
+                "id": 418,
                 "description": "Malian unique unit. Quick infantry unit with a high ranged attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -586,6 +606,7 @@
                 }
             },{
                 "name": "elite-genitour",
+                "id": 230,
                 "description": "Berber unique unit. Mounted Skirmisher.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -600,6 +621,7 @@
                 }
             },{
                 "name": "elite-genoese-crossbowman",
+                "id": 868,
                 "description": "Italian unique unit. Anti cavalry archery unit.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -614,6 +636,7 @@
                 }
             },{
                 "name": "elite-huskarl",
+                "id": 555,
                 "description": "Gothic unique unit. Infantry with substantial pierce armor, virtually immune to archer fire.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -628,6 +651,7 @@
                 }
             },{
                 "name": "elite-jaguar-warrior",
+                "id": 726,
                 "description": "Aztec unique unit. Attack bonus vs. other infantry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -642,6 +666,7 @@
                 }
             },{
                 "name": "elite-janissary",
+                "id": 557,
                 "description": "Turkish unique unit. Hand Cannoneer with longer range and no minimum range. Powerful close attack, but inaccurate at range.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -656,6 +681,7 @@
                 }
             },{
                 "name": "elite-kamayuk",
+                "id": 879,
                 "description": "Inca unique unit. Infantry unit with attack bonus vs. cavalry. Carries a long spear to infiltrate formations.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -670,6 +696,7 @@
                 }
             },{
                 "name": "elite-karambit-warrior",
+                "id": 836,
                 "description": "Malay unique unit. Cheap and weak infantry unit that only takes half a population spot.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -684,6 +711,7 @@
                 }
             },{
                 "name": "elite-longboat",
+                "id": 533,
                 "description": "Viking unique unit. Fires multiple arrows.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -698,6 +726,7 @@
                 }
             },{
                 "name": "elite-longbowman",
+                "id": 530,
                 "description": "British unique unit. Powerful archer with long range.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -712,6 +741,7 @@
                 }
             },{
                 "name": "elite-magyar-huszar",
+                "id": 871,
                 "description": "Magyar unique unit. Light cavalry unit with a bonus vs. siege.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -726,6 +756,7 @@
                 }
             },{
                 "name": "elite-mameluke",
+                "id": 556,
                 "description": "Saracen unique unit. Camel with hand-to-hand attack at distance. Excels vs. other mounted units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -740,6 +771,7 @@
                 }
             },{
                 "name": "elite-mangudai",
+                "id": 561,
                 "description": "Mongol unique unit. Cavalry archer with attack bonus vs. siege weapons.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -754,6 +786,7 @@
                 }
             },{
                 "name": "elite-organ-gun",
+                "id": 114,
                 "description": "Portuguese unique unit. Siege weapon that fires a volley of bullets. Very effective against large groups of units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -768,6 +801,7 @@
                 }
             },{
                 "name": "elite-plumed-archer",
+                "id": 765,
                 "description": "Mayan unique unit. Strong, fast, well-armored archer with less attack than other archers.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -782,6 +816,7 @@
                 }
             },{
                 "name": "elite-rattan-archer",
+                "id": 782,
                 "description": "Vietnamese unique unit. Heavily armored Archer.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -796,6 +831,7 @@
                 }
             },{
                 "name": "elite-samurai",
+                "id": 560,
                 "description": "Japanese unique unit. Infantry with fast attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -810,6 +846,7 @@
                 }
             },{
                 "name": "elite-shotel-warrior",
+                "id": 453,
                 "description": "Ethiopian unique unit. Cheap infantry unit with high creation speed.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -824,6 +861,7 @@
                 }
             },{
                 "name": "elite-skirmisher",
+                "id": 6,
                 "description": "Stronger than Skirmisher. Ranged unit equipped with armor vs. archer attacks.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -838,6 +876,7 @@
                 }
             },{
                 "name": "elite-tarkan",
+                "id": 757,
                 "description": "Hun unique unit. Cavalry with attack bonus vs. buildings.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -852,6 +891,7 @@
                 }
             },{
                 "name": "elite-teutonic-knight",
+                "id": 554,
                 "description": "Teutonic unique unit. Infantry with effective armor and slow but powerful attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -866,6 +906,7 @@
                 }
             },{
                 "name": "elite-throwing-axeman",
+                "id": 531,
                 "description": "Frankish unique unit. Infantry with ranged attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -880,6 +921,7 @@
                 }
             },{
                 "name": "elite-turtle-ship",
+                "id": 832,
                 "description": "Korean unique unit. Slow, ironclad battleship used to destroy other ships at close range.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -894,6 +936,7 @@
                 }
             },{
                 "name": "elite-war-elephant",
+                "id": 558,
                 "description": "Persian unique unit. Slow, powerful, strong, and well-armored cavalry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -908,6 +951,7 @@
                 }
             },{
                 "name": "elite-war-wagon",
+                "id": 829,
                 "description": "Korean unique unit. Heavily armored horse-drawn archer unit.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -922,6 +966,7 @@
                 }
             },{
                 "name": "elite-woad-raider",
+                "id": 534,
                 "description": "Celtic unique unit. Exceptionally quick infantry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -936,6 +981,7 @@
                 }
             },{
                 "name": "fast-fire-ship",
+                "id": 532,
                 "description": "Stronger than Fire Ship. Spews fire at other ships.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -950,6 +996,7 @@
                 }
             },{
                 "name": "fire-galley",
+                "id": 529,
                 "description": "Spews fire at other ships. Good at sinking Galleys.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -964,6 +1011,7 @@
                 }
             },{
                 "name": "fire-ship",
+                "id": 467,
                 "description": "Spews fire at other ships. Good at sinking Galleys.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -978,6 +1026,7 @@
                 }
             },{
                 "name": "fishing-ship",
+                "id": 13,
                 "description": "Gathers food from jumping fish and Fish Traps.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -992,6 +1041,7 @@
                 }
             },{
                 "name": "galleon",
+                "id": 442,
                 "description": "Stronger than War Galley.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1006,6 +1056,7 @@
                 }
             },{
                 "name": "galley",
+                "id": 539,
                 "description": "Small, fast ship with weak attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1020,6 +1071,7 @@
                 }
             },{
                 "name": "gbeto",
+                "id": 260,
                 "description": "Malian unique unit. Quick infantry unit with a high ranged attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1034,6 +1086,7 @@
                 }
             },{
                 "name": "genitour",
+                "id": 596,
                 "description": "Berber unique unit. Mounted Skirmisher.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1048,6 +1101,7 @@
                 }
             },{
                 "name": "genoese-crossbowman",
+                "id": 866,
                 "description": "Italian unique unit. Anti cavalry archery unit.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1062,6 +1116,7 @@
                 }
             },{
                 "name": "halberdier",
+                "id": 359,
                 "description": "Stronger than Spearman. Medium infantry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1076,6 +1131,7 @@
                 }
             },{
                 "name": "hand-cannoneer",
+                "id": 5,
                 "description": "Powerful close attack; inaccurate at range.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1090,6 +1146,7 @@
                 }
             },{
                 "name": "heavy-camel",
+                "id": 330,
                 "description": "Stronger than Camel. Excels at killing other mounted units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1104,6 +1161,7 @@
                 }
             },{
                 "name": "heavy-cavalry-archer",
+                "id": 474,
                 "description": "Stronger than Cavalry Archer. Fast, with ranged attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1118,6 +1176,7 @@
                 }
             },{
                 "name": "heavy-demolition-ship",
+                "id": 528,
                 "description": "Stronger than Demolition Ship. Filled with explosives. Self-destructs when used.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1132,6 +1191,7 @@
                 }
             },{
                 "name": "heavy-scorpion",
+                "id": 542,
                 "description": "Stronger than Scorpion. Light artillery that fires large arrowlike bolts.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1146,6 +1206,7 @@
                 }
             },{
                 "name": "huskarl",
+                "id": 41,
                 "description": "Gothic unique unit. Infantry with substantial pierce armor, virtually immune to archer fire.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1160,6 +1221,7 @@
                 }
             },{
                 "name": "hussar",
+                "id": 441,
                 "description": "Stronger than Light Cavalry. Fast with extensive line of sight.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1174,6 +1236,7 @@
                 }
             },{
                 "name": "imperial-camel",
+                "id": 897,
                 "description": "Stronger than Heavy Camel. Excels at killing other mounted units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1188,6 +1251,7 @@
                 }
             },{
                 "name": "imperial-skirmisher",
+                "id": 762,
                 "description": "Stronger than Skirmisher. Ranged unit equipped with armor vs. archer attacks.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1202,6 +1266,7 @@
                 }
             },{
                 "name": "jaguar-warrior",
+                "id": 725,
                 "description": "Aztec unique unit. Attack bonus vs. other infantry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1216,6 +1281,7 @@
                 }
             },{
                 "name": "janissary",
+                "id": 46,
                 "description": "Turkish unique unit. Hand Cannoneer with longer range and no minimum range. Powerful close attack, but inaccurate at range.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1230,6 +1296,7 @@
                 }
             },{
                 "name": "kamayuk",
+                "id": 879,
                 "description": "Inca unique unit. Infantry unit with attack bonus vs. cavalry. Carries a long spear to infiltrate formations.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1244,6 +1311,7 @@
                 }
             },{
                 "name": "karambit-warrior",
+                "id": 836,
                 "description": "Malay unique unit. Cheap and weak infantry unit that only takes half a population spot.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1273,6 +1341,7 @@
                 }
             },{
                 "name": "knight",
+                "id": 38,
                 "description": "Fast and heavy cavalry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1287,6 +1356,7 @@
                 }
             },{
                 "name": "light-cavalry",
+                "id": 546,
                 "description": "Stronger than Scout Cavalry. Fast with extensive line of sight.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1301,6 +1371,7 @@
                 }
             },{
                 "name": "long-swordsman",
+                "id": 77,
                 "description": "Stronger than Man-at-Arms. Cheap and quick to create.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1315,6 +1386,7 @@
                 }
             },{
                 "name": "longboat",
+                "id": 250,
                 "description": "Viking unique unit. Fires multiple arrows.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1329,6 +1401,7 @@
                 }
             },{
                 "name": "longbowman",
+                "id": 8,
                 "description": "British unique unit. Powerful archer with long range.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1343,6 +1416,7 @@
                 }
             },{
                 "name": "magyar-huszar",
+                "id": 869,
                 "description": "Magyar unique unit. Light cavalry unit with a bonus vs. siege.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1357,6 +1431,7 @@
                 }
             },{
                 "name": "mameluke",
+                "id": 282,
                 "description": "Saracen unique unit. Camel with hand-to-hand attack at distance. Excels vs. other mounted units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1371,6 +1446,7 @@
                 }
             },{
                 "name": "man-at-arms",
+                "id": 75,
                 "description": "Stronger than Militia. Cheap and quick to create.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1385,6 +1461,7 @@
                 }
             },{
                 "name": "mangonel",
+                "id": 280,
                 "description": "Wheeled siege weapon used to attack a small mass of units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1399,6 +1476,7 @@
                 }
             },{
                 "name": "mangudai",
+                "id": 11,
                 "description": "Mongol unique unit. Cavalry archer with attack bonus vs. siege weapons.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1413,6 +1491,7 @@
                 }
             },{
                 "name": "militia",
+                "id": 74,
                 "description": "Basic infantry swordsman. Cheap and quick to create.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1427,6 +1506,7 @@
                 }
             },{
                 "name": "missionary",
+                "id": 775,
                 "description": "Spanish unique unit. Mounted Monk. Converts enemy units and heals friendly units like Monks, but cannot pick up Relics.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1441,6 +1521,7 @@
                 }
             },{
                 "name": "monk",
+                "id": 125,
                 "description": "Slow and weak. Converts enemy units, ships to your civilization (player color). Heals wounded villagers, military units (except siege weapons).",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1454,7 +1535,23 @@
                     "tech": ["none"]
                 }
             },{
+                "name": "my-unique-unit",
+                "id": -1,
+                "description": "Castle age variant of the unique unit associated with player's civilization",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["References the castle age variant of the unique unit"],
+                "line": "my-unique-unit-line",
+                "example": [],
+                "related": ["my-unique-unit-line"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
                 "name": "onager",
+                "id": 550,
                 "description": "Stronger than Mangonel. Wheeled siege weapon used to attack a small mass of units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1469,6 +1566,7 @@
                 }
             },{
                 "name": "organ-gun",
+                "id": 106,
                 "description": "Portuguese unique unit. Siege weapon that fires a volley of bullets. Very effective against large groups of units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1483,11 +1581,12 @@
                 }
             },{
                 "name": "paladin",
+                "id": 569,
                 "description": "Stronger than Cavalier. Fast and heavy cavalry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
                 "line": "knight-line",
-                "example": [],
+                "class": "cavalry-class",
                 "related": ["knight", "cavalier"],
                 "requires": {
                     "age": "imperial-age",
@@ -1497,11 +1596,12 @@
                 }
             },{
                 "name": "petard",
+                "id": 440,
                 "description": "Demolition infantry unit armed with explosives. Devastating vs. buildings, ineffective vs. other units. Self-destructs when used.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
                 "line": "none",
-                "example": [],
+                "class": "petard-class",
                 "related": ["none"],
                 "requires": {
                     "age": "castle-age",
@@ -1511,6 +1611,7 @@
                 }
             },{
                 "name": "pikeman",
+                "id": 358,
                 "description": "Stronger than Spearman. Medium infantry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1525,6 +1626,7 @@
                 }
             },{
                 "name": "plumed-archer",
+                "id": 763,
                 "description": "Mayan unique unit. Strong, fast, well-armored archer with less attack than other archers.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1539,6 +1641,7 @@
                 }
             },{
                 "name": "rattan-archer",
+                "id": 784,
                 "description": "Vietnamese unique unit. Heavily armored Archer.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1553,6 +1656,7 @@
                 }
             },{
                 "name": "samurai",
+                "id": 291,
                 "description": "Japanese unique unit. Infantry with fast attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1567,6 +1671,7 @@
                 }
             },{
                 "name": "scorpion",
+                "id": 279,
                 "description": "Light artillery that fires large arrowlike bolts.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1581,6 +1686,7 @@
                 }
             },{
                 "name": "scout-cavalry",
+                "id": 448,
                 "description": "Fast with extensive line of sight.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1595,6 +1701,7 @@
                 }
             },{
                 "name": "shotel-warrior",
+                "id": 453,
                 "description": "Ethiopian unique unit. Cheap infantry unit with high creation speed.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1609,6 +1716,7 @@
                 }
             },{
                 "name": "siege-onager",
+                "id": 588,
                 "description": "Stronger than Onager. Wheeled siege weapon used to attack a small mass of units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1623,6 +1731,7 @@
                 }
             },{
                 "name": "siege-ram",
+                "id": 548,
                 "description": "Stronger than Capped Ram. Slow, lumbering siege weapon used to reduce enemy towns to ruins.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1637,6 +1746,7 @@
                 }
             },{
                 "name": "siege-tower",
+                "id": 494,
                 "description": "Siege weapon used to scale enemy walls; resistant to archer attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1651,6 +1761,7 @@
                 }
             },{
                 "name": "skirmisher",
+                "id": 7,
                 "description": "Ranged unit equipped with armor vs. archer attacks.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1665,6 +1776,7 @@
                 }
             },{
                 "name": "slinger",
+                "id": 2,
                 "description": "Inca unique unit. Ranged unit with attack bonus vs. infantry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1679,6 +1791,7 @@
                 }
             },{
                 "name": "spearman",
+                "id": 93,
                 "description": "Stronger than Long Swordsman. Cheap and quick to create.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1693,6 +1806,7 @@
                 }
             },{
                 "name": "tarkan",
+                "id": 755,
                 "description": "Hun unique unit. Cavalry with attack bonus vs. buildings.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1707,6 +1821,7 @@
                 }
             },{
                 "name": "teutonic-knight",
+                "id": 25,
                 "description": "Teutonic unique unit. Infantry with effective armor and slow but powerful attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1721,6 +1836,7 @@
                 }
             },{
                 "name": "throwing-axeman",
+                "id": 281,
                 "description": "Frankish unique unit. Infantry with ranged attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1735,6 +1851,7 @@
                 }
             },{
                 "name": "trade-cart",
+                "id": 128,
                 "description": "Used to trade with other players by land.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1749,6 +1866,7 @@
                 }
             },{
                 "name": "trade-cog",
+                "id": 17,
                 "description": "Used to trade with other players by sea.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1763,6 +1881,7 @@
                 }
             },{
                 "name": "transport-ship",
+                "id": 545,
                 "description": "Used to move your units across water.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1777,9 +1896,10 @@
                 }
             },{
                 "name": "trebuchet",
+                "id": 331,
                 "description": "Powerful siege weapon used to destroy buildings, walls from long distance.",
                 "version": {"min": "1.0c", "max": ""},
-                "note": ["none"],
+                "note": ["This references the packed (mobile) version of the trebuchet. Use UnitId 42 for the unbacked (attacking) version"],
                 "line": "none",
                 "example": [],
                 "related": ["none"],
@@ -1791,6 +1911,7 @@
                 }
             },{
                 "name": "turtle-ship",
+                "id": 831,
                 "description": "Korean unique unit. Slow, ironclad battleship used to destroy other ships at close range.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1805,6 +1926,7 @@
                 }
             },{
                 "name": "two-handed-swordsman",
+                "id": 473,
                 "description": "Stronger than Long Swordsman. Cheap and quick to create.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1816,6 +1938,21 @@
                     "building": ["barracks"],
                     "civ": ["!persian"],
                     "tech": ["ri-two-handed-swordsman"]
+                }
+            },{
+                "name": "unpacked-trebuchet",
+                "id": 42,
+                "description": "Unpacked version of `trebuchet`, a powerful siege weapon used to destroy buildings, walls from long distance.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "line": "none",
+                "example": [],
+                "related": ["none"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["castle"],
+                    "civ": ["all"],
+                    "tech": ["none"]
                 }
             },{
                 "name": "villager",
@@ -1849,6 +1986,7 @@
                 }
             },{
                 "name": "war-galley",
+                "id": 21,
                 "description": "Stronger than Galley.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1863,6 +2001,7 @@
                 }
             },{
                 "name": "war-wagon",
+                "id": 827,
                 "description": "Korean unique unit. Heavily armored horse-drawn archer unit.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1877,6 +2016,7 @@
                 }
             },{
                 "name": "woad-raider",
+                "id": 232,
                 "description": "Celtic unique unit. Exceptionally quick infantry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1946,6 +2086,11 @@
                 "description": "Containing king units and related heroes",
                 "note": ["Included: `king`"]
             },{
+                "name": "livestock-class",
+                "id": 958,
+                "description": "Herdable animals that can be hunted for food",
+                "note": ["Included: `sheep`, `turkey`"]
+            },{
                 "name": "monastery-class",
                 "id": 918,
                 "description": "Contains all monastery trainable units",
@@ -1954,22 +2099,62 @@
                 "name": "monk-with-relic-class",
                 "id": 943,
                 "description": "Monks actively holding relics",
-                "note": ["Included: `king`"]
+                "note": ["Includes: `king`"]
             },{
                 "name": "packed-trebuchet-class",
                 "id": 951,
-                "description": "Class containing only the packed trebuchet unit, which is the referenced unit \"trebuchet\" (331)",
+                "description": "Class containing only the packed trebuchet unit, which is the referenced unit `trebuchet` (331)",
                 "note": ["Usage: Piority setting, unit counting, villager management."]
+            },{
+                "name": "petard-class",
+                "id": 935,
+                "description": "Class containing only the `petard` unit (440)",
+                "note": ["Includes: `petard`"]
+            },{
+                "name": "scorpion-class",
+                "id": 955,
+                "description": "Class containing scorpion units",
+                "note": ["Includes: `scorpion`, `heavy-scorpion`"]
+            },{
+                "name": "scout-cavalry-class",
+                "id": 947,
+                "description": "Special class for the scout cavalry to prevent them getting attacked by Gaia wolves",
+                "note": ["Includes: `scout-cavalry`"]
             },{
                 "name": "siege-weapon-class",
                 "id": 913,
                 "description": "All siege weapons",
-                "notes": ["Included: battering-ram-line, mangonel-line, bombard-cannon"]
+                "notes": ["Includes: battering-ram-line, mangonel-line, bombard-cannon"]
+            },{
+                "name": "trade-cart-class",
+                "id": 919,
+                "description": "Trade carts",
+                "notes": ["Includes: `trade-cart`"]
+            },{
+                "name": "trade-cog-class",
+                "id": 902,
+                "description": "Trading ships",
+                "notes": ["Includes: `trade-cog`"]
+            },{
+                "name": "transport-ship-class",
+                "id": 920,
+                "description": "Transport ships",
+                "notes": ["Includes: `transport-ship`"]
             },{
                 "name": "unpacked-trebuchet-class",
                 "id": 954,
                 "description": "Class containing only the unpacked trebuchet unit (42)",
                 "note": ["Usage: Piority setting, unit counting, villager management."]
+            },{
+                "name": "villager-class",
+                "id": 904,
+                "description": "Villager unit class",
+                "notes": ["Includes: all villager sub units"]
+            },{
+                "name": "warship-class",
+                "id": 922,
+                "description": "Warship class",
+                "notes": ["Includes: `galley-line`, `demolition-ship-line`, `fire-ship-line`, `cannon-galleon-line`, `longboat-line`, `turtle-ship-line`"]
             }
         ]},
     "UnitLine": {
@@ -2068,6 +2253,10 @@
                 "name": "mangudai-line",
                 "id": -275,
                 "description": "Mangudai line: `mangudai`, `elite-mangudai`"
+            },{
+                "name": "my-unique-unit-line",
+                "id": -1,
+                "description": "Unit line related to player civilization's unique unit"
             },{
                 "name": "plumed-archer-line",
                 "id": -266,
@@ -2189,6 +2378,98 @@
                 "name": "villager-wood",
                 "id": 979,
                 "description": "All wood choppers (male and female)"
+            }
+        ]},
+    "GaiaUnitId": {
+        "description": "Defines all Gaia units (player 0)",
+        "parentcategories": ["UnitId"],
+        "subcategories": [],
+        "values": [
+            {
+                "name": "deep-fish",
+                "id": 905,
+                "description": "Fish far from shore",
+                "related": ["shore-fish"]
+            },{
+                "name": "deer",
+                "id": 65,
+                "description": "Tame animal that can be hunted for food (not herdable)",
+                "related": ["elephant", "horse", "ostrich", "wild-boar", "zebra"]
+            },{
+                "name": "elephant",
+                "id": 936,
+                "description": "Dangerous animal that can be hunted for food (not herdable)",
+                "related": ["deer", "horse", "ostrich", "wild-boar", "zebra"]
+            },{
+                "name": "forage-bush",
+                "id": 59,
+                "description": "A bush that villagers can use to collect food",
+                "related": ["fruit-bush"]
+            },{
+                "name": "fruit-bush",
+                "id": 1059,
+                "description": "A bush that villagers can use to collect food",
+                "related": ["forage-bush"]
+            },{
+                "name": "gold-mine",
+                "id": 66,
+                "description": "A gold mine that can be mined by villagers for gold",
+                "related": ["stone-mine"]
+            },{
+                "name": "horse",
+                "id": 814,
+                "description": "A horse",
+                "related": ["zebra"]
+            },{
+                "name": "javelina",
+                "id": 882,
+                "description": "A dangerous, huntable animal that provides 340 food",
+                "related": ["wild-boar"]
+            },{
+                "name": "ostrich",
+                "id": 1026,
+                "description": "An ostrich (it's pretty fast)",
+                "related": ["horse","zebra"]
+            },{
+                "name": "relic",
+                "id": 285,
+                "description": "Can be collected by monks and deposited in a monastery for a continuous source of gold",
+                "related": []
+            },{
+                "name": "tree",
+                "id": 915,
+                "description": "A tree ... did you expect it to be something else?",
+                "related": []
+            },{
+                "name": "rhino",
+                "id": 1139,
+                "description": "A dangerous animal that can be hunted for food",
+                "related": ["elephant", "wild-boar", "javelina"]
+            },{
+                "name": "sheep",
+                "id": 594,
+                "description": "A herdable animal that provides 100 food. Can also be used for scouting",
+                "related": ["turkey"]
+            },{
+                "name": "shore-fish",
+                "id": 905,
+                "description": "Fish adjacent to the shore, accessible by villagers",
+                "related": ["deep-fish"]
+            },{
+                "name": "stone-mine",
+                "id": 102,
+                "description": "A stone mine that can be mined by villagers for stone",
+                "related": ["gold-mine"]
+            },{
+                "name": "wild-boar",
+                "id": 48,
+                "description": "A wild animal that can be hunted to obtain food",
+                "related": ["javelina"]
+            },{
+                "name": "zebra",
+                "id": 1019,
+                "description": "A zebra",
+                "related": ["horse"]
             }
         ]}
 }

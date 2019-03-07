@@ -1,4 +1,4 @@
-.vscode/**
+**/.vscode/**
 .vscode-test/**
 .gitignore
 languageExtension/node_modules/**

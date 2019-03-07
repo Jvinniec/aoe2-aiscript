@@ -26,8 +26,13 @@ import {
 // Import the needed methods and objects
 import {
 	AiScriptPar,
+	AiScriptType,
 	loadAoE2Parameters
 } from './aiScriptResources';
+
+import {AiScriptParser} from './aiScriptParser';
+import {AiScriptErr}    from './aiScriptErrorChecker'
+import { type } from 'os';
 
 // Create a connection for the server. The connection uses Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -42,7 +47,7 @@ let hasWorkspaceFolderCapability: boolean              = false;
 let hasDiagnosticRelatedInformationCapability: boolean = false;
 
 // List of parameters
-let aiScriptPars: AiScriptPar[] = loadAoE2Parameters();
+let aiScriptTypes: Map<string, AiScriptType> = loadAoE2Parameters();
 let aiScriptCompletionList: CompletionList = {items: [], isIncomplete: false};
 
 
@@ -119,7 +124,7 @@ interface AiScriptSettings {
  * not supported by the client.
  **************************************************************************/
 const defaultSettings: AiScriptSettings = { 
-	updateErrorsWhen: 	  "onSave",
+	updateErrorsWhen: 	  "never",
 	maxErrorsReported:    100,
 	enableCompletionHelp: false,
 	enableHoverHelp:      false,
@@ -205,13 +210,27 @@ async function validateTextDocumentOnChange(textDocument: TextDocument): Promise
 	}
 }
 
+
 /**********************************************************************//**
  * When a file is saved, re-evaluate the document for errors
  * 	@param change			TextDocumentChangeEvent 
  **************************************************************************/
 documents.onDidSave(change => {
-	validateTextDocument(change.document);
+	validateTextDocumentOnSave(change.document);
 });
+
+
+/**********************************************************************//**
+ * Re-evaluate a document for errors if the user has specified 
+ * 'updateErrorsWhen === "onChnage".
+ * 	@param textDocument		Document to be re-evaluated 
+ **************************************************************************/
+async function validateTextDocumentOnSave(textDocument: TextDocument): Promise<void> {
+	let settings = await getDocumentSettings(textDocument.uri);
+	if (settings.updateErrorsWhen === "onSave") {
+		validateTextDocument(textDocument);
+	}
+}
 
 
 /**********************************************************************//**
@@ -232,76 +251,112 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	let settings = await getDocumentSettings(textDocument.uri);
 	let diagnostics: Diagnostic[] = [];
 
-	/* Skip if experimental features are not requested */
-	if (settings.maxErrorsReported !== 0) {
+	// Quit if no checks were actually requested
+	if (settings.maxErrorsReported === 0) {
+		return;
+	}
 
-		// The validator creates diagnostics for all uppercase words length 2 and more
-		let text = textDocument.getText();
-		let pattern = /\(\s*(\w+-?)+/g;
-		let m: RegExpExecArray | null;
+	//let loadfile = textDocument.uri.substring(7);
+	// Script text
+	let text = textDocument.getText();
+	
+	// Get the errors
+	let parser: AiScriptParser = new AiScriptParser("dummyname.per", aiScriptTypes);
+	let errors: AiScriptErr[]  = parser.getErrors(text, settings.maxErrorsReported);
+	connection.console.log("NumErrs: " + errors.length);
 
-		let problems = 0;
-		while ((m = pattern.exec(text)) && problems < 0/*settings.maxNumberOfProblems*/) {
+	// Define the diagnostic information
+	errors.forEach(error => {
+		diagnostics.push({
+			severity: error.severity,
+			code: error.code,
+			range: {
+				start: textDocument.positionAt(error.position.start),
+				end: textDocument.positionAt(error.position.stop)
+			},
+			message: "ERR"+error.code+": "+error.message.long,
+			source: 'Aoe2AiScript'
+		});
+	})
+	/*
+
+	//let command_pattern: RegExp = /(\(\s*)\w[^\(\)]*(\".*\")*[^\(\)]*(?=\))/g;
+	//let m: RegExpExecArray;
+
+	while ((m = command_pattern.exec(text)) && problems < settings.maxErrorsReported) {
+		connection.console.log(m.index + ": " + m.join('|'));
+
+		let char = m.index;
+		let isComment = false;
+		while ((text[char--] !== "\n") && !isComment) {
+			if (text[char] === ";")
+				isComment = true;
+		}
+		// Skip comments
+		if (isComment) continue;
+
+		// Search for matching command
+		let test_str = m[0].slice(m[1].length,);
+		//connection.console.log(test_str);
+		let offset = m[0].length - test_str.length;
+
+		// Replace strings with a single word, for ease of parsing
+		test_str      = test_str.replace(/"[\s\S]*"/g, '"string"');
+		let test_arr  = test_str.split(/\s+/g);
+		let com_match = aiScriptPars[test_arr[0]];
+		
+		// Note the match
+		let diagnostic: Diagnostic = undefined;
+		if (com_match == undefined) {
+			// Failure to find a match for the command
+			diagnostic = {
+				severity: DiagnosticSeverity.Error,
+				range: {
+					start: textDocument.positionAt(m.index+offset),
+					end: textDocument.positionAt(m.index + offset + test_arr[0].length)
+				},
+				message: 'Unknown command: `'+test_arr[0]+'`',
+				source: 'Aoe2AiScript'
+			};
 			problems++;
-
-			// Search for matching command
-			let test_str = m[0].slice(1,).replace(/\s*/g,'');
-			let offset = m[0].length - test_str.length;
-			let com_match = "";
-			/*
-			aiScriptPars.forEach(el => {
-				if (el.name === test_str) {
-					//connection.console.log(el.name);
-					com_match = el.description;
-					
-					com_match += "\nexample:\n```"+el.example[0].data+"```";
-					return true;
-				}
-			});
-			*/
-			// Note the match
-			if (com_match.length > 0) {
-				let hover: Hover = {
-					contents: {
-						language: "markdown",
-						value: `${test_str}\n${com_match}`
-					}
-				}
-				
-			}
-			// ... otherwise if no command is found, produce an error
-			else {
-				let diagnosic: Diagnostic = {
-					severity: DiagnosticSeverity.Warning,
-					range: {
-						start: textDocument.positionAt(m.index+offset),
-						end: textDocument.positionAt(m.index + m[0].length)
-					},
-					message: `${test_str}\n${com_match}`,
-					source: 'AiScript'
-				};
-				if (hasDiagnosticRelatedInformationCapability) {
-					diagnosic.relatedInformation = [
-						{
-							location: {
-								uri: textDocument.uri,
-								range: Object.assign({}, diagnosic.range)
-							},
-							message: 'Spelling matters'
+		}
+		// ... otherwise if no command is found, produce an error
+		else {
+			let diagnosic: Diagnostic = {
+				severity: DiagnosticSeverity.Warning,
+				range: {
+					start: textDocument.positionAt(m.index+offset),
+					end: textDocument.positionAt(m.index + m[0].length)
+				},
+				message: `${test_str}\n${com_match}`,
+				source: 'Aoe2AiScript'
+			};
+			if (hasDiagnosticRelatedInformationCapability) {
+				diagnosic.relatedInformation = [
+					{
+						location: {
+							uri: textDocument.uri,
+							range: Object.assign({}, diagnosic.range)
 						},
-						{
-							location: {
-								uri: textDocument.uri,
-								range: Object.assign({}, diagnosic.range)
-							},
-							message: 'Particularly for names'
-						}
-					];
-				}
-				diagnostics.push(diagnosic);
+						message: 'Spelling matters'
+					},
+					{
+						location: {
+							uri: textDocument.uri,
+							range: Object.assign({}, diagnosic.range)
+						},
+						message: 'Particularly for names'
+					}
+				];
 			}
 		}
+
+		if (diagnostic != undefined) {
+			diagnostics.push(diagnostic);
+		}
+		
 	}
+	*/
 
 	// Send the computed diagnostics to VSCode.
 	connection.sendDiagnostics({ uri: textDocument.uri, diagnostics });
@@ -440,9 +495,9 @@ async function getHover(textDocPos: TextDocumentPositionParams): Promise<Hover> 
 
 		// Search for command
 		let hover_par: AiScriptPar = undefined;
-		aiScriptPars.forEach(par => {
-			if (par.label === hover_txt)
-				hover_par = par;
+		Object.keys(aiScriptTypes).forEach(typekey => {
+			if (hover_par === undefined)
+				hover_par = aiScriptTypes[typekey].values[hover_txt];
 		});
 
 		if (hover_par !== undefined) {
@@ -565,18 +620,17 @@ async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise
 		let command_str  = command_pars[0];			// Command name
 		let par_indx     = command_pars.length - 2;	// Parameter index at cursor
 
-		// Search for command
-		let command: AiScriptPar = undefined;
-		aiScriptPars.forEach(par => {
-			if (par.label === command_str)
-				command = par;
-		});
+		// Search for command in the Fact, Action, and FactAction types
+		let command: AiScriptPar = aiScriptTypes["Control"].values[command_str];
+		if (command === undefined)
+			command = aiScriptTypes["Fact"].values[command_str];
+		if (command === undefined)
+			command = aiScriptTypes["Action"].values[command_str];
+		if (command === undefined)
+			command = aiScriptTypes["FactAction"].values[command_str];
 
-		if ((command !== undefined) &&
-			((command.section === "Fact") ||
-			 (command.section === "Action") ||
-			 (command.section === "FactAction"))) {
-		
+		// If the comand was found ...
+		if (command !== undefined) {
 			// Add the command type to the command definition
 			command_str = "(" + command.section + ") " + command_str; 
 			
@@ -584,18 +638,15 @@ async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise
 			let par_info : ParameterInformation[] = [];
 			let offset = command_str.length + 1;
 			command.pars.forEach(par => {
-				if (par.type !== "none") {
-					command_str += " " + par.type;
-					par_info.push({
-						label: [offset, offset+par.type.length],
-						documentation: {
-							value: "**"+par.type +":** *"+par.note+"*", 
-							kind: 'markdown'
-						}
-					});
-					offset += par.type.length+1;
-				}
-				
+				command_str += " " + par.type;
+				par_info.push({
+					label: [offset, offset+par.type.length],
+					documentation: {
+						value: "**"+par.type +":** *"+par.note+"*", 
+						kind: 'markdown'
+					}
+				});
+				offset += par.type.length+1;				
 			});
 
 			let descrip: MarkupContent = {value: "", kind: 'markdown'};
@@ -663,77 +714,82 @@ function fillCompletions() {
 	
 	if (aiScriptCompletionList.items.length === 0) {
 		
-		// Loop through all parameters
-		aiScriptPars.forEach(par => {
+		// Loop through all Types
+		Object.keys(aiScriptTypes).forEach(typeName => {
+			let type: AiScriptType = aiScriptTypes[typeName];
 
-			// Construct a detailed call signature
-			let detail = "(" + par.section + ") " + par.label;
-			if (par.pars !== undefined) {
-				par.pars.forEach(p => {
-					detail += " " + p.type;
-				})
-			}
+			// Loop through all parameters of this type
+			Object.keys(type.values).forEach(parName => {
+				let par: AiScriptPar = type.values[parName];
+				// Construct a detailed call signature
+				let detail = "(" + par.section + ") " + par.label;
+				if (par.pars !== undefined) {
+					par.pars.forEach(p => {
+						detail += " " + p.type;
+					})
+				}
 
-			// Define a new completion item
-			let item: CompletionItem = {
-				label: par.label,
-				documentation: {
-					value: par.description,
-					kind: 'markdown'
-				},
-				detail: detail
-			}
+				// Define a new completion item
+				let item: CompletionItem = {
+					label: par.label,
+					documentation: {
+						value: par.description,
+						kind: 'markdown'
+					},
+					detail: detail
+				}
 
-			// Define the parameter kind (determines which icon is next to the 
-			// suggestion in the popup list)
-			switch (par.section) {
-				case "BuildingId":
-				case "BuildingClass":
-				case "WallId":
-				case "WallLine":
-					item.kind = CompletionItemKind.Struct;
-					break;
-				case "UnitId":
-				case "UnitClass":
-				case "UnitLine":
-				case "UnitSet":
-					item.kind = CompletionItemKind.Unit;
-					break;
-				case "Action":
-				case "FactAction":
-					item.kind = CompletionItemKind.Method;
-					break;
-				case "Fact":
-					item.kind = CompletionItemKind.Variable;
-					break;
-				case "TechId":
-					item.kind = CompletionItemKind.Class;
-					break;
-				case "AgeId":
-					item.kind = CompletionItemKind.Enum;
-					break;
-				case "RelOp":
-				case "UpRelOp":
-				case "TypeOp":
-				case "MathOp":
-					item.kind = CompletionItemKind.Operator;
-					break;
-				case "Control":
-					item.kind = CompletionItemKind.Interface;
-					break;
-				default:
-					item.kind = CompletionItemKind.Module;
-					break;
-			}
+				// Define the parameter kind (determines which icon is next to the 
+				// suggestion in the popup list)
+				switch (par.section) {
+					case "BuildingId":
+					case "BuildingClass":
+					case "WallId":
+					case "WallLine":
+						item.kind = CompletionItemKind.Struct;
+						break;
+					case "UnitId":
+					case "UnitClass":
+					case "UnitLine":
+					case "UnitSet":
+						item.kind = CompletionItemKind.Unit;
+						break;
+					case "Action":
+					case "FactAction":
+						item.kind = CompletionItemKind.Method;
+						break;
+					case "Fact":
+						item.kind = CompletionItemKind.Variable;
+						break;
+					case "TechId":
+						item.kind = CompletionItemKind.Class;
+						break;
+					case "AgeId":
+						item.kind = CompletionItemKind.Enum;
+						break;
+					case "RelOp":
+					case "UpRelOp":
+					case "TypeOp":
+					case "MathOp":
+						item.kind = CompletionItemKind.Operator;
+						break;
+					case "Control":
+						item.kind = CompletionItemKind.Interface;
+						break;
+					default:
+						item.kind = CompletionItemKind.Module;
+						break;
+				}
 
-			// Append the new completion item
-			aiScriptCompletionList.items.push(item);
-
-			// Add an entry for alternative labels, i.e. for Civs
-			if (par.altLabel !== undefined) {
-				item.label = par.altLabel;
+				// Append the new completion item
 				aiScriptCompletionList.items.push(item);
-			}
+
+				// Add an entry for alternative labels, i.e. for Civs
+				if (par.altLabel !== undefined) {
+					item.label = par.altLabel;
+					aiScriptCompletionList.items.push(item);
+				}
+			});
 		});
 	} // end-if
 }

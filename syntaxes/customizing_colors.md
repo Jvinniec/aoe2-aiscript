@@ -21,7 +21,7 @@ The individual components are defined using a set of regular expressions that ca
 | keyword.control.aoe2aiscript.load              | `#load-if-defined`, `#load-if-not-defined`, `#else`, `#end-if`, `load`, `load-random` (for more control see below)
 | keyword.control.aoe2aiscript.control           | `and`, `nand`, `nor`, `not`, `or`
 | constant.language.aoe2aiscript.truefalse       | `true`, `false`
-| constant.language.aoe2aiscript.truefalse       | anything following an opening parenthesis, but not defined above (i.e fact and action commands)
+
 
 ## Finer grained control
 The following are not specially colored by default, but have been made available. This allows either highlighting something that wouldn't otherwise be highlighted, or applying a special color to a command subset.

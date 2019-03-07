@@ -4,10 +4,10 @@
     "description": "Command tooltips and syntax highlighting for Age of Empires 2 AI scripts",
     "version": "0.1.6-dev",
     "keywords": [
-        "aoe2",
+        "aoeII",
+        "age",
         "empires",
         "age of empires",
-        "age of empires II",
         "ai scripting"
     ],
     "license": "GPL-3.0-or-later",
@@ -31,6 +31,7 @@
     ],
     "categories": [
         "Programming Languages",
+        "Linters",
         "Snippets"
     ],
     "contributes": {
@@ -55,10 +56,11 @@
                     "scope": "resource.aiscript",
                     "type": "string",
                     "enum": [
+                        "never",
                         "onSave",
                         "onChange"
                     ],
-                    "default": "onSave",
+                    "default": "never",
                     "description": "Controls when error squiggles are updated. Default: update only when the file is saved. Change to 'onChange' to update whenever the file is edited (this may have some performance cost for large files)."
                 },
                 "aoe2_AiScript.maxErrorsReported": {
@@ -75,7 +77,7 @@
                         true,
                         false
                     ],
-                    "default": false,
+                    "default": true,
                     "description": "Controls whether completion suggestions features will be enabled."
                 },
                 "aoe2_AiScript.enableParameterHelp": {
@@ -86,7 +88,7 @@
                         "parametersOnly",
                         "full"
                     ],
-                    "default": "off",
+                    "default": "parametersOnly",
                     "description": "Controls whether parameter help will be provided as you write commands."
                 },
                 "aoe2_AiScript.enableHoverHelp": {
@@ -96,7 +98,7 @@
                         true,
                         false
                     ],
-                    "default": false,
+                    "default": true,
                     "description": "Controls whether parameter help will be provided when you hover over a parameter."
                 }
             }
