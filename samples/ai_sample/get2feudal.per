@@ -57,6 +57,7 @@
 ; Make sure we still have a TC
 (defrule
     (building-type-count town-center > 0)
+    (can-build town-center)
     =>
     (up-jump-rule 2)
 )
@@ -92,28 +93,29 @@
 
 ; The following is useful for testing errors
 
-; The bits in (parenthesis should not be identified)
+; The bits in (parenthesis should not be identified) when inside a comment
 #load-if-not-defined hun                        ; 'hun' should be 'HUN-CIV'
 (defrule
     (or (current-age == dark)                   ; 'dark' should be 'dark-age'
         (current-age <= feudal-age)             ; There's a missing closing paren
-    (building-type-count house c: maximum-dark-houses) ; 'c:' is not a relational operator
+    (building-type-count house c: maximum-dark-houses) ; 'c:' is not a RelOp (relational operator)
     (can-build villager)                        ; 'villager' is not a valid argument to 'can-biuld'
     =>
     (biuld house)                               ; no such command as 'biuld'
+    (build house)
 )
 #else                                           ; missing a closing '#end-if'
 
 (defrule
-    (true) ;1
-    (true) ;2
-    (true) ;3
-    (true) ;4
-    (true) ;5
-    (true) ;6
-    (true) ;7
-    (true) ;8
-    (true) ;9
+    (true) ; 1
+    (true) ; 2
+    (true) ; 3
+    (true) ; 4
+    (true) ; 5
+    (true) ; 6
+    (true) ; 7
+    (true) ; 8
+    (true) ; 9
     (true) ;10
     (true) ;11
     (true) ;12
@@ -123,6 +125,5 @@
     (true) ;16
     (true) ;17 - TOO MANY
     =>
-    (up-build house)    ; up-build takes more than a building ID
-                        ; missing closing rule paren
-
+    (   up-build house)     ; up-build takes more than a building ID
+                            ; missing closing rule paren
