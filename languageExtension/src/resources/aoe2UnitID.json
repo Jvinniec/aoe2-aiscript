@@ -1536,7 +1536,6 @@
                 }
             },{
                 "name": "my-unique-unit",
-                "id": -1,
                 "description": "Castle age variant of the unique unit associated with player's civilization",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["References the castle age variant of the unique unit"],
@@ -1746,7 +1745,7 @@
                 }
             },{
                 "name": "siege-tower",
-                "id": 494,
+                "id": 885,
                 "description": "Siege weapon used to scale enemy walls; resistant to archer attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -2255,7 +2254,6 @@
                 "description": "Mangudai line: `mangudai`, `elite-mangudai`"
             },{
                 "name": "my-unique-unit-line",
-                "id": -1,
                 "description": "Unit line related to player civilization's unique unit"
             },{
                 "name": "plumed-archer-line",
@@ -2273,6 +2271,10 @@
                 "name": "scout-cavalry-line",
                 "id": -286,
                 "description": "Scout cavalry line: `scout-cavalry`, `light-cavalry`, `hussar`"
+            },{
+                "name": "shotel-warrior-line",
+                "id": -251,
+                "description": "Shotel warrior line: `shotel-warrior`, `elite-shotel-warrior`"
             },{
                 "name": "skirmisher-line",
                 "id": -297,
