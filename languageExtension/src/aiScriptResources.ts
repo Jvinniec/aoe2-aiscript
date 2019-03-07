@@ -1,18 +1,27 @@
+
+import {Levenshtein} from 'levenshtein'
+
 /**********************************************************************//**
  * Import AI scripting resources
  **************************************************************************/
-import * as aoe2actions    from './resources/aoe2Action.json';
-import * as aoe2buildings  from './resources/aoe2BuildingId.json';
-import * as aoe2civs       from './resources/aoe2CivId.json';
-import * as aoe2facts      from './resources/aoe2Fact.json';
-import * as aoe2factaction from './resources/aoe2FactAction.json';
-import * as aoe2misc	   from './resources/aoe2Misc.json';
-import * as aoe2stratnum   from './resources/aoe2StrategicNumbers.json';
-import * as aoe2techs      from './resources/aoe2TechId.json';
-import * as aoe2units      from './resources/aoe2UnitId.json';
+// import * as aoe2actions    from './resources/aoe2Action.json';
+// import * as aoe2buildings  from './resources/aoe2BuildingId.json';
+// import * as aoe2civs       from './resources/aoe2CivId.json';
+// import * as aoe2facts      from './resources/aoe2Fact.json';
+// import * as aoe2factaction from './resources/aoe2FactAction.json';
+// import * as aoe2misc	   from './resources/aoe2Misc.json';
+// import * as aoe2stratnum   from './resources/aoe2StrategicNumbers.json';
+// import * as aoe2techs      from './resources/aoe2TechId.json';
+// import * as aoe2units      from './resources/aoe2UnitId.json';
 
 // Methods and variables to export from this file
-export {AiScriptPar, loadAoE2Parameters};
+export {AiScriptPar, 
+		AiScriptType, 
+		loadAoE2Parameters, 
+		InheritsFrom, 
+		guessParam,
+		levenGuess
+};
 
 /**********************************************************************//**
  * Defines a 'require' object, typically associated with units and techs
@@ -23,6 +32,7 @@ interface AiScriptRequires {
 	civ: Array<string>;
 	tech: Array<string>;
 }
+
 
 /**********************************************************************//**
  * Defines a 'unique' object associated with civilizations
@@ -43,10 +53,6 @@ interface AiScriptPar {
 	label: string;
 	description: string;
 	section: string;
-
-	// Parent and child categories
-	parentcategories?: Array<{type: string}>;
-	subcategories?: Array<{type: string}>;
 	
 	// Optional parameters
 	altLabel?: string;
@@ -64,6 +70,18 @@ interface AiScriptPar {
 
 
 /**********************************************************************//**
+ * Defines a scripting parameter that can be used for completions and hovers
+ **************************************************************************/
+interface AiScriptType {
+	label: 			   string;
+	description: 	   string;
+	parentcategories?: string[];
+	subcategories?:    string[];
+	values: 		   Map<string,AiScriptPar>;
+}
+
+
+/**********************************************************************//**
  * Defines variables associated with a scripting command (facts and actions)
  **************************************************************************/
 interface AiScriptCommand {
@@ -71,16 +89,16 @@ interface AiScriptCommand {
 	description: string;
 	note: Array<string>;
 	param: Array<{type: string, note: string}>;
-	example: Array<{title: string, data: string}>;
+	example?: Array<{title: string, data: string}>;
 }
 
 // Initialize the parameter list
-let ai_script_parameters: Map<string, AiScriptPar> = new Map();
+let ai_script_parameters: Map<string, AiScriptType> = new Map();
 
 /**********************************************************************//**
  * Loads all parameters from the resource files
  **************************************************************************/
-function loadAoE2Parameters(): Map<string, AiScriptPar> {
+function loadAoE2Parameters(): Map<string, AiScriptType> {
 
     // Fill all the parameters
 	loadBuildings();
@@ -99,15 +117,43 @@ function loadAoE2Parameters(): Map<string, AiScriptPar> {
  * Loads facts, actions and factactions
  **************************************************************************/
 function loadCommands() {
+	// Facts
+	let facts: AiScriptType = {
+		label: "Fact",
+		description: aoe2facts.Fact.description,
+		subcategories: aoe2facts.Fact.subcategories,
+		values: new Map()
+	};
 	aoe2facts.Fact.values.forEach(fact => {
-		ai_script_parameters[fact.name] = getCommandPar(fact, "Fact");
+		facts.values[fact.name] = getCommandPar(fact, facts.label);
 	});
+
+	// Actions
+	let actions: AiScriptType = {
+		label: "Action",
+		description: aoe2actions.Action.description,
+		subcategories: aoe2actions.Action.subcategories,
+		values: new Map()
+	};
 	aoe2actions.Action.values.forEach(action => {
-		ai_script_parameters[action.name] = getCommandPar(action, "Action");
+		actions.values[action.name] = getCommandPar(action, actions.label);
 	});
+
+	// FactActions
+	let factactions: AiScriptType = {
+		label: "FactAction",
+		description: aoe2factaction.FactAction.description,
+		parentcategories: aoe2factaction.FactAction.parentcategories,
+		values: new Map()
+	};
 	aoe2factaction.FactAction.values.forEach(faction => {
-		ai_script_parameters[faction.name] = getCommandPar(faction, "FactAction");
+		factactions.values[faction.name] = getCommandPar(faction, factactions.label);
 	});
+
+	// Add the commands to the type map
+	ai_script_parameters[facts.label]       = facts;
+	ai_script_parameters[actions.label]     = actions;
+	ai_script_parameters[factactions.label] = factactions;
 }
 
 
@@ -115,13 +161,27 @@ function loadCommands() {
  * Formats the results from a command object into an AiScriptPar
  **************************************************************************/
 function getCommandPar(command: AiScriptCommand, section: string): AiScriptPar {
+	// Define command parameters
+	let command_pars = [];
+	let param_text: string = "";
+	if (command.param === undefined) {
+		param_text = "";
+	} else if (command.param[0].type !== "noop") {
+		param_text = getParamText(command.param);
+		command_pars = command.param;
+	}
+
+	// Get examples text
+	let example_text: string = "";
+	if (command.example !== undefined) {
+		example_text = getExampleText(command.example);
+	}
+
 	return {
 		label:       command.name,
-        description: command.description + 
-                        getParamText(command.param) + 
-                        getExampleText(command.example),
+        description: command.description + param_text + example_text,
         section:     section,
-        pars:        command.param,
+        pars:        command_pars,
         examples:    command.example
 	}
 }
@@ -132,19 +192,29 @@ function getCommandPar(command: AiScriptCommand, section: string): AiScriptPar {
  **************************************************************************/
 function loadBuildings() {
 	Object.keys(aoe2buildings).forEach(buildkey => {
+		let buildingType: AiScriptType = {
+			label: buildkey,
+			description: aoe2buildings[buildkey].description,
+			parentcategories: aoe2buildings[buildkey].parentcategories,
+			subcategories: aoe2buildings[buildkey].subcategories,
+            values: new Map()
+		}
+
+		// Loop through all of the values
 		aoe2buildings[buildkey].values.forEach(building => {
 			// Construct building description
 			let build_descrip = building.description;
 			if (building.requires !== undefined)
 				build_descrip += getRequiresText(building.requires);
 
-			ai_script_parameters[building.name] = {
+			buildingType.values[building.name] = {
 				label:       building.name,
 				description: build_descrip,
 				section:     buildkey,
 				requires:    building.requires
 			};
 		});
+		ai_script_parameters[buildkey] = buildingType;
 	});
 }
 
@@ -153,34 +223,37 @@ function loadBuildings() {
  * Loads CivId objects into ai_script_parameters
  **************************************************************************/
 function loadCivs() {
-
 	Object.keys(aoe2civs).forEach(civkey => {
+		let civType: AiScriptType = {
+			label: civkey,
+			description: aoe2civs[civkey].description,
+			parentcategories: aoe2civs[civkey].parentcategories,
+			subcategories: aoe2civs[civkey].subcategories,
+            values: new Map()
+		}
+
 		aoe2civs[civkey].values.forEach(civ => {
 			// Get description and unique info
 			let civ_descrip = civ.name.toUpperCase() + " civilization";
-			let civ_unique  = "none";
+			let civ_unique: AiScriptUniques = undefined;
 			if (civ.link === undefined) {
 				civ_descrip += getUniquesText(civ.unique);
 				civ_unique   = civ.unique;
 			} else {
-				let civ_par = undefined;
-				Object.keys(ai_script_parameters).forEach(key => {
-					let element = ai_script_parameters[key];
-					if ((element.section == civ.link.type) && (element.label == civ.link.value))
-						civ_par = element;
-				});
+				let civ_par = ai_script_parameters[civ.link.type].values[civ.link.value];
 				civ_descrip = civ_par.description;
 				civ_unique  = civ_par.unique;
 			}
 
 			// Add the civ info
-			ai_script_parameters[civ.name] = {
+			civType.values[civ.name] = {
 				label:       civ.name,
 				description: civ_descrip,
 				section:     civkey,
 				unique:      civ_unique
 			};
 		});
+		ai_script_parameters[civkey] = civType;
 	});
 }
 
@@ -192,14 +265,29 @@ function loadMisc() {
 
 	// Loop over all keys and all items in each key
 	Object.keys(aoe2misc).forEach(misc => {
-		aoe2misc[misc].values.forEach(item => {
-			ai_script_parameters[item.name] = {
-				label:       item.name,
-				description: item.description,
-				section:     misc,
-				id:          item.id
-			};
-		});
+		let miscType: AiScriptType = {
+			label: misc,
+			description: aoe2misc[misc].description,
+			parentcategories: aoe2misc[misc].parentcategories,
+			subcategories: aoe2misc[misc].subcategories,
+            values: new Map()
+		}
+
+		if (misc === "Control") {
+			aoe2misc[misc].values.forEach(item => {
+				miscType.values[item.name] = getCommandPar(item, miscType.label);
+			});
+		} else {
+			aoe2misc[misc].values.forEach(item => {
+				miscType.values[item.name] = {
+					label:       item.name,
+					description: item.description,
+					section:     misc,
+					id:          item.id
+				};
+			});
+		}
+		ai_script_parameters[miscType.label] = miscType;
 	});
 }
 
@@ -208,14 +296,19 @@ function loadMisc() {
  * Loads TechId objects into ai_script_parameters
  **************************************************************************/
 function loadStrategicNumbers() {
-
-	aoe2stratnum.StrategicNumber.forEach(num => {
-		ai_script_parameters[num.name] = {
+	let snType: AiScriptType = {
+		label: "StrategicNumber",
+		description: aoe2stratnum.StrategicNumber.description,
+		values: new Map()
+	}
+	aoe2stratnum.StrategicNumber.values.forEach(num => {
+		snType.values[num.name] = {
 			label:       num.name,
 			description: num.notes,
-			section:     "StrategicNumber"
+			section:     snType.label
 		};
 	});
+	ai_script_parameters[snType.label] = snType;
 }
 
 
@@ -223,15 +316,21 @@ function loadStrategicNumbers() {
  * Loads TechId objects into ai_script_parameters
  **************************************************************************/
 function loadTechs() {
-
-	aoe2techs.TechID.forEach(tech => {
-		ai_script_parameters[tech.name] = {
+	let techType: AiScriptType = {
+		label: "TechId",
+		description: aoe2techs.TechId.description,
+		subcategories: aoe2techs.TechId.subcategories,
+		values: new Map()
+	}
+	aoe2techs.TechId.values.forEach(tech => {
+		techType.values[tech.name] = {
 			label:       tech.name,
 			description: tech.description + getRequiresText(tech.requires),
-			section:     "TechId",
+			section:     techType.label,
 			requires:    tech.requires
 		};
 	});
+	ai_script_parameters[techType.label] = techType;
 }
 
 
@@ -241,6 +340,13 @@ function loadTechs() {
 function loadUnits() {
 
 	Object.keys(aoe2units).forEach(unitkey => {
+		let unitType: AiScriptType = {
+			label: unitkey,
+			description: aoe2units[unitkey].description,
+			parentcategories: aoe2units[unitkey].parentcategories,
+			subcategories: aoe2units[unitkey].subcategories,
+            values: new Map()
+		}
 		aoe2units[unitkey].values.forEach(unit => {
 			// Construct unit description
 			let unit_descrip: string = unit.description;
@@ -249,13 +355,14 @@ function loadUnits() {
 			if (unit.class !== undefined)
 				unit_descrip += "\n* class: " + unit.class;
 
-			ai_script_parameters[unit.name] = {
+			unitType.values[unit.name] = {
 				label:       unit.name,
 				description: unit_descrip,
 				section:     unitkey,
 				requires:    unit.requires
 			};
 		});
+		ai_script_parameters[unitkey] = unitType;
 	});
 }
 
@@ -268,7 +375,7 @@ function loadUnits() {
 function getParamText(params: Array<{type: string, note: string}>) {
 	let parText = "\n\n**Parameters**  \n";
 	params.forEach(par => {
-		if (par.type === "none") {
+		if (par.type === "noop") {
 			parText += "*none*";
 		} else {
 			parText += "* **" + par.type + "**: *" + par.note + "*";
@@ -371,4 +478,91 @@ function getFormattedList(myList: Array<string>) {
 		}
 	});
 	return text;
+}
+
+
+// Define a set of excluded types for inheritance checking. These require
+// much more detailed information to accurately check. 
+var excluded_types: string[] = ['StrategicNumber', 'GoalId', 'PlayerId', "TauntId", "RelOp", "UpRelOp"];
+
+/**********************************************************************//**
+ * Checks if `value` is a member (or subcategory member) of the `expected` type
+ *  @param[in] value      	Value to see if it is a member of the 'expected' type
+ *  @param[in] expected		Type/category to be checked
+ *  @param[in] params		Map of all valid AoE2 script types
+ *  @return Whether or not @p value inherits from @p expected
+ * 
+ * Method is recursive, as it also checks the sub-categories of expected
+ * and all of their sub-categories, etc ...
+ **************************************************************************/
+var InheritsFrom = function ifname(value: string, expected: string, 
+					  params?: Map<string, AiScriptType>): boolean
+{
+	// For now we cannot assess numbers correctly
+	if (/^-*[0-9]+$/g.test(value)) return true;
+	
+	// Load the parameters if none were passed
+	if (params === undefined) params = loadAoE2Parameters();
+
+	// TODO: enable better error checking so these exclusions are not necessary
+	if (excluded_types.indexOf(expected) !== -1) {
+		return true;
+	}
+
+	let inherits: boolean = false;
+	if (params[expected] !== undefined) {
+		if (params[expected].values[value] !== undefined) {
+			inherits = true;
+		} else if (params[expected].subcategories !== undefined) {
+			params[expected].subcategories.forEach(category => {
+				inherits = (inherits || ifname(value, category, params));
+			});
+		}
+	}
+	return inherits;
+}
+
+var levenshtein = require("levenshtein");
+interface levenGuess {
+	guess: string[];
+	dist:  number;
+}
+var guessParam = function guessPar(input: string, categories: string[],
+								   scriptPars: Map<string, AiScriptType>): levenGuess
+{
+	let curLeven = {
+		guess: [],
+		dist: 5		// Maximum allowed distance (may need tuning)
+	}
+	categories.forEach(cat => {
+		
+		let category: AiScriptType = scriptPars[cat];
+		// Test all parameters of this category
+		
+		Object.keys(category.values).forEach(param => {
+			let leven = new levenshtein(input, param);
+			curLeven = updateLevenDist({guess:[param], dist: leven.distance}, curLeven);
+		});
+		
+		// Test parameters of subcategories
+		if (category.subcategories !== undefined) {
+			let newLeven = guessPar(input, category.subcategories, scriptPars);
+			curLeven = updateLevenDist(newLeven, curLeven);
+		}
+		
+	});
+	
+	return curLeven;
+}
+
+function updateLevenDist(newLeven: levenGuess, curLeven: levenGuess): levenGuess 
+{
+	if (newLeven.dist < curLeven.dist) {
+		curLeven.guess = newLeven.guess;
+		curLeven.dist  = newLeven.dist;
+	} 
+	else if (newLeven.dist == curLeven.dist) {
+		curLeven.guess = curLeven.guess.concat(newLeven.guess);
+	}
+	return curLeven;
 }
