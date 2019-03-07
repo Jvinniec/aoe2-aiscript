@@ -30,6 +30,7 @@
         }
     },{
         "name": "ri-anarchy",
+        "id": 16,
         "description": "Huskarls can be trained at Barracks",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -43,6 +44,8 @@
         }
     },{
         "name": "ri-andean-sling",
+        "id": 516,
+        "defined": 0,
         "description": "Skirmishers and Slingers minimum range removed",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -56,7 +59,7 @@
         }
     },{
         "name": "ri-arbalest",
-        "id": 376,
+        "id": 237,
         "description": "Upgrades Crossbowman to Arbalest",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -70,6 +73,7 @@
         }
     },{
         "name": "ri-architecture",
+        "id": 51,
         "description": "Buildings +10% HP, +1 armor, +1 pierce armor, +3 building armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -83,6 +87,7 @@
         }
     },{
         "name": "ri-arquebus",
+        "id": 573,
         "description": "Gunpowder units fire more accurately at moving targets. Increases projectile speed of Bombard Cannons and Bombard Towers by +0.2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -96,6 +101,7 @@
         }
     },{
         "name": "ri-arrowslits",
+        "id": 608,
         "description": "Watch Tower/Guard Tower/Keep +1/+2/+3 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -109,6 +115,7 @@
         }
     },{
         "name": "ri-arson",
+        "id": 602,
         "description": "Infantry +2 attack vs standard buildings",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -122,6 +129,7 @@
         }
     },{
         "name": "ri-artillery",
+        "id": 10,
         "description": "Bombard Tower, Bombard Cannon, and Cannon Galleon range +2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -135,6 +143,7 @@
         }
     },{
         "name": "ri-atheism",
+        "id": 21,
         "description": "Wonder and Relic victories take +100 years -50% Spies/Treason cost",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -148,6 +157,7 @@
         }
     },{
         "name": "ri-atlatl",
+        "id": 460,
         "description": "Skirmishers +1 attack and range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -160,7 +170,8 @@
             "tech": ["none"]
         }
     },{
-        "name": "ri-attonement",
+        "name": "ri-atonement",
+        "id": 319,
         "description": "Monks and Missionaries can convert enemy Monks and Missionaries",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -174,6 +185,7 @@
         }
     },{
         "name": "ri-ballistics",
+        "id": 93,
         "description": "Improves missile unit's accuracy at moving targets.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -187,6 +199,7 @@
         }
     },{
         "name": "ri-banking",
+        "id": 17,
         "description": "Tributes are free",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -200,6 +213,7 @@
         }
     },{
         "name": "ri-bearded-axe",
+        "id": 83,
         "description": "Throwing Axeman range +1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -213,6 +227,7 @@
         }
     },{
         "name": "ri-berserkergang",
+        "id": 49,
         "description": "Berserks regenerate faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -226,6 +241,7 @@
         }
     },{
         "name": "ri-blast-furnace",
+        "id": 75,
         "description": "Infantry and cavalry +2 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -239,6 +255,7 @@
         }
     },{
         "name": "ri-block-printing",
+        "id": 230,
         "description": "Monk and Missionary conversion range +3 and line of sight +3",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -252,6 +269,7 @@
         }
     },{
         "name": "ri-bloodlines",
+        "id": 435,
         "description": "Mounted units +20 HP",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -265,6 +283,7 @@
         }
     },{
         "name": "ri-bodkin-arrow",
+        "id": 200,
         "description": "Archers, Castles, Town Centers, Towers, Galleys, and Longboats +1 attack, +1 range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -278,6 +297,7 @@
         }
     },{
         "name": "ri-boiling-oil",
+        "id": 488,
         "description": "Castles +9 bonus damage against rams",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -291,6 +311,7 @@
         }
     },{
         "name": "ri-bombard-tower",
+        "id": 64,
         "description": "Allows creation of Bombard Towers",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -304,6 +325,7 @@
         }
     },{
         "name": "ri-bow-saw",
+        "id": 203,
         "description": "Villagers gather wood 20% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -317,6 +339,7 @@
         }
     },{
         "name": "ri-bracer",
+        "id": 201,
         "description": "Archers, Castles, Town Centers, Towers, Galleys, and Longboats +1 attack, +1 range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -329,33 +352,8 @@
             "tech": ["ri-bodkin-arrow"]
         }
     },{
-        "name": "ri-hoardings",
-        "description": "Castles +21% HP",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "example": [],
-        "related": ["none"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["!aztec", "!burmese", "!chinese", "!ethiopian", "!goth", "!hun", "!japanese", "!korean", "!malay", "!portuguese"],
-            "tech": [""]
-        }
-    },{
-        "name": "ri-howdah",
-        "description": "Battle Elephants +1/+1 armor",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "example": [],
-        "related": ["ri-manipur-cavalry"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["castle"],
-            "civ": ["burmese"],
-            "tech": ["none"]
-        }
-    },{
         "name": "ri-cannon-galleon",
+        "id": 37,
         "description": "Allows creation of Cannon Galleons",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -368,7 +366,22 @@
             "tech": ["ri-chemistry"]
         }
     },{
+        "name": "ri-capped-ram",
+        "id": 96,
+        "description": "Upgrades Rams to Capped Rams (+1A, +25HP, +10 Pierce Armor, +1 Ram Armor, +25 building/wall attack, +10 siege attack)",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "example": [],
+        "related": ["ri-siege-ram"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["siege-workshop"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
         "name": "ri-caravan",
+        "id": 48,
         "description": "Trade Carts and Trade Cogs move 50% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -382,6 +395,7 @@
         }
     },{
         "name": "ri-careening",
+        "id": 374,
         "description": "Ship armor +1, Transport Ship capacity +5",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -395,6 +409,7 @@
         }
     },{
         "name": "ri-carrack",
+        "id": 572,
         "description": "Ship armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -408,6 +423,7 @@
         }
     },{
         "name": "ri-cartography",
+        "id": 19,
         "description": "See allies' Line of Sight",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -421,6 +437,7 @@
         }
     },{
         "name": "ri-cavalier",
+        "id": 209,
         "description": "Upgrades Knight to Cavalier",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -434,6 +451,7 @@
         }
     },{
         "name": "ri-chain-barding",
+        "id": 82,
         "description": "Cavalry armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -447,6 +465,7 @@
         }
     },{
         "name": "ri-chain-mail",
+        "id": 76,
         "description": "Infantry armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -460,6 +479,7 @@
         }
     },{
         "name": "ri-champion",
+        "id": 264,
         "description": "Upgrads Two Handed Swordsman to Champion",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -473,6 +493,7 @@
         }
     },{
         "name": "ri-chatras",
+        "id": 628,
         "description": "Battle Elephants +50 HP",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -486,6 +507,7 @@
         }
     },{
         "name": "ri-chemistry",
+        "id": 47,
         "description": "Allows creation of gunpowder units; +1 attack for siege units, archers, and defensive structures",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -499,6 +521,7 @@
         }
     },{
         "name": "ri-chieftains",
+        "id": 463,
         "description": "Infantry +5 attack vs cavalry, +4 vs camels",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -512,6 +535,7 @@
         }
     },{
         "name": "ri-chivalry",
+        "id": 493,
         "description": "Stables work 40% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -525,6 +549,7 @@
         }
     },{
         "name": "ri-coinage",
+        "id": 23,
         "description": "Tribute fee reduced to 20%",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -538,6 +563,7 @@
         }
     },{
         "name": "ri-conscription",
+        "id": 315,
         "description": "Barracks, Archery Range, Stable, and Castle units train 33% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -551,6 +577,7 @@
         }
     },{
         "name": "ri-couriers",
+        "id": 517,
         "description": "Kamayuks, Slingers, and Eagle Scouts +1/+2 armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -564,6 +591,7 @@
         }
     },{
         "name": "ri-crenellations",
+        "id": 11,
         "description": "Castle range +3, garrisoned infantry fires arrows",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -577,6 +605,7 @@
         }
     },{
         "name": "ri-crop-rotation",
+        "id": 12,
         "description": "Farms provide +175 food before they need to be reseeded",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -617,20 +646,8 @@
             "tech": ["ri-chemistry","ri-cannon-galleon"]
         }
     },{
-        "name": "ri-demolition-ship",
-        "description": "Upgrades Demolition Raft to Demolition Ship",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "example": [],
-        "related": ["ri-heavy-demolition-Ship"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["dock"],
-            "civ": ["!korean"],
-            "tech": ["none"]
-        }
-    },{
         "name": "ri-double-bit-axe",
+        "id": 202,
         "description": "Villagers gather wood 20% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -644,6 +661,7 @@
         }
     },{
         "name": "ri-double-crossbow",
+        "id": 623,
         "description": "Ballista Elephants and Scorpions fire two projectiles",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -657,6 +675,7 @@
         }
     },{
         "name": "ri-drill",
+        "id": 6,
         "description": "Siege Workshop units movement speed +50%",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -670,6 +689,7 @@
         }
     },{
         "name": "ri-druzhina",
+        "id": 513,
         "description": "Infantry deals trample damage",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -683,6 +703,7 @@
         }
     },{
         "name": "ri-dry-dock",
+        "id": 375,
         "description": "Ship speed +15%, Transport Ship capacity +10",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -696,6 +717,7 @@
         }
     },{
         "name": "ri-eagle-warrior",
+        "id": 384,
         "description": "Upgrades Eagle Scout to Eagle Warrior",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -709,6 +731,7 @@
         }
     },{
         "name": "ri-el-dorado",
+        "id": 4,
         "description": "Eagle Warrior HP +40",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -722,6 +745,7 @@
         }
     },{
         "name": "ri-elite-arambai",
+        "id": 619,
         "description": "Upgrades Arambai to Elite Arambai",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -735,6 +759,7 @@
         }
     },{
         "name": "ri-elite-ballista-elephant",
+        "id": 615,
         "description": "Upgrades Conquistador to Elite Conquistador",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -748,6 +773,7 @@
         }
     },{
         "name": "ri-elite-battle-elephant",
+        "id": 631,
         "description": "Upgrades Battle Elephant to Elite Battle Elephant",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -761,6 +787,7 @@
         }
     },{
         "name": "ri-elite-berserk",
+        "id": 398,
         "description": "Upgrades Berserk to Elite Berserk",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -774,9 +801,10 @@
         }
     },{
         "name": "ri-elite-boyar",
+        "id": 504,
         "description": "Upgrades Boyar to Elite Boyar",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
+        "note": ["Not defined by default"],
         "example": [],
         "related": ["none"],
         "requires": {
@@ -787,6 +815,7 @@
         }
     },{
         "name": "ri-elite-camel-archer",
+        "id": 565,
         "description": "Upgrades Camel Archer to Elite Camel Archer",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -800,6 +829,7 @@
         }
     },{
         "name": "ri-elite-caravel",
+        "id": 597,
         "description": "Upgrades Caravel to Elite Caravel",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -813,6 +843,7 @@
         }
     },{
         "name": "ri-elite-cataphract",
+        "id": 361,
         "description": "Upgrades Cataphract to Elite Cataphract",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -826,6 +857,7 @@
         }
     },{
         "name": "ri-elite-chu-ko-nu",
+        "id": 362,
         "description": "Upgrades Chu Ko Nu to Elite Chu Ko Nu",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -839,6 +871,7 @@
         }
     },{
         "name": "ri-elite-conquistador",
+        "id": 60,
         "description": "Upgrades Conquistador to Elite Conquistador",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -852,6 +885,7 @@
         }
     },{
         "name": "ri-elite-eagle-warrior",
+        "id": 434,
         "description": "Upgrades Eagle Warrior to Elite Eagle Warrior",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -865,6 +899,7 @@
         }
     },{
         "name": "ri-elite-elephant-archer",
+        "id": 481,
         "description": "Upgrades Elephant Archer to Elite Elephant Archer",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -878,6 +913,7 @@
         }
     },{
         "name": "ri-elite-gbeto",
+        "id": 567,
         "description": "Upgrades Gbeto to Elite Gbeto",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -891,6 +927,7 @@
         }
     },{
         "name": "ri-elite-genitour",
+        "id": 599,
         "description": "Upgrades Genitour to Elite Genitour",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -904,6 +941,7 @@
         }
     },{
         "name": "ri-elite-genoese-crossbowman",
+        "id": 468,
         "description": "Upgrades Genoese Crossbowman to Elite Genoese Crossbowman",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -917,6 +955,7 @@
         }
     },{
         "name": "ri-elite-huskarl",
+        "id": 365,
         "description": "Upgrades Huskarl to Elite Huskarl",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -929,20 +968,8 @@
             "tech": ["none"]
         }
     },{
-        "name": "ri-elite-imperial-camel",
-        "description": "Upgrades Imperial Camel to Elite Imperial Camel",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "example": [],
-        "related": ["none"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["indian"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "ri-elite-jaguar-warrior",
+        "name": "ri-elite-jaguar-man",
+        "id": 432,
         "description": "Upgrades Jaguar Warrior to Elite Jaguar Warrior",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -956,6 +983,7 @@
         }
     },{
         "name": "ri-elite-janissary",
+        "id": 369,
         "description": "Upgrades Janissary to Elite Janissary",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -969,6 +997,7 @@
         }
     },{
         "name": "ri-elite-kamayuk",
+        "id": 509,
         "description": "Upgrades Kamayuk to Elite Kamayuk",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -982,6 +1011,7 @@
         }
     },{
         "name": "ri-elite-karambit-warrior",
+        "id": 617,
         "description": "Upgrades Karambit Warrior to Elite Karambit Warrior",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -995,6 +1025,7 @@
         }
     },{
         "name": "ri-elite-longboat",
+        "id": 372,
         "description": "Upgrades Longboat to Elite Longboat",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1008,6 +1039,7 @@
         }
     },{
         "name": "ri-elite-longbowman",
+        "id": 360,
         "description": "Upgrades Longbowman to Elite Longbowman",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1021,6 +1053,7 @@
         }
     },{
         "name": "ri-elite-magyar-huszar",
+        "id": 472,
         "description": "Upgrades Magyar Huszar to Elite Magyar Huszar",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1034,6 +1067,7 @@
         }
     },{
         "name": "ri-elite-mameluke",
+        "id": 368,
         "description": "Upgrades Mameluke to Elite Mameluke",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1047,6 +1081,7 @@
         }
     },{
         "name": "ri-elite-mangudai",
+        "id": 371,
         "description": "Upgrades Mangudai to Elite Mangudai",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1060,6 +1095,7 @@
         }
     },{
         "name": "ri-elite-organ-gun",
+        "id": 563,
         "description": "Upgrades Organ Gun to Elite Organ Gun",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1073,6 +1109,7 @@
         }
     },{
         "name": "ri-elite-plumed-archer",
+        "id": 27,
         "description": "Upgrades Plumed Archer to Elite Plumed Archer",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1086,6 +1123,7 @@
         }
     },{
         "name": "ri-elite-rattan-archer",
+        "id": 621,
         "description": "Upgrades Rattan Archer to Elite Rattan Archer",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1099,6 +1137,7 @@
         }
     },{
         "name": "ri-elite-samurai",
+        "id": 366,
         "description": "Upgrades Samurai to Elite Samurai",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1112,6 +1151,7 @@
         }
     },{
         "name": "ri-elite-shotel-warrior",
+        "id": 569,
         "description": "Upgrades Shotel Warrior to Elite Shotel Warrior",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1125,6 +1165,7 @@
         }
     },{
         "name": "ri-elite-skirmisher",
+        "id": 98,
         "description": "Upgrades Skirmisher to Elite Skirmisher",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1138,6 +1179,7 @@
         }
     },{
         "name": "ri-elite-tarkan",
+        "id": 2,
         "description": "Upgrades Tarkan to Elite Tarkan",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1151,6 +1193,7 @@
         }
     },{
         "name": "ri-elite-teutonic-knight",
+        "id": 364,
         "description": "Upgrades Teutonic Knight to Elite Teutonic Knight",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1164,6 +1207,7 @@
         }
     },{
         "name": "ri-elite-throwing-axeman",
+        "id": 363,
         "description": "Upgrades Throwing Axeman to Elite Throwing Axeman",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1177,6 +1221,7 @@
         }
     },{
         "name": "ri-elite-turtle-ship",
+        "id": 448,
         "description": "Upgrades Turtle Ship to Elite Turtle Ship",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1190,6 +1235,7 @@
         }
     },{
         "name": "ri-elite-war-elephant",
+        "id": 367,
         "description": "Upgrades War Elephant to Elite War Elephant",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1203,6 +1249,7 @@
         }
     },{
         "name": "ri-elite-war-wagon",
+        "id": 450,
         "description": "Upgrades War Wagon to Elite War Wagon",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1216,6 +1263,7 @@
         }
     },{
         "name": "ri-elite-woad-raider",
+        "id": 370,
         "description": "Upgrades Woad Raider to Elite Woad Raider",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1229,6 +1277,7 @@
         }
     },{
         "name": "ri-faith",
+        "id": 45,
         "description": "Increases conversion resistance",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1242,6 +1291,7 @@
         }
     },{
         "name": "ri-farimba",
+        "id": 577,
         "description": "Stable units +5 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1255,6 +1305,7 @@
         }
     },{
         "name": "ri-fast-fire-ship",
+        "id": 246,
         "description": "Upgrades Fire Ship to Fast Fire Ship",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1268,6 +1319,7 @@
         }
     },{
         "name": "ri-fervor",
+        "id": 252,
         "description": "Monk and Missionary speed +15%",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1281,6 +1333,7 @@
         }
     },{
         "name": "ri-fletching",
+        "id": 199,
         "description": "Archers, Castles, Town Centers, Towers, Galleys, and Longboats +1 attack and range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1294,6 +1347,7 @@
         }
     },{
         "name": "ri-forced-levy",
+        "id": 625,
         "description": "Militia line units cost no gold",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1307,6 +1361,7 @@
         }
     },{
         "name": "ri-forging",
+        "id": 67,
         "description": "Infantry and cavalry +1 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1320,6 +1375,7 @@
         }
     },{
         "name": "ri-fortified-wall",
+        "id": 194,
         "description": "Upgrades your Stone Walls to Fortified Walls. Also increases hit points of gates.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1333,6 +1389,7 @@
         }
     },{
         "name": "ri-furor-celtica",
+        "id": 5,
         "description": "Siege Workshop units +40% HP",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1346,6 +1403,7 @@
         }
     },{
         "name": "ri-galleon",
+        "id": 35,
         "description": "Upgrades War Galley to Galleon",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1359,6 +1417,7 @@
         }
     },{
         "name": "ri-garland-wars",
+        "id": 24,
         "description": "Infantry attack +4",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1372,6 +1431,7 @@
         }
     },{
         "name": "ri-gillnets",
+        "id": 65,
         "description": "Fishing Ships work +25% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1385,6 +1445,7 @@
         }
     },{
         "name": "ri-gold-mining",
+        "id": 55,
         "description": "Villagers gather gold 15% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1398,6 +1459,7 @@
         }
     },{
         "name": "ri-gold-shaft-mining",
+        "id": 182,
         "description": "Villagers gather gold 15% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1411,6 +1473,7 @@
         }
     },{
         "name": "ri-great-wall",
+        "id": 462,
         "description": "Walls and towers +30% hit points",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1424,6 +1487,7 @@
         }
     },{
         "name": "ri-greek-fire",
+        "id": 464,
         "description": "Fire Ships +1 range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1437,6 +1501,7 @@
         }
     },{
         "name": "ri-guard-tower",
+        "id": 140,
         "description": "Upgrads Watch Towers to Guard Towers",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1450,6 +1515,7 @@
         }
     },{
         "name": "ri-guilds",
+        "id": 15,
         "description": "Trading fee reduced to 15%",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1463,6 +1529,7 @@
         }
     },{
         "name": "ri-halberdier",
+        "id": 429,
         "description": "Upgrades Pikeman to Halberdier",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1476,6 +1543,7 @@
         }
     },{
         "name": "ri-hand-cart",
+        "id": 249,
         "description": "Villagers carry 50% more and move 10% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1489,6 +1557,7 @@
         }
     },{
         "name": "ri-heated-shot",
+        "id": 380,
         "description": "Towers +125%, Castles and Harbors +4 attack vs ships",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1502,6 +1571,7 @@
         }
     },{
         "name": "ri-heavy-camel",
+        "id": 236,
         "description": "Upgrades Camel to Heavy Camel",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1515,6 +1585,7 @@
         }
     },{
         "name": "ri-heavy-cavalry-archer",
+        "id": 218,
         "description": "Upgrades Cavalry Archer to Heavy Cavalry Archer",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1528,6 +1599,7 @@
         }
     },{
         "name": "ri-heavy-demolition-ship",
+        "id": 244,
         "description": "Upgrades Demolition Raft to Demolition Ship",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1541,6 +1613,7 @@
         }
     },{
         "name": "ri-heavy-plow",
+        "id": 13,
         "description": "Farms provide +125 food, Villagers carry +1 food",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1554,6 +1627,7 @@
         }
     },{
         "name": "ri-heavy-scorpion",
+        "id": 239,
         "description": "Upgrades `scorpion` to `heavy-scorpion`",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1567,9 +1641,11 @@
         }
     },{
         "name": "ri-herbal-medicine",
+        "id": 441,
+        "defined": 0,
         "description": "Quadruples the healing rate of units garrisoned inside buildings",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
+        "note": ["This command is not defined by default. You will need to add `(defconst ri-herbal-medicine 441)` to use it in your scripts"],
         "example": [],
         "related": ["none"],
         "requires": {
@@ -1580,6 +1656,7 @@
         }
     },{
         "name": "ri-heresy",
+        "id": 439,
         "description": "Converted units/buildings die/are destroyed instead of taking the enemy's color",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1592,7 +1669,22 @@
             "tech": ["none"]
         }
     },{
+        "name": "ri-hoardings",
+        "id": 379,
+        "description": "Castles +21% HP",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["!aztec", "!burmese", "!chinese", "!ethiopian", "!goth", "!hun", "!japanese", "!korean", "!malay", "!portuguese"],
+            "tech": [""]
+        }
+    },{
         "name": "ri-horse-collar",
+        "id": 14,
         "description": "Farms provide +75 food before they need to be reseeded",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1605,7 +1697,37 @@
             "tech": ["none"]
         }
     },{
+        "name": "ri-howdah",
+        "id": 626,
+        "description": "Battle Elephants +1/+1 armor",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "example": [],
+        "related": ["ri-manipur-cavalry"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["burmese"],
+            "tech": ["none"]
+        }
+    },{
+        "name": "ri-hunting-dogs",
+        "id": 526,
+        "removed": 1,
+        "description": "Hunters and Fishermen +25% working speed",
+        "version": {"min": "1.0c", "max": "2.2"},
+        "note": ["Removed in HD patch 2.2"],
+        "example": [],
+        "related": [],
+        "requires": {
+            "age": "dark-age",
+            "building": ["mill"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
         "name": "ri-husbandry",
+        "id": 39,
         "description": "Cavalry speed +10%",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1619,6 +1741,7 @@
         }
     },{
         "name": "ri-hussar",
+        "id": 428,
         "description": "Upgrades light Cavalry to Hussar",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1632,6 +1755,7 @@
         }
     },{
         "name": "ri-illumination",
+        "id": 233,
         "description": "Monks and Missionaries regain their faith faster after a successful conversion",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1645,6 +1769,7 @@
         }
     },{
         "name": "ri-imperial-camel",
+        "id": 521,
         "description": "Upgrades Heavy Camel to Imperial Camel",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1658,6 +1783,7 @@
         }
     },{
         "name": "ri-imperial-skirmisher",
+        "id": 655,
         "description": "Upgrades Elite Skirmisher to Imperial Skirmisher",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1671,6 +1797,7 @@
         }
     },{
         "name": "ri-inquisition",
+        "id": 492,
         "description": "Monks convert faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1684,6 +1811,7 @@
         }
     },{
         "name": "ri-iron-casting",
+        "id": 68,
         "description": "Infantry and cavalry +1 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1697,6 +1825,7 @@
         }
     },{
         "name": "ri-ironclad",
+        "id": 489,
         "description": "Siege weapon melee armor +4",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1710,6 +1839,7 @@
         }
     },{
         "name": "ri-kasbah",
+        "id": 578,
         "description": "Team Castles work +25% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1723,6 +1853,7 @@
         }
     },{
         "name": "ri-kataparuto",
+        "id": 59,
         "description": "Trebuchets pack/unpack and fire faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1736,6 +1867,7 @@
         }
     },{
         "name": "ri-keep",
+        "id": 63,
         "description": "Upgrads Guard Towers to Keeps",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1749,6 +1881,7 @@
         }
     },{
         "name": "ri-leather-archer-armor",
+        "id": 212,
         "description": "Archer armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1762,6 +1895,7 @@
         }
     },{
         "name": "ri-light-cavalry",
+        "id": 254,
         "description": "Upgrades Scout Cavalry to Light Cavalry",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1775,6 +1909,7 @@
         }
     },{
         "name": "ri-logistica",
+        "id": 61,
         "description": "Cataphracts cause trample damage, +6 attack vs infantry",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1788,6 +1923,7 @@
         }
     },{
         "name": "ri-long-swordsman",
+        "id": 207,
         "description": "Upgrads Man-at-Arms to Long Swordsman",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1801,6 +1937,7 @@
         }
     },{
         "name": "ri-loom",
+        "id": 22,
         "description": "Villagers +15 HP, +1/+2 armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1814,6 +1951,7 @@
         }
     },{
         "name": "ri-madrasah",
+        "id": 490,
         "description": "Monks return 33 gold when killed",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1827,6 +1965,7 @@
         }
     },{
         "name": "ri-maghrabi-camels",
+        "id": 579,
         "description": "Camel troops regenerate",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1840,6 +1979,7 @@
         }
     },{
         "name": "ri-mahouts",
+        "id": 7,
         "description": "War Elephant speed +30%",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1853,6 +1993,7 @@
         }
     },{
         "name": "ri-man-at-arms",
+        "id": 222,
         "description": "Upgrads Milita to Man-at-Arms",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1866,6 +2007,7 @@
         }
     },{
         "name": "ri-manipur-cavalry",
+        "id": 627,
         "description": "Cavalry and Arambai +3 attack vs buildings and standard buildings",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1879,6 +2021,7 @@
         }
     },{
         "name": "ri-marauders",
+        "id": 483,
         "description": "Tarkans can be trained at the Stable",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1892,6 +2035,7 @@
         }
     },{
         "name": "ri-masonry",
+        "id": 50,
         "description": "Buildings +10% HP, +1 armor, +1 pierce armor, +3 building armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1905,6 +2049,7 @@
         }
     },{
         "name": "ri-mercenaries",
+        "id": 514,
         "description": "Magyar Huszars cost no gold",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1918,6 +2063,7 @@
         }
     },{
         "name": "ri-murder-holes",
+        "id": 322,
         "description": "Removes towers and Castles minimum range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1931,6 +2077,7 @@
         }
     },{
         "name": "ri-nomads",
+        "id": 487,
         "description": "Houses do not lose population when destroyed",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1944,6 +2091,7 @@
         }
     },{
         "name": "ri-obsidian-arrows",
+        "id": 485,
         "description": "Archer line has +6 attack vs standard buildings and stone defense",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1957,6 +2105,7 @@
         }
     },{
         "name": "ri-orthodoxy",
+        "id": 512,
         "description": "Monks +3/+3 armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1970,6 +2119,7 @@
         }
     },{
         "name": "ri-padded-archer-armor",
+        "id": 211,
         "description": "Archer armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1983,6 +2133,7 @@
         }
     },{
         "name": "ri-paladin",
+        "id": 265,
         "description": "Upgrades Cavalier to Paladin",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1996,6 +2147,7 @@
         }
     },{
         "name": "ri-panokseon",
+        "id": 486,
         "description": "Turtle Ships move 15% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2009,6 +2161,7 @@
         }
     },{
         "name": "ri-paper-money",
+        "id": 629,
         "description": "The player and all allies receive 500 gold",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2022,6 +2175,7 @@
         }
     },{
         "name": "ri-parthian-tactics",
+        "id": 436,
         "description": "Mounted archer armor +1/+2, attack bonus of +2 or +4 against Pikemen",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2035,6 +2189,7 @@
         }
     },{
         "name": "ri-pavise",
+        "id": 494,
         "description": "Foot archers +1/+1 armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2048,6 +2203,7 @@
         }
     },{
         "name": "ri-perfusion",
+        "id": 457,
         "description": "Barracks work 100% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2061,6 +2217,7 @@
         }
     },{
         "name": "ri-pikeman",
+        "id": 197,
         "description": "Upgrades Spearman to Pikeman",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2073,20 +2230,22 @@
             "tech": ["none"]
         }
     },{
-        "name": "ri-plate-barding-armor",
+        "name": "ri-plate-barding",
+        "id": 80,
         "description": "Cavalry armor +1/+2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
         "example": [],
-        "related": ["ri-scale-barding", "ri-chain-barding-armor"],
+        "related": ["ri-scale-barding", "ri-chain-barding"],
         "requires": {
             "age": "imperial-age",
             "building": ["blacksmith"],
             "civ": ["!aztec", "!celt", "!ethiopian", "!goth", "!inca", "!japanese", "!korean", "!malay", "!mayan", "!mongol", "!viking"],
-            "tech": ["ri-chain-barding-armor"]
+            "tech": ["ri-chain-barding"]
         }
     },{
-        "name": "ri-plate-mail-armor",
+        "name": "ri-plate-mail",
+        "id": 77,
         "description": "Infantry armor +1/+2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2100,6 +2259,7 @@
         }
     },{
         "name": "ri-recurve-bow",
+        "id": 515,
         "description": "Cavalry Archers +1 range and attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2113,6 +2273,7 @@
         }
     },{
         "name": "ri-redemption",
+        "id": 316,
         "description": "Monks can convert most buildings and siege units",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2125,7 +2286,25 @@
             "tech": [""]
         }
     },{
+        "name": "ri-revetments",
+        "id": 525,
+        "removed": 1,
+        "description": "???",
+        "version": {"min": "?", "max": "?"},
+        "note": ["Not sure this is a legit research item",
+                 "May belong to a modded version of the game and not the primary game itself",
+                 "Alot of existing scripts define this constant, but I can find no documentation of what it does"],
+        "example": [],
+        "related": [],
+        "requires": {
+            "age": "?",
+            "building": ["?"],
+            "civ": ["none"],
+            "tech": ["?"]
+        }
+    },{
         "name": "ri-ring-archer-armor",
+        "id": 219,
         "description": "Archer armor +1/+2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2139,6 +2318,7 @@
         }
     },{
         "name": "ri-rocketry",
+        "id": 52,
         "description": "Chu Ko Nu attack +2, Scorpion attack +4",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2152,6 +2332,7 @@
         }
     },{
         "name": "ri-royal-heirs",
+        "id": 574,
         "description": "Shotel Warriors are created nearly instantly",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2165,6 +2346,7 @@
         }
     },{
         "name": "ri-sanctity",
+        "id": 231,
         "description": "Monk and Missionary hit points +15",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2178,6 +2360,7 @@
         }
     },{
         "name": "ri-sappers",
+        "id": 321,
         "description": "Villagers +15 attack against buildings and stone defense. Villagers chop down trees with one strike",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2191,11 +2374,12 @@
         }
     },{
         "name": "ri-scale-barding",
+        "id": 81,
         "description": "Cavalry armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
         "example": [],
-        "related": ["ri-chain-barding-armor", "ri-plate-barding-armor"],
+        "related": ["ri-chain-barding", "ri-plate-barding"],
         "requires": {
             "age": "feudal-age",
             "building": ["blacksmith"],
@@ -2204,6 +2388,7 @@
         }
     },{
         "name": "ri-scale-mail",
+        "id": 74,
         "description": "Infantry armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2217,6 +2402,7 @@
         }
     },{
         "name": "ri-shatagni",
+        "id": 507,
         "description": "Hand Cannoneers +1 range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2230,6 +2416,7 @@
         }
     },{
         "name": "ri-shinkichon",
+        "id": 445,
         "description": "Mangonels +1 range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2243,6 +2430,7 @@
         }
     },{
         "name": "ri-shipwright",
+        "id": 373,
         "description": "Ships cost -20% wood and are built 54% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2256,6 +2444,7 @@
         }
     },{
         "name": "ri-siege-engineers",
+        "id": 377,
         "description": "Siege units +20% attack against buildings, +1 range (except Rams)",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2269,6 +2458,7 @@
         }
     },{
         "name": "ri-silk-road",
+        "id": 499,
         "description": "Trade units cost halved",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2282,6 +2472,7 @@
         }
     },{
         "name": "ri-sipahi",
+        "id": 491,
         "description": "Cavalry Archers +20 HP",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2295,6 +2486,7 @@
         }
     },{
         "name": "ri-spies",
+        "id": 408,
         "description": "See enemy's Line of Sight",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Use `can-spy` fact to see if this tech can be researched",
@@ -2311,6 +2503,7 @@
         }
     },{
         "name": "ri-squires",
+        "id": 215,
         "description": "Infantry move 10% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2324,6 +2517,7 @@
         }
     },{
         "name": "ri-stone-mining",
+        "id": 278,
         "description": "Villagers gather stone 15% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2337,6 +2531,7 @@
         }
     },{
         "name": "ri-stone-shaft-mining",
+        "id": 279,
         "description": "Villagers gather stone 15% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2349,7 +2544,22 @@
             "tech": ["ri-stone-mining"]
         }
     },{
+        "name": "ri-stonecutting",
+        "id": 54,
+        "description": "(Treadmill Crane) Villagers construct buildings 20% faster",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This is associated with the \"Treadmill Crane\" research tech"],
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["university"],
+            "civ": ["!briton", "!byzantine", "!chinese", "!ethiopian", "!goth", "!hun", "!indian", "!malay", "!mongol", "!persian", "!spanish"],
+            "tech": ["none"]
+        }
+    },{
         "name": "ri-stronghold",
+        "id": 482,
         "description": "Castles and Towers fire 25% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2363,6 +2573,7 @@
         }
     },{
         "name": "ri-sultans",
+        "id": 506,
         "description": "All gold gathering is 10% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2376,6 +2587,7 @@
         }
     },{
         "name": "ri-supremacy",
+        "id": 440,
         "description": "Increases Villager combat skills",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2389,6 +2601,7 @@
         }
     },{
         "name": "ri-thalassocracy",
+        "id": 624,
         "description": "Turns Docks into Harbors",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2402,6 +2615,7 @@
         }
     },{
         "name": "ri-theocracy",
+        "id": 438,
         "description": "Only one Monk or Missionary must rest after a successful conversion",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2415,6 +2629,7 @@
         }
     },{
         "name": "ri-thumb-ring",
+        "id": 437,
         "description": "Archers fire faster and with 100% accuracy",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2428,6 +2643,7 @@
         }
     },{
         "name": "ri-tigui",
+        "id": 576,
         "description": "Town Centers fire arrows",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2441,6 +2657,7 @@
         }
     },{
         "name": "ri-torsion-engines",
+        "id": 575,
         "description": "Siege Workshop units blast radius increased",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2454,6 +2671,7 @@
         }
     },{
         "name": "ri-town-patrol",
+        "id": 280,
         "description": "Building line-of-sight +4.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2467,6 +2685,7 @@
         }
     },{
         "name": "ri-town-watch",
+        "id": 8,
         "description": "Building line-of-sight +4.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2480,6 +2699,7 @@
         }
     },{
         "name": "ri-tracking",
+        "id": 90,
         "description": "Infantry +2 line-of-sight",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2492,35 +2712,8 @@
             "tech": ["none"]
         }
     },{
-        "name": "ri-treadmill-crane",
-        "description": "Villagers construct buildings 20% faster",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "example": [],
-        "related": ["none"],
-        "requires": {
-            "age": "castle-age",
-            "building": ["university"],
-            "civ": ["!briton", "!byzantine", "!chinese", "!ethiopian", "!goth", "!hun", "!indian", "!malay", "!mongol", "!persian", "!spanish"],
-            "tech": ["none"]
-        }
-    },{
-        "name": "ri-treason",
-        "description": "See enemy Kings for a short time",
-        "version": {"min": "1.0c", "max": ""},
-        "note": [
-            "Regicide Map only",
-            "Treason replaces Spies in Regicide maps"],
-        "example": [],
-        "related": ["ri-spies"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["castle"],
-            "civ": ["all"],
-            "tech": ["none"]
-        }
-    },{
         "name": "ri-tusk-swords",
+        "id": 622,
         "description": "Battle Elephants +3 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2534,6 +2727,7 @@
         }
     },{
         "name": "ri-two-handed-swordsman",
+        "id": 217,
         "description": "Upgrads Long Swordsman to Two Handed Swordsman",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2547,6 +2741,7 @@
         }
     },{
         "name": "ri-two-man-saw",
+        "id": 221,
         "description": "Villagers gather wood 10% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2560,6 +2755,7 @@
         }
     },{
         "name": "ri-war-galley",
+        "id": 34,
         "description": "Upgrades Galley to War Galley and Fire Galley to Fire Ship",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2572,7 +2768,8 @@
             "tech": ["none"]
         }
     },{
-        "name": "ri-warwolf",
+        "name": "ri-war-wolf",
+        "id": 461,
         "description": "Trebuchets do blast damage, 100% accuracy against units",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2586,6 +2783,7 @@
         }
     },{
         "name": "ri-wheel-barrow",
+        "id": 213,
         "description": "Villagers carry 25% more and move 10% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2599,6 +2797,7 @@
         }
     },{
         "name": "ri-yasama",
+        "id": 484,
         "description": "Towers fire 2 extra arrows",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2612,6 +2811,7 @@
         }
     },{
         "name": "ri-yeoman",
+        "id": 3,
         "description": "Foot archer range +1, Tower attack +2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2625,6 +2825,7 @@
         }
     },{
         "name": "ri-zealotry",
+        "id": 9,
         "description": "Camel and Mameluke +30HP",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
