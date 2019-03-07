@@ -4,15 +4,15 @@ import {Levenshtein} from 'levenshtein'
 /**********************************************************************//**
  * Import AI scripting resources
  **************************************************************************/
-// import * as aoe2actions    from './resources/aoe2Action.json';
-// import * as aoe2buildings  from './resources/aoe2BuildingId.json';
-// import * as aoe2civs       from './resources/aoe2CivId.json';
-// import * as aoe2facts      from './resources/aoe2Fact.json';
-// import * as aoe2factaction from './resources/aoe2FactAction.json';
-// import * as aoe2misc	   from './resources/aoe2Misc.json';
-// import * as aoe2stratnum   from './resources/aoe2StrategicNumbers.json';
-// import * as aoe2techs      from './resources/aoe2TechId.json';
-// import * as aoe2units      from './resources/aoe2UnitId.json';
+import * as aoe2actions    from './resources/aoe2Action.json';
+import * as aoe2buildings  from './resources/aoe2BuildingId.json';
+import * as aoe2civs       from './resources/aoe2CivId.json';
+import * as aoe2facts      from './resources/aoe2Fact.json';
+import * as aoe2factaction from './resources/aoe2FactAction.json';
+import * as aoe2misc	   from './resources/aoe2Misc.json';
+import * as aoe2stratnum   from './resources/aoe2StrategicNumbers.json';
+import * as aoe2techs      from './resources/aoe2TechId.json';
+import * as aoe2units      from './resources/aoe2UnitId.json';
 
 // Methods and variables to export from this file
 export {AiScriptPar, 
