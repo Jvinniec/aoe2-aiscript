@@ -3,12 +3,25 @@
     "subcategories": ["AgeId"],
     "values": [
     {
+        "name": "my-unique-research",
+        "description": "References the unique unit upgrade for the players current civilisation",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["This research is NOT available in All Tech games."],
+        "example": [],
+        "related": ["my-unique-unit-upgrade"],
+        "requires": {
+            "age": "castle-age",
+            "building": ["castle"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
         "name": "my-unique-unit-upgrade",
         "description": "References the unique unit upgrade for the players current civilisation",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Unlike the civilizations unique technology (`my-unique-research`) this research is available in All Tech games."],
         "example": [],
-        "related": ["ri-perfusion"],
+        "related": ["my-unique-research"],
         "requires": {
             "age": "imperial-age",
             "building": ["castle"],
