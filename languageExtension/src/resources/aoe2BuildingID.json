@@ -1,7 +1,7 @@
 { 
     "BuildingId": {
         "description": "A building",
-        "subcategories": ["BuildingClass","WallId"],
+        "subcategories": ["BuildingClass","WallId","FoundationId","BuildingLine"],
         "values": [
             {
                 "name": "archery-range",
@@ -57,6 +57,7 @@
                 }
             },{
                 "name": "castle",
+                "id": 82,
                 "description": "Used to create your unique unit, build Trebuchets, and improve villagers and buildings",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -69,6 +70,7 @@
                 }
             },{
                 "name": "dock",
+                "id": 45,
                 "description": "Used to build and improve ships, deposit food from Fishing Ships, and trade with other players by sea.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -81,6 +83,7 @@
                 }
             },{
                 "name": "farm",
+                "id": 50,
                 "description": "A renewable source of food. Provides a limited amount of food before it goes fallow and must be rebuilt.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -105,6 +108,7 @@
                 }
             },{
                 "name": "fish-trap",
+                "id": 199,
                 "description": "A renewable source of food. Similar to a Farm, but in water.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -129,6 +133,7 @@
                 } 
             },{
                 "name": "guard-tower",
+                "id": 234,
                 "description": "Stronger than Watch Tower, with greater fighting ability.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -153,6 +158,7 @@
                 }
             },{
                 "name": "house",
+                "id": 70,
                 "description": "Each House supports 5 units (villagers, military units, ships, Trade Carts).",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -177,6 +183,7 @@
                 }
             },{
                 "name": "lumber-camp",
+                "id": 562,
                 "description": "Used to deposit wood and research wood-gathering improvements.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -189,6 +196,7 @@
                 }
             },{
                 "name": "market",
+                "id": 84,
                 "description": "Used to buy and sell resources, trade with other players by land, and research trade improvements.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -201,6 +209,7 @@
                 }
             },{
                 "name": "mill",
+                "id": 68,
                 "description": "Used to deposit food and research farming improvements.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -213,6 +222,7 @@
                 }
             },{
                 "name": "mining-camp",
+                "id": 584,
                 "description": "Used to deposit stone and gold and research stone-gathering and gold-gathering improvements.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -225,6 +235,20 @@
                 }
             },{
                 "name": "monastery",
+                "id": 104,
+                "description": "Used to create and improve Monks. Garrisoned relics generate gold.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["none"],
+                "related": ["none"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["none"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
+                "name": "monument",
+                "id": 826,
                 "description": "Used to create and improve Monks. Garrisoned relics generate gold.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -237,6 +261,7 @@
                 }
             },{
                 "name": "outpost",
+                "id": 598,
                 "description": "A stationary watch point that provides advanced warning of nearby enemy activity.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -261,6 +286,7 @@
                 }
             },{
                 "name": "siege-workshop",
+                "id": 49,
                 "description": "Used to build siege weapons.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -273,6 +299,7 @@
                 }
             },{
                 "name": "stable",
+                "id": 101,
                 "description": "Used to create and improve cavalry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -285,6 +312,7 @@
                 }
             },{
                 "name": "town-center",
+                "id": 109,
                 "description": "Used to create villagers, deposit resources (food, wood, stone, gold), advance to next age, and improve buildings, villagers. Units can garrison inside for protection.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -297,6 +325,7 @@
                 }
             },{
                 "name": "university",
+                "id": 209,
                 "description": "Used to improve buildings and missile units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -309,6 +338,7 @@
                 }
             },{
                 "name": "watch-tower",
+                "id": 79,
                 "description": "Basic stone tower. Automatically attacks enemy units and buildings within range.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -321,6 +351,7 @@
                 }
             },{
                 "name": "wonder",
+                "id": 276,
                 "description": "Building a Wonder of the World demonstrates the superiority of your civilization. Constructing a Wonder that stands for a certain period of time is one way to win the game.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -358,6 +389,11 @@
                 "description": "Class containing only the farm building and fish traps",
                 "note": ["Usage: up-drop-resurces, up-retask-gatherers and priority settings"]
             },{
+                "name": "monument-class",
+                "id": 901,
+                "description": "Monuments",
+                "note": ["Includes: `monument`"]
+            },{
                 "name": "tower-class",
                 "id": 952,
                 "description": "Class containing different tower buildings",
@@ -382,6 +418,7 @@
         "values": [
             {
                 "name": "fortified-wall",
+                "id": 155,
                 "description": "Stronger than Stone Wall. Difficult to breach without siege weapons.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -394,6 +431,7 @@
                 }
             },{
                 "name": "palisade-wall",
+                "id": 72,
                 "description": "Wooden Wall that is cheap and easy to build. Slows down your enemies and warns you of their approach.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -406,6 +444,7 @@
                 }
             },{
                 "name": "stone-wall",
+                "id": 117,
                 "description": "Stronger than Palisade Wall but more expensive. Slows down your enemies so you have a chance to fend them off.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -426,5 +465,63 @@
                 "name": "stone-wall-line",
                 "description": "Includes: `stone-wall`, `fortified-wall`"
             }
-        ]}
+        ]},
+    "FoundationId": {
+        "description": "Foundation IDs for buildings that can be walked under",
+        "parentcategories": ["BuildingId"],
+        "values": [
+            {
+                "name": "town-center-foundation",
+                "id": 621,
+                "description": "town-center-foundation"
+            },{
+                "name": "gate-ascending",
+                "id": 487,
+                "description": "gate-ascending"
+            },{
+                "name": "gate-ascending-closed",
+                "id": 64,
+                "description": "gate-ascending-closed"
+            },{
+                "name": "gate-ascending-open",
+                "id": 78,
+                "description": "gate-ascending-open"
+            },{
+                "name": "gate-descending",
+                "id": 490,
+                "description": "gate-descending"
+            },{
+                "name": "gate-descending-closed",
+                "id": 88,
+                "description": "gate-descending-closed"
+            },{
+                "name": "gate-descending-open",
+                "id": 99,
+                "description": "gate-descending-open"
+            },{
+                "name": "gate-horizontal",
+                "id": 665,
+                "description": "gate-horizontal"
+            },{
+                "name": "gate-horizontal-closed",
+                "id": 659,
+                "description": "gate-horizontal-closed"
+            },{
+                "name": "gate-horizontal-open",
+                "id": 661,
+                "description": "gate-horizontal-open"
+            },{
+                "name": "gate-vertical",
+                "id": 673,
+                "description": "gate-vertical"
+            },{
+                "name": "gate-vertical-closed",
+                "id": 667,
+                "description": "gate-vertical-closed"
+            },{
+                "name": "gate-vertical-open",
+                "id": 669,
+                "description": "gate-vertical-open"
+            }
+        ]},
 }

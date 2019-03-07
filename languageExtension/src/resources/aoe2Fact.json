@@ -1,5 +1,6 @@
 { "Fact": {
     "description": "Fact commands",
+    "subcategories": ["FactAction"],
     "values": [
     {
         "name": "attack-soldier-count",
@@ -935,7 +936,7 @@
         "name": "gate-count",
         "description": "Counts the number of gates that are completed or being built",
         "version": {"min": "1.0c", "max": ""},
-        "note": ["Checks if GoalID is equal to Value"],
+        "note": ["Checks if GoalId is equal to Value"],
         "param": [
             {
                 "type": "Perimeter",
@@ -1092,7 +1093,7 @@
         "note": ["none"],
         "param": [
             {
-                "type": "RelOp",
+                "type": "UpRelOp",
                 "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
@@ -1150,6 +1151,7 @@
         "related": []
     },{
         "name": "player-number",
+        "id": 22,
         "description": "Checks computer player's player number",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1599,7 +1601,7 @@
                  "Does NOT check if sufficient resources are present to start researching"],
         "param": [
             {
-                "type": "TechID",
+                "type": "TechId",
                 "note": "Tech ID associated with research"
             }],
         "example": [{
@@ -1616,7 +1618,7 @@
                  "Does NOT check if sufficient resources are present to start researching"],
         "param": [
             {
-                "type": "TechID",
+                "type": "TechId",
                 "note": "Tech ID associated with research"
             }],
         "example": [{
@@ -1648,7 +1650,7 @@
         "note": ["To be used only when all computer players are on the same team"],
         "param": [
             {
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "Shared goal ID (0 - 255)"
             },{
                 "type": "Value",
@@ -2064,7 +2066,7 @@
                 "type": "GoalId",
                 "note": "The goal that will be compared."
             },{
-                "type": "RelOp",
+                "type": "UpRelOp",
                 "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
@@ -2403,6 +2405,28 @@
             "title": "Check if less than 2 sighted deer remain (redirect to up-gaia-type-count).",
             "data": "(defrule\r\n\t(up-gaia-type-count-total c: deer &lt; 2)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
         } ],
+        "related": []
+    },{
+        "name": "up-idle-unit-count",
+        "description": "Check the number of idle units for the specified type.",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "param": [ 
+            {
+                "type": "IdleType",
+                "note": "A const from the IdleType enumeration"
+            }, {
+                "type": "RelOp",
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
+            }, {
+                "type": "Value",
+                "note": "A number for comparison."
+            }
+        ],
+        "example": [ {
+            "title": "Check if there are more than 5 idle villagers.",
+            "data": "(defrule\r\n\t(up-idle-unit-count idle-type-villager > 5)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
+        }],
         "related": []
     },{
         "name": "up-object-type-count",
@@ -2854,10 +2878,10 @@
         "note": ["Set Point2 to 0 to use the point that is stored by up-set-target-point."],
         "param": [ 
             {
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510)"
             },{
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
             },{
                 "type": "RelOp",
@@ -2878,7 +2902,7 @@
         "note": ["Set Point to 0 to use the point that is stored by up-set-target-point."],
         "param": [ 
             {
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
             },{
                 "type": "RelOp",
@@ -2899,7 +2923,7 @@
         "note": ["Set Point to 0 to use the point that is stored by up-set-target-point. Please note that when used with all-units-class (-1), this may capture unexpected objects like birds flying over a tile, terrain plants, etc."],
         "param": [ 
             {
-                "type": "GoalID",
+                "type": "GoalId",
                 "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
             },{
                 "type": "TypeOp",
@@ -2923,7 +2947,7 @@
                 "type": "ObjectData",
                 "note": "The type of data to retrieve."
             },{
-                "type": "TypeOp",
+                "type": "RelOp",
                 "note": "Type operator"
             },{
                 "type": "Value",
@@ -3015,7 +3039,7 @@
             "title": "Check if the goal named &quot;gl-guard-flag&quot; contains the flag for guard-flag-resource.",
             "data": "(defconst gl-guard-flag 103)\r\n(defrule\r\n\t(up-compare-flag gl-guard-flag == guard-flag-resource)\r\n=&gt;\r\n\t(do-nothing)\r\n)"
         }],
-        "related": []
+        "related": ["up-modify-flag", "up-modify-goal"]
     },{
         "name": "up-point-explored",
         "description": "Check if a point on the map has been explored.",

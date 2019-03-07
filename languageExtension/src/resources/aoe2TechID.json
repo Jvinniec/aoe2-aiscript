@@ -1,5 +1,21 @@
-{ "TechID": [
+{ "TechId": {
+    "description": "Research technology",
+    "subcategories": ["AgeId"],
+    "values": [
     {
+        "name": "my-unique-unit-upgrade",
+        "description": "References the unique unit upgrade for the players current civilisation",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["Unlike the civilizations unique technology (`my-unique-research`) this research is available in All Tech games."],
+        "example": [],
+        "related": ["ri-perfusion"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["castle"],
+            "civ": ["all"],
+            "tech": ["none"]
+        }
+    },{
         "name": "ri-anarchy",
         "description": "Huskarls can be trained at Barracks",
         "version": {"min": "1.0c", "max": ""},
@@ -27,16 +43,17 @@
         }
     },{
         "name": "ri-arbalest",
+        "id": 376,
         "description": "Upgrades Crossbowman to Arbalest",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
         "example": [],
-        "related": ["ri-crossbowman"],
+        "related": ["ri-crossbow"],
         "requires": {
             "age": "imperial-age",
             "building": ["archery-range"],
             "civ": ["!berber", "!burmese", "!celt", "!frank", "!goth", "!hun", "!indian", "!persian", "!slav", "!spanish", "!teuton", "!turk"],
-            "tech": ["ri-crossbowman"]
+            "tech": ["ri-crossbow"]
         }
     },{
         "name": "ri-architecture",
@@ -403,30 +420,30 @@
             "tech": ["none"]
         }
     },{
-        "name": "ri-chain-barding-armor",
+        "name": "ri-chain-barding",
         "description": "Cavalry armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
         "example": [],
-        "related": ["ri-scale-barding-armor", "ri-plate-barding-armor"],
+        "related": ["ri-scale-barding", "ri-plate-barding"],
         "requires": {
             "age": "castle-age",
             "building": ["blacksmith"],
             "civ": ["!aztec", "!inca", "!malay", "!mayan"],
-            "tech": ["ri-scale-barding-armor"]
+            "tech": ["ri-scale-barding"]
         }
     },{
-        "name": "ri-chain-mail-armor",
+        "name": "ri-chain-mail",
         "description": "Infantry armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
         "example": [],
-        "related": ["ri-scale-mail-armor", "ri-plate-mail-armor"],
+        "related": ["ri-scale-mail", "ri-plate-mail"],
         "requires": {
             "age": "castle-age",
             "building": ["blacksmith"],
             "civ": ["all"],
-            "tech": ["ri-scale-mail-armor"]
+            "tech": ["ri-scale-mail"]
         }
     },{
         "name": "ri-champion",
@@ -559,7 +576,8 @@
             "tech": ["ri-heavy-plow"]
         }
     },{
-        "name": "ri-crossbowman",
+        "name": "ri-crossbow",
+        "id": 100,
         "description": "Upgrades Archer to Crossbowman",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -570,6 +588,20 @@
             "building": ["archery-range"],
             "civ": ["!spanish"],
             "tech": ["none"]
+        }
+    },{
+        "name": "ri-deck-guns",
+        "id": 376,
+        "description": "Upgrades `cannon-galleon` to `elite-cannon-galleon`",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "example": [],
+        "related": ["ri-arbalest"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["dock"],
+            "civ": ["!aztec","!briton","!celt","!chinese","!frank","!goth","!hun","!korean","!mayan","!teuton"],
+            "tech": ["ri-chemistry","ri-cannon-galleon"]
         }
     },{
         "name": "ri-demolition-ship",
@@ -752,19 +784,6 @@
             "building": ["castle"],
             "civ": ["berber"],
             "tech": ["none"]
-        }
-    },{
-        "name": "ri-elite-cannon-galleon",
-        "description": "Upgrades Cannon Galleons to Elite Cannon Galleons",
-        "version": {"min": "1.0c", "max": ""},
-        "note": ["none"],
-        "example": [],
-        "related": ["ri-cannon-galleon"],
-        "requires": {
-            "age": "imperial-age",
-            "building": ["dock"],
-            "civ": ["berber", "burmese", "byzantine", "indian", "italian", "japanese", "khmer", "malay", "persian", "portuguese", "saracen", "spanish", "turk", "vietnamese", "viking"],
-            "tech": ["ri-cannon-galleon"]
         }
     },{
         "name": "ri-elite-caravel",
@@ -1448,12 +1467,12 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
         "example": [],
-        "related": ["ri-wheelbarrow"],
+        "related": ["ri-wheel-barrow"],
         "requires": {
             "age": "castle-age",
             "building": ["town-center"],
             "civ": ["all"],
-            "tech": ["ri-wheelbarrow"]
+            "tech": ["ri-wheel-barrow"]
         }
     },{
         "name": "ri-heated-shot",
@@ -1519,6 +1538,19 @@
             "building": ["mill"],
             "civ": ["all"],
             "tech": ["ri-horse-collar"]
+        }
+    },{
+        "name": "ri-heavy-scorpion",
+        "description": "Upgrades `scorpion` to `heavy-scorpion`",
+        "version": {"min": "1.0c", "max": ""},
+        "note": ["none"],
+        "example": [],
+        "related": ["none"],
+        "requires": {
+            "age": "imperial-age",
+            "building": ["siege-workshop"],
+            "civ": ["!aztec", "!briton", "!byzantine", "!hun", "!korean", "!saracen", "!spanish"],
+            "tech": ["none"]
         }
     },{
         "name": "ri-herbal-medicine",
@@ -2033,7 +2065,7 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
         "example": [],
-        "related": ["ri-scale-barding-armor", "ri-chain-barding-armor"],
+        "related": ["ri-scale-barding", "ri-chain-barding-armor"],
         "requires": {
             "age": "imperial-age",
             "building": ["blacksmith"],
@@ -2046,12 +2078,12 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
         "example": [],
-        "related": ["ri-scale-mail-armor", "ri-chain-mail-armor"],
+        "related": ["ri-scale-mail", "ri-chain-mail"],
         "requires": {
             "age": "imperial-age",
             "building": ["blacksmith"],
             "civ": ["!goth", "!hun", "!indian", "!khmer", "!magyar"],
-            "tech": ["ri-chain-mail-armor"]
+            "tech": ["ri-chain-mail"]
         }
     },{
         "name": "ri-recurve-bow",
@@ -2145,7 +2177,7 @@
             "tech": ["none"]
         }
     },{
-        "name": "ri-scale-barding-armor",
+        "name": "ri-scale-barding",
         "description": "Cavalry armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2158,12 +2190,12 @@
             "tech": ["none"]
         }
     },{
-        "name": "ri-scale-mail-armor",
+        "name": "ri-scale-mail",
         "description": "Infantry armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
         "example": [],
-        "related": ["ri-chain-mail-armor", "ri-plate-mail-armor"],
+        "related": ["ri-chain-mail", "ri-plate-mail"],
         "requires": {
             "age": "feudal-age",
             "building": ["blacksmith"],
@@ -2540,7 +2572,7 @@
             "tech": ["none"]
         }
     },{
-        "name": "ri-wheelbarrow",
+        "name": "ri-wheel-barrow",
         "description": "Villagers carry 25% more and move 10% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2591,5 +2623,5 @@
             "civ": ["saracen"],
             "tech": ["none"]
         }
-    }
-]}
+    }]
+}}
