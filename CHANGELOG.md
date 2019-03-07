@@ -5,6 +5,13 @@ All notable changes to the "aoe2-aiscript" extension will be documented in this 
 
 ## v0.2.0 [dev]
 
+## v0.1.6
+- Add a lot of missing resource objects (also fix some incorrect ones)
+- Setup hierarchy of identifier IDs, to improve error detection and prevent false positives
+- Add experimental error detection (off by default)
+- Remove completion, hover, and signature help from experimental to released
+- Set completion, hover, and signature help ON by default
+
 ## v0.1.5
 - Add additional resource information and add additional categories
 - Fix signatures issue where signatures would highlight the wrong variable [issue #8]
