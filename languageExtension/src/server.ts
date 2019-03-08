@@ -251,8 +251,7 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	let diagnostics: Diagnostic[] = [];
 
 	// Quit if no checks were actually requested
-	//if ((settings.maxErrorsReported === 0) || (settings.updateErrorsWhen === "never")) {
-	if (true) {
+	if ((settings.maxErrorsReported === 0) || (settings.updateErrorsWhen === "never")) {
 		return;
 	}
 

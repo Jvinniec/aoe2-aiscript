@@ -31,7 +31,11 @@ These are features that are considered good enough to be tested by people, but m
 To turn them on, go to the settings (`Preferences`->`Settings`), search for *'aoe2 ai script'* and set the desired feature values. You may need to reload your VSCode instance for your changes to take effect.
 
 Current experimental features:
-- None right now (but some are under development)
+- Error detection: Detects when there are errors in your scripts and underlines them with red (errors) or green (warnings) squiggly lines. This feature is still VERY experimental. It is advised to keep this off for the time being, unless you REALLY want to test it out.
+  - Does not test for: Rule length, rule/command closure
+  - Cannot detect when a GoalId is being used instead of a UnitId, BuildingId, etc... 
+  - load-randoms that have multiple files also fail every time
+  - Using the ID numbers is also incorrectly flagged
 
 ## Why ANOTHER code editor?
 Building the editing features on top of Visual Studio Code offers several benefits:
