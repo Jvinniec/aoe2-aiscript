@@ -2568,6 +2568,11 @@
                 "description": "A horse",
                 "related": ["zebra"]
             },{
+                "name": "jaguar",
+                "id": 812,
+                "description": "A vicious animal that kills units that come too close",
+                "related": ["wild-boar"]
+            },{
                 "name": "javelina",
                 "id": 882,
                 "description": "A dangerous, huntable animal that provides 340 food",
@@ -2581,11 +2586,6 @@
                 "name": "relic",
                 "id": 285,
                 "description": "Can be collected by monks and deposited in a monastery for a continuous source of gold",
-                "related": []
-            },{
-                "name": "tree",
-                "id": 915,
-                "description": "A tree ... did you expect it to be something else?",
                 "related": []
             },{
                 "name": "rhino",
@@ -2608,10 +2608,20 @@
                 "description": "A stone mine that can be mined by villagers for stone",
                 "related": ["gold-mine"]
             },{
+                "name": "tree",
+                "id": 915,
+                "description": "A tree ... did you expect it to be something else?",
+                "related": []
+            },{
                 "name": "wild-boar",
                 "id": 48,
                 "description": "A wild animal that can be hunted to obtain food",
                 "related": ["javelina"]
+            },{
+                "name": "wolf",
+                "id": 126,
+                "description": "A vicious animal that will attack stray units if they come too close",
+                "related": []
             },{
                 "name": "zebra",
                 "id": 1019,
