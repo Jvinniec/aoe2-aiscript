@@ -32,7 +32,6 @@ import {
 
 import {AiScriptParser} from './aiScriptParser';
 import {AiScriptErr}    from './aiScriptErrorChecker'
-import { type } from 'os';
 
 // Create a connection for the server. The connection uses Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -252,7 +251,8 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	let diagnostics: Diagnostic[] = [];
 
 	// Quit if no checks were actually requested
-	if (settings.maxErrorsReported === 0) {
+	//if ((settings.maxErrorsReported === 0) || (settings.updateErrorsWhen === "never")) {
+	if (true) {
 		return;
 	}
 
