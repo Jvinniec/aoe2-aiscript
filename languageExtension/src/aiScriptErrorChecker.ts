@@ -3,7 +3,8 @@ import {
     AiScriptPar, 
     AiScriptType, 
     InheritsFrom, 
-    guessParam
+    guessParam,
+    findParam
 } from './aiScriptResources'
 
 export {AiScriptErr, AiScriptErrCommandInvalid, AiScriptErrorChecker};
@@ -228,6 +229,8 @@ class AiScriptErrorChecker {
                     let expected: string = com_match.pars[i-1].type;
                     let parValue: string = test_arr[i];
                     
+                    let parObj = findParam(this._params, parValue);
+
                     // Check type is valid
                     if (this._params[expected] === undefined) {
                         let message: string = "Unkown parameter type encountered: " +
@@ -249,7 +252,17 @@ class AiScriptErrorChecker {
                         let err = AiScriptErrIndentifierInvalid(pos, "Invalid parameter", message);
                         errors.push(err);
                     }
-                    
+
+                    /*
+                    // Check if the parameter needs to be defined
+                    else if ((parObj !== undefined) && (parObj.defined === false)) {
+                            let message: string = "Friendly reminder that this parameter "+
+                                                "must be defined by you in a dedicated "+
+                                                "`defconst` before it is used.";
+                            let err = AiScriptErrDefine(pos, 2, message);
+                            errors.push(err);
+                    }
+                    */
                 }
             }
         }

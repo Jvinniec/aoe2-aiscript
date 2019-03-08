@@ -4,6 +4,7 @@
         "values": [
             {
                 "name": "aztec",
+                "id": 15,
                 "unique": {
                     "unit": ["jaguar-warrior"],
                     "building": ["none"],
@@ -11,6 +12,7 @@
                 }
             },{
                 "name": "berbers",
+                "id": 27,
                 "unique": {
                     "unit": ["camel-archer", "genitour"],
                     "building": ["none"],
@@ -18,6 +20,7 @@
                 }
             },{
                 "name": "briton",
+                "id": 1,
                 "unique": {
                     "unit": ["longbowman"],
                     "building": ["none"],
@@ -25,6 +28,7 @@
                 }
             },{
                 "name": "burmese",
+                "id": 30,
                 "unique": {
                     "unit": ["arambai"],
                     "building": ["none"],
@@ -32,6 +36,7 @@
                 }
             },{
                 "name": "byzantine",
+                "id": 7,
                 "unique": {
                     "unit": ["cataphract"],
                     "building": ["none"],
@@ -39,6 +44,7 @@
                 }
             },{
                 "name": "celtic",
+                "id": 13,
                 "unique": {
                     "unit": ["woad-raider"],
                     "building": ["none"],
@@ -46,6 +52,7 @@
                 }
             },{
                 "name": "chinese",
+                "id": 6,
                 "unique": {
                     "unit": ["chu-ko-nu"],
                     "building": ["none"],
@@ -53,6 +60,7 @@
                 }
             },{
                 "name": "ethiopian",
+                "id": 25,
                 "unique": {
                     "unit": ["shotel-warrior"],
                     "building": ["none"],
@@ -60,6 +68,7 @@
                 }
             },{
                 "name": "frankish",
+                "id": 2,
                 "unique": {
                     "unit": ["throwing-axeman"],
                     "building": ["none"],
@@ -67,6 +76,7 @@
                 }
             },{
                 "name": "gothic",
+                "id": 3,
                 "unique": {
                     "unit": ["huskarl"],
                     "building": ["none"],
@@ -74,6 +84,7 @@
                 }
             },{
                 "name": "hun",
+                "id": 17,
                 "unique": {
                     "unit": ["tarkan"],
                     "building": ["none"],
@@ -81,6 +92,7 @@
                 }
             },{
                 "name": "incan",
+                "id": 21,
                 "unique": {
                     "unit": ["kamayuk", "slinger"],
                     "building": ["none"],
@@ -88,6 +100,7 @@
                 }
             },{
                 "name": "indian",
+                "id": 20,
                 "unique": {
                     "unit": ["elephant-archer", "imperial-camel"],
                     "building": ["none"],
@@ -95,6 +108,7 @@
                 }
             },{
                 "name": "italian",
+                "id": 19,
                 "unique": {
                     "unit": ["genoese-crossbowman"],
                     "building": ["none"],
@@ -102,6 +116,7 @@
                 }
             },{
                 "name": "japanese",
+                "id": 5,
                 "unique": {
                     "unit": ["samurai"],
                     "building": ["none"],
@@ -109,6 +124,7 @@
                 }
             },{
                 "name": "khmer",
+                "id": 28,
                 "unique": {
                     "unit": ["ballista-elephant"],
                     "building": ["none"],
@@ -116,6 +132,7 @@
                 }
             },{
                 "name": "korean",
+                "id": 18,
                 "unique": {
                     "unit": ["war-wagon", "turtle-ship"],
                     "building": ["none"],
@@ -123,6 +140,7 @@
                 }
             },{
                 "name": "magyar",
+                "id": 22,
                 "unique": {
                     "unit": ["magyar-huszar"],
                     "building": ["none"],
@@ -130,6 +148,7 @@
                 }
             },{
                 "name": "malay",
+                "id": 29,
                 "unique": {
                     "unit": ["karambit-warrior"],
                     "building": ["none"],
@@ -137,6 +156,7 @@
                 }
             },{
                 "name": "malian",
+                "id": 26,
                 "unique": {
                     "unit": ["gbeto"],
                     "building": ["none"],
@@ -144,6 +164,7 @@
                 }
             },{
                 "name": "mayan",
+                "id": 16,
                 "unique": {
                     "unit": ["plumed-archer"],
                     "building": ["none"],
@@ -151,6 +172,7 @@
                 }
             },{
                 "name": "mongol",
+                "id": 12,
                 "unique": {
                     "unit": ["mangudai"],
                     "building": ["none"],
@@ -158,6 +180,7 @@
                 }
             },{
                 "name": "persian",
+                "id": 8,
                 "unique": {
                     "unit": ["war-elephant"],
                     "building": ["none"],
@@ -165,6 +188,7 @@
                 }
             },{
                 "name": "portuguese",
+                "id": 24,
                 "unique": {
                     "unit": ["organ-gun", "caravel"],
                     "building": ["feitoria"],
@@ -172,6 +196,7 @@
                 }
             },{
                 "name": "saracen",
+                "id": 9,
                 "unique": {
                     "unit": ["mameluke"],
                     "building": ["none"],
@@ -179,6 +204,7 @@
                 }
             },{
                 "name": "slavic",
+                "id": 23,
                 "unique": {
                     "unit": ["boyar"],
                     "building": ["none"],
@@ -186,6 +212,7 @@
                 }
             },{
                 "name": "spanish",
+                "id": 14,
                 "unique": {
                     "unit": ["conquistador", "missionary"],
                     "building": ["none"],
@@ -193,6 +220,7 @@
                 }
             },{
                 "name": "teutonic",
+                "id": 4,
                 "unique": {
                     "unit": ["teutonic-knight"],
                     "building": ["none"],
@@ -200,6 +228,7 @@
                 }
             },{
                 "name": "turkish",
+                "id": 10,
                 "unique": {
                     "unit": ["janissary"],
                     "building": ["none"],
@@ -207,6 +236,7 @@
                 }
             },{
                 "name": "vietnamese",
+                "id": 31,
                 "unique": {
                     "unit": ["rattan-archer", "imperial-skirmisher"],
                     "building": ["none"],
@@ -214,6 +244,7 @@
                 }
             },{
                 "name": "viking",
+                "id": 11,
                 "unique": {
                     "unit": ["berserk", "longboat"],
                     "building": ["none"],

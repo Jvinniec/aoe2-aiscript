@@ -96,6 +96,8 @@
                 }
             },{
                 "name": "feitoria",
+                "id": 734,
+                "defined": 0,
                 "description": "Economic building. Generates resources without the need of villagers. Requires 20 population.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],

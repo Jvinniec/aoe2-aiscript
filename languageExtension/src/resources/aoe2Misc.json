@@ -404,7 +404,11 @@
                 "note": ["User patch only"]
             },{
                 "name": "DARK-AGE-START",
-                "description": "Game starts in dark age",
+                "description": "Game starts in dark-age",
+                "note": ["none"]
+            },{
+                "name": "DARK-AGE-END",
+                "description": "Maximum age is set to dark-age",
                 "note": ["none"]
             },{
                 "name": "FEUDAL-AGE-START",
@@ -413,17 +417,29 @@
                          "Assumes mill requirement has been met for farms/markets",
                          "All dark-age techs are already researched"]
             },{
+                "name": "FEUDAL-AGE-END",
+                "description": "Maximum age is set to feudal-age",
+                "note": ["none"]
+            },{
                 "name": "CASTLE-AGE-START",
                 "description": "Game starts in castle age",
                 "note": ["Assumes same conditions as \\'FEUDAL-AGE-START\\'",
                          "Assumes blacksmith requirement has been met for seige workshop",
                          "All dark-age and feudal-age techs are already researched"]
             },{
+                "name": "CASTLE-AGE-END",
+                "description": "Maximum age is set to castle-age",
+                "note": ["none"]
+            },{
                 "name": "IMPERIAL-AGE-START",
                 "description": "Game starts in imperial age",
                 "note": ["Assumes same conditions as \\'CASTLE-AGE-START\\'",
                          "Assumes castle requirement has been met for all things that require one",
                          "All dark, feudal, and castle-age techs are already researched"]
+            },{
+                "name": "IMPERIAL-AGE-END",
+                "description": "Maximum age is not set (most games)",
+                "note": ["none"]
             },{
                 "name": "POST-IMPERIAL-AGE-START",
                 "description": "Game starts in imperial age",
@@ -1925,45 +1941,59 @@
         "values": [
             {
                 "name": "position-center",
+                "id": 0,
                 "description": "Center position"
             },{
                 "name": "position-opposite",
+                "id": 1,
                 "description": "Opposite position"
             },{
                 "name": "position-corner",
+                "id": 2,
                 "description": "Corner position"
             },{
                 "name": "position-enemy",
+                "id": 3,
                 "description": "Enemy position"
             },{
                 "name": "position-border",
+                "id": 4,
                 "description": "Border position"
             },{
                 "name": "position-mirror",
+                "id": 5,
                 "description": "Mirror position"
             },{
                 "name": "position-flank",
+                "id": 6,
                 "description": "Flank position"
             },{
                 "name": "position-zero",
+                "id": 6,
                 "description": "Zero position"
             },{
                 "name": "position-map-size",
+                "id": 8,
                 "description": "Map size position"
             },{
                 "name": "position-self",
+                "id": 9,
                 "description": "Self position"
             },{
                 "name": "position-target",
+                "id": 10,
                 "description": "Target position"
             },{
                 "name": "position-focus",
+                "id": 11,
                 "description": "Focus position"
             },{
                 "name": "position-object",
+                "id": 12,
                 "description": "Object position"
             },{
                 "name": "position-point",
+                "id": 13,
                 "description": "Point position"
             }
         ]},
@@ -3406,6 +3436,9 @@
                 "name": "score",
                 "description": "Highest score wins"
             },{
+                "name": "relic",
+                "description": "Can win if team collects all relics and holds for a specific amount of time"
+            },{
                 "name": "standard",
                 "description": "Wonder, relic or military victory"
             },{
@@ -3424,6 +3457,9 @@
             },{
                 "name": "VICTORY-CUSTOM",
                 "link": {"type": "VictoryCond", "value": "custom"}
+            },{
+                "name": "VICTORY-RELICS",
+                "link": {"type": "VictoryCond", "value": "relic"}
             },{
                 "name": "VICTORY-SCORE",
                 "link": {"type": "VictoryCond", "value": "score"}
