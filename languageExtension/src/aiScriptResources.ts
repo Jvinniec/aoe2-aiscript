@@ -562,7 +562,7 @@ var guessParam = function guessPar(input: string, categories: string[],
 		// Test all parameters of this category
 		
 		Object.keys(category.values).forEach(param => {
-			let leven = new levenshtein(input, param);
+			let leven:Levenshtein = new levenshtein(input, param);
 			curLeven = updateLevenDist({guess:[param], dist: leven.distance}, curLeven);
 		});
 		
