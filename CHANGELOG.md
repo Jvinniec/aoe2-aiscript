@@ -6,6 +6,7 @@ All notable changes to the "aoe2-aiscript" extension will be documented in this 
 ## v0.2.0 [dev]
 
 ## v0.1.6
+- Add tech, unit, and building ID numbers to resources
 - Add a lot of missing resource objects (also fix some incorrect ones)
 - Setup hierarchy of identifier IDs, to improve error detection and prevent false positives
 - Add experimental error detection (off by default)

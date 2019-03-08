@@ -7,6 +7,7 @@
             {
                 "name": "arambai",
                 "id": 823,
+                "defined": 0,
                 "description": "Burmese unique unit. Mounted dart thrower.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -52,6 +53,7 @@
             },{
                 "name": "ballista-elephant",
                 "id": 760,
+                "defined": 0,
                 "description": "Khmer unique unit. Heavy cavalry equipped with a Scorpion. Can fell trees.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -82,6 +84,7 @@
             },{
                 "name": "battle-elephant",
                 "id": 774,
+                "defined": 0,
                 "description": "Slow and heavy cavalry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -127,6 +130,7 @@
             },{
                 "name": "boyar",
                 "id": 876,
+                "defined": 0,
                 "description": "Slavic Unique Unit. Heavily armored cavalry; resistant to melee attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -157,6 +161,7 @@
             },{
                 "name": "camel-archer",
                 "id": 203,
+                "defined": 0,
                 "description": "Berber unique unit. Cavalry archer with an attack bonus vs. cavalry archers.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -202,6 +207,7 @@
             },{
                 "name": "caravel",
                 "id": 861,
+                "defined": 0,
                 "description": "Portuguese unique unit. Boat effective vs. large fleets because each shot damages multiple units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -292,9 +298,10 @@
             },{
                 "name": "condottiero",
                 "id": 882,
+                "defined": 0,
                 "description": "Italian mercenary unit. Quick infantry.",
                 "version": {"min": "1.0c", "max": ""},
-                "note": ["none"],
+                "note": ["This unit has no elite version"],
                 "line": "none",
                 "example": [],
                 "related": ["none"],
@@ -337,6 +344,7 @@
             },{
                 "name": "demolition-raft",
                 "id": 527,
+                "defined": 0,
                 "description": "Filled with explosives. Self-destructs when used.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -382,6 +390,7 @@
             },{
                 "name": "elephant-archer",
                 "id": 926,
+                "defined": 0,
                 "description": "Indian unique unit. Heavy mounted archer.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -412,6 +421,7 @@
             },{
                 "name": "elite-ballista-elephant",
                 "id": 891,
+                "defined": 0,
                 "description": "Khmer unique unit. Heavy cavalry equipped with a Scorpion. Can fell trees.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -427,6 +437,7 @@
             },{
                 "name": "elite-battle-elephant",
                 "id": 766,
+                "defined": 0,
                 "description": "Stronger than Battle Elephant. Slow and heavy cavalry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -457,6 +468,7 @@
             },{
                 "name": "elite-boyar",
                 "id": 876,
+                "defined": 0,
                 "description": "Slavic Unique Unit. Heavily armored cavalry; resistant to melee attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -472,6 +484,7 @@
             },{
                 "name": "elite-camel-archer",
                 "id": 208,
+                "defined": 0,
                 "description": "Berber unique unit. Cavalry archer with an attack bonus vs. cavalry archers.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -502,6 +515,7 @@
             },{
                 "name": "elite-caravel",
                 "id": 183,
+                "defined": 0,
                 "description": "Portuguese unique unit. Boat effective vs. large fleets because each shot damages multiple units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -577,6 +591,7 @@
             },{
                 "name": "elite-elephant-archer",
                 "id": 875,
+                "defined": 0,
                 "description": "Indian unique unit. Heavy mounted archer.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -592,6 +607,7 @@
             },{
                 "name": "elite-gbeto",
                 "id": 418,
+                "defined": 0,
                 "description": "Malian unique unit. Quick infantry unit with a high ranged attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -607,10 +623,11 @@
             },{
                 "name": "elite-genitour",
                 "id": 230,
+                "defined": 0,
                 "description": "Berber unique unit. Mounted Skirmisher.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
-                "line": "none",
+                "line": "genitour-line",
                 "example": [],
                 "related": ["genitour"],
                 "requires": {
@@ -622,6 +639,7 @@
             },{
                 "name": "elite-genoese-crossbowman",
                 "id": 868,
+                "defined": 0,
                 "description": "Italian unique unit. Anti cavalry archery unit.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -682,6 +700,7 @@
             },{
                 "name": "elite-kamayuk",
                 "id": 879,
+                "defined": 0,
                 "description": "Inca unique unit. Infantry unit with attack bonus vs. cavalry. Carries a long spear to infiltrate formations.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -697,6 +716,7 @@
             },{
                 "name": "elite-karambit-warrior",
                 "id": 836,
+                "defined": 0,
                 "description": "Malay unique unit. Cheap and weak infantry unit that only takes half a population spot.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -742,6 +762,7 @@
             },{
                 "name": "elite-magyar-huszar",
                 "id": 871,
+                "defined": 0,
                 "description": "Magyar unique unit. Light cavalry unit with a bonus vs. siege.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -787,6 +808,7 @@
             },{
                 "name": "elite-organ-gun",
                 "id": 114,
+                "defined": 0,
                 "description": "Portuguese unique unit. Siege weapon that fires a volley of bullets. Very effective against large groups of units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -817,6 +839,7 @@
             },{
                 "name": "elite-rattan-archer",
                 "id": 782,
+                "defined": 0,
                 "description": "Vietnamese unique unit. Heavily armored Archer.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -847,6 +870,7 @@
             },{
                 "name": "elite-shotel-warrior",
                 "id": 453,
+                "defined": 0,
                 "description": "Ethiopian unique unit. Cheap infantry unit with high creation speed.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -997,6 +1021,7 @@
             },{
                 "name": "fire-galley",
                 "id": 529,
+                "defined": 0,
                 "description": "Spews fire at other ships. Good at sinking Galleys.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1072,6 +1097,7 @@
             },{
                 "name": "gbeto",
                 "id": 260,
+                "defined": 0,
                 "description": "Malian unique unit. Quick infantry unit with a high ranged attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1087,10 +1113,11 @@
             },{
                 "name": "genitour",
                 "id": 596,
+                "defined": 0,
                 "description": "Berber unique unit. Mounted Skirmisher.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
-                "line": "none",
+                "line": "genitour-line",
                 "example": [],
                 "related": ["elite-genitour"],
                 "requires": {
@@ -1102,6 +1129,7 @@
             },{
                 "name": "genoese-crossbowman",
                 "id": 866,
+                "defined": 0,
                 "description": "Italian unique unit. Anti cavalry archery unit.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1237,6 +1265,7 @@
             },{
                 "name": "imperial-camel",
                 "id": 897,
+                "defined": 0,
                 "description": "Stronger than Heavy Camel. Excels at killing other mounted units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1252,6 +1281,7 @@
             },{
                 "name": "imperial-skirmisher",
                 "id": 762,
+                "defined": 0,
                 "description": "Stronger than Skirmisher. Ranged unit equipped with armor vs. archer attacks.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1297,6 +1327,7 @@
             },{
                 "name": "kamayuk",
                 "id": 879,
+                "defined": 0,
                 "description": "Inca unique unit. Infantry unit with attack bonus vs. cavalry. Carries a long spear to infiltrate formations.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1312,6 +1343,7 @@
             },{
                 "name": "karambit-warrior",
                 "id": 836,
+                "defined": 0,
                 "description": "Malay unique unit. Cheap and weak infantry unit that only takes half a population spot.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1417,6 +1449,7 @@
             },{
                 "name": "magyar-huszar",
                 "id": 869,
+                "defined": 0,
                 "description": "Magyar unique unit. Light cavalry unit with a bonus vs. siege.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1566,6 +1599,7 @@
             },{
                 "name": "organ-gun",
                 "id": 106,
+                "defined": 0,
                 "description": "Portuguese unique unit. Siege weapon that fires a volley of bullets. Very effective against large groups of units.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1641,6 +1675,7 @@
             },{
                 "name": "rattan-archer",
                 "id": 784,
+                "defined": 0,
                 "description": "Vietnamese unique unit. Heavily armored Archer.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1701,6 +1736,7 @@
             },{
                 "name": "shotel-warrior",
                 "id": 453,
+                "defined": 0,
                 "description": "Ethiopian unique unit. Cheap infantry unit with high creation speed.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1746,6 +1782,7 @@
             },{
                 "name": "siege-tower",
                 "id": 885,
+                "defined": 0,
                 "description": "Siege weapon used to scale enemy walls; resistant to archer attack.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1776,6 +1813,7 @@
             },{
                 "name": "slinger",
                 "id": 2,
+                "defined": 0,
                 "description": "Inca unique unit. Ranged unit with attack bonus vs. infantry.",
                 "version": {"min": "1.0c", "max": ""},
                 "note": ["none"],
@@ -1802,6 +1840,38 @@
                     "building": ["barracks"],
                     "civ": ["all"],
                     "tech": ["none"]
+                }
+            },{
+                "name": "stable-elite-tarkan",
+                "id": 887,
+                "defined": 0,
+                "description": "Version of Elite Tarkan unit trained at the stable.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["Requires \"marauders\" tech"],
+                "line": "",
+                "example": [],
+                "related": ["tarkan", "elite-tarkan", "stable-tarkan"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["stable"],
+                    "civ": ["hun"],
+                    "tech": ["ri-marauders"]
+                }
+            },{
+                "name": "stable-tarkan",
+                "id": 886,
+                "defined": 0,
+                "description": "Version of Tarkan unit trained at the stable.",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["Requires \"marauders\" tech"],
+                "line": "none",
+                "example": [],
+                "related": ["tarkan", "elite-tarkan", "stable-tarkan"],
+                "requires": {
+                    "age": "imperial-age",
+                    "building": ["stable"],
+                    "civ": ["hun"],
+                    "tech": ["ri-marauders"]
                 }
             },{
                 "name": "tarkan",
@@ -2161,17 +2231,42 @@
         "parentcategory": ["UnitId"],
         "values": [
             {
+                "name": "arambai-line",
+                "id": -247,
+                "defined": 0,
+                "description": "Arambai line: `arambai`, `elite-arambai`"
+            },{
                 "name": "archer-line",
                 "id": -299,
                 "description": "Archer line: `archer`, `crossbowman`, `arbalest`"
+            },{
+                "name": "ballista-elephant-line",
+                "id": -249,
+                "defined": 0,
+                "description": "Ballista elephant line: `ballista-elephant`, `elite-ballista-elephant`"
             },{
                 "name": "battering-ram-line",
                 "id": -291,
                 "description": "Battering ram line: `battering-ram`, `capped-ram`, `siege-ram`"
             },{
+                "name": "battle-elephant-line",
+                "id": -246,
+                "defined": 0,
+                "description": "Battle elephant line: `battle-elephant`, `elite-battle-elephant`"
+            },{
                 "name": "berserk-line",
                 "id": -282,
                 "description": "Berserk line: `berserk`, `elite-berserk`"
+            },{
+                "name": "boyar-line",
+                "id": -260,
+                "defined": 0,
+                "description": "Boyar line: `boyar`, `elite-boyar`"
+            },{
+                "name": "camel-archer-line",
+                "id": -285,
+                "defined": 0,
+                "description": "Camel archer line: `camel-archer`, `elite-camel-archer`"
             },{
                 "name": "camel-line",
                 "id": -288,
@@ -2180,6 +2275,11 @@
                 "name": "cannon-galleon-line",
                 "id": -285,
                 "description": "Cannon galleon line: `cannon-galleon`, `elite-cannon-galleon`"
+            },{
+                "name": "caravel-line",
+                "id": -254,
+                "defined": 0,
+                "description": "Caravel line: `caravel`, `elite-caravel`"
             },{
                 "name": "cataphract-line",
                 "id": -281,
@@ -2205,6 +2305,11 @@
                 "id": -267,
                 "description": "Eagle warrior line: `eagle-warrior`, `elite-eagle-warrior`"
             },{
+                "name": "elephant-archer-line",
+                "id": -261,
+                "defined": 0,
+                "description": "Elephant archer line: `elephant-archer`, `elite-elephant-archer`"
+            },{
                 "name": "fire-ship-line",
                 "id": -293,
                 "description": "Fire ship line: `fire-ship`, `fast-fire-ship`"
@@ -2212,6 +2317,21 @@
                 "name": "galley-line",
                 "id": -292,
                 "description": "Galley line: `galley`, `war-galley`, `galleon`"
+            },{
+                "name": "gbeto-line",
+                "id": -252,
+                "defined": 0,
+                "description": "Gbeto line: `gbeto`, `elite-gbeto`"
+            },{
+                "name": "genitour-line",
+                "id": -250,
+                "defined": 0,
+                "description": "Genitour line: `genitour`, `elite-genitour`"
+            },{
+                "name": "genoese-crossbowman-line",
+                "id": -262,
+                "defined": 0,
+                "description": "Genoese crossbowman line: `genoese-crossbowman`, `elite-genoese-crossbowman`"
             },{
                 "name": "huskarl-line",
                 "id": -279,
@@ -2224,6 +2344,16 @@
                 "name": "janissary-line",
                 "id": -278,
                 "description": "Janissary line: `janissary`, `elite-janissary`"
+            },{
+                "name": "kamayuk-line",
+                "id": -258,
+                "defined": 0,
+                "description": "Kamayuk line: `kamayuk`, `elite-kamayuk`"
+            },{
+                "name": "karambit-warrior-line",
+                "id": -245,
+                "defined": 0,
+                "description": "Karambit warrior line: `karambit-warrior`, `elite-karambit-warrior`"
             },{
                 "name": "knight-line",
                 "id": -287,
@@ -2241,6 +2371,11 @@
                 "id": -296,
                 "description": "Militiaman line: `militiaman`, `man-at-arms`, `long-swordsman`, `two-handed-swordsman`, `champion`"
             },{
+                "name": "magyar-huszar-line",
+                "id": -259,
+                "defined": 0,
+                "description": "Magyar huszar line: `magyar-huszar`, `elite-magyar-huszar`"
+            },{
                 "name": "mameluke-line",
                 "id": -276,
                 "description": "Mameluke line: `mameluke`, `elite-mameluke`"
@@ -2256,9 +2391,19 @@
                 "name": "my-unique-unit-line",
                 "description": "Unit line related to player civilization's unique unit"
             },{
+                "name": "organ-gun-line",
+                "id": -253,
+                "defined": 0,
+                "description": "Organ gun line: `organ-gun`, `elite-organ-gun`"
+            },{
                 "name": "plumed-archer-line",
                 "id": -266,
                 "description": "Plumed archer line: `plumed-archer`, `elite-plumed-archer`"
+            },{
+                "name": "rattan-archer-line",
+                "id": -248,
+                "defined": 0,
+                "description": "Rattan archer line: `rattan-archer`, `elite-rattan-archer`"
             },{
                 "name": "samurai-line",
                 "id": -274,

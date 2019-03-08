@@ -88,6 +88,7 @@
     },{
         "name": "ri-arquebus",
         "id": 573,
+        "defined": 0,
         "description": "Gunpowder units fire more accurately at moving targets. Increases projectile speed of Bombard Cannons and Bombard Towers by +0.2",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -102,6 +103,7 @@
     },{
         "name": "ri-arrowslits",
         "id": 608,
+        "defined": 0,
         "description": "Watch Tower/Guard Tower/Keep +1/+2/+3 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -116,6 +118,7 @@
     },{
         "name": "ri-arson",
         "id": 602,
+        "defined": 0,
         "description": "Infantry +2 attack vs standard buildings",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -158,6 +161,7 @@
     },{
         "name": "ri-atlatl",
         "id": 460,
+        "defined": 0,
         "description": "Skirmishers +1 attack and range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -298,6 +302,7 @@
     },{
         "name": "ri-boiling-oil",
         "id": 488,
+        "defined": 0,
         "description": "Castles +9 bonus damage against rams",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -410,6 +415,7 @@
     },{
         "name": "ri-carrack",
         "id": 572,
+        "defined": 0,
         "description": "Ship armor +1/+1",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -494,6 +500,7 @@
     },{
         "name": "ri-chatras",
         "id": 628,
+        "defined": 0,
         "description": "Battle Elephants +50 HP",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -522,6 +529,7 @@
     },{
         "name": "ri-chieftains",
         "id": 463,
+        "defined": 0,
         "description": "Infantry +5 attack vs cavalry, +4 vs camels",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -536,6 +544,7 @@
     },{
         "name": "ri-chivalry",
         "id": 493,
+        "defined": 0,
         "description": "Stables work 40% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -578,6 +587,7 @@
     },{
         "name": "ri-couriers",
         "id": 517,
+        "defined": 0,
         "description": "Kamayuks, Slingers, and Eagle Scouts +1/+2 armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -662,6 +672,7 @@
     },{
         "name": "ri-double-crossbow",
         "id": 623,
+        "defined": 0,
         "description": "Ballista Elephants and Scorpions fire two projectiles",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -690,6 +701,7 @@
     },{
         "name": "ri-druzhina",
         "id": 513,
+        "defined": 0,
         "description": "Infantry deals trample damage",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -718,6 +730,7 @@
     },{
         "name": "ri-eagle-warrior",
         "id": 384,
+        "defined": 0,
         "description": "Upgrades Eagle Scout to Eagle Warrior",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -746,6 +759,7 @@
     },{
         "name": "ri-elite-arambai",
         "id": 619,
+        "defined": 0,
         "description": "Upgrades Arambai to Elite Arambai",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -760,6 +774,7 @@
     },{
         "name": "ri-elite-ballista-elephant",
         "id": 615,
+        "defined": 0,
         "description": "Upgrades Conquistador to Elite Conquistador",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -774,6 +789,7 @@
     },{
         "name": "ri-elite-battle-elephant",
         "id": 631,
+        "defined": 0,
         "description": "Upgrades Battle Elephant to Elite Battle Elephant",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -802,6 +818,7 @@
     },{
         "name": "ri-elite-boyar",
         "id": 504,
+        "defined": 0,
         "description": "Upgrades Boyar to Elite Boyar",
         "version": {"min": "1.0c", "max": ""},
         "note": ["Not defined by default"],
@@ -816,6 +833,7 @@
     },{
         "name": "ri-elite-camel-archer",
         "id": 565,
+        "defined": 0,
         "description": "Upgrades Camel Archer to Elite Camel Archer",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -830,6 +848,7 @@
     },{
         "name": "ri-elite-caravel",
         "id": 597,
+        "defined": 0,
         "description": "Upgrades Caravel to Elite Caravel",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -900,6 +919,7 @@
     },{
         "name": "ri-elite-elephant-archer",
         "id": 481,
+        "defined": 0,
         "description": "Upgrades Elephant Archer to Elite Elephant Archer",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -914,6 +934,7 @@
     },{
         "name": "ri-elite-gbeto",
         "id": 567,
+        "defined": 0,
         "description": "Upgrades Gbeto to Elite Gbeto",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -928,6 +949,7 @@
     },{
         "name": "ri-elite-genitour",
         "id": 599,
+        "defined": 0,
         "description": "Upgrades Genitour to Elite Genitour",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -942,6 +964,7 @@
     },{
         "name": "ri-elite-genoese-crossbowman",
         "id": 468,
+        "defined": 0,
         "description": "Upgrades Genoese Crossbowman to Elite Genoese Crossbowman",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -998,6 +1021,7 @@
     },{
         "name": "ri-elite-kamayuk",
         "id": 509,
+        "defined": 0,
         "description": "Upgrades Kamayuk to Elite Kamayuk",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1012,6 +1036,7 @@
     },{
         "name": "ri-elite-karambit-warrior",
         "id": 617,
+        "defined": 0,
         "description": "Upgrades Karambit Warrior to Elite Karambit Warrior",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1054,6 +1079,7 @@
     },{
         "name": "ri-elite-magyar-huszar",
         "id": 472,
+        "defined": 0,
         "description": "Upgrades Magyar Huszar to Elite Magyar Huszar",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1096,6 +1122,7 @@
     },{
         "name": "ri-elite-organ-gun",
         "id": 563,
+        "defined": 0,
         "description": "Upgrades Organ Gun to Elite Organ Gun",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1124,6 +1151,7 @@
     },{
         "name": "ri-elite-rattan-archer",
         "id": 621,
+        "defined": 0,
         "description": "Upgrades Rattan Archer to Elite Rattan Archer",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1152,6 +1180,7 @@
     },{
         "name": "ri-elite-shotel-warrior",
         "id": 569,
+        "defined": 0,
         "description": "Upgrades Shotel Warrior to Elite Shotel Warrior",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1292,6 +1321,7 @@
     },{
         "name": "ri-farimba",
         "id": 577,
+        "defined": 0,
         "description": "Stable units +5 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1348,6 +1378,7 @@
     },{
         "name": "ri-forced-levy",
         "id": 625,
+        "defined": 0,
         "description": "Militia line units cost no gold",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1432,6 +1463,7 @@
     },{
         "name": "ri-gillnets",
         "id": 65,
+        "defined": 0,
         "description": "Fishing Ships work +25% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1474,6 +1506,7 @@
     },{
         "name": "ri-great-wall",
         "id": 462,
+        "defined": 0,
         "description": "Walls and towers +30% hit points",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1488,6 +1521,7 @@
     },{
         "name": "ri-greek-fire",
         "id": 464,
+        "defined": 0,
         "description": "Fire Ships +1 range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1699,6 +1733,7 @@
     },{
         "name": "ri-howdah",
         "id": 626,
+        "defined": 0,
         "description": "Battle Elephants +1/+1 armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1713,6 +1748,7 @@
     },{
         "name": "ri-hunting-dogs",
         "id": 526,
+        "defined": 0,
         "removed": 1,
         "description": "Hunters and Fishermen +25% working speed",
         "version": {"min": "1.0c", "max": "2.2"},
@@ -1770,6 +1806,7 @@
     },{
         "name": "ri-imperial-camel",
         "id": 521,
+        "defined": 0,
         "description": "Upgrades Heavy Camel to Imperial Camel",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1784,6 +1821,7 @@
     },{
         "name": "ri-imperial-skirmisher",
         "id": 655,
+        "defined": 0,
         "description": "Upgrades Elite Skirmisher to Imperial Skirmisher",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1798,6 +1836,7 @@
     },{
         "name": "ri-inquisition",
         "id": 492,
+        "defined": 0,
         "description": "Monks convert faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1826,6 +1865,7 @@
     },{
         "name": "ri-ironclad",
         "id": 489,
+        "defined": 0,
         "description": "Siege weapon melee armor +4",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1840,6 +1880,7 @@
     },{
         "name": "ri-kasbah",
         "id": 578,
+        "defined": 0,
         "description": "Team Castles work +25% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1952,6 +1993,7 @@
     },{
         "name": "ri-madrasah",
         "id": 490,
+        "defined": 0,
         "description": "Monks return 33 gold when killed",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -1966,6 +2008,7 @@
     },{
         "name": "ri-maghrabi-camels",
         "id": 579,
+        "defined": 0,
         "description": "Camel troops regenerate",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2008,6 +2051,7 @@
     },{
         "name": "ri-manipur-cavalry",
         "id": 627,
+        "defined": 0,
         "description": "Cavalry and Arambai +3 attack vs buildings and standard buildings",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2022,6 +2066,7 @@
     },{
         "name": "ri-marauders",
         "id": 483,
+        "defined": 0,
         "description": "Tarkans can be trained at the Stable",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2050,6 +2095,7 @@
     },{
         "name": "ri-mercenaries",
         "id": 514,
+        "defined": 0,
         "description": "Magyar Huszars cost no gold",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2078,6 +2124,7 @@
     },{
         "name": "ri-nomads",
         "id": 487,
+        "defined": 0,
         "description": "Houses do not lose population when destroyed",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2092,6 +2139,7 @@
     },{
         "name": "ri-obsidian-arrows",
         "id": 485,
+        "defined": 0,
         "description": "Archer line has +6 attack vs standard buildings and stone defense",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2106,6 +2154,7 @@
     },{
         "name": "ri-orthodoxy",
         "id": 512,
+        "defined": 0,
         "description": "Monks +3/+3 armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2148,6 +2197,7 @@
     },{
         "name": "ri-panokseon",
         "id": 486,
+        "defined": 0,
         "description": "Turtle Ships move 15% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2162,6 +2212,7 @@
     },{
         "name": "ri-paper-money",
         "id": 629,
+        "defined": 0,
         "description": "The player and all allies receive 500 gold",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2190,6 +2241,7 @@
     },{
         "name": "ri-pavise",
         "id": 494,
+        "defined": 0,
         "description": "Foot archers +1/+1 armor",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2260,6 +2312,7 @@
     },{
         "name": "ri-recurve-bow",
         "id": 515,
+        "defined": 0,
         "description": "Cavalry Archers +1 range and attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2288,12 +2341,13 @@
     },{
         "name": "ri-revetments",
         "id": 525,
+        "defined": 0,
         "removed": 1,
         "description": "???",
         "version": {"min": "?", "max": "?"},
         "note": ["Not sure this is a legit research item",
                  "May belong to a modded version of the game and not the primary game itself",
-                 "Alot of existing scripts define this constant, but I can find no documentation of what it does"],
+                 "Alot of existing scripts define this constant, but I cant find documentation of what it does"],
         "example": [],
         "related": [],
         "requires": {
@@ -2333,6 +2387,7 @@
     },{
         "name": "ri-royal-heirs",
         "id": 574,
+        "defined": 0,
         "description": "Shotel Warriors are created nearly instantly",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2403,6 +2458,7 @@
     },{
         "name": "ri-shatagni",
         "id": 507,
+        "defined": 0,
         "description": "Hand Cannoneers +1 range",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2459,6 +2515,7 @@
     },{
         "name": "ri-silk-road",
         "id": 499,
+        "defined": 0,
         "description": "Trade units cost halved",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2473,6 +2530,7 @@
     },{
         "name": "ri-sipahi",
         "id": 491,
+        "defined": 0,
         "description": "Cavalry Archers +20 HP",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2560,6 +2618,7 @@
     },{
         "name": "ri-stronghold",
         "id": 482,
+        "defined": 0,
         "description": "Castles and Towers fire 25% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2574,6 +2633,7 @@
     },{
         "name": "ri-sultans",
         "id": 506,
+        "defined": 0,
         "description": "All gold gathering is 10% faster",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2602,6 +2662,7 @@
     },{
         "name": "ri-thalassocracy",
         "id": 624,
+        "defined": 0,
         "description": "Turns Docks into Harbors",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2644,6 +2705,7 @@
     },{
         "name": "ri-tigui",
         "id": 576,
+        "defined": 0,
         "description": "Town Centers fire arrows",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2658,6 +2720,7 @@
     },{
         "name": "ri-torsion-engines",
         "id": 575,
+        "defined": 0,
         "description": "Siege Workshop units blast radius increased",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2714,6 +2777,7 @@
     },{
         "name": "ri-tusk-swords",
         "id": 622,
+        "defined": 0,
         "description": "Battle Elephants +3 attack",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
@@ -2770,6 +2834,7 @@
     },{
         "name": "ri-war-wolf",
         "id": 461,
+        "defined": 0,
         "description": "Trebuchets do blast damage, 100% accuracy against units",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
