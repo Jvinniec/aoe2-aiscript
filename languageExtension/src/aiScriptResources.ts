@@ -18,6 +18,7 @@ import * as aoe2units      from './resources/aoe2UnitId.json';
 export {AiScriptPar, 
 		AiScriptType, 
 		loadAoE2Parameters, 
+		findParam,
 		InheritsFrom, 
 		guessParam,
 		levenGuess
@@ -57,6 +58,7 @@ interface AiScriptPar {
 	// Optional parameters
 	altLabel?: string;
 	id?: number;
+	defined?: boolean;
 	notes?: Array<string>;
 	pars?: Array<{type: string, note: string}>;
 	examples?: Array<{title: string, data: string}>;
@@ -211,7 +213,8 @@ function loadBuildings() {
 				label:       building.name,
 				description: build_descrip,
 				section:     buildkey,
-				requires:    building.requires
+				requires:    building.requires,
+				defined:     (building.defined !== undefined)? (building.defined === 1) : true
 			};
 		});
 		ai_script_parameters[buildkey] = buildingType;
@@ -327,7 +330,8 @@ function loadTechs() {
 			label:       tech.name,
 			description: tech.description + getRequiresText(tech.requires),
 			section:     techType.label,
-			requires:    tech.requires
+			requires:    tech.requires,
+			defined:     (tech.defined !== undefined)? (tech.defined === 1) : true
 		};
 	});
 	ai_script_parameters[techType.label] = techType;
@@ -359,7 +363,8 @@ function loadUnits() {
 				label:       unit.name,
 				description: unit_descrip,
 				section:     unitkey,
-				requires:    unit.requires
+				requires:    unit.requires,
+				defined:     (unit.defined !== undefined)? (unit.defined === 1) : true
 			};
 		});
 		ai_script_parameters[unitkey] = unitType;
@@ -521,6 +526,23 @@ var InheritsFrom = function ifname(value: string, expected: string,
 	}
 	return inherits;
 }
+
+
+function findParam (scriptPars: Map<string, AiScriptType>,
+					parName: string): AiScriptPar
+{
+	let parObj: AiScriptPar = undefined;
+	Object.keys(scriptPars).forEach(category => {
+		let cat: AiScriptType = scriptPars[category];
+		if (cat.values !== undefined) {
+			Object.keys(cat.values).forEach(par => {
+				if (cat.values[par].label === parName) parObj = cat.values[par];
+			});
+		}
+	});
+	return parObj;
+}
+
 
 var levenshtein = require("levenshtein");
 interface levenGuess {
