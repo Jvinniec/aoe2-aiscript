@@ -8,7 +8,6 @@ import {
 	TextDocuments,
 	TextDocument,
 	Diagnostic,
-	DiagnosticSeverity,
 	ProposedFeatures,
 	InitializeParams,
 	DidChangeConfigurationNotification,
@@ -69,14 +68,13 @@ connection.onInitialize((params: InitializeParams) => {
 		capabilities.textDocument.publishDiagnostics &&
 		capabilities.textDocument.publishDiagnostics.relatedInformation);
 
+	connection.console.log("workspacefoldercapability: "+hasWorkspaceFolderCapability);
 
 	return {
 		capabilities: {
 			textDocumentSync: documents.syncKind,
 			// Tell the client that the server supports code completion
-			completionProvider: {
-				resolveProvider: false
-			},
+			completionProvider: {resolveProvider: false},
 			
 			// Tell the client we support hover text
 			hoverProvider: true,
@@ -266,17 +264,28 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 
 	// Define the diagnostic information
 	errors.forEach(error => {
+
+		// Assemble the error message
+		let errMsg: string = error.message.long;
+		if (error.severity === 1) {
+			errMsg = "ERR" + error.code + ": " + errMsg;
+		} else if (error.severity === 2) {
+			errMsg = "WARN" + error.code + ": " + errMsg; 
+		} else if (error.severity === 3) {
+			errMsg = "INFO: " + errMsg;
+		}
+
+		// Push append the new diagnostic
 		diagnostics.push({
 			severity: error.severity,
 			code: error.code,
-			range: {
-				start: textDocument.positionAt(error.position.start),
-				end: textDocument.positionAt(error.position.stop)
-			},
-			message: "ERR"+error.code+": "+error.message.long,
+			range: {start: textDocument.positionAt(error.position.start),
+					end: textDocument.positionAt(error.position.stop)},
+			message: errMsg,
 			source: 'Aoe2AiScript'
 		});
 	})
+
 	/*
 
 	//let command_pattern: RegExp = /(\(\s*)\w[^\(\)]*(\".*\")*[^\(\)]*(?=\))/g;
