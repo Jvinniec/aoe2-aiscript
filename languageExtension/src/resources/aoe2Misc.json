@@ -3719,6 +3719,18 @@
                         "type": "Fact",
                         "note": "A valid fact command and it's parameters within `()`"
                     }]
+            },{
+                "name": "xor",
+                "description": "Used to check if only one of two Facts are true",
+                "note": ["none"],
+                "param": [
+                    {
+                        "type": "Fact",
+                        "note": "A valid fact command and it's parameters within `()`"
+                    },{
+                        "type": "Fact",
+                        "note": "A valid fact command and it's parameters within `()`"
+                    }]
             }
         ]}
 }
