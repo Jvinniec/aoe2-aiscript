@@ -1053,7 +1053,7 @@
             }],
         "example": [{
             "title": "Build a farm if fewer than 2 idle farms exist",
-            "data": "(defrule\r\n\t(idel-farm-count <= 2)\r\n\t(can-build farm)\r\n=>\r\n\t(build farm)\r\n)"
+            "data": "(defrule\r\n\t(idle-farm-count <= 2)\r\n\t(can-build farm)\r\n=>\r\n\t(build farm)\r\n)"
         }],
         "related": []
     },{
