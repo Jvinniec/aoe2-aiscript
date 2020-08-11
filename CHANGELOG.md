@@ -4,6 +4,7 @@ All notable changes to the "aoe2-aiscript" extension will be documented in this 
     <major>.<minor>.<patch>
 
 ## v0.1.7 [dev]
+- Rename 'cc-add-resources' to correct value of 'cc-add-resource' [#15]
 
 ## v0.1.6
 - Add tech, unit, and building ID numbers to resources

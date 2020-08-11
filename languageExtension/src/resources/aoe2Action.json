@@ -134,7 +134,7 @@
         }],
         "related": []
     },{
-        "name": "cc-add-resources",
+        "name": "cc-add-resource",
         "description": "Cheat action that adds the given resource amount to the computer player",
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
