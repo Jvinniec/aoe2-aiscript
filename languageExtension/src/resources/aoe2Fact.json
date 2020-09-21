@@ -2983,8 +2983,8 @@
                 "type": "ObjectData",
                 "note": "The type of data to retrieve."
             },{
-                "type": "TypeOp",
-                "note": "Type operator"
+                "type": "RelOp",
+                "note": "Relational operator (`<`, `>`, `==`, etc...)"
             },{
                 "type": "Value",
                 "note": "A number for comparison."
