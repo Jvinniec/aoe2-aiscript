@@ -69,7 +69,7 @@ export function activate(context: ExtensionContext) {
     client.start();
 	
 	let langConf: LanguageConfiguration = {
-		"wordPattern": /(([a-zA-Z0-9]+-){0,}[a-zA-Z0-9]+)/g
+		"wordPattern": /(#{0,1}([a-zA-Z0-9]+-){0,}[a-zA-Z0-9]+)/g
 	}
 	languages.setLanguageConfiguration('aoe2aiscript', langConf);	
 }
