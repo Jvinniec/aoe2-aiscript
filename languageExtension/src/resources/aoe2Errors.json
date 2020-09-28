@@ -1,0 +1,113 @@
+{"AiErrorId": {
+    "description": "Errors associated with AoE2 AI scripts, as derived from the CPSB",
+    "values": [
+    {
+        "name": "ERR2001",
+        "id": 2001,
+        "description": "Missing opening parenthesis"
+    },{
+        "name": "ERR2002",
+        "id": 2002,
+        "description": "Missing keyword"
+    },{
+        "name": "ERR2003",
+        "id": 2003,
+        "description": "Invalid keyword"
+    },{
+        "name": "ERR2004",
+        "id": 2004,
+        "description": "Missing identifier"
+    },{
+        "name": "ERR2005",
+        "id": 2005,
+        "description": "Invalid identifier"
+    },{
+        "name": "ERR2006",
+        "id": 2006,
+        "description": "Missing file name"
+    },{
+        "name": "ERR2007",
+        "id": 2007,
+        "description": "Missing left-hand side (LHS) of the rule"
+    },{
+        "name": "ERR2008",
+        "id": 2008,
+        "description": "Missing arrow"
+    },{
+        "name": "ERR2009",
+        "id": 2009,
+        "description": "Missing right-hand side (RHS) of the rule"
+    },{
+        "name": "ERR2010",
+        "id": 2010,
+        "description": "Missing closing quote"
+    },{
+        "name": "ERR2011",
+        "id": 2011,
+        "description": "Missing closing parenthesis"
+    },{
+        "name": "ERR2012",
+        "id": 2012,
+        "description": "Constant already defined"
+    },{
+        "name": "ERR2013",
+        "id": 2013,
+        "description": "Unexpected end-of-file"
+    },{
+        "name": "ERR3001",
+        "id": 3001,
+        "description": "Invalid preprocessor directive. The given directive is not one of the following: `#load-if-defined`, `#load-if-not-defined`, `#else`, `#end-if`"
+    },{
+        "name": "ERR3002",
+        "id": 3002,
+        "description": "Missing preprocessor symbol (Preprocessor directive is expecting a preprocessor symbol to follow)"
+    },{
+        "name": "ERR3003",
+        "id": 3003,
+        "description": "Preprocessor nesting too deep (Preprocessor directives are nested more than 50 levels deep)"
+    },{
+        "name": "ERR3004",
+        "id": 3004,
+        "description": "Unexpected `#else` (Found `#else` without matching `#load-if-...` directive)"
+    },{
+        "name": "ERR3005",
+        "id": 3005,
+        "description": "Unexpected `#end-if` (Found `#end-if` without matching `#load-if-...` directive)"
+    },{
+        "name": "ERR3006",
+        "id": 3006,
+        "description": "Missing `#end-if` (End-of-file reached with outstanding `#load-if-...` directive and no matching `#end-if`)"
+    },{
+        "name": "ERR5001",
+        "id": 5001,
+        "description": "File open failed"
+    },{
+        "name": "ERR5002",
+        "id": 5002,
+        "description": "File load failed"
+    },{
+        "name": "ERR6001",
+        "id": 6001,
+        "description": "List full"
+    },{
+        "name": "ERR6002",
+        "id": 6002,
+        "description": "Rule too long"
+    },{
+        "name": "ERR6003",
+        "id": 6003,
+        "description": "String table full"
+    },{
+        "name": "ERR8001",
+        "id": 8001,
+        "description": "No rules found in file"
+    },{
+        "name": "ERR9000",
+        "id": 9000,
+        "description": "Undocumented error"
+    },{
+        "name": "ERR9001",
+        "id": 9001,
+        "description": "Unexpected error"
+    }]
+}}
