@@ -613,18 +613,19 @@ async function getSignatureHelp(textDocPos: TextDocumentPositionParams): Promise
 			line_text = line_text.slice(0, line_text.length-1);
 		}
 
-		// Now get only the text from the closest '(' until the end
-		let command_text_array = /\([^\(]+$/g.exec(line_text);
+		// Now get only the text from the closest '(' or '#' until the end
+		let command_text_array = /[#\(][^\(]+$/g.exec(line_text);
 
-		let command_text = "";
-		// Handle the case where the object doesn't begin with a '('
+		// Handle the case where an appropriate beginning wasn't found
 		if (command_text_array === null) {
 			return undefined;
-		} else {
-			command_text = command_text_array[0];
 		}
 
-		command_text     = command_text.substr(1,);	// trim leading '('
+		// Extract the command name and current parameter index
+		let command_text = command_text_array[0];
+		if (command_text[0] == "(") {
+			command_text = command_text.substr(1,);	// trim leading '('
+		}
 		let command_pars = command_text.split(/\s+/g);
 		let command_str  = command_pars[0];			// Command name
 		let par_indx     = command_pars.length - 2;	// Parameter index at cursor
