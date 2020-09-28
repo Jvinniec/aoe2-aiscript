@@ -119,6 +119,8 @@ interface AiScriptSettings {
 	enableCompletionHelp: boolean;		// Turns on/off completion suggestions
 	enableHoverHelp:      boolean;		// Turns on/off hover help
 	enableParameterHelp:  string;		// Turns on/off signature help
+	aiName:               string;		// Name of the AI script
+	aiDirectory:          string;		// Directory to find AI in 
 }
 
 /**********************************************************************//**
@@ -130,7 +132,9 @@ const defaultSettings: AiScriptSettings = {
 	maxErrorsReported:    100,
 	enableCompletionHelp: false,
 	enableHoverHelp:      false,
-	enableParameterHelp:  "off"
+	enableParameterHelp:  "off",
+	aiName:               "",
+	aiDirectory:          ""
 };
 let globalSettings: AiScriptSettings = defaultSettings;
 
@@ -240,6 +244,7 @@ async function validateTextDocumentOnSave(textDocument: TextDocument): Promise<v
  * 	@param change			TextDocumentChangeEvent 
  **************************************************************************/
 documents.onDidOpen(change => {
+	//connection.console.log("Openned "+change.document.uri);
 	validateTextDocument(change.document);
 });
 
@@ -254,7 +259,10 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	let diagnostics: Diagnostic[] = [];
 
 	// Quit if no checks were actually requested
+	connection.console.log(settings.aiName);
 	if ((settings.maxErrorsReported === 0) || (settings.updateErrorsWhen === "never")) {
+		return;
+	} else if (settings.aiName === "") {
 		return;
 	}
 
@@ -262,9 +270,23 @@ async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	// Script text
 	let text = textDocument.getText();
 	
+	let folders: WorkspaceFolder[] = await connection.workspace.getWorkspaceFolders();
+	let workspaceFolder: string = folders[0].uri;
+	let filepath = URI.parse(workspaceFolder).fsPath;
+
+	connection.console.log("dir : " + filepath);
+
 	// Get the errors
-	let parser: AiScriptParser = new AiScriptParser("dummyname.per", aiScriptTypes);
-	let errors: AiScriptErr[]  = parser.getErrors(text, settings.maxErrorsReported);
+	let parser: AiScriptParser = new AiScriptParser(settings.aiName, workspaceFolder, aiScriptTypes);
+	parser.parse();
+	connection.console.log("file:\n" + parser.logger);
+
+	let errors: AiScriptErr[] = parser.getErrors();
+	let scopes: Map<string, AiScriptScope[]> = parser.getScopes();
+	connection.console.log(""+Object.keys(scopes).length);
+	Object.keys(scopes).forEach(scp => {
+		connection.console.log(scopes[scp].filename);
+	});
 	connection.console.log("NumErrs: " + errors.length);
 
 	// Define the diagnostic information
