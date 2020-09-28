@@ -179,6 +179,8 @@
                     "tech": ["ri-nomads", "ri-drill"]
                 }
             },{
+                "name": "my-civ"
+            },{
                 "name": "persian",
                 "id": 8,
                 "unique": {

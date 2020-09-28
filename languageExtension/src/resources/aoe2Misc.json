@@ -1509,6 +1509,9 @@
             },{
                 "name": "focus-player",
                 "description": "(Userpatch only) Linked with player number specified in sn-focus-player-num"
+            },{
+                "name": "my-player-number",
+                "description": "This AI's player number"
             }
         ]},
     "PlayerSettings": {

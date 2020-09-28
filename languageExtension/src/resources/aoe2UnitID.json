@@ -1568,6 +1568,20 @@
                     "tech": ["none"]
                 }
             },{
+                "name": "my-elite-unique-unit",
+                "description": "Castle age variant of the unique unit associated with player's civilization",
+                "version": {"min": "1.0c", "max": ""},
+                "note": ["References the elite version of the unique unit for the AIs civ"],
+                "line": "my-unique-unit-line",
+                "example": [],
+                "related": ["my-unique-unit-line"],
+                "requires": {
+                    "age": "castle-age",
+                    "building": ["castle"],
+                    "civ": ["all"],
+                    "tech": ["none"]
+                }
+            },{
                 "name": "my-unique-unit",
                 "description": "Castle age variant of the unique unit associated with player's civilization",
                 "version": {"min": "1.0c", "max": ""},
