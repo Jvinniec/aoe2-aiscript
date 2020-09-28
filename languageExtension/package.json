@@ -1,7 +1,7 @@
 {
 	"name": "aoe2-aiscript-language-extension",
 	"description": "Language extension for AoE2 AiScript.",
-	"version": "0.1.0",
+	"version": "0.1.7",
 	"author": "Jvinniec",
 	"license": "GPL-3.0-or-later",
 	"repository": {

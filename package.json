@@ -2,7 +2,7 @@
     "name": "aoe2-aiscript",
     "displayName": "AoE2 AiScript",
     "description": "Command tooltips and syntax highlighting for Age of Empires 2 AI scripts",
-    "version": "0.1.7-dev",
+    "version": "0.1.7",
     "keywords": [
         "aoeII",
         "age",
