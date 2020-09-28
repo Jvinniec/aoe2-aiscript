@@ -3113,7 +3113,7 @@
                 "type": "GoalId",
                 "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
             },{
-                "type": "Bool",
+                "type": "Strict",
                 "note": "Set to 1 to require an open destination tile or 0 to allow for a few tiles of separation."
             },{
                 "type": "RelOp",

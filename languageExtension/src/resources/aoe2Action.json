@@ -1539,7 +1539,7 @@
         "note": ["none"],
         "param": [ 
             {
-                "type": "Boolean",
+                "type": "PreserveResearch",
                 "note": "If set to 1, buildings performing research will not be affected."
             },{
                 "type": "TypeOp",
@@ -2237,16 +2237,16 @@
         "note": ["none"],
         "param": [ 
             {
-                "type": "Boolean",
+                "type": "LocalIndex",
                 "note": "(0 or 1) Set to 1 to clear the offset into the list of local objects to search."
             },{
-                "type": "Boolean",
+                "type": "LocalList",
                 "note": "(0 or 1) Set to 1 to clear the local object list from previous searches."
             },{
-                "type": "Boolean",
+                "type": "RemoteIndex",
                 "note": "(0 or 1) Set to 1 to clear the offset into the list of remote objects to search."
             },{
-                "type": "Boolean",
+                "type": "RemoteList",
                 "note": "(0 or 1) Set to 1 to clear the remote object list from previous searches."
             }],
         "example": [ {
@@ -2440,7 +2440,7 @@
         "note": ["The action-default command is equivalent to a right-click.",
                 "This command can only perform the following actions: action-default, action-move, action-patrol, action-guard, action-follow, action-stop, action-ground, action-garrison, action-delete, action-gather, and action-none."],
         "param": [{
-                "type": "Bool",
+                "type": "Target",
                 "note": "Set to 1 to target only the object set by up-set-target-object."
             },{
                 "type": "TargetAction",
@@ -2712,7 +2712,7 @@
                 "Please consider game performance when writing data."],
         "param": [
             {
-                "type": "Bool",
+                "type": "Plain",
                 "note": "A value to determine whether the data is formatted or plain text."
             },{
                 "type": "String",
@@ -2986,8 +2986,8 @@
             "type": "PlayerId",
             "note": "A single PlayerId for: self, this-any"
         },{
-            "type": "Bool",
-            "note": "Set to 1 to get the current type id for counting."
+            "type": "Count",
+            "note": "(0 or 1) Set to 1 to get the current type id for counting."
         },{
             "type": "TypeId",
             "note": "Set to a valid type or line id."
@@ -3135,8 +3135,8 @@
                 "This buffer is shared by all AIs, so please store data before using it in a rule pass."],
         "param": [
             {
-                "type": "Bool",
-                "note": "Set to 1 to include the map file extension."
+                "type": "Extension",
+                "note": "(0 ro 1) Set to 1 to include the map file extension."
             }],
         "example": [{
             "title": "Store the current map name in the buffer.",
@@ -3281,8 +3281,8 @@
                 "type": "GoalId",
                 "note": "The first of 2 consecutive goals to read and store the (x,y) pair (range 41-510)"
             },{
-                "type": "Bool",
-                "note": "Set to 1 to bound as a precise point (x100)."
+                "type": "Precise",
+                "note": "(0 or 1) Set to 1 to bound as a precise point (x100)."
             },{
                 "type": "TypeOp",
                 "note": "Type operator"
@@ -3305,7 +3305,7 @@
                 "type": "GoalId",
                 "note": "The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
             },{
-                "type": "Bool",
+                "type": "Strict",
                 "note": "Set to 1 to require an open destination tile or 0 to allow for a few tiles of separation."
             },{
                 "type": "GoalId",
@@ -3409,8 +3409,8 @@
                 "You can find units from a flagged search group using object-data-group-flag, which is set to the group id."],
         "param": [
             {
-                "type": "Bool",
-                "note": "Set to 1 to append or 0 to remove."
+                "type": "On",
+                "note": "(0 or 1) Set to 1 to append or 0 to remove."
             },{
                 "type": "TypeOp",
                 "note": "Type operator"
