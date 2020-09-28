@@ -22,6 +22,7 @@
 		"levenshtein": "~1.0.0"
 	},
 	"devDependencies": {
-		"vscode": "^1.1.21"
+		"@types/vscode": "^1.30.0",
+		"vscode-test": "1.4.0"
 	}
 }

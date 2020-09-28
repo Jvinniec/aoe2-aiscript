@@ -504,8 +504,9 @@ async function getHover(textDocPos: TextDocumentPositionParams): Promise<Hover> 
 		// Search for command
 		let hover_par: AiScriptPar = undefined;
 		Object.keys(aiScriptTypes).forEach(typekey => {
-			if (hover_par === undefined)
+			if (hover_par === undefined) {
 				hover_par = aiScriptTypes[typekey].values[hover_txt];
+			}
 		});
 
 		if (hover_par !== undefined) {
