@@ -7,7 +7,16 @@ import {
     findParam
 } from './aiScriptResources'
 
-export {AiScriptErr, AiScriptErrCommandInvalid, AiScriptErrorChecker};
+import {
+    AiScriptScope,
+    AiScriptScopeType
+} from './aiScriptParser'
+
+export {
+    AiScriptErr, 
+    AiScriptErrCommandInvalid, 
+    AiScriptErrorChecker
+};
 
 interface AiScriptErrPos {
     start: number;
@@ -253,16 +262,14 @@ class AiScriptErrorChecker {
                         errors.push(err);
                     }
 
-                    /*
                     // Check if the parameter needs to be defined
                     else if ((parObj !== undefined) && (parObj.defined === false)) {
                             let message: string = "Friendly reminder that this parameter "+
                                                 "must be defined by you in a dedicated "+
                                                 "`defconst` before it is used.";
-                            let err = AiScriptErrDefine(pos, 2, message);
+                            let err = AiScriptErrDefine(pos, 3, message);
                             errors.push(err);
                     }
-                    */
                 }
             }
         }
@@ -279,4 +286,20 @@ class AiScriptErrorChecker {
         // Made it to the start of the line
         return false;
     }
+
+    static getScopeError(scope: AiScriptScope): AiScriptErr {
+        let scope_type = AiScriptScopeType[scope.type];
+
+        // Define messgae and error position
+        let msg = "Unclosed '"+scope_type+"' scope";
+        let pos: AiScriptErrPos = {start: scope.start, 
+                                    stop: scope.start+scope_type.length};
+        let err: AiScriptErr = AiScriptErrDefine(pos, 1, msg);
+        err.filename = scope.filename;
+
+        // Return the associated error
+        return err;
+    }
+
+    
 };
