@@ -236,16 +236,22 @@ function loadCivs() {
 		}
 
 		aoe2civs[civkey].values.forEach(civ => {
-			// Get description and unique info
-			let civ_descrip = civ.name.toUpperCase() + " civilization";
-			let civ_unique: AiScriptUniques = undefined;
-			if (civ.link === undefined) {
-				civ_descrip += getUniquesText(civ.unique);
-				civ_unique   = civ.unique;
-			} else {
-				let civ_par = ai_script_parameters[civ.link.type].values[civ.link.value];
-				civ_descrip = civ_par.description;
-				civ_unique  = civ_par.unique;
+			
+			let civ_descrip: string = "AI's civilization";
+			let civ_unique: string = "undefined";
+
+			if (civ.name != "my-civ") {
+				// Get description and unique info
+				civ_descrip = civ.name.toUpperCase() + " civilization";
+				civ_unique = undefined;
+				if (civ.link === undefined) {
+					civ_descrip += getUniquesText(civ.unique);
+					civ_unique   = civ.unique;
+				} else {
+					let civ_par = ai_script_parameters[civ.link.type].values[civ.link.value];
+					civ_descrip = civ_par.description;
+					civ_unique  = civ_par.unique;
+				}
 			}
 
 			// Add the civ info
