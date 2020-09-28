@@ -7,22 +7,15 @@ import * as path from 'path';
 import { 
     workspace, 
     ExtensionContext, 
-    languages, 
-    TextDocument, 
-    Position,
-    CancellationToken,
-    CompletionContext,
-    CompletionItem,
-	MarkdownString,
-	LanguageConfiguration
+    languages,
+	LanguageConfiguration,
 } from 'vscode';
 
 import {
 	LanguageClient,
 	LanguageClientOptions,
 	ServerOptions,
-	TransportKind,
-	CompletionItemKind
+	TransportKind
 } from 'vscode-languageclient';
 
 let client: LanguageClient;

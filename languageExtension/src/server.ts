@@ -3,6 +3,8 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  * ------------------------------------------------------------------------------------------ */
 
+import { basename } from 'path';
+
 import {
 	createConnection,
 	TextDocuments,
@@ -19,8 +21,11 @@ import {
 	Range,
 	SignatureHelp,
 	ParameterInformation,
-	MarkupContent
+	MarkupContent,
+	WorkspaceFolder
 } from 'vscode-languageserver';
+
+import URI from 'vscode-uri'
 
 // Import the needed methods and objects
 import {
@@ -29,7 +34,7 @@ import {
 	loadAoE2Parameters
 } from './aiScriptResources';
 
-import {AiScriptParser} from './aiScriptParser';
+import {AiScriptParser, AiScriptScope} from './aiScriptParser';
 import {AiScriptErr}    from './aiScriptErrorChecker'
 
 // Create a connection for the server. The connection uses Node's IPC as a transport.
