@@ -1,4 +1,5 @@
 **/.vscode/**
+**/*.ts
 .vscode-test/**
 .gitignore
 languageExtension/node_modules/**
@@ -7,3 +8,4 @@ languageExtension/node_modules/**
 !languageExtension/node_modules/vscode-languageserver/**
 !languageExtension/node_modules/vscode-languageserver-protocol/**
 !languageExtension/node_modules/vscode-languageserver-types/**
+!languageExtension/node_modules/vscode-uri/**
