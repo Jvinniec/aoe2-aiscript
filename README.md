@@ -3,7 +3,7 @@
 [![Version](https://vsmarketplacebadge.apphb.com/version-short/jvinniec.aoe2-aiscript.svg)](https://marketplace.visualstudio.com/items?itemName=jvinniec.aoe2-aiscript)
 [![Installs](https://vsmarketplacebadge.apphb.com/installs/jvinniec.aoe2-aiscript.svg)](https://marketplace.visualstudio.com/items?itemName=jvinniec.aoe2-aiscript)
 
-This extension serves as a syntax highlighting tool for writing AI scripts in Age of Empires 2. It will apply this highlighting to any `.per` files that are loaded in vscode. See the 'Experimental Features' section for a list of additional features that are available.
+Age of Empires 2 AI script writing extension. This extension provides command/parameter tool-tips and auto-completion suggestions. It will also apply syntax highlighting to any `.per` files that are loaded in vscode providing a more visually appealing way to . See the 'Experimental Features' section for a list of additional features that are available.
 
 
 ## Features
@@ -66,7 +66,7 @@ Alternatively, for the real go-getters out there, you can fork the repository, m
 The following people and resources have contributed a non-trivial amount to the development of this extension. Seriously, this extension would not be as good as it is without them:
 
 * Scripter: Responsible for the userpatch material and related resources that are used by this extension. Whoever you are, you're a legend.
-* Aleph: This guy likes complaining when things break, and I love him for it.
+* AiScripters: These guys like complaining when things break, and I love them for it (Aleph & Electricity).
 * AiScript resource list: The resource info derives heavily from the resource file made for AiScript
 * [AoE2 wiki](https://ageofempires.fandom.com/wiki/Age_of_Empires_II:_The_Age_of_Kings): A lot of extra information for the resources was extracted from this site
 
