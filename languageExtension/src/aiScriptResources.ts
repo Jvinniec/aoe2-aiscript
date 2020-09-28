@@ -534,33 +534,71 @@ var InheritsFrom = function ifname(value: string, expected: string,
 }
 
 
+/**********************************************************************//**
+ * Locates the parameter with a given name in the resources
+ *  @param[in] scriptPars   Map of all valid AoE2 script types
+ *  @param[in] parName		Name of parameter to locate
+ *  @param[in] type			Type associated with parName (if known)
+ *  @return AiScriptPar if parName is found, otherwise return undefined
+ **************************************************************************/
 function findParam (scriptPars: Map<string, AiScriptType>,
-					parName: string): AiScriptPar
+					parName: string, type?: string): AiScriptPar
 {
 	let parObj: AiScriptPar = undefined;
-	Object.keys(scriptPars).forEach(category => {
-		let cat: AiScriptType = scriptPars[category];
-		if (cat.values !== undefined) {
-			Object.keys(cat.values).forEach(par => {
-				if (cat.values[par].label === parName) parObj = cat.values[par];
-			});
-		}
-	});
+
+	// Check if type was supplied
+	if ((type !== undefined) && (InheritsFrom(parName, type, scriptPars))) {
+		parObj = scriptPars[type].values[parName];
+	}
+
+	// ... otherwise loop through all types
+	else {
+		Object.keys(scriptPars).forEach(category => {
+			let cat: AiScriptType = scriptPars[category];
+			if (cat.values !== undefined) {
+				if (cat.values[parName] !== undefined)
+					parObj = cat.values[parName];
+			}
+		});
+	}
 	return parObj;
 }
 
 
 var levenshtein = require("levenshtein");
+
+/**********************************************************************//**
+ * @interface levenGuess 
+ *  @param[in] input		Name of parameter to locate
+ *  @param[in] categories	Types to search under
+ *  @param[in] scriptPars   Map of all valid AoE2 script types
+ *  @return List of potential matching parameter names.
+ * 
+ * Computes the closesness in spelling using the 'Levenstein distance'.
+ * Uses recursion to check subcategories of the supplied categories.
+ **************************************************************************/
 interface levenGuess {
 	guess: string[];
 	dist:  number;
 }
+
+
+/**********************************************************************//**
+ * Returns parameters close in spelling to supplied input
+ *  @param[in] input		Name of parameter to locate
+ *  @param[in] categories	Types to search under
+ *  @param[in] scriptPars   Map of all valid AoE2 script types
+ *  @return List of potential matching parameter names.
+ * 
+ * Computes the closesness in spelling using the 'Levenstein distance'.
+ * Uses recursion to check subcategories of the supplied categories.
+ **************************************************************************/
 var guessParam = function guessPar(input: string, categories: string[],
 								   scriptPars: Map<string, AiScriptType>): levenGuess
 {
 	let curLeven = {
 		guess: [],
-		dist: 5		// Maximum allowed distance (may need tuning)
+		dist: 6		// Maximum allowed distance (may need tuning)
 	}
 	categories.forEach(cat => {
 		
@@ -583,6 +621,18 @@ var guessParam = function guessPar(input: string, categories: string[],
 	return curLeven;
 }
 
+
+/**********************************************************************//**
+ * returns the updated `levenGuess` object if `newLevel` is closer
+ *  @param[in] input		Name of parameter to locate
+ *  @param[in] categories	Types to search under
+ *  @param[in] scriptPars   Map of all valid AoE2 script types
+ *  @return List of potential matching parameter names.
+ * 
+ * @p newLeven replace @p curLeven if it's distance is smaller, otherwise
+ * the values are appended to curLeven if the distance is the same or ignored
+ * if they are larger.
+ **************************************************************************/
 function updateLevenDist(newLeven: levenGuess, curLeven: levenGuess): levenGuess 
 {
 	if (newLeven.dist < curLeven.dist) {
