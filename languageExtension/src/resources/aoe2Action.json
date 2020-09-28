@@ -985,8 +985,8 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
         "param": [ {
-            "type": "GoalId",
-            "note": "The first of 4 consecutive goals (from 41 to 508) that store cost data for food, wood, stone, and gold."
+            "type": "outGoalId",
+            "note": "The first of 4 consecutive goal IDs (from 41 to 508) that will store cost data for food, wood, stone, and gold."
         } ],
         "example": [ {
             "title": "Reset gl-cost-food, gl-cost-wood, gl-cost-stone, and gl-cost-gold to 0.",
@@ -1003,8 +1003,8 @@
                 "type": "ResetCost",
                 "note": "If set to 1, the values of the provided goal set will be reset to 0."
             },{
-                "type": "GoalId",
-                "note": "The first of 4 consecutive goals to store cost data for food, wood, stone, and gold."
+                "type": "ioGoalId",
+                "note": "The first of 4 consecutive goal IDs (from 41 to 508) that will store cost data for food, wood, stone, and gold."
             } 
         ],
         "example": [ {
@@ -1074,7 +1074,7 @@
         "param": [ 
             {
                 "type": "inGoalId",
-                "note": "The first of 4 consecutive goals (from 41 to 508) that store cost data for food, wood, stone, and gold, in that order"
+                "note": "The first of 4 consecutive goal IDs (from 41 to 508) that store cost data for food, wood, stone, and gold, in that order"
             },{
                 "type": "TypeOp",
                 "note": "Type operator"
@@ -1093,8 +1093,8 @@
         "version": {"min": "1.0c", "max": ""},
         "note": ["none"],
         "param": [ {
-            "type": "GoalId",
-            "note": "The first of 4 consecutive goals (from 41 to 508) to store the cost delta for food, wood, stone, and gold."
+            "type": "outGoalId",
+            "note": "The first of 4 consecutive goal IDs (from 41 to 508) to store the cost delta for food, wood, stone, and gold."
         }],
         "example": [ {
             "title": "Store the resource difference into the 4 goals starting with gl-delta-food.",
@@ -1975,7 +1975,7 @@
                 "note": "The position to read."
             },{
                 "type": "outGoalId",
-                "note": "The first of 2 consecutive goals to store the (x,y) pair."
+                "note": "The first of 2 consecutive goal IDs to store the (x,y) pair."
             } ],
         "example": [ {
             "title": "Get the position of the map center.",
@@ -1992,11 +1992,11 @@
         "note": ["A negative value for Count will result in subtraction. Set Point2 to 0 to use the point that is stored by up-set-target-point."],
         "param": [ 
             {
-                "type": "inGoalId",
-                "note": "(Point1) The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+                "type": "ioGoalId",
+                "note": "(Point1) The first of 2 consecutive goal IDs to store the (x,y) pair (range 41-510)"
             },{
                 "type": "inGoalId",
-                "note": "(Point2) The first of 2 consecutive goals to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
+                "note": "(Point2) The first of 2 consecutive goal IDs to read an (x,y) pair (range 41-510, or 0 to read the point set by up-set-target-point)"
             },{
                 "type": "TypeOp",
                 "note": "Type operator"
@@ -2017,10 +2017,10 @@
         "param": [ 
             {
                 "type": "inGoalId",
-                "note": "(Point1) The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+                "note": "(Point1) The first of 2 consecutive goal IDs to store the (x,y) pair (range 41-510)"
             },{
                 "type": "inGoalId",
-                "note": "(Point2) The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
+                "note": "(Point2) The first of 2 consecutive goal IDs to read an (x,y) pair (41 to 510, or 0 to read the point set by up-set-target-point)"
             },{
                 "type": "TypeOp",
                 "note": "Type operator (`c:`)"
@@ -2040,11 +2040,11 @@
         "note": ["A negative value for Tiles will result in subtraction. Set Point2 to 0 to use the point that is stored by `up-set-target-point`."],
         "param": [ 
             {
-                "type": "inGoalId",
-                "note": "(Point1) The first of 2 consecutive goals to store the (x,y) pair (range 41-510)"
+                "type": "ioGoalId",
+                "note": "(Point1) The first of 2 consecutive goal IDs to store the (x,y) pair (range 41-510)"
             },{
                 "type": "inGoalId",
-                "note": "(Point2) The first of 2 consecutive goals to read an (x,y) pair (41 to 510, or 0 to read the point set by `up-set-target-point`)"
+                "note": "(Point2) The first of 2 consecutive goal IDs to read an (x,y) pair (41 to 510, or 0 to read the point set by `up-set-target-point`)"
             },{
                 "type": "TypeOp",
                 "note": "Type operator (`c:`)"
@@ -2217,13 +2217,13 @@
         "related": []
     },{
         "name": "up-get-search-state",
-        "description": "Get the search state into 4 consecutive extended goals.",
+        "description": "Get the search state into 4 consecutive goal IDs.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The goals will be filled with data in the following order: current local search total, last local search count, current remote search total, last remote search count."],
         "param": [ 
             {
-                "type": "GoalId",
-                "note": "The first of 4 consecutive goals to read the state (range 41-508"
+                "type": "outGoalId",
+                "note": "The first of 4 consecutive goal IDs to read the state (range 41-508)"
             }],
         "example": [ {
             "title": "Get the search state.",
@@ -2564,7 +2564,7 @@
         "related": []
     },{
         "name": "up-get-guard-state",
-        "description": "Get the guard state into 4 consecutive extended goals.",
+        "description": "Get the guard state into 4 consecutive goal IDs.",
         "version": {"min": "1.0c", "max": ""},
         "note": ["The goals will be filled with data in the following order: TypeId, ResourceAmount, ResourceDelta, GuardFlags.",
                 "Please use up-compare-flag to check the guard flags.",
@@ -2573,8 +2573,8 @@
                 "If the guard-flag-victory condition is set, the AI will be defeated if no TypeId objects remain."],
         "param": [
             {
-                "type": "GoalId",
-                "note": "The first of 4 consecutive goals to read the state (range 41-508)"
+                "type": "outGoalId",
+                "note": "The first of 4 consecutive goal IDs to read the state (range 41-508)"
             }],
         "example": [
             {
